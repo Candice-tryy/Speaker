@@ -150,7 +150,7 @@
       <div class="crumb"><b id="crumb">Part 2 · Hometown</b></div>
       <div class="pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="#FF9466" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V5a1 1 0 0 1 1-1h11l-2 4 2 4H6"/></svg>
-        <span>6.5</span>
+        <span id="targetVal">6.5</span>
       </div>
     </div>
     <div class="dots"><i class="done"></i><i class="cur"></i><i></i></div>
@@ -248,9 +248,16 @@ const QUESTIONS = {
   'Weekend':       ['Talk about how you spend your weekends.', '你周末通常做什么，<br>和谁一起，以及为什么喜欢这样过。'],
   'Neighbours':    ['Describe a neighbour you get on well with.', '这个人是谁，你们怎么认识的，<br>以及你们平时怎么相处。'],
 };
+// target band (set on profile page) → 跟读达标线 = 目标分 − 0.5
+const target = parseFloat(localStorage.getItem('speaker_target') || '6.5');
+const passMark = (target - 0.5).toFixed(1);
+const followGoal = `跟读到 <b>${passMark}</b> 即可通关 · 只看发音和流利度`;
+
 (function initCtx(){
+  $('#targetVal').textContent = target.toFixed(1);
   $('#crumb').textContent = `${ctx.part} · ${ctx.peak}`;
   $('#kind').textContent = `Current card · ${ctx.part}`;
+  $('#goal').innerHTML = followGoal;
   const q = QUESTIONS[ctx.topic] || [`Talk about ${ctx.topic.toLowerCase()}.`, '围绕这个话题展开，<br>给出细节和你的看法。'];
   $('#qtext').textContent = q[0];
   $('#qsub').innerHTML = q[1];
@@ -273,7 +280,7 @@ $('#seg').querySelectorAll('button').forEach(b=>{
     b.classList.add('active');mode=b.dataset.s;
     $('#goal').innerHTML = mode==='mock'
       ? '隐藏范本，用自己的话说 · <b>意思大致完整</b>即可'
-      : '跟读到 <b>6.0</b> 即可通关 · 只看发音和流利度';
+      : followGoal;
     if(mode==='mock') $('#reveal').classList.remove('open');
   });
 });

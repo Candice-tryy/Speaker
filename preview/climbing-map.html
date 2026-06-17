@@ -122,7 +122,7 @@
     </div>
     <div class="target">
       <svg viewBox="0 0 24 24" fill="none" stroke="#FF9466" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V5a1 1 0 0 1 1-1h11l-2 4 2 4H6"/></svg>
-      <span>6.5</span>
+      <span id="targetVal">6.5</span>
     </div>
   </div>
 
@@ -161,9 +161,9 @@
 
   <div class="nav">
     <a class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l6-12 5 7 3-4 4 9z"/></svg><span>登山</span></a>
-    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="14" rx="2"/><path d="M16 8l4 1.5v9L16 20"/></svg><span>练习</span></a>
-    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-3"/></svg><span>进度</span></a>
-    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M5 20a7 7 0 0 1 14 0"/></svg><span>我的</span></a>
+    <a href="card-practice.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="14" rx="2"/><path d="M16 8l4 1.5v9L16 20"/></svg><span>练习</span></a>
+    <a href="progress.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-3"/></svg><span>进度</span></a>
+    <a href="profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M5 20a7 7 0 0 1 14 0"/></svg><span>我的</span></a>
   </div>
 
 </div>
@@ -384,6 +384,9 @@ stage.addEventListener('wheel', e=>{
 }, {passive:false});
 
 document.getElementById('reviewCard').addEventListener('click', ()=>showToast('🎁 今日复习补给 · +20 经验'));
+
+// ---------- target band (set on profile page) ----------
+document.getElementById('targetVal').textContent = localStorage.getItem('speaker_target') || '6.5';
 
 // ---------- return from practice: light up the node ----------
 (function handleReturn(){

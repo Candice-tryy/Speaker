@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Speaking · 我的</title>
+<style>
+  :root{
+    --green:#34CC9E; --green-deep:#13A87E; --green-text:#0E7A5E;
+    --coral:#FF9466; --coral-deep:#FF7B4A; --coral-text:#E06A38;
+    --coral-soft:#FFEEE2;
+    --ink:#3A5750; --muted:#7C9890; --faint:#B9CFC7;
+    --mint-1:#EAF7F1; --mint-2:#DCEFE7; --line:#E9F2EE;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  html,body{margin:0; height:100%;}
+  body{background:#DCEBE6; font-family:Inter,"PingFang SC","Microsoft YaHei",Arial,sans-serif;
+       color:var(--ink); display:grid; place-items:center; min-height:100vh; padding:18px;}
+  .phone{width:340px; height:720px; position:relative; overflow:hidden; border-radius:38px;
+    border:2px solid #fff; box-shadow:0 0 0 1px var(--line), 0 30px 70px rgba(40,90,72,.22);
+    background:linear-gradient(180deg,#EEF6FB 0%,#F4FAF8 50%,#FFF8F3 100%);
+    display:flex; flex-direction:column;}
+
+  .body{flex:1;overflow-y:auto;padding:24px 20px 12px;}
+  .body::-webkit-scrollbar{display:none;}
+
+  /* profile head */
+  .head{display:flex;align-items:center;gap:14px;}
+  .avatar{width:62px;height:62px;border-radius:22px;background:var(--mint-2);display:flex;
+    align-items:center;justify-content:center;font-size:32px;flex:none;}
+  .head .nm{font-size:19px;font-weight:600;color:#2E4D44;}
+  .head .lv{margin-top:3px;display:inline-flex;align-items:center;gap:5px;font-size:12px;color:var(--coral-text);
+    background:var(--coral-soft);padding:3px 10px;border-radius:20px;font-weight:600;}
+
+  /* mini stats */
+  .stats{display:flex;gap:10px;margin-top:18px;}
+  .stat{flex:1;background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 10px;text-align:center;}
+  .stat .v{font-size:20px;font-weight:700;color:var(--green-deep);}
+  .stat .l{font-size:11px;color:var(--muted);margin-top:2px;}
+
+  .sectitle{font-size:12px;font-weight:600;color:var(--muted);margin:22px 4px 10px;letter-spacing:.03em;}
+
+  /* target band card */
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;}
+  .card .ct{font-size:14px;font-weight:600;color:#2E4D44;}
+  .card .cd{font-size:12px;color:var(--muted);margin-top:3px;line-height:1.5;}
+  .bands{display:flex;gap:8px;margin-top:14px;}
+  .band{flex:1;border:1.5px solid var(--mint-2);background:var(--mint-1);border-radius:13px;padding:11px 0;
+    text-align:center;font-size:15px;font-weight:700;color:var(--muted);cursor:pointer;transition:.15s;}
+  .band.on{background:var(--coral);border-color:var(--coral);color:#fff;box-shadow:0 6px 16px rgba(255,123,74,.32);}
+  .band:active{transform:scale(.95);}
+
+  /* rows */
+  .rows{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;}
+  .row{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;border-top:1px solid var(--line);}
+  .row:first-child{border-top:none;}
+  .row:active{background:var(--mint-1);}
+  .row .ic{width:34px;height:34px;border-radius:11px;background:var(--mint-1);display:flex;
+    align-items:center;justify-content:center;color:var(--green-deep);flex:none;}
+  .row .ic svg{width:18px;height:18px;}
+  .row .tx{flex:1;font-size:14px;font-weight:500;color:#37524B;}
+  .row .meta{font-size:13px;color:var(--muted);}
+  .row .arr{color:var(--faint);}
+  .row .arr svg{width:18px;height:18px;}
+
+  /* bottom nav */
+  .nav{display:flex;justify-content:space-around;padding:8px 8px 20px;}
+  .nav a{display:flex;flex-direction:column;align-items:center;gap:3px;color:var(--faint);
+    text-decoration:none;font-size:10px;cursor:pointer;}
+  .nav a.on{color:var(--green-deep);font-weight:600;}
+  .nav svg{width:23px;height:23px;}
+
+  .toast{position:absolute;left:50%;bottom:96px;transform:translateX(-50%) translateY(10px);
+    background:#2E4D44;color:#fff;font-size:12.5px;padding:9px 15px;border-radius:14px;opacity:0;
+    pointer-events:none;transition:.3s;z-index:30;box-shadow:0 8px 22px rgba(0,0,0,.18);max-width:260px;text-align:center;}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+</style>
+</head>
+<body>
+<div class="phone">
+
+  <div class="body">
+    <div class="head">
+      <div class="avatar">🦊</div>
+      <div>
+        <div class="nm">Candice</div>
+        <div class="lv">⛰ Lv.3 · 攀登者</div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="v">7</div><div class="l">连续天数</div></div>
+      <div class="stat"><div class="v">12</div><div class="l">已点亮关</div></div>
+      <div class="stat"><div class="v">340</div><div class="l">累计经验</div></div>
+    </div>
+
+    <div class="sectitle">目标分</div>
+    <div class="card">
+      <div class="ct">我的目标 band</div>
+      <div class="cd">影响语料难度、打分宽容度和词汇高亮权重。改了之后新卡片立即生效。</div>
+      <div class="bands" id="bands">
+        <div class="band" data-b="5.5">5.5</div>
+        <div class="band" data-b="6.0">6.0</div>
+        <div class="band on" data-b="6.5">6.5</div>
+        <div class="band" data-b="7.0">7.0</div>
+      </div>
+    </div>
+
+    <div class="sectitle">学习</div>
+    <div class="rows">
+      <div class="row" onclick="toast('📒 生词本：28 个词')">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h13a2 2 0 0 1 2 2v14H6a2 2 0 0 1-2-2z"/><path d="M8 4v16"/></svg></div>
+        <div class="tx">生词本</div>
+        <div class="meta">28 个词</div>
+        <div class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></div>
+      </div>
+      <div class="row" onclick="toast('⏰ 每日提醒：20:00')">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></div>
+        <div class="tx">每日练习提醒</div>
+        <div class="meta">20:00</div>
+        <div class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></div>
+      </div>
+      <div class="row" onclick="toast('🔊 示范朗读口音：英音')">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4z"/><path d="M16 9a4 4 0 0 1 0 6"/><path d="M19 6a8 8 0 0 1 0 12"/></svg></div>
+        <div class="tx">朗读口音</div>
+        <div class="meta">英音</div>
+        <div class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></div>
+      </div>
+    </div>
+
+    <div class="sectitle">其他</div>
+    <div class="rows">
+      <div class="row" onclick="toast('💬 反馈通道')">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <div class="tx">意见反馈</div>
+        <div class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></div>
+      </div>
+      <div class="row" onclick="toast('Speaking v0.1 · 原型')">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/></svg></div>
+        <div class="tx">关于 Speaking</div>
+        <div class="meta">v0.1</div>
+        <div class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav">
+    <a href="climbing-map.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l6-12 5 7 3-4 4 9z"/></svg><span>登山</span></a>
+    <a href="card-practice.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="14" rx="2"/><path d="M16 8l4 1.5v9L16 20"/></svg><span>练习</span></a>
+    <a href="progress.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-3"/></svg><span>进度</span></a>
+    <a class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M5 20a7 7 0 0 1 14 0"/></svg><span>我的</span></a>
+  </div>
+
+  <div class="toast" id="toast"></div>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+let tT;
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(tT);tT=setTimeout(()=>t.classList.remove('show'),1600);}
+
+// target band — persisted, read by map & card pages
+const TKEY='speaker_target';
+const saved = localStorage.getItem(TKEY) || '6.5';
+$('#bands').querySelectorAll('.band').forEach(b=>{
+  b.classList.toggle('on', b.dataset.b===saved);
+  b.addEventListener('click',()=>{
+    $('#bands').querySelectorAll('.band').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on');
+    localStorage.setItem(TKEY, b.dataset.b);
+    toast(`🎯 目标分已设为 ${b.dataset.b}`);
+  });
+});
+</script>
+</body>
+</html>
