@@ -6,12 +6,13 @@
 <title>Speaking · 卡片练习</title>
 <style>
   :root{
-    --green:#34CC9E; --green-deep:#13A87E; --green-text:#0E7A5E;
-    --coral:#FF9466; --coral-deep:#FF7B4A; --coral-text:#E06A38;
-    --coral-soft:#FFEEE2; --halo:#FFD9C2;
-    --ink:#3A5750; --muted:#7C9890; --faint:#B9CFC7;
+    --green:#3FC196; --green-deep:#2E9C97; --green-text:#1E7A66;
+    --acc:#9B82DC; --acc-deep:#6E54B8; --acc-soft:#E7DEF8;
+    --coral:var(--acc); --coral-deep:var(--acc-deep); --coral-text:var(--acc-deep);
+    --coral-soft:var(--acc-soft); --halo:var(--acc-soft);
+    --ink:#3F5C50; --muted:#7C9A8D; --faint:#A6C0B7;
     --mint-1:#EAF7F1; --mint-2:#DCEFE7; --line:#E9F2EE;
-    --hl:#FFE7D6; --hl-line:#FFB98E;
+    --hl:var(--acc-soft); --hl-line:var(--acc);
   }
   *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
   html,body{margin:0; height:100%;}
@@ -32,7 +33,7 @@
   .crumb{font-size:12px;color:var(--muted);}
   .crumb b{color:#5C7B72;font-weight:600;}
   .pill{display:flex;align-items:center;gap:4px;background:#fff;padding:5px 11px;border-radius:20px;
-        box-shadow:0 3px 8px rgba(255,150,90,.14);font-size:12px;font-weight:600;color:var(--coral-text);}
+        box-shadow:0 3px 8px rgba(60,120,90,.12);font-size:12px;font-weight:600;color:var(--green-deep);}
   .pill svg{width:13px;height:13px;}
   .dots{display:flex;gap:6px;justify-content:center;margin-top:16px;}
   .dots i{width:7px;height:7px;border-radius:50%;background:var(--mint-2);}
@@ -83,7 +84,7 @@
 
   .recwrap{display:flex;justify-content:center;}
   .rec{width:76px;height:76px;border-radius:50%;border:none;cursor:pointer;position:relative;
-       background:var(--coral);box-shadow:0 10px 26px rgba(255,123,74,.4);display:flex;
+       background:var(--acc);box-shadow:0 10px 26px rgba(110,84,184,.38);display:flex;
        align-items:center;justify-content:center;color:#fff;transition:transform .15s;}
   .rec:active{transform:scale(.94);}
   .rec svg{width:30px;height:30px;}
@@ -174,7 +175,7 @@
         </div>
         <div class="anstools">
           <button onclick="toast('🔊 示范朗读中…')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4z"/><path d="M16 9a4 4 0 0 1 0 6"/></svg>示范朗读</button>
-          <button onclick="toast('✍️ 输入提示词生成个性化范本')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7-3-3-7 7v3z"/><path d="M16 9l3-3-2-2-3 3"/></svg>个性化</button>
+          <button onclick="genPersonal()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7-3-3-7 7v3z"/><path d="M16 9l3-3-2-2-3 3"/></svg>个性化</button>
         </div>
       </div>
     </div>
@@ -236,7 +237,6 @@
 const $ = s => document.querySelector(s);
 let recited=false, mode='follow';
 
-// ---------- params from map ----------
 const U = new URLSearchParams(location.search);
 const ctx = {
   p: U.get('p') ?? '1', pk: U.get('pk') ?? '0', n: U.get('n') ?? '0',
@@ -248,12 +248,22 @@ const QUESTIONS = {
   'Weekend':       ['Talk about how you spend your weekends.', '你周末通常做什么，<br>和谁一起，以及为什么喜欢这样过。'],
   'Neighbours':    ['Describe a neighbour you get on well with.', '这个人是谁，你们怎么认识的，<br>以及你们平时怎么相处。'],
 };
-// target band (set on profile page) → 跟读达标线 = 目标分 − 0.5
+
+const ACCENTS = [
+  {a:'#EC7CA8', d:'#C9537F', s:'#FBDEEA'},
+  {a:'#9B82DC', d:'#6E54B8', s:'#E7DEF8'},
+  {a:'#5DAEE6', d:'#3585C2', s:'#D7EAF9'},
+];
+
 const target = parseFloat(localStorage.getItem('speaker_target') || '6.5');
 const passMark = (target - 0.5).toFixed(1);
 const followGoal = `跟读到 <b>${passMark}</b> 即可通关 · 只看发音和流利度`;
 
 (function initCtx(){
+  const acc = ACCENTS[Math.min(parseInt(ctx.pk)||0, ACCENTS.length-1)];
+  document.documentElement.style.setProperty('--acc', acc.a);
+  document.documentElement.style.setProperty('--acc-deep', acc.d);
+  document.documentElement.style.setProperty('--acc-soft', acc.s);
   $('#targetVal').textContent = target.toFixed(1);
   $('#crumb').textContent = `${ctx.part} · ${ctx.peak}`;
   $('#kind').textContent = `Current card · ${ctx.part}`;
@@ -262,6 +272,11 @@ const followGoal = `跟读到 <b>${passMark}</b> 即可通关 · 只看发音和
   $('#qtext').textContent = q[0];
   $('#qsub').innerHTML = q[1];
 })();
+
+function genPersonal(){
+  const persona = (localStorage.getItem('speaker_persona') || '').trim();
+  toast(persona ? `✍️ 按你的人设生成中…「${persona.slice(0,12)}…」` : '先去「我的」填写个性化人设');
+}
 
 function goMap(done){
   const qs = `?p=${ctx.p}&pk=${ctx.pk}&n=${ctx.n}`

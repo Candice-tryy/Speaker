@@ -6,10 +6,11 @@
 <title>Speaking · 考官模拟</title>
 <style>
   :root{
-    --green:#34CC9E; --green-deep:#13A87E; --green-text:#0E7A5E;
-    --coral:#FF9466; --coral-deep:#FF7B4A; --coral-text:#E06A38;
-    --coral-soft:#FFEEE2; --halo:#FFD9C2;
-    --ink:#3A5750; --muted:#7C9890; --faint:#B9CFC7;
+    --green:#3FC196; --green-deep:#2E9C97; --green-text:#1E7A66;
+    --acc:#9B82DC; --acc-deep:#6E54B8; --acc-soft:#E7DEF8;
+    --coral:var(--acc); --coral-deep:var(--acc-deep); --coral-text:var(--acc-deep);
+    --coral-soft:var(--acc-soft); --halo:var(--acc-soft);
+    --ink:#3F5C50; --muted:#7C9A8D; --faint:#A6C0B7;
     --mint-1:#EAF7F1; --mint-2:#DCEFE7; --line:#E9F2EE;
     --exam:#5C7B72;
   }
@@ -55,7 +56,7 @@
   .hint{text-align:center;font-size:11px;color:var(--muted);margin-bottom:10px;min-height:15px;}
   .recwrap{display:flex;justify-content:center;}
   .rec{width:72px;height:72px;border-radius:50%;border:none;cursor:pointer;position:relative;
-       background:var(--coral);box-shadow:0 10px 26px rgba(255,123,74,.4);display:flex;
+       background:var(--acc);box-shadow:0 10px 26px rgba(110,84,184,.38);display:flex;
        align-items:center;justify-content:center;color:#fff;transition:transform .15s;}
   .rec:disabled{background:var(--mint-2);box-shadow:none;color:var(--faint);cursor:default;}
   .rec:active:not(:disabled){transform:scale(.94);}
@@ -148,16 +149,25 @@
 <script>
 const $ = s => document.querySelector(s);
 
-// ---------- params ----------
 const U = new URLSearchParams(location.search);
 const ctx = {
   p:U.get('p')??'1', pk:U.get('pk')??'0', n:U.get('n')??'3',
   part:U.get('part')||'Part 2', peak:U.get('peak')||'Hometown'
 };
+const ACCENTS = [
+  {a:'#EC7CA8', d:'#C9537F', s:'#FBDEEA'},
+  {a:'#9B82DC', d:'#6E54B8', s:'#E7DEF8'},
+  {a:'#5DAEE6', d:'#3585C2', s:'#D7EAF9'},
+];
+(function(){
+  const acc = ACCENTS[Math.min(parseInt(ctx.pk)||0, ACCENTS.length-1)];
+  document.documentElement.style.setProperty('--acc', acc.a);
+  document.documentElement.style.setProperty('--acc-deep', acc.d);
+  document.documentElement.style.setProperty('--acc-soft', acc.s);
+})();
 $('#sub').textContent = `${ctx.part} · ${ctx.peak}`;
 $('#rSeg').textContent = `${ctx.part} · ${ctx.peak} · 考官模拟`;
 
-// ---------- examiner script (question + follow-ups) ----------
 const SCRIPT = [
   { q:`Let's talk about ${ctx.peak.toLowerCase()}. Could you tell me a bit about where you live?`, react:'Mm, I see.' },
   { q:`And what do you usually do there in your free time?`, react:'That sounds nice.' },

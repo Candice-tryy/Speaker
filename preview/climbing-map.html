@@ -7,9 +7,7 @@
 <style>
   :root{
     --green:#3FC196; --green-deep:#2E9C97; --green-text:#1E7A66;
-    --coral:#FF8C5A; --coral-deep:#E26A36; --coral-text:#E26A36;
-    --halo:#FFC9A6;
-    --teal:#3FB6C2; --teal-deep:#2E8C97;
+    --acc:#EC7CA8; --acc-deep:#C9537F; --acc-soft:#FBDEEA;
     --ink:#3F5C50; --muted:#7C9A8D; --faint:#A6C0B7;
     --node-lock:#BBD8CB; --line:#E4EFE9;
     --glass:rgba(255,255,255,.72);
@@ -24,14 +22,12 @@
     background:linear-gradient(180deg,#8FD3EF 0%,#AEE0F2 24%,#D4EFEC 54%,#E9F7E4 76%,#F4EFDF 100%);
     transition:background .7s ease;}
 
-  /* ---- full-screen scene ---- */
   .stage{position:absolute; inset:0; z-index:1;}
   .scene{position:absolute; inset:0; transition:transform .55s cubic-bezier(.4,.05,.2,1), opacity .4s;}
   .scene.exit-up{transform:translateY(-20px) scale(1.06); opacity:0;}
   .scene.enter-down{transform:translateY(22px) scale(1.06); opacity:0;}
   svg.map{width:100%; height:100%; display:block;}
 
-  /* ambient motion */
   .cloud{animation:drift 16s ease-in-out infinite;}
   .cloud.c2{animation-duration:23s; animation-delay:-6s;}
   @keyframes drift{0%,100%{transform:translateX(0);}50%{transform:translateX(20px);}}
@@ -53,21 +49,20 @@
   .node.shake{animation:shake .42s;}
   @keyframes shake{0%,100%{transform:translateX(0);}20%,60%{transform:translateX(-3px);}40%,80%{transform:translateX(3px);}}
 
-  /* mist sweep on peak change */
   .mist{position:absolute; inset:-12% -10%; pointer-events:none; opacity:0; z-index:4;}
   .mist.up{animation:mistUp .62s ease-in;}
   .mist.down{animation:mistDown .62s ease-in;}
   @keyframes mistUp{0%{opacity:0; transform:translateY(70%);}45%{opacity:1;}100%{opacity:0; transform:translateY(-70%);}}
   @keyframes mistDown{0%{opacity:0; transform:translateY(-70%);}45%{opacity:1;}100%{opacity:0; transform:translateY(70%);}}
 
-  /* ---- floating UI ---- */
   .hud{position:absolute; top:0; left:0; right:0; z-index:6;
     display:flex; align-items:center; justify-content:space-between; gap:8px; padding:16px 16px 0;}
   .chip{display:flex; align-items:center; gap:5px; background:var(--glass); backdrop-filter:blur(8px);
     -webkit-backdrop-filter:blur(8px); padding:6px 11px; border-radius:20px; font-size:13px; font-weight:600;
     box-shadow:0 4px 12px rgba(40,90,72,.12);}
-  .chip.streak{color:var(--coral-deep);}
-  .chip.target{color:var(--teal-deep);}
+  .hud-right{display:flex; align-items:center; gap:8px;}
+  .chip.streak{color:var(--acc-deep);}
+  .chip.target{color:var(--green-deep);}
   .chip svg{width:14px;height:14px;}
   .parts{display:flex; align-items:flex-end; gap:11px;}
   .part{background:none; border:none; padding:0; cursor:pointer; font-family:inherit; line-height:1;
@@ -87,12 +82,12 @@
     transition:transform .15s; border:1px solid rgba(255,255,255,.6);}
   .review:active{transform:scale(.98);}
   .review .ic{width:40px; height:40px; border-radius:14px; flex:none; display:flex; align-items:center;
-    justify-content:center; font-size:19px; background:linear-gradient(135deg,#5FCBD6,#3FB6C2);}
-  .review .t1{font-size:14px; font-weight:600; color:var(--teal-deep);}
+    justify-content:center; font-size:19px; background:linear-gradient(135deg,#5FD3B0,#3FC196);}
+  .review .t1{font-size:14px; font-weight:600; color:var(--green-deep);}
   .review .t2{font-size:12px; color:#5E8E86;}
-  .review .arr{margin-left:auto; color:var(--teal); font-size:20px; line-height:1;}
+  .review .arr{margin-left:auto; color:var(--green); font-size:20px; line-height:1;}
 
-  .nav{display:flex; justify-content:space-around; padding:8px 14px 18px;
+  .nav{display:flex; justify-content:space-around; padding:8px 40px 18px;
     background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.55) 45%);}
   .nav a{display:flex; flex-direction:column; align-items:center; gap:3px; color:#7FA294;
     text-decoration:none; font-size:10px; cursor:pointer; text-shadow:0 1px 2px rgba(255,255,255,.5);}
@@ -103,6 +98,25 @@
     background:#2E4D44; color:#fff; font-size:12.5px; padding:9px 15px; border-radius:14px; opacity:0;
     pointer-events:none; transition:.3s; z-index:20; white-space:nowrap; box-shadow:0 8px 22px rgba(0,0,0,.18);}
   .toast.show{opacity:1; transform:translateX(-50%) translateY(0);}
+
+  .onboard{position:absolute; inset:0; z-index:30; background:rgba(40,77,68,.42);
+    backdrop-filter:blur(3px); display:flex; align-items:center; justify-content:center; padding:24px;
+    opacity:0; pointer-events:none; transition:.3s;}
+  .onboard.show{opacity:1; pointer-events:auto;}
+  .ob-card{background:#fff; border-radius:26px; padding:24px 22px; width:100%;
+    box-shadow:0 20px 50px rgba(40,90,72,.3); transform:translateY(14px); transition:transform .3s;}
+  .onboard.show .ob-card{transform:translateY(0);}
+  .ob-card .em{font-size:34px;}
+  .ob-card h2{margin:8px 0 4px; font-size:19px; font-weight:600; color:#2E4D44;}
+  .ob-card p{margin:0 0 14px; font-size:13px; line-height:1.6; color:var(--muted);}
+  .ob-card textarea{width:100%; min-height:84px; border:1px solid var(--line); border-radius:14px;
+    padding:11px 13px; font-family:inherit; font-size:13.5px; line-height:1.5; color:#37524B; resize:none;
+    background:#F7FBF9;}
+  .ob-card textarea:focus{outline:none; border-color:var(--green);}
+  .ob-go{margin-top:14px; width:100%; border:none; border-radius:15px; padding:14px; background:var(--green);
+    color:#fff; font-family:inherit; font-size:15px; font-weight:600; cursor:pointer; box-shadow:0 10px 24px rgba(63,193,150,.4);}
+  .ob-skip{margin-top:10px; width:100%; background:none; border:none; font-family:inherit; font-size:13px;
+    color:var(--muted); cursor:pointer;}
 </style>
 </head>
 <body>
@@ -122,18 +136,20 @@
   </div>
 
   <div class="hud">
-    <div class="chip streak">
-      <svg viewBox="0 0 24 24" fill="#FF8C5A" stroke="none"><path d="M12 2c1 3-1 4-1 6 0 1 1 2 2 2s2-1 2-3c2 2 3 4 3 7a8 8 0 1 1-13-5c2 2 3 1 3-1 0-3 1-5 1-6z"/></svg>
-      <span id="streakVal">7</span>
-    </div>
     <div class="parts">
       <button class="part" data-part="0">Part 1</button>
       <button class="part active" data-part="1">Part 2</button>
       <button class="part" data-part="2">Part 3</button>
     </div>
-    <div class="chip target">
-      <svg viewBox="0 0 24 24" fill="none" stroke="#2E8C97" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg>
-      <span id="targetVal">6.5</span>
+    <div class="hud-right">
+      <div class="chip streak">
+        <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2c1 3-1 4-1 6 0 1 1 2 2 2s2-1 2-3c2 2 3 4 3 7a8 8 0 1 1-13-5c2 2 3 1 3-1 0-3 1-5 1-6z"/></svg>
+        <span id="streakVal">7</span>
+      </div>
+      <div class="chip target">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg>
+        <span id="targetVal">6.5</span>
+      </div>
     </div>
   </div>
 
@@ -153,23 +169,32 @@
     </div>
     <div class="nav">
       <a class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l6-12 5 7 3-4 4 9z"/></svg><span>登山</span></a>
-      <a href="card-practice.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="14" rx="2"/><path d="M16 8l4 1.5v9L16 20"/></svg><span>练习</span></a>
       <a href="profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M5 20a7 7 0 0 1 14 0"/></svg><span>我的</span></a>
     </div>
   </div>
 
   <div class="toast" id="toast"></div>
 
+  <div class="onboard" id="onboard">
+    <div class="ob-card">
+      <div class="em">👋</div>
+      <h2>先告诉我你是谁</h2>
+      <p>写一句你的身份和爱好，AI 会据此生成更像「你」的口语范本。之后随时能在「我的」里修改。</p>
+      <textarea id="obPersona" placeholder="例：我是一名爱爬山和摄影的大三学生，养了只猫，周末喜欢逛独立咖啡馆。"></textarea>
+      <button class="ob-go" id="obGo">开始攀登</button>
+      <button class="ob-skip" id="obSkip">先跳过，稍后再填</button>
+    </div>
+  </div>
+
 </div>
 
 <script>
-// ---------- data ----------
 const FOOT = {x:52, y:576};
 const NODE_POS = [
-  {x:104, y:496},   // topic 1
-  {x:170, y:404},   // topic 2
-  {x:228, y:312},   // topic 3
-  {x:258, y:186}    // boss
+  {x:104, y:496},
+  {x:170, y:404},
+  {x:228, y:312},
+  {x:258, y:186}
 ];
 const PARTS = [
   { name:"Part 1", peaks:[
@@ -191,7 +216,6 @@ const PARTS = [
 
 let partIdx = 1, peakIdx = 0;
 
-// ---------- progress (persisted) ----------
 const PKEY = 'speaker_progress';
 function loadProg(){ try{ return JSON.parse(localStorage.getItem(PKEY))||{}; }catch(e){ return {}; } }
 let prog = loadProg();
@@ -204,6 +228,11 @@ const SKIES = [
   "linear-gradient(180deg,#8FD3EF 0%,#AEE0F2 24%,#D4EFEC 54%,#E9F7E4 76%,#F4EFDF 100%)",
   "linear-gradient(180deg,#7CC8EE 0%,#A2DAF1 24%,#CDEBEC 54%,#E6F5E6 78%,#F3F0E2 100%)",
   "linear-gradient(180deg,#6FBEEC 0%,#97D2F0 24%,#C7E7EC 54%,#E2F3E8 78%,#F1F0E5 100%)",
+];
+const ACCENTS = [
+  {a:'#EC7CA8', d:'#C9537F', s:'#FBDEEA'},
+  {a:'#9B82DC', d:'#6E54B8', s:'#E7DEF8'},
+  {a:'#5DAEE6', d:'#3585C2', s:'#D7EAF9'},
 ];
 const phoneEl = document.querySelector('.phone');
 
@@ -218,7 +247,6 @@ function animateAlt(to){
   })(performance.now());
 }
 
-// ---------- scene ----------
 function pathD(){
   const f=FOOT, n=NODE_POS;
   return `M${f.x} ${f.y} Q92 540 ${n[0].x} ${n[0].y} Q120 430 ${n[1].x} ${n[1].y} `
@@ -235,18 +263,18 @@ function buildScene(peak, pdone, ki, total){
                <circle cx="${p.x}" cy="${p.y}" r="${isBoss?13:9}" fill="none" stroke="#fff" stroke-width="2" opacity=".5"/>
                <path d="M${p.x-5} ${p.y} l4 4 l7 -8" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>`;
     } else if(current){
-      const halo = `<ellipse class="halo" cx="${p.x}" cy="${p.y+12}" rx="21" ry="9" fill="var(--halo)" opacity=".7"/>`;
+      const halo = `<ellipse class="halo" cx="${p.x}" cy="${p.y+12}" rx="21" ry="9" fill="var(--acc-soft)" opacity=".8"/>`;
       if(isBoss){
-        inner = halo + `<circle cx="${p.x}" cy="${p.y}" r="14" fill="#fff"/><circle cx="${p.x}" cy="${p.y}" r="10.5" fill="var(--coral)"/>
+        inner = halo + `<circle cx="${p.x}" cy="${p.y}" r="14" fill="#fff"/><circle cx="${p.x}" cy="${p.y}" r="10.5" fill="var(--acc)"/>
           <text x="${p.x}" y="${p.y+4}" text-anchor="middle" font-size="13">😺</text>
-          <rect x="${p.x}" y="${p.y-26}" width="3" height="13" fill="var(--coral-deep)"/>
-          <path d="M${p.x+3} ${p.y-26} l11 4 l-11 4 Z" fill="var(--coral)"/>`;
+          <rect x="${p.x}" y="${p.y-26}" width="3" height="13" fill="var(--acc-deep)"/>
+          <path d="M${p.x+3} ${p.y-26} l11 4 l-11 4 Z" fill="var(--acc)"/>`;
       } else {
-        inner = halo + `<circle cx="${p.x}" cy="${p.y}" r="13" fill="#fff"/><circle cx="${p.x}" cy="${p.y}" r="9.5" fill="var(--coral)"/>
+        inner = halo + `<circle cx="${p.x}" cy="${p.y}" r="13" fill="#fff"/><circle cx="${p.x}" cy="${p.y}" r="9.5" fill="var(--acc)"/>
           <g class="climber"><g transform="translate(${p.x},${p.y-13})">
             <circle cx="0" cy="-3" r="3.6" fill="#fff"/>
             <path d="M-3.3 1 q3.3 -4 6.6 0 l-1 6.5 h-4.6 Z" fill="#fff"/>
-            <path d="M-3.6 -5 a3.8 2.1 0 0 1 7.2 0 Z" fill="var(--coral-deep)"/>
+            <path d="M-3.6 -5 a3.8 2.1 0 0 1 7.2 0 Z" fill="var(--acc-deep)"/>
           </g></g>`;
       }
     } else {
@@ -256,14 +284,13 @@ function buildScene(peak, pdone, ki, total){
     }
     const w = Math.max(46, label.length*6.4 + 16);
     const ly = p.y - (isBoss?27:25);
-    const lc = current ? "var(--coral-text)" : "var(--muted)";
+    const lc = current ? "var(--acc-deep)" : "var(--muted)";
     const lw = current ? "600" : "500";
     const lbl = `<rect x="${p.x-w/2}" y="${ly-12}" width="${w}" height="17" rx="8.5" fill="#fff" opacity="${current?1:.94}"/>
                  <text x="${p.x}" y="${ly}" text-anchor="middle" font-size="10.5" fill="${lc}" font-weight="${lw}">${label}</text>`;
     return `<g class="node" data-i="${i}" data-state="${done?'done':current?'current':'lock'}">${lbl}${inner}</g>`;
   }).join("");
 
-  // peak indicator dots (which peak of the part)
   let dots = "";
   for(let d=0; d<total; d++){
     const cy = 150 + d*15;
@@ -301,7 +328,7 @@ function buildScene(peak, pdone, ki, total){
 
     <g><path d="M40 596 l8 -18 l8 18 Z" fill="#3C8F6E"/><path d="M40 587 l8 -16 l8 16 Z" fill="#4CA37E"/><rect x="46" y="596" width="4" height="7" fill="#9B7B53"/></g>
     <g><path d="M286 588 l7 -15 l7 15 Z" fill="#3C8F6E"/><path d="M286 581 l7 -13 l7 13 Z" fill="#4CA37E"/><rect x="290" y="588" width="4" height="7" fill="#9B7B53"/></g>
-    <circle cx="150" cy="640" r="3" fill="#FF8C5A" opacity=".8"/><circle cx="210" cy="628" r="3" fill="#FFD45F" opacity=".85"/><circle cx="120" cy="620" r="2.5" fill="#fff" opacity=".8"/>
+    <circle cx="150" cy="640" r="3" fill="var(--acc)" opacity=".85"/><circle cx="210" cy="628" r="3" fill="#fff" opacity=".85"/><circle cx="120" cy="620" r="2.5" fill="var(--acc-soft)"/>
 
     <path d="${pathD()}" fill="none" stroke="#E7C893" stroke-width="12" stroke-linecap="round"/>
     <path d="${pathD()}" fill="none" stroke="#FCF4E2" stroke-width="3" stroke-linecap="round" stroke-dasharray="1.5 11"/>
@@ -326,9 +353,17 @@ function showToast(msg){
   clearTimeout(toastTimer); toastTimer = setTimeout(()=>toast.classList.remove('show'), 1600);
 }
 
+function applyAccent(){
+  const acc = ACCENTS[Math.min(peakIdx, ACCENTS.length-1)];
+  phoneEl.style.setProperty('--acc', acc.a);
+  phoneEl.style.setProperty('--acc-deep', acc.d);
+  phoneEl.style.setProperty('--acc-soft', acc.s);
+}
+
 function render(){
   const peak = PARTS[partIdx].peaks[peakIdx];
   const total = PARTS[partIdx].peaks.length;
+  applyAccent();
   scene.innerHTML = buildScene(peak, getDone(partIdx, peakIdx), peakIdx, total);
   document.getElementById('hint').style.display = peakIdx < total-1 ? 'flex' : 'none';
   phoneEl.style.background = SKIES[Math.min(peakIdx, SKIES.length-1)];
@@ -357,7 +392,6 @@ function bindNodes(){
   });
 }
 
-// part switch
 document.querySelectorAll('.part').forEach(b=>{
   b.addEventListener('click', ()=>{
     document.querySelectorAll('.part').forEach(x=>x.classList.remove('active'));
@@ -366,7 +400,6 @@ document.querySelectorAll('.part').forEach(b=>{
   });
 });
 
-// peak switch (swipe / wheel)
 function switchPeak(dir){
   const peaks = PARTS[partIdx].peaks, next = peakIdx + dir;
   if(next < 0 || next >= peaks.length){ showToast(dir>0 ? '已是最高峰 ⛰' : '已在山脚'); return; }
@@ -398,10 +431,8 @@ stage.addEventListener('wheel', e=>{
 
 document.getElementById('reviewCard').addEventListener('click', ()=>showToast('🎁 今日复习补给 · +20 经验'));
 
-// target band (set on profile page)
 document.getElementById('targetVal').textContent = localStorage.getItem('speaker_target') || '6.5';
 
-// return from practice: light up the node
 (function handleReturn(){
   const u = new URLSearchParams(location.search);
   if(u.has('p')) partIdx = Math.min(+u.get('p'), PARTS.length-1);
@@ -417,6 +448,22 @@ document.getElementById('targetVal').textContent = localStorage.getItem('speaker
   }
   render();
   history.replaceState({}, '', location.pathname);
+})();
+
+(function onboarding(){
+  if(localStorage.getItem('speaker_onboarded')) return;
+  const ob = document.getElementById('onboard');
+  const ta = document.getElementById('obPersona');
+  ta.value = localStorage.getItem('speaker_persona') || '';
+  setTimeout(()=>ob.classList.add('show'), 400);
+  function finish(){
+    const v = ta.value.trim();
+    if(v) localStorage.setItem('speaker_persona', v);
+    localStorage.setItem('speaker_onboarded', '1');
+    ob.classList.remove('show');
+  }
+  document.getElementById('obGo').addEventListener('click', finish);
+  document.getElementById('obSkip').addEventListener('click', finish);
 })();
 </script>
 </body>
