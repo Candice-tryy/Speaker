@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Speaking · 登山地图</title>
+<style>
+  :root{
+    --green:#34CC9E; --green-deep:#13A87E; --green-text:#0E7A5E;
+    --coral:#FF9466; --coral-deep:#FF7B4A; --coral-text:#E06A38;
+    --coral-soft:#FFEEE2; --halo:#FFD9C2;
+    --ink:#3A5750; --muted:#9DB3AB; --faint:#B9CFC7;
+    --node-lock:#D7E8E0; --bubble:#FFFFFF;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  html,body{margin:0; height:100%;}
+  body{
+    background:#DCEBE6;
+    font-family:Inter,"PingFang SC","Microsoft YaHei",Arial,sans-serif;
+    color:var(--ink);
+    display:grid; place-items:center; min-height:100vh; padding:18px;
+  }
+
+  .phone{
+    width:340px; height:720px; position:relative; overflow:hidden;
+    border-radius:38px; border:2px solid #FFFFFF;
+    box-shadow:0 0 0 1px #E4EFE9, 0 30px 70px rgba(40,90,72,.22);
+    background:linear-gradient(180deg,#EAF7FB 0%,#F3FBF7 46%,#FFF6F0 100%);
+    transition:background .7s ease;
+    display:flex; flex-direction:column;
+  }
+
+  /* ---- top bar ---- */
+  .topbar{display:flex; align-items:center; justify-content:space-between; padding:20px 22px 4px; z-index:6;}
+  .parts{display:flex; align-items:flex-end; gap:14px;}
+  .part{font-size:13px; color:var(--faint); background:none; border:none; padding:0; cursor:pointer;
+        font-family:inherit; transition:.28s; line-height:1;}
+  .part.active{font-size:23px; font-weight:600; color:var(--green-deep);}
+  .target{display:flex; align-items:center; gap:5px; background:#fff; padding:6px 12px; border-radius:22px;
+          box-shadow:0 3px 8px rgba(255,150,90,.18); font-size:12px; font-weight:600; color:var(--coral-text);}
+  .target svg{width:14px;height:14px;}
+
+  .peakline{display:flex; align-items:center; gap:7px; padding:3px 24px 2px; z-index:6;}
+  .peakline .pk{font-size:13px; font-weight:600; color:#5C7B72;}
+  .peakline .sub{font-size:11px; color:var(--faint);}
+  .peakline .alt{margin-left:auto; display:flex; align-items:center; gap:3px; font-size:11px; color:#7FA89A; font-weight:600;}
+  .peakline .alt svg{width:12px;height:12px;}
+
+  /* ---- stage ---- */
+  .stage{flex:1; position:relative; overflow:hidden;}
+  .scene{position:absolute; inset:0; transition:transform .6s cubic-bezier(.5,.05,.2,1), opacity .45s;}
+  .scene.exit-up{transform:translateY(-44px) scale(.96); opacity:0;}
+  .scene.enter-down{transform:translateY(56px) scale(1.04); opacity:0;}
+
+  /* mist sweep on peak change */
+  .mist{position:absolute; inset:-12% -10%; pointer-events:none; opacity:0; z-index:8;}
+  .mist.up{animation:mistUp .62s ease-in;}
+  .mist.down{animation:mistDown .62s ease-in;}
+  @keyframes mistUp{0%{opacity:0; transform:translateY(70%);}45%{opacity:1;}100%{opacity:0; transform:translateY(-70%);}}
+  @keyframes mistDown{0%{opacity:0; transform:translateY(-70%);}45%{opacity:1;}100%{opacity:0; transform:translateY(70%);}}
+
+  svg.map{width:100%; height:100%; display:block;}
+
+  /* floating clouds */
+  .cloud{animation:drift 14s ease-in-out infinite;}
+  .cloud.c2{animation-duration:19s; animation-delay:-5s;}
+  @keyframes drift{0%,100%{transform:translateX(0);}50%{transform:translateX(16px);}}
+
+  .sun-glow{animation:breathe 4.5s ease-in-out infinite; transform-origin:290px 58px;}
+  @keyframes breathe{0%,100%{opacity:.22; transform:scale(1);}50%{opacity:.4; transform:scale(1.12);}}
+
+  .climber{animation:bob 2.6s ease-in-out infinite;}
+  @keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(-3px);}}
+
+  .halo{transform-origin:center; transform-box:fill-box; animation:pulse 2.2s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:.55; transform:scale(1);}50%{opacity:.9; transform:scale(1.18);}}
+
+  .node{cursor:pointer;}
+  .node.shake{animation:shake .42s;}
+  @keyframes shake{0%,100%{transform:translateX(0);}20%,60%{transform:translateX(-3px);}40%,80%{transform:translateX(3px);}}
+
+  .bubble-rect{transition:.2s;}
+
+  /* ---- review card ---- */
+  .review{margin:0 18px 12px; background:var(--coral-soft); border-radius:20px; padding:12px 15px;
+          display:flex; align-items:center; gap:12px; box-shadow:0 4px 12px rgba(255,150,90,.16);
+          cursor:pointer; transition:transform .15s; z-index:6;}
+  .review:active{transform:scale(.98);}
+  .review .ic{width:40px;height:40px;border-radius:14px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;}
+  .review .t1{font-size:14px;font-weight:600;color:var(--coral-text);}
+  .review .t2{font-size:12px;color:#C98A66;}
+  .review .arr{margin-left:auto;color:var(--coral);font-size:20px;line-height:1;}
+
+  /* ---- bottom nav ---- */
+  .nav{display:flex; justify-content:space-around; padding:8px 8px 20px; z-index:6;}
+  .nav a{display:flex;flex-direction:column;align-items:center;gap:3px;color:var(--faint);text-decoration:none;font-size:10px;cursor:pointer;}
+  .nav a.on{color:var(--green-deep); font-weight:600;}
+  .nav svg{width:23px;height:23px;}
+
+  /* ---- toast ---- */
+  .toast{position:absolute; left:50%; bottom:96px; transform:translateX(-50%) translateY(10px);
+         background:#2E4D44; color:#fff; font-size:12.5px; padding:9px 15px; border-radius:14px;
+         opacity:0; pointer-events:none; transition:.3s; z-index:20; white-space:nowrap;
+         box-shadow:0 8px 22px rgba(0,0,0,.18);}
+  .toast.show{opacity:1; transform:translateX(-50%) translateY(0);}
+
+  /* swipe hint */
+  .hint{position:absolute; top:8px; left:50%; transform:translateX(-50%); display:flex; flex-direction:column;
+        align-items:center; color:var(--faint); font-size:10px; gap:1px; z-index:5; pointer-events:none;
+        animation:bob 2.6s ease-in-out infinite;}
+  .hint svg{width:16px;height:16px;}
+</style>
+</head>
+<body>
+<div class="phone">
+
+  <div class="topbar">
+    <div class="parts">
+      <button class="part" data-part="0">Part 1</button>
+      <button class="part active" data-part="1">Part 2</button>
+      <button class="part" data-part="2">Part 3</button>
+    </div>
+    <div class="target">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#FF9466" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V5a1 1 0 0 1 1-1h11l-2 4 2 4H6"/></svg>
+      <span>6.5</span>
+    </div>
+  </div>
+
+  <div class="peakline">
+    <span class="pk" id="peakName">🏔 Hometown</span>
+    <span class="sub" id="peakSub">· 第 1 / 3 峰</span>
+    <span class="alt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20l6-11 4 6 3-4 5 9z"/></svg><span id="altVal">1,200</span> m</span>
+  </div>
+
+  <div class="stage" id="stage">
+    <div class="hint" id="hint">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+      <span>上滑去下一峰</span>
+    </div>
+    <div class="scene" id="scene"></div>
+    <div class="mist" id="mist">
+      <svg viewBox="0 0 340 200" preserveAspectRatio="none" width="100%" height="100%">
+        <ellipse cx="60"  cy="70"  rx="80" ry="34" fill="#fff" opacity=".92"/>
+        <ellipse cx="180" cy="50"  rx="95" ry="40" fill="#fff" opacity=".96"/>
+        <ellipse cx="300" cy="80"  rx="85" ry="36" fill="#fff" opacity=".92"/>
+        <ellipse cx="120" cy="120" rx="100" ry="42" fill="#fff" opacity=".88"/>
+        <ellipse cx="250" cy="130" rx="90" ry="38" fill="#fff" opacity=".9"/>
+      </svg>
+    </div>
+    <div class="toast" id="toast"></div>
+  </div>
+
+  <div class="review" id="reviewCard">
+    <div class="ic">🎁</div>
+    <div>
+      <div class="t1">Daily review</div>
+      <div class="t2">点亮 +20 经验 · 1 关</div>
+    </div>
+    <div class="arr">›</div>
+  </div>
+
+  <div class="nav">
+    <a class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l6-12 5 7 3-4 4 9z"/></svg><span>登山</span></a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="14" rx="2"/><path d="M16 8l4 1.5v9L16 20"/></svg><span>练习</span></a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-3"/></svg><span>进度</span></a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M5 20a7 7 0 0 1 14 0"/></svg><span>我的</span></a>
+  </div>
+
+</div>
+
+<script>
+// ---------- data ----------
+const NODE_POS = [
+  {x:110, y:312},   // topic 1
+  {x:168, y:250},   // topic 2
+  {x:226, y:196},   // topic 3
+  {x:250, y:92}     // boss
+];
+const PARTS = [
+  { name:"Part 1", peaks:[
+    {emoji:"🏠", name:"Hometown", topics:["Where you live","Your room","Neighbours"], boss:"Examiner", done:2},
+    {emoji:"🍜", name:"Food",     topics:["Cooking","Eating out","Snacks"],          boss:"Examiner", done:0},
+    {emoji:"🎵", name:"Music",    topics:["Favourite song","Concerts","Singing"],     boss:"Examiner", done:0},
+  ]},
+  { name:"Part 2", peaks:[
+    {emoji:"🏔", name:"Hometown", topics:["Daily routine","Weekend","Neighbours"], boss:"Examiner", done:1},
+    {emoji:"✈️", name:"Travel",   topics:["A trip","A city","A journey"],          boss:"Examiner", done:0},
+    {emoji:"📚", name:"Study",     topics:["A teacher","A subject","A skill"],       boss:"Examiner", done:0},
+  ]},
+  { name:"Part 3", peaks:[
+    {emoji:"💡", name:"Society",  topics:["Technology","Work life","Change"],  boss:"Examiner", done:0},
+    {emoji:"🌍", name:"Environment", topics:["Climate","Cities","Future"],     boss:"Examiner", done:0},
+    {emoji:"🧠", name:"Opinions", topics:["Education","Media","Values"],       boss:"Examiner", done:0},
+  ]},
+];
+
+let partIdx = 1, peakIdx = 0;
+
+// altitude per peak index, and sky gradients (higher = bluer / paler at top)
+const ALT = [1200, 2480, 3760];
+const SKIES = [
+  "linear-gradient(180deg,#EAF7FB 0%,#F3FBF7 46%,#FFF6F0 100%)",
+  "linear-gradient(180deg,#DCEFFA 0%,#EAF7FB 44%,#F6FBF8 100%)",
+  "linear-gradient(180deg,#CFE6FA 0%,#E0F0FB 42%,#F0F8FB 100%)",
+];
+const phoneEl = document.querySelector('.phone');
+const altEl = document.getElementById('altVal');
+
+function animateAlt(to){
+  const from = parseInt(altEl.textContent.replace(/,/g,'')) || 0;
+  const t0 = performance.now(), dur = 600;
+  function step(now){
+    const k = Math.min(1,(now-t0)/dur);
+    const v = Math.round(from + (to-from)*(1-Math.pow(1-k,3)));
+    altEl.textContent = v.toLocaleString();
+    if(k<1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+// ---------- render ----------
+function buildScene(peak){
+  const cur = Math.min(peak.done, 3); // index of current node
+  const nodeMarkup = NODE_POS.map((p,i)=>{
+    const isBoss = i===3;
+    const done = i < peak.done;
+    const current = i === peak.done;
+    const label = isBoss ? peak.boss : peak.topics[i];
+    let inner = "";
+    if(done){
+      inner = `<circle cx="${p.x}" cy="${p.y}" r="${isBoss?13:9}" fill="var(--green)"/>
+               <path d="M${p.x-5} ${p.y} l4 4 l7 -8" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>`;
+    } else if(current){
+      const halo = `<ellipse class="halo" cx="${p.x}" cy="${p.y+12}" rx="20" ry="9" fill="var(--halo)" opacity=".7"/>`;
+      if(isBoss){
+        inner = halo + `<circle cx="${p.x}" cy="${p.y}" r="14" fill="#fff"/><circle cx="${p.x}" cy="${p.y}" r="11" fill="var(--coral)"/><text x="${p.x}" y="${p.y+4}" text-anchor="middle" font-size="13">😈</text>`;
+      } else {
+        inner = halo + `<circle cx="${p.x}" cy="${p.y}" r="12" fill="#fff"/><circle cx="${p.x}" cy="${p.y}" r="9" fill="var(--coral)"/>`;
+        // climber hat figure
+        inner += `<g class="climber"><g transform="translate(${p.x},${p.y-12})">
+                    <circle cx="0" cy="-3" r="3.4" fill="#fff"/>
+                    <path d="M-3.2 1 q3.2 -4 6.4 0 l-1 6 h-4.4 Z" fill="#fff"/>
+                    <path d="M-3.4 -5 a3.6 2 0 0 1 6.8 0 Z" fill="var(--coral-deep)"/>
+                  </g></g>`;
+      }
+    } else {
+      inner = `<circle cx="${p.x}" cy="${p.y}" r="${isBoss?9:7}" fill="#fff"/>
+               <circle cx="${p.x}" cy="${p.y}" r="${isBoss?6:4.5}" fill="var(--node-lock)"/>
+               ${isBoss?`<text x="${p.x}" y="${p.y+3}" text-anchor="middle" font-size="9">😈</text>`:""}`;
+    }
+    // label bubble
+    const w = Math.max(44, label.length*6.4 + 14);
+    const ly = p.y - (isBoss?26:24);
+    const lcolor = current ? "var(--coral-text)" : "var(--muted)";
+    const lweight = current ? "600" : "400";
+    const lbl = `<rect class="bubble-rect" x="${p.x-w/2}" y="${ly-12}" width="${w}" height="17" rx="8.5" fill="#fff" opacity="${current?1:.92}"/>
+                 <text x="${p.x}" y="${ly}" text-anchor="middle" font-size="10.5" fill="${lcolor}" font-weight="${lweight}">${label}</text>`;
+    return `<g class="node" data-i="${i}" data-state="${done?'done':current?'current':'lock'}">${lbl}${inner}</g>`;
+  }).join("");
+
+  return `
+  <svg class="map" viewBox="0 0 340 430" preserveAspectRatio="xMidYMax meet">
+    <circle class="sun-glow" cx="290" cy="58" r="30" fill="#FFE08A"/>
+    <circle cx="290" cy="58" r="22" fill="#FFE08A"/>
+    <g class="cloud"><ellipse cx="74" cy="92" rx="30" ry="15" fill="#fff"/><ellipse cx="94" cy="84" rx="20" ry="13" fill="#fff"/></g>
+    <g class="cloud c2"><ellipse cx="220" cy="150" rx="24" ry="12" fill="#fff" opacity=".85"/><ellipse cx="236" cy="144" rx="16" ry="10" fill="#fff" opacity=".85"/></g>
+
+    <path d="M-10 440 L70 250 Q120 130 250 70 Q330 30 360 60 L360 440 Z" fill="#CDEBDD"/>
+    <path d="M-10 440 L70 250 Q120 130 250 70 Q210 150 250 200 Q300 250 280 440 Z" fill="#B7E2CC"/>
+    <path d="M-10 440 L40 320 Q150 250 200 320 Q260 400 360 350 L360 440 Z" fill="#E3F6EC"/>
+    <path d="M232 96 Q250 78 268 96 Q258 104 250 100 Q242 104 232 96 Z" fill="#fff"/>
+
+    <path d="M42 392 Q95 360 110 312 Q126 262 168 250 Q214 238 226 196 Q236 160 250 96" fill="none" stroke="#B6D8CB" stroke-width="11" stroke-linecap="round"/>
+    <path d="M42 392 Q95 360 110 312 Q126 262 168 250 Q214 238 226 196 Q236 160 250 96" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-dasharray="1.5 10"/>
+
+    <g><circle cx="42" cy="392" r="10" fill="var(--green)"/><path d="M37 392 l4 4 l7 -8" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></g>
+    ${nodeMarkup}
+  </svg>`;
+}
+
+const scene = document.getElementById('scene');
+const toast = document.getElementById('toast');
+let toastTimer;
+function showToast(msg){
+  toast.textContent = msg; toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>toast.classList.remove('show'), 1600);
+}
+
+function render(){
+  const peak = PARTS[partIdx].peaks[peakIdx];
+  scene.innerHTML = buildScene(peak);
+  document.getElementById('peakName').textContent = `${peak.emoji} ${peak.name}`;
+  document.getElementById('peakSub').textContent = `· 第 ${peakIdx+1} / ${PARTS[partIdx].peaks.length} 峰`;
+  document.getElementById('hint').style.display = peakIdx < PARTS[partIdx].peaks.length-1 ? 'flex' : 'none';
+  phoneEl.style.background = SKIES[Math.min(peakIdx, SKIES.length-1)];
+  animateAlt(ALT[Math.min(peakIdx, ALT.length-1)]);
+  bindNodes();
+}
+
+function bindNodes(){
+  scene.querySelectorAll('.node').forEach(n=>{
+    n.addEventListener('click', ()=>{
+      const st = n.dataset.state, i = +n.dataset.i;
+      const peak = PARTS[partIdx].peaks[peakIdx];
+      const label = i===3 ? peak.boss : peak.topics[i];
+      if(st==='lock'){
+        n.classList.add('shake');
+        setTimeout(()=>n.classList.remove('shake'),450);
+        showToast('🔒 先过前面的关卡');
+      } else if(st==='current'){
+        showToast(i===3 ? `进入考官 Boss · ${label}` : `开始练习 · ${label}`);
+      } else {
+        showToast(`✓ 已通关 · ${label}`);
+      }
+    });
+  });
+}
+
+// ---------- part switch ----------
+document.querySelectorAll('.part').forEach(b=>{
+  b.addEventListener('click', ()=>{
+    document.querySelectorAll('.part').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    partIdx = +b.dataset.part; peakIdx = 0;
+    render();
+  });
+});
+
+// ---------- peak switch (swipe / wheel) ----------
+function switchPeak(dir){ // dir: +1 up to higher peak, -1 down
+  const peaks = PARTS[partIdx].peaks;
+  const next = peakIdx + dir;
+  if(next < 0 || next >= peaks.length){
+    showToast(dir>0 ? '已是最高峰 🏔' : '已在山脚');
+    return;
+  }
+  const mist = document.getElementById('mist');
+  mist.classList.remove('up','down');
+  void mist.offsetWidth;
+  mist.classList.add(dir>0?'up':'down');
+  scene.classList.add(dir>0?'exit-up':'enter-down');
+  setTimeout(()=>{
+    peakIdx = next; render();
+    scene.classList.add(dir>0?'enter-down':'exit-up');
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      scene.classList.remove('exit-up','enter-down');
+    }));
+  }, 320);
+}
+
+let startY = null;
+const stage = document.getElementById('stage');
+stage.addEventListener('touchstart', e=>{ startY = e.touches[0].clientY; }, {passive:true});
+stage.addEventListener('touchend', e=>{
+  if(startY===null) return;
+  const dy = e.changedTouches[0].clientY - startY;
+  if(Math.abs(dy) > 55) switchPeak(dy<0 ? +1 : -1);
+  startY = null;
+});
+let wheelLock=false;
+stage.addEventListener('wheel', e=>{
+  e.preventDefault();
+  if(wheelLock) return;
+  if(Math.abs(e.deltaY) < 12) return;
+  wheelLock=true; switchPeak(e.deltaY<0 ? +1 : -1);
+  setTimeout(()=>wheelLock=false, 650);
+}, {passive:false});
+
+document.getElementById('reviewCard').addEventListener('click', ()=>showToast('🎁 今日复习补给 · +20 经验'));
+
+render();
+</script>
+</body>
+</html>
