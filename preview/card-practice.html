@@ -144,10 +144,10 @@
 
   <div class="top">
     <div class="toprow">
-      <button class="back" aria-label="返回地图" onclick="toast('← 返回登山地图')">
+      <button class="back" aria-label="返回地图" onclick="goMap(false)">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
       </button>
-      <div class="crumb"><b>Part 2 · Hometown</b></div>
+      <div class="crumb"><b id="crumb">Part 2 · Hometown</b></div>
       <div class="pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="#FF9466" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V5a1 1 0 0 1 1-1h11l-2 4 2 4H6"/></svg>
         <span>6.5</span>
@@ -158,9 +158,9 @@
 
   <div class="main">
     <div class="qcard">
-      <div class="kind">Current card · Part 2</div>
-      <div class="qtext">Describe your daily routine.</div>
-      <div class="sub">早上 / 下午 / 晚上分别做什么，<br>以及你最喜欢一天里的哪个时段。</div>
+      <div class="kind" id="kind">Current card · Part 2</div>
+      <div class="qtext" id="qtext">Describe your daily routine.</div>
+      <div class="sub" id="qsub">早上 / 下午 / 晚上分别做什么，<br>以及你最喜欢一天里的哪个时段。</div>
     </div>
 
     <div class="reveal" id="reveal">
@@ -214,7 +214,7 @@
     </div>
     <div class="fbcta">
       <button class="retry" onclick="closeFb()">再练一次</button>
-      <button class="pass" id="passBtn" onclick="toast('🎉 关卡点亮！返回登山地图…')">点亮这一关 ✦</button>
+      <button class="pass" id="passBtn" onclick="goMap(true)">点亮这一关 ✦</button>
     </div>
   </div>
 
@@ -235,6 +235,33 @@
 <script>
 const $ = s => document.querySelector(s);
 let recited=false, mode='follow';
+
+// ---------- params from map ----------
+const U = new URLSearchParams(location.search);
+const ctx = {
+  p: U.get('p') ?? '1', pk: U.get('pk') ?? '0', n: U.get('n') ?? '0',
+  part: U.get('part') || 'Part 2', peak: U.get('peak') || 'Hometown',
+  topic: U.get('topic') || 'Daily routine'
+};
+const QUESTIONS = {
+  'Daily routine': ['Describe your daily routine.', '早上 / 下午 / 晚上分别做什么，<br>以及你最喜欢一天里的哪个时段。'],
+  'Weekend':       ['Talk about how you spend your weekends.', '你周末通常做什么，<br>和谁一起，以及为什么喜欢这样过。'],
+  'Neighbours':    ['Describe a neighbour you get on well with.', '这个人是谁，你们怎么认识的，<br>以及你们平时怎么相处。'],
+};
+(function initCtx(){
+  $('#crumb').textContent = `${ctx.part} · ${ctx.peak}`;
+  $('#kind').textContent = `Current card · ${ctx.part}`;
+  const q = QUESTIONS[ctx.topic] || [`Talk about ${ctx.topic.toLowerCase()}.`, '围绕这个话题展开，<br>给出细节和你的看法。'];
+  $('#qtext').textContent = q[0];
+  $('#qsub').innerHTML = q[1];
+})();
+
+function goMap(done){
+  const qs = `?p=${ctx.p}&pk=${ctx.pk}&n=${ctx.n}`
+    + `&topic=${encodeURIComponent(ctx.topic)}`
+    + (done ? '&done=1' : '');
+  location.href = 'climbing-map.html' + qs;
+}
 let tT;
 function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(tT);tT=setTimeout(()=>t.classList.remove('show'),1600);}
 

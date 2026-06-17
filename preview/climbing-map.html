@@ -196,6 +196,17 @@ const PARTS = [
 
 let partIdx = 1, peakIdx = 0;
 
+// ---------- progress (persisted) ----------
+const PKEY = 'speaker_progress';
+function loadProg(){ try{ return JSON.parse(localStorage.getItem(PKEY))||{}; }catch(e){ return {}; } }
+let prog = loadProg();
+function progKey(pi,ki){ return pi+'-'+ki; }
+function getDone(pi,ki){
+  const saved = prog[progKey(pi,ki)];
+  return saved!==undefined ? saved : PARTS[pi].peaks[ki].done;
+}
+function setDone(pi,ki,v){ prog[progKey(pi,ki)] = v; localStorage.setItem(PKEY, JSON.stringify(prog)); }
+
 // altitude per peak index, and sky gradients (higher = bluer / paler at top)
 const ALT = [1200, 2480, 3760];
 const SKIES = [
@@ -219,12 +230,11 @@ function animateAlt(to){
 }
 
 // ---------- render ----------
-function buildScene(peak){
-  const cur = Math.min(peak.done, 3); // index of current node
+function buildScene(peak, pdone){
   const nodeMarkup = NODE_POS.map((p,i)=>{
     const isBoss = i===3;
-    const done = i < peak.done;
-    const current = i === peak.done;
+    const done = i < pdone;
+    const current = i === pdone;
     const label = isBoss ? peak.boss : peak.topics[i];
     let inner = "";
     if(done){
@@ -289,7 +299,7 @@ function showToast(msg){
 
 function render(){
   const peak = PARTS[partIdx].peaks[peakIdx];
-  scene.innerHTML = buildScene(peak);
+  scene.innerHTML = buildScene(peak, getDone(partIdx, peakIdx));
   document.getElementById('peakName').textContent = `${peak.emoji} ${peak.name}`;
   document.getElementById('peakSub').textContent = `· 第 ${peakIdx+1} / ${PARTS[partIdx].peaks.length} 峰`;
   document.getElementById('hint').style.display = peakIdx < PARTS[partIdx].peaks.length-1 ? 'flex' : 'none';
@@ -309,9 +319,18 @@ function bindNodes(){
         setTimeout(()=>n.classList.remove('shake'),450);
         showToast('🔒 先过前面的关卡');
       } else if(st==='current'){
-        showToast(i===3 ? `进入考官 Boss · ${label}` : `开始练习 · ${label}`);
+        if(i===3){ showToast(`👹 考官 Boss · ${label} 即将上线`); return; }
+        const qs = `?p=${partIdx}&pk=${peakIdx}&n=${i}`
+          + `&part=${encodeURIComponent(PARTS[partIdx].name)}`
+          + `&peak=${encodeURIComponent(peak.name)}`
+          + `&topic=${encodeURIComponent(label)}`;
+        location.href = 'card-practice.html' + qs;
       } else {
-        showToast(`✓ 已通关 · ${label}`);
+        const qs = `?p=${partIdx}&pk=${peakIdx}&n=${i}`
+          + `&part=${encodeURIComponent(PARTS[partIdx].name)}`
+          + `&peak=${encodeURIComponent(peak.name)}`
+          + `&topic=${encodeURIComponent(label)}`;
+        location.href = 'card-practice.html' + qs;
       }
     });
   });
@@ -369,7 +388,26 @@ stage.addEventListener('wheel', e=>{
 
 document.getElementById('reviewCard').addEventListener('click', ()=>showToast('🎁 今日复习补给 · +20 经验'));
 
-render();
+// ---------- return from practice: light up the node ----------
+(function handleReturn(){
+  const u = new URLSearchParams(location.search);
+  if(u.has('p')) partIdx = Math.min(+u.get('p'), PARTS.length-1);
+  if(u.has('pk')) peakIdx = Math.min(+u.get('pk'), PARTS[partIdx].peaks.length-1);
+  document.querySelectorAll('.part').forEach(x=>x.classList.toggle('active', +x.dataset.part===partIdx));
+
+  if(u.get('done')==='1'){
+    const n = +u.get('n');
+    const cur = getDone(partIdx, peakIdx);
+    if(n === cur){ setDone(partIdx, peakIdx, cur+1); }   // advance only the current node
+    render();
+    const topic = u.get('topic') ? decodeURIComponent(u.get('topic')) : '关卡';
+    setTimeout(()=>showToast(`🎉 ${topic} 点亮成功！+20 经验`), 350);
+    history.replaceState({}, '', location.pathname);     // clean url
+    return;
+  }
+  render();
+  history.replaceState({}, '', location.pathname);
+})();
 </script>
 </body>
 </html>
