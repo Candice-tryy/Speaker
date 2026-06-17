@@ -314,23 +314,20 @@ function bindNodes(){
       const st = n.dataset.state, i = +n.dataset.i;
       const peak = PARTS[partIdx].peaks[peakIdx];
       const label = i===3 ? peak.boss : peak.topics[i];
+      const go = ()=>{
+        const isBoss = i===3;
+        const qs = `?p=${partIdx}&pk=${peakIdx}&n=${i}`
+          + `&part=${encodeURIComponent(PARTS[partIdx].name)}`
+          + `&peak=${encodeURIComponent(peak.name)}`
+          + `&topic=${encodeURIComponent(label)}`;
+        location.href = (isBoss ? 'examiner.html' : 'card-practice.html') + qs;
+      };
       if(st==='lock'){
         n.classList.add('shake');
         setTimeout(()=>n.classList.remove('shake'),450);
-        showToast('🔒 先过前面的关卡');
-      } else if(st==='current'){
-        if(i===3){ showToast(`👹 考官 Boss · ${label} 即将上线`); return; }
-        const qs = `?p=${partIdx}&pk=${peakIdx}&n=${i}`
-          + `&part=${encodeURIComponent(PARTS[partIdx].name)}`
-          + `&peak=${encodeURIComponent(peak.name)}`
-          + `&topic=${encodeURIComponent(label)}`;
-        location.href = 'card-practice.html' + qs;
+        showToast(i===3 ? '🔒 先清完本峰 3 关再战 Boss' : '🔒 先过前面的关卡');
       } else {
-        const qs = `?p=${partIdx}&pk=${peakIdx}&n=${i}`
-          + `&part=${encodeURIComponent(PARTS[partIdx].name)}`
-          + `&peak=${encodeURIComponent(peak.name)}`
-          + `&topic=${encodeURIComponent(label)}`;
-        location.href = 'card-practice.html' + qs;
+        go();
       }
     });
   });
