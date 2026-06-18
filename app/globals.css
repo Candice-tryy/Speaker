@@ -1,0 +1,130 @@
+:root {
+  --green: #3fc196;
+  --green-deep: #2e9c97;
+  --green-text: #1e7a66;
+  --acc: #f0875a;
+  --acc-deep: #c75a2c;
+  --acc-soft: #fce3d7;
+  --yellow: #f6c84f;
+  --yellow-deep: #c98d16;
+  --yellow-soft: #fff3c8;
+  --blue: #5daee6;
+  --blue-deep: #3585c2;
+  --blue-soft: #d7eaf9;
+  --coral: var(--acc);
+  --coral-deep: var(--acc-deep);
+  --coral-text: var(--acc-deep);
+  --coral-soft: var(--acc-soft);
+  --halo: var(--acc-soft);
+  --ink: #3f5c50;
+  --muted: #7c9a8d;
+  --faint: #a6c0b7;
+  --mint-1: #eaf7f1;
+  --mint-2: #dcefe7;
+  --line: #e9f2ee;
+  --hl: var(--acc-soft);
+  --hl-line: var(--acc);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: var(--ink);
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* --- climbing map: vars + animation classes that live inside injected SVG --- */
+:root {
+  --node-lock: #bbd8cb;
+  --glass: rgba(255, 255, 255, 0.72);
+}
+
+svg.map {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.cloud {
+  animation: drift 16s ease-in-out infinite;
+}
+.cloud.c2 {
+  animation-duration: 23s;
+  animation-delay: -6s;
+}
+@keyframes drift {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(20px); }
+}
+.bird1 { animation: fly1 17s linear infinite; }
+.bird2 { animation: fly2 23s linear infinite; animation-delay: -7s; }
+.bird3 { animation: fly3 20s linear infinite; animation-delay: -13s; }
+@keyframes fly1 { 0% { transform: translate(-50px, 140px); } 100% { transform: translate(400px, 64px); } }
+@keyframes fly2 { 0% { transform: translate(-80px, 82px); } 100% { transform: translate(400px, 150px); } }
+@keyframes fly3 { 0% { transform: translate(-60px, 205px); } 100% { transform: translate(400px, 118px); } }
+.wing {
+  animation: flap 0.45s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+@keyframes flap {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.5); }
+}
+.sun-glow {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: breathe 5s ease-in-out infinite;
+}
+@keyframes breathe {
+  0%, 100% { opacity: 0.32; transform: scale(1); }
+  50% { opacity: 0.52; transform: scale(1.12); }
+}
+.climber { animation: bob 2.6s ease-in-out infinite; }
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+.halo {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: pulse 2.2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.2); }
+}
+.node { cursor: pointer; }
+.node.shake { animation: shake 0.42s; }
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-3px); }
+  40%, 80% { transform: translateX(3px); }
+}
+@keyframes mistUp {
+  0% { opacity: 0; transform: translateY(70%); }
+  45% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-70%); }
+}
+@keyframes mistDown {
+  0% { opacity: 0; transform: translateY(-70%); }
+  45% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(70%); }
+}
