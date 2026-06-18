@@ -53,6 +53,7 @@
 .peak-scene {
   height: 96px;
   position: relative;
+  overflow: hidden;
   background: linear-gradient(180deg, #aee0ff, #d9f0ff);
 }
 .peak-mtn {
@@ -64,14 +65,74 @@
   background: linear-gradient(180deg, #54cca0, #2e9c97);
   clip-path: polygon(0 100%, 20% 30%, 38% 62%, 60% 12%, 82% 55%, 100% 25%, 100% 100%);
 }
+.peak-snow {
+  position: absolute;
+  bottom: 40px;
+  left: 56%;
+  width: 22px;
+  height: 14px;
+  background: #fff;
+  clip-path: polygon(0 100%, 50% 10%, 100% 100%);
+  opacity: 0.9;
+}
 .peak-sun {
   position: absolute;
-  top: 16px;
-  right: 28px;
+  top: 14px;
+  right: 26px;
   width: 34px;
   height: 34px;
   border-radius: 50%;
   background: #fff3b0;
+  box-shadow: 0 0 18px rgba(255, 243, 176, 0.8);
+  animation: breathe 3.6s ease-in-out infinite;
+}
+.cloud {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 999px;
+  height: 12px;
+}
+.cloud::after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 12px;
+  width: 22px;
+  height: 18px;
+  background: inherit;
+  border-radius: 50%;
+}
+.cloud-a {
+  top: 18px;
+  width: 44px;
+  animation: drift 14s linear infinite;
+}
+.cloud-b {
+  top: 40px;
+  width: 32px;
+  opacity: 0.85;
+  animation: drift 20s linear infinite;
+  animation-delay: -6s;
+}
+.climber {
+  position: absolute;
+  bottom: 34px;
+  left: 52%;
+  font-size: 16px;
+  animation: bob 2.4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.95; }
+  50% { transform: scale(1.12); opacity: 1; }
+}
+@keyframes drift {
+  from { transform: translateX(-60px); }
+  to { transform: translateX(420px); }
+}
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
 .peak-name {
   padding: 12px 18px 4px;

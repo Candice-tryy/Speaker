@@ -2,7 +2,7 @@ import { useState } from "react";
 import { View, Text, ScrollView } from "@tarojs/components";
 import Taro, { useDidShow } from "@tarojs/taro";
 import { getBank, type Part } from "../../lib/api";
-import { accentFor, getProgress, getSettings, isNodeDone, nodeKey } from "../../lib/store";
+import { accentFor, getProgress, getSettings, isNodeDone, needForPart, nodeKey } from "../../lib/store";
 import "./index.scss";
 
 const PART_LABELS: Record<string, string> = {
@@ -30,7 +30,7 @@ export default function Map() {
   });
 
   const part = parts[active];
-  const need = part?.name === "Part 2串题" ? 1 : 1;
+  const need = part ? needForPart(part.name) : 1;
 
   function openNode(partName: string, peakIdx: number, nodeIdx: number, topicId: string) {
     Taro.navigateTo({
@@ -74,7 +74,11 @@ export default function Map() {
             <View className="peak" key={`${part.name}-${peakIdx}`}>
               <View className="peak-scene">
                 <View className="peak-sun" />
+                <View className="cloud cloud-a" />
+                <View className="cloud cloud-b" />
                 <View className="peak-mtn" />
+                <View className="peak-snow" />
+                <View className="climber">🧗</View>
               </View>
               <Text className="peak-name">{peak.name}</Text>
               <View className="nodes">
