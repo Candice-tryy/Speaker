@@ -7,7 +7,9 @@
 <style>
   :root{
     --green:#3FC196; --green-deep:#2E9C97; --green-text:#1E7A66;
-    --acc:#9B82DC; --acc-deep:#6E54B8; --acc-soft:#E7DEF8;
+    --acc:#F0875A; --acc-deep:#C75A2C; --acc-soft:#FCE3D7;
+    --yellow:#F6C84F; --yellow-deep:#C98D16; --yellow-soft:#FFF3C8;
+    --blue:#5DAEE6; --blue-deep:#3585C2; --blue-soft:#D7EAF9;
     --coral:var(--acc); --coral-deep:var(--acc-deep); --coral-text:var(--acc-deep);
     --coral-soft:var(--acc-soft); --halo:var(--acc-soft);
     --ink:#3F5C50; --muted:#7C9A8D; --faint:#A6C0B7;
@@ -32,13 +34,13 @@
   .back svg{width:18px;height:18px;}
   .crumb{font-size:12px;color:var(--muted);}
   .crumb b{color:#5C7B72;font-weight:600;}
-  .pill{display:flex;align-items:center;gap:4px;background:#fff;padding:5px 11px;border-radius:20px;
-        box-shadow:0 3px 8px rgba(60,120,90,.12);font-size:12px;font-weight:600;color:var(--green-deep);}
+  .pill{display:flex;align-items:center;gap:4px;background:var(--blue-soft);padding:5px 11px;border-radius:20px;
+        box-shadow:0 3px 8px rgba(53,133,194,.14);font-size:12px;font-weight:600;color:var(--blue-deep);}
   .pill svg{width:13px;height:13px;}
   .dots{display:flex;gap:6px;justify-content:center;margin-top:16px;}
   .dots i{width:7px;height:7px;border-radius:50%;background:var(--mint-2);}
   .dots i.done{background:var(--green);}
-  .dots i.cur{background:var(--coral);width:20px;border-radius:4px;}
+  .dots i.cur{background:var(--yellow);width:20px;border-radius:4px;}
 
   /* main */
   .main{flex:1;display:flex;flex-direction:column;justify-content:center;padding:0 22px;}
@@ -47,7 +49,7 @@
   .qcard{background:#fff;border-radius:26px;border:1px solid var(--line);
     box-shadow:0 12px 30px rgba(40,90,72,.08);padding:30px 24px;text-align:center;}
   .qcard .kind{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
-    color:var(--coral);margin-bottom:16px;}
+    color:var(--blue-deep);margin-bottom:16px;}
   .qcard .qtext{font-size:21px;line-height:1.5;font-weight:500;color:#2E4D44;}
   .qcard .sub{margin-top:14px;font-size:13px;line-height:1.6;color:var(--muted);}
 
@@ -77,19 +79,20 @@
   .seg{display:flex;background:var(--mint-2);border-radius:13px;padding:4px;margin-bottom:14px;}
   .seg button{flex:1;border:none;background:none;font-family:inherit;font-size:13px;font-weight:600;
      color:var(--muted);padding:7px;border-radius:9px;cursor:pointer;transition:.2s;}
-  .seg button.active{background:#fff;color:var(--green-deep);box-shadow:0 2px 6px rgba(40,90,72,.1);}
+  .seg button.active{background:#fff;color:var(--blue-deep);box-shadow:0 2px 6px rgba(53,133,194,.12);}
 
   .goal{text-align:center;font-size:12px;color:var(--muted);margin-bottom:12px;min-height:16px;}
   .goal b{color:var(--green-deep);}
 
   .recwrap{display:flex;justify-content:center;}
   .rec{width:76px;height:76px;border-radius:50%;border:none;cursor:pointer;position:relative;
-       background:var(--acc);box-shadow:0 10px 26px rgba(110,84,184,.38);display:flex;
-       align-items:center;justify-content:center;color:#fff;transition:transform .15s;}
+       background:linear-gradient(180deg,#FFE68A 0%,var(--yellow) 100%);
+       box-shadow:0 12px 28px rgba(201,141,22,.38);display:flex;
+       align-items:center;justify-content:center;color:#7A5200;transition:transform .15s;}
   .rec:active{transform:scale(.94);}
   .rec svg{width:30px;height:30px;}
-  .rec.recording{background:var(--coral-deep);}
-  .ring{position:absolute;inset:-10px;border-radius:50%;border:3px solid var(--halo);opacity:0;}
+  .rec.recording{background:linear-gradient(180deg,#FFD85F 0%,#E9A91D 100%);}
+  .ring{position:absolute;inset:-10px;border-radius:50%;border:3px solid var(--yellow-soft);opacity:0;}
   .rec.recording .ring{animation:ring 1.3s ease-out infinite;}
   @keyframes ring{0%{opacity:.8;transform:scale(.85);}100%{opacity:0;transform:scale(1.4);}}
   .rectip{text-align:center;font-size:11px;color:var(--faint);margin-top:8px;}
@@ -104,9 +107,9 @@
   .band{display:flex;align-items:center;gap:14px;}
   .score{font-size:40px;font-weight:700;color:var(--green-deep);line-height:1;}
   .dims{display:flex;gap:8px;flex:1;}
-  .dim{flex:1;background:var(--mint-1);border-radius:12px;padding:8px 10px;}
+  .dim{flex:1;background:var(--blue-soft);border-radius:12px;padding:8px 10px;}
   .dim .dl{font-size:10px;color:var(--muted);}
-  .dim .dv{font-size:15px;font-weight:600;color:var(--green-text);margin-top:1px;}
+  .dim .dv{font-size:15px;font-weight:600;color:var(--blue-deep);margin-top:1px;}
   .advice{margin-top:14px;background:var(--coral-soft);border-radius:14px;padding:11px 13px;
     font-size:13px;line-height:1.5;color:var(--coral-text);display:flex;gap:8px;}
   .advice svg{width:16px;height:16px;flex:none;margin-top:1px;}
@@ -114,7 +117,7 @@
   .fbcta button{flex:1;border:none;border-radius:15px;padding:14px;font-family:inherit;font-size:14px;
     font-weight:600;cursor:pointer;transition:.15s;}
   .fbcta .retry{background:var(--mint-2);color:var(--green-deep);flex:0 0 96px;}
-  .fbcta .pass{background:var(--green);color:#fff;box-shadow:0 8px 20px rgba(52,204,158,.4);}
+  .fbcta .pass{background:var(--yellow);color:#6B4700;box-shadow:0 8px 20px rgba(201,141,22,.32);}
   .fbcta button:active{transform:scale(.97);}
 
   .toast{position:absolute;left:50%;bottom:120px;transform:translateX(-50%) translateY(10px);
@@ -164,7 +167,7 @@
       <div class="sub" id="qsub">早上 / 下午 / 晚上分别做什么，<br>以及你最喜欢一天里的哪个时段。</div>
     </div>
 
-    <div class="reveal" id="reveal">
+    <div class="reveal open" id="reveal">
       <button class="toggle" onclick="toggleReveal()">
         看 AI 范本回答
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
@@ -233,6 +236,7 @@
 
 </div>
 
+<script src="question-bank.js"></script>
 <script>
 const $ = s => document.querySelector(s);
 let recited=false, mode='follow';
@@ -241,36 +245,68 @@ const U = new URLSearchParams(location.search);
 const ctx = {
   p: U.get('p') ?? '1', pk: U.get('pk') ?? '0', n: U.get('n') ?? '0',
   part: U.get('part') || 'Part 2', peak: U.get('peak') || 'Hometown',
-  topic: U.get('topic') || 'Daily routine'
-};
-const QUESTIONS = {
-  'Daily routine': ['Describe your daily routine.', '早上 / 下午 / 晚上分别做什么，<br>以及你最喜欢一天里的哪个时段。'],
-  'Weekend':       ['Talk about how you spend your weekends.', '你周末通常做什么，<br>和谁一起，以及为什么喜欢这样过。'],
-  'Neighbours':    ['Describe a neighbour you get on well with.', '这个人是谁，你们怎么认识的，<br>以及你们平时怎么相处。'],
+  topic: U.get('topic') || 'Daily routine',
+  topicId: U.get('topicId') || '',
+  questionId: U.get('questionId') || ''
 };
 
 const ACCENTS = [
-  {a:'#EC7CA8', d:'#C9537F', s:'#FBDEEA'},
-  {a:'#9B82DC', d:'#6E54B8', s:'#E7DEF8'},
-  {a:'#5DAEE6', d:'#3585C2', s:'#D7EAF9'},
+  {a:'#F0875A', d:'#C75A2C', s:'#FCE3D7'},
+  {a:'#F0875A', d:'#C75A2C', s:'#FCE3D7'},
+  {a:'#F0875A', d:'#C75A2C', s:'#FCE3D7'},
 ];
 
 const target = parseFloat(localStorage.getItem('speaker_target') || '6.5');
 const passMark = (target - 0.5).toFixed(1);
 const followGoal = `跟读到 <b>${passMark}</b> 即可通关 · 只看发音和流利度`;
 
-(function initCtx(){
+function escapeHTML(value){
+  return String(value || '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+}
+
+function renderAnswer(answer){
+  const defs = [
+    ['in my opinion', '表达观点', 'In my opinion, ...'],
+    ['the key point', '关键点', 'the key point is balance'],
+    ['for example', '举例', 'For example, ...'],
+    ['as a result', '结果', 'As a result, ...'],
+    ['on the other hand', '另一方面', 'On the other hand, ...']
+  ];
+  let html = escapeHTML(answer).replace(/\n{2,}/g, '<br><br>');
+  defs.forEach(([word, def, colloc])=>{
+    const re = new RegExp(`\\b${word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i');
+    html = html.replace(re, match => `<span class="w" data-w="${escapeHTML(match)}" data-ipa="" data-def="${escapeHTML(def)}" data-c="${escapeHTML(colloc)}">${match}</span>`);
+  });
+  $('#ans').innerHTML = html;
+  bindWordTags();
+}
+
+function renderQuestion(topic, question){
+  $('#crumb').textContent = `${ctx.part} · ${topic?.title || ctx.peak}`;
+  $('#kind').textContent = `Current card · ${ctx.part}`;
+  if(question?.part === 2){
+    const cue = QuestionBank.splitCueCard(question.content);
+    $('#qtext').textContent = cue.title || question.content;
+    $('#qsub').innerHTML = cue.bullets.length
+      ? cue.bullets.map(item => escapeHTML(item)).join('<br>')
+      : escapeHTML(topic?.title || ctx.topic);
+  }else{
+    $('#qtext').textContent = question?.content || `Talk about ${ctx.topic.toLowerCase()}.`;
+    $('#qsub').innerHTML = escapeHTML(topic?.title || ctx.peak);
+  }
+}
+
+(async function initCtx(){
   const acc = ACCENTS[Math.min(parseInt(ctx.pk)||0, ACCENTS.length-1)];
   document.documentElement.style.setProperty('--acc', acc.a);
   document.documentElement.style.setProperty('--acc-deep', acc.d);
   document.documentElement.style.setProperty('--acc-soft', acc.s);
   $('#targetVal').textContent = target.toFixed(1);
-  $('#crumb').textContent = `${ctx.part} · ${ctx.peak}`;
-  $('#kind').textContent = `Current card · ${ctx.part}`;
   $('#goal').innerHTML = followGoal;
-  const q = QUESTIONS[ctx.topic] || [`Talk about ${ctx.topic.toLowerCase()}.`, '围绕这个话题展开，<br>给出细节和你的看法。'];
-  $('#qtext').textContent = q[0];
-  $('#qsub').innerHTML = q[1];
+  const bank = await QuestionBank.load();
+  const item = QuestionBank.getQuestion(bank, ctx.topicId, ctx.questionId, ctx.part);
+  renderQuestion(item?.topic, item?.question);
+  renderAnswer(QuestionBank.fallbackAnswer(item?.question, item?.topic));
 })();
 
 function genPersonal(){
@@ -300,13 +336,16 @@ $('#seg').querySelectorAll('button').forEach(b=>{
   });
 });
 
-document.querySelectorAll('.w').forEach(w=>{
-  w.addEventListener('click',()=>{
-    $('#sWord').textContent=w.dataset.w;$('#sIpa').textContent=w.dataset.ipa;
-    $('#sDef').textContent=w.dataset.def;$('#sColloc').innerHTML='常见搭配：'+w.dataset.c;
-    $('#mask').classList.add('show');$('#sheet').classList.add('show');
+function bindWordTags(){
+  document.querySelectorAll('.w').forEach(w=>{
+    w.addEventListener('click',()=>{
+      $('#sWord').textContent=w.dataset.w;$('#sIpa').textContent=w.dataset.ipa;
+      $('#sDef').textContent=w.dataset.def;$('#sColloc').innerHTML='常见搭配：'+w.dataset.c;
+      $('#mask').classList.add('show');$('#sheet').classList.add('show');
+    });
   });
-});
+}
+bindWordTags();
 function closeSheet(){$('#mask').classList.remove('show');$('#sheet').classList.remove('show');}
 
 const rec=$('#rec');let holding=false;

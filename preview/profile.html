@@ -7,7 +7,9 @@
 <style>
   :root{
     --green:#3FC196; --green-deep:#2E9C97; --green-text:#1E7A66;
-    --acc:#9B82DC; --acc-deep:#6E54B8; --acc-soft:#E7DEF8;
+    --acc:#F0875A; --acc-deep:#C75A2C; --acc-soft:#FCE3D7;
+    --yellow:#F6C84F; --yellow-deep:#C98D16; --yellow-soft:#FFF3C8;
+    --blue:#5DAEE6; --blue-deep:#3585C2; --blue-soft:#D7EAF9;
     --ink:#3F5C50; --muted:#7C9A8D; --faint:#A6C0B7;
     --mint-1:#EAF7F1; --mint-2:#DCEFE7; --line:#E9F2EE;
   }
@@ -25,15 +27,17 @@
 
   /* profile head */
   .head{display:flex;align-items:center;gap:14px;}
-  .avatar{width:62px;height:62px;border-radius:22px;background:var(--mint-2);display:flex;
+  .avatar{width:62px;height:62px;border-radius:22px;background:var(--yellow-soft);display:flex;
     align-items:center;justify-content:center;font-size:32px;flex:none;}
   .head .nm{font-size:19px;font-weight:600;color:#2E4D44;}
-  .head .lv{margin-top:3px;display:inline-flex;align-items:center;gap:5px;font-size:12px;color:var(--acc-deep);
-    background:var(--acc-soft);padding:3px 10px;border-radius:20px;font-weight:600;}
+  .head .lv{margin-top:3px;display:inline-flex;align-items:center;gap:5px;font-size:12px;color:var(--blue-deep);
+    background:var(--blue-soft);padding:3px 10px;border-radius:20px;font-weight:600;}
 
   /* mini stats */
   .stats{display:flex;gap:10px;margin-top:18px;}
   .stat{flex:1;background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 10px;text-align:center;}
+  .stat:nth-child(2){background:var(--yellow-soft);border-color:#F7DE91;}
+  .stat:nth-child(3){background:var(--blue-soft);border-color:#C9E2F5;}
   .stat .v{font-size:20px;font-weight:700;color:var(--green-deep);}
   .stat .l{font-size:11px;color:var(--muted);margin-top:2px;}
 
@@ -61,7 +65,7 @@
   .row{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;border-top:1px solid var(--line);}
   .row:first-child{border-top:none;}
   .row:active{background:var(--mint-1);}
-  .row .ic{width:34px;height:34px;border-radius:11px;background:var(--mint-1);display:flex;
+  .row .ic{width:34px;height:34px;border-radius:11px;background:var(--blue-soft);display:flex;
     align-items:center;justify-content:center;color:var(--green-deep);flex:none;}
   .row .ic svg{width:18px;height:18px;}
   .row .tx{flex:1;font-size:14px;font-weight:500;color:#37524B;}
@@ -69,12 +73,12 @@
   .row .arr{color:var(--faint);}
   .row .arr svg{width:18px;height:18px;}
 
-  /* bottom nav */
-  .nav{display:flex;justify-content:space-around;padding:8px 8px 20px;}
-  .nav a{display:flex;flex-direction:column;align-items:center;gap:3px;color:var(--faint);
-    text-decoration:none;font-size:10px;cursor:pointer;}
-  .nav a.on{color:var(--green-deep);font-weight:600;}
-  .nav svg{width:23px;height:23px;}
+  .map-back{position:absolute;top:16px;right:16px;width:31px;height:31px;border-radius:50%;
+    border:1px solid rgba(215,234,249,.65);background:rgba(255,255,255,.76);
+    backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--blue-deep);
+    display:flex;align-items:center;justify-content:center;box-shadow:0 5px 14px rgba(53,133,194,.16);
+    cursor:pointer;text-decoration:none;z-index:8;}
+  .map-back svg{width:18px;height:18px;transform:translate(0.25px,-1.75px);}
 
   .toast{position:absolute;left:50%;bottom:96px;transform:translateX(-50%) translateY(10px);
     background:#2E4D44;color:#fff;font-size:12.5px;padding:9px 15px;border-radius:14px;opacity:0;
@@ -84,6 +88,9 @@
 </head>
 <body>
 <div class="phone">
+  <a class="map-back" href="climbing-map.html" aria-label="返回登山">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l6-12 5 7 3-4 4 9z"/></svg>
+  </a>
 
   <div class="body">
     <div class="head">
@@ -184,11 +191,6 @@
         <div class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></div>
       </div>
     </div>
-  </div>
-
-  <div class="nav">
-    <a href="climbing-map.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l6-12 5 7 3-4 4 9z"/></svg><span>登山</span></a>
-    <a class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M5 20a7 7 0 0 1 14 0"/></svg><span>我的</span></a>
   </div>
 
   <div class="toast" id="toast"></div>

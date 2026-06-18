@@ -7,7 +7,9 @@
 <style>
   :root{
     --green:#3FC196; --green-deep:#2E9C97; --green-text:#1E7A66;
-    --acc:#9B82DC; --acc-deep:#6E54B8; --acc-soft:#E7DEF8;
+    --acc:#F0875A; --acc-deep:#C75A2C; --acc-soft:#FCE3D7;
+    --yellow:#F6C84F; --yellow-deep:#C98D16; --yellow-soft:#FFF3C8;
+    --blue:#5DAEE6; --blue-deep:#3585C2; --blue-soft:#D7EAF9;
     --coral:var(--acc); --coral-deep:var(--acc-deep); --coral-text:var(--acc-deep);
     --coral-soft:var(--acc-soft); --halo:var(--acc-soft);
     --ink:#3F5C50; --muted:#7C9A8D; --faint:#A6C0B7;
@@ -32,8 +34,8 @@
   .av{width:38px;height:38px;border-radius:50%;background:var(--exam);display:flex;align-items:center;justify-content:center;font-size:20px;flex:none;}
   .who .n{font-size:14px;font-weight:600;color:#2E4D44;}
   .who .s{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:5px;}
-  .who .s .live{width:6px;height:6px;border-radius:50%;background:var(--green);}
-  .qcount{margin-left:auto;font-size:11px;color:var(--muted);background:#fff;border:1px solid var(--line);padding:4px 10px;border-radius:20px;}
+  .who .s .live{width:6px;height:6px;border-radius:50%;background:var(--yellow);}
+  .qcount{margin-left:auto;font-size:11px;color:var(--blue-deep);background:var(--blue-soft);border:1px solid #C9E2F5;padding:4px 10px;border-radius:20px;}
 
   /* chat */
   .chat{flex:1;overflow-y:auto;padding:16px 16px 8px;display:flex;flex-direction:column;gap:12px;}
@@ -44,8 +46,8 @@
   .bub{padding:11px 14px;font-size:14px;line-height:1.55;border-radius:18px;}
   .row.ex .bub{background:#fff;border:1px solid var(--line);border-bottom-left-radius:6px;color:#37524B;}
   .row.me{align-self:flex-end;}
-  .row.me .bub{background:var(--coral);color:#fff;border-bottom-right-radius:6px;}
-  .tag{font-size:10px;font-weight:600;color:var(--coral);margin-bottom:3px;}
+  .row.me .bub{background:var(--blue);color:#fff;border-bottom-right-radius:6px;}
+  .tag{font-size:10px;font-weight:600;color:var(--blue-deep);margin-bottom:3px;}
   .typing{display:flex;gap:4px;padding:13px 15px;}
   .typing i{width:7px;height:7px;border-radius:50%;background:var(--faint);animation:blink 1.2s infinite;}
   .typing i:nth-child(2){animation-delay:.2s;}.typing i:nth-child(3){animation-delay:.4s;}
@@ -56,13 +58,15 @@
   .hint{text-align:center;font-size:11px;color:var(--muted);margin-bottom:10px;min-height:15px;}
   .recwrap{display:flex;justify-content:center;}
   .rec{width:72px;height:72px;border-radius:50%;border:none;cursor:pointer;position:relative;
-       background:var(--acc);box-shadow:0 10px 26px rgba(110,84,184,.38);display:flex;
-       align-items:center;justify-content:center;color:#fff;transition:transform .15s;}
-  .rec:disabled{background:var(--mint-2);box-shadow:none;color:var(--faint);cursor:default;}
+       background:linear-gradient(180deg,#FFE68A 0%,var(--yellow) 100%);
+       box-shadow:0 12px 28px rgba(201,141,22,.38);display:flex;
+       align-items:center;justify-content:center;color:#7A5200;transition:transform .15s;}
+  .rec:disabled{background:linear-gradient(180deg,#FFF1B8 0%,#F6D978 100%);
+    box-shadow:none;color:#A47713;cursor:default;opacity:.72;}
   .rec:active:not(:disabled){transform:scale(.94);}
   .rec svg{width:28px;height:28px;}
-  .rec.recording{background:var(--coral-deep);}
-  .ring{position:absolute;inset:-9px;border-radius:50%;border:3px solid var(--halo);opacity:0;}
+  .rec.recording{background:linear-gradient(180deg,#FFD85F 0%,#E9A91D 100%);}
+  .ring{position:absolute;inset:-9px;border-radius:50%;border:3px solid var(--yellow-soft);opacity:0;}
   .rec.recording .ring{animation:ring 1.3s ease-out infinite;}
   @keyframes ring{0%{opacity:.8;transform:scale(.85);}100%{opacity:0;transform:scale(1.4);}}
 
@@ -79,14 +83,14 @@
   .bigband{margin:14px 0 4px;font-size:54px;font-weight:700;color:var(--green-deep);line-height:1;}
   .bandlbl{font-size:12px;color:var(--muted);}
   .dims{display:flex;gap:8px;margin:16px 0;}
-  .dim{flex:1;background:var(--mint-1);border-radius:12px;padding:9px 6px;}
+  .dim{flex:1;background:var(--blue-soft);border-radius:12px;padding:9px 6px;}
   .dim .dl{font-size:10px;color:var(--muted);}
-  .dim .dv{font-size:15px;font-weight:600;color:var(--green-text);margin-top:2px;}
+  .dim .dv{font-size:15px;font-weight:600;color:var(--blue-deep);margin-top:2px;}
   .advice{background:var(--coral-soft);border-radius:14px;padding:12px 13px;font-size:13px;line-height:1.5;
     color:var(--coral-text);display:flex;gap:8px;text-align:left;}
   .advice svg{width:16px;height:16px;flex:none;margin-top:1px;}
-  .done-btn{margin-top:18px;width:100%;border:none;border-radius:16px;padding:15px;background:var(--green);
-    color:#fff;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;box-shadow:0 10px 24px rgba(52,204,158,.4);}
+  .done-btn{margin-top:18px;width:100%;border:none;border-radius:16px;padding:15px;background:var(--yellow);
+    color:#6B4700;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;box-shadow:0 10px 24px rgba(201,141,22,.32);}
   .done-btn:active{transform:scale(.98);}
 
   .toast{position:absolute;left:50%;bottom:110px;transform:translateX(-50%) translateY(10px);
@@ -146,18 +150,20 @@
 
 </div>
 
+<script src="question-bank.js"></script>
 <script>
 const $ = s => document.querySelector(s);
 
 const U = new URLSearchParams(location.search);
 const ctx = {
   p:U.get('p')??'1', pk:U.get('pk')??'0', n:U.get('n')??'3',
-  part:U.get('part')||'Part 2', peak:U.get('peak')||'Hometown'
+  part:U.get('part')||'Part 2', peak:U.get('peak')||'Hometown',
+  topicId:U.get('topicId')||'', questionId:U.get('questionId')||''
 };
 const ACCENTS = [
-  {a:'#EC7CA8', d:'#C9537F', s:'#FBDEEA'},
-  {a:'#9B82DC', d:'#6E54B8', s:'#E7DEF8'},
-  {a:'#5DAEE6', d:'#3585C2', s:'#D7EAF9'},
+  {a:'#F0875A', d:'#C75A2C', s:'#FCE3D7'},
+  {a:'#F0875A', d:'#C75A2C', s:'#FCE3D7'},
+  {a:'#F0875A', d:'#C75A2C', s:'#FCE3D7'},
 ];
 (function(){
   const acc = ACCENTS[Math.min(parseInt(ctx.pk)||0, ACCENTS.length-1)];
@@ -168,7 +174,7 @@ const ACCENTS = [
 $('#sub').textContent = `${ctx.part} · ${ctx.peak}`;
 $('#rSeg').textContent = `${ctx.part} · ${ctx.peak} · 考官模拟`;
 
-const SCRIPT = [
+let SCRIPT = [
   { q:`Let's talk about ${ctx.peak.toLowerCase()}. Could you tell me a bit about where you live?`, react:'Mm, I see.' },
   { q:`And what do you usually do there in your free time?`, react:'That sounds nice.' },
   { q:`Has it changed much over the past few years?`, react:'Interesting.' },
@@ -197,6 +203,7 @@ function typing(cb){
 }
 
 function askNext(){
+  if(qi >= SCRIPT.length){ finish(); return; }
   $('#qcount').textContent = `第 ${qi+1} / ${SCRIPT.length} 问`;
   hint.textContent='考官正在提问…'; rec.disabled=true;
   typing(()=>{
@@ -239,8 +246,17 @@ function goMap(done){
   location.href = 'climbing-map.html' + qs;
 }
 
-// kick off
-setTimeout(askNext, 400);
+async function initExaminer(){
+  const bank = await QuestionBank.load();
+  const item = QuestionBank.getQuestion(bank, ctx.topicId, ctx.questionId, ctx.part);
+  if(item?.topic){
+    SCRIPT = QuestionBank.getExaminerScript(item.topic);
+    $('#sub').textContent = `${ctx.part} · ${item.topic.title}`;
+    $('#rSeg').textContent = `${ctx.part} · ${item.topic.title} · 考官模拟`;
+  }
+  setTimeout(askNext, 400);
+}
+initExaminer();
 </script>
 </body>
 </html>

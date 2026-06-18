@@ -7,7 +7,9 @@
 <style>
   :root{
     --green:#3FC196; --green-deep:#2E9C97; --green-text:#1E7A66;
-    --acc:#EC7CA8; --acc-deep:#C9537F; --acc-soft:#FBDEEA;
+    --acc:#F0875A; --acc-deep:#C75A2C; --acc-soft:#FCE3D7;
+    --yellow:#F6C84F; --yellow-deep:#C98D16; --yellow-soft:#FFF3C8;
+    --blue:#5DAEE6; --blue-deep:#3585C2; --blue-soft:#D7EAF9;
     --ink:#3F5C50; --muted:#7C9A8D; --faint:#A6C0B7;
     --node-lock:#BBD8CB; --line:#E4EFE9;
     --glass:rgba(255,255,255,.72);
@@ -56,43 +58,45 @@
   @keyframes mistDown{0%{opacity:0; transform:translateY(-70%);}45%{opacity:1;}100%{opacity:0; transform:translateY(70%);}}
 
   .hud{position:absolute; top:0; left:0; right:0; z-index:6;
-    display:flex; align-items:center; justify-content:space-between; gap:8px; padding:16px 16px 0;}
-  .chip{display:flex; align-items:center; gap:5px; background:var(--glass); backdrop-filter:blur(8px);
-    -webkit-backdrop-filter:blur(8px); padding:6px 11px; border-radius:20px; font-size:13px; font-weight:600;
-    box-shadow:0 4px 12px rgba(40,90,72,.12);}
-  .hud-right{display:flex; align-items:center; gap:8px;}
-  .chip.streak{color:var(--acc-deep);}
-  .chip.target{color:var(--green-deep);}
-  .chip svg{width:14px;height:14px;}
-  .parts{display:flex; align-items:flex-end; gap:11px;}
+    display:flex; align-items:flex-start; justify-content:space-between; gap:8px; padding:16px 16px 0;}
+  .hud-main{display:flex; flex-direction:column; gap:8px; align-items:flex-start;}
+  .metrics{display:flex; gap:10px; align-items:center; padding-left:1px;
+    color:#fff; text-shadow:0 1px 3px rgba(53,133,194,.45);}
+  .metric{display:flex; align-items:center; gap:4px; font-size:11px; font-weight:700;}
+  .metric svg{width:13px;height:13px;}
+  .hud-actions{display:flex; align-items:center; gap:8px;}
+  .spark{display:flex; align-items:center; gap:5px; padding:6px 10px; border-radius:999px;
+    color:var(--yellow-deep); background:rgba(255,243,200,.86); backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px); border:1px solid rgba(246,200,79,.4);
+    box-shadow:0 5px 14px rgba(201,141,22,.18); font-size:13px; font-weight:800;}
+  .spark svg{width:14px;height:14px;}
+  .settings{width:31px;height:31px;border-radius:50%;border:1px solid rgba(215,234,249,.65);
+    background:rgba(255,255,255,.76);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+    color:var(--blue-deep);display:flex;align-items:center;justify-content:center;
+    box-shadow:0 5px 14px rgba(53,133,194,.16);cursor:pointer;}
+  .settings svg{width:17px;height:17px;}
+  .parts{display:flex; align-items:flex-end; gap:13px;}
   .part{background:none; border:none; padding:0; cursor:pointer; font-family:inherit; line-height:1;
-    font-size:13px; color:#6E9486; transition:.28s; text-shadow:0 1px 2px rgba(255,255,255,.5);}
-  .part.active{font-size:21px; font-weight:700; color:#fff; text-shadow:0 1px 4px rgba(60,120,150,.5);}
+    font-size:15px; color:#5F8E82; transition:.28s; text-shadow:0 1px 2px rgba(255,255,255,.5);}
+  .part.active{font-size:26px; font-weight:800; color:#fff; text-shadow:0 1px 4px rgba(53,133,194,.55);}
 
-  .hint{position:absolute; top:92px; left:50%; transform:translateX(-50%); z-index:6;
-    display:flex; flex-direction:column; align-items:center; gap:1px; color:#fff; font-size:10px;
-    text-shadow:0 1px 3px rgba(60,120,150,.5); pointer-events:none; animation:bob 2.6s ease-in-out infinite;}
-  .hint svg{width:16px;height:16px;}
+  .hint{position:absolute; top:88px; left:0; right:0; z-index:6;
+    display:flex; align-items:center; justify-content:center; color:#fff;
+    text-shadow:0 2px 6px rgba(53,133,194,.45); pointer-events:none; animation:bob 2.6s ease-in-out infinite;}
+  .hint svg{width:34px;height:34px;filter:drop-shadow(0 2px 5px rgba(53,133,194,.35));}
 
   .bottom{position:absolute; left:0; right:0; bottom:0; z-index:6; pointer-events:none;}
   .bottom > *{pointer-events:auto;}
-  .review{margin:0 16px 12px; background:var(--glass); backdrop-filter:blur(10px);
+  .review{margin:0 16px 12px; background:rgba(255,248,219,.86); backdrop-filter:blur(10px);
     -webkit-backdrop-filter:blur(10px); border-radius:20px; padding:12px 15px; display:flex;
-    align-items:center; gap:12px; box-shadow:0 8px 22px rgba(40,90,72,.16); cursor:pointer;
-    transition:transform .15s; border:1px solid rgba(255,255,255,.6);}
+    align-items:center; gap:12px; box-shadow:0 10px 24px rgba(201,141,22,.18); cursor:pointer;
+    transition:transform .15s; border:1px solid rgba(246,200,79,.42);}
   .review:active{transform:scale(.98);}
   .review .ic{width:40px; height:40px; border-radius:14px; flex:none; display:flex; align-items:center;
-    justify-content:center; font-size:19px; background:linear-gradient(135deg,#5FD3B0,#3FC196);}
-  .review .t1{font-size:14px; font-weight:600; color:var(--green-deep);}
-  .review .t2{font-size:12px; color:#5E8E86;}
-  .review .arr{margin-left:auto; color:var(--green); font-size:20px; line-height:1;}
-
-  .nav{display:flex; justify-content:space-around; padding:8px 40px 18px;
-    background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.55) 45%);}
-  .nav a{display:flex; flex-direction:column; align-items:center; gap:3px; color:#7FA294;
-    text-decoration:none; font-size:10px; cursor:pointer; text-shadow:0 1px 2px rgba(255,255,255,.5);}
-  .nav a.on{color:var(--green-deep); font-weight:600;}
-  .nav svg{width:23px;height:23px;}
+    justify-content:center; font-size:19px; background:linear-gradient(135deg,#FFE68A,var(--yellow)); color:#7A5200;}
+  .review .t1{font-size:14px; font-weight:600; color:var(--yellow-deep);}
+  .review .t2{font-size:12px; color:#8A6B13;}
+  .review .arr{margin-left:auto; color:var(--yellow-deep); font-size:20px; line-height:1;}
 
   .toast{position:absolute; left:50%; bottom:120px; transform:translateX(-50%) translateY(10px);
     background:#2E4D44; color:#fff; font-size:12.5px; padding:9px 15px; border-radius:14px; opacity:0;
@@ -136,26 +140,39 @@
   </div>
 
   <div class="hud">
-    <div class="parts">
-      <button class="part" data-part="0">Part 1</button>
-      <button class="part active" data-part="1">Part 2</button>
-      <button class="part" data-part="2">Part 3</button>
+    <div class="hud-main">
+      <div class="parts">
+        <button class="part" data-part="0">Part 1</button>
+        <button class="part active" data-part="1">Part 2</button>
+        <button class="part" data-part="2">Part 3</button>
+      </div>
+      <div class="metrics">
+        <div class="metric">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg>
+          Target <span id="targetVal">6.5</span>
+        </div>
+        <div class="metric">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M6 20l6-15 6 15"/><path d="M9 13h6"/></svg>
+          <span id="altVal">1,200</span>m
+        </div>
+      </div>
     </div>
-    <div class="hud-right">
-      <div class="chip streak">
-        <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2c1 3-1 4-1 6 0 1 1 2 2 2s2-1 2-3c2 2 3 4 3 7a8 8 0 1 1-13-5c2 2 3 1 3-1 0-3 1-5 1-6z"/></svg>
+    <div class="hud-actions">
+      <div class="spark">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2.2c2.6 2.9 2.2 5.2 4.1 7 2.2 2 4 4.2 4 7a7.9 7.9 0 0 1-15.8 0c0-3 1.5-5.4 3.7-7.3 1.5-1.3 2-3.7 4-6.7Z" fill="#E64B3C"/>
+          <path d="M12.7 13.1c.8 1.2 2.4 2.2 2.4 4.2a3.2 3.2 0 0 1-6.4 0c0-1.7 1.1-2.8 2.2-4 .1 1 .7 1.5 1.3 1.5.5 0 .8-.5.5-1.7Z" fill="#FFB238"/>
+        </svg>
         <span id="streakVal">7</span>
       </div>
-      <div class="chip target">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg>
-        <span id="targetVal">6.5</span>
-      </div>
+      <a class="settings" href="profile.html" aria-label="设置">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15.5A3.5 3.5 0 1 0 12 8a3.5 3.5 0 0 0 0 7.5Z"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.04.04a2 2 0 0 1-2.83 2.83l-.04-.04A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 .6V20a2 2 0 0 1-4 0v-.06a1.7 1.7 0 0 0-1-.54 1.7 1.7 0 0 0-1.88.34l-.04.04a2 2 0 0 1-2.83-2.83l.04-.04A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-.6-1H4a2 2 0 0 1 0-4h.06a1.7 1.7 0 0 0 .54-1 1.7 1.7 0 0 0-.34-1.88l-.04-.04a2 2 0 1 1 2.83-2.83l.04.04A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-.6V4a2 2 0 0 1 4 0v.06a1.7 1.7 0 0 0 1 .54 1.7 1.7 0 0 0 1.88-.34l.04-.04a2 2 0 1 1 2.83 2.83l-.04.04A1.7 1.7 0 0 0 19.4 9c.2.36.4.68.6 1H20a2 2 0 0 1 0 4h-.06a1.7 1.7 0 0 0-.54 1Z"/></svg>
+      </a>
     </div>
   </div>
 
   <div class="hint" id="hint">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
-    <span>上滑去下一峰</span>
   </div>
 
   <div class="bottom">
@@ -166,10 +183,6 @@
         <div class="t2">点亮 +20 经验 · 1 关</div>
       </div>
       <div class="arr">›</div>
-    </div>
-    <div class="nav">
-      <a class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l6-12 5 7 3-4 4 9z"/></svg><span>登山</span></a>
-      <a href="profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M5 20a7 7 0 0 1 14 0"/></svg><span>我的</span></a>
     </div>
   </div>
 
@@ -188,31 +201,16 @@
 
 </div>
 
+<script src="question-bank.js"></script>
 <script>
-const FOOT = {x:52, y:576};
+const FOOT = {x:34, y:612};
 const NODE_POS = [
-  {x:104, y:496},
-  {x:170, y:404},
-  {x:228, y:312},
-  {x:258, y:186}
+  {x:132, y:552},
+  {x:230, y:486},
+  {x:116, y:412},
+  {x:260, y:302}
 ];
-const PARTS = [
-  { name:"Part 1", peaks:[
-    {name:"Hometown", topics:["Where you live","Your room","Neighbours"], boss:"Examiner", done:2},
-    {name:"Food",     topics:["Cooking","Eating out","Snacks"],          boss:"Examiner", done:0},
-    {name:"Music",    topics:["Favourite song","Concerts","Singing"],     boss:"Examiner", done:0},
-  ]},
-  { name:"Part 2", peaks:[
-    {name:"Hometown", topics:["Daily routine","Weekend","Neighbours"], boss:"Examiner", done:1},
-    {name:"Travel",   topics:["A trip","A city","A journey"],          boss:"Examiner", done:0},
-    {name:"Study",    topics:["A teacher","A subject","A skill"],       boss:"Examiner", done:0},
-  ]},
-  { name:"Part 3", peaks:[
-    {name:"Society",     topics:["Technology","Work life","Change"], boss:"Examiner", done:0},
-    {name:"Environment", topics:["Climate","Cities","Future"],       boss:"Examiner", done:0},
-    {name:"Opinions",    topics:["Education","Media","Values"],       boss:"Examiner", done:0},
-  ]},
-];
+let PARTS = [];
 
 let partIdx = 1, peakIdx = 0;
 
@@ -230,9 +228,9 @@ const SKIES = [
   "linear-gradient(180deg,#6FBEEC 0%,#97D2F0 24%,#C7E7EC 54%,#E2F3E8 78%,#F1F0E5 100%)",
 ];
 const ACCENTS = [
-  {a:'#EC7CA8', d:'#C9537F', s:'#FBDEEA'},
-  {a:'#9B82DC', d:'#6E54B8', s:'#E7DEF8'},
-  {a:'#5DAEE6', d:'#3585C2', s:'#D7EAF9'},
+  {a:'#F0875A', d:'#C75A2C', s:'#FCE3D7'},
+  {a:'#F0875A', d:'#C75A2C', s:'#FCE3D7'},
+  {a:'#F0875A', d:'#C75A2C', s:'#FCE3D7'},
 ];
 const phoneEl = document.querySelector('.phone');
 
@@ -249,32 +247,44 @@ function animateAlt(to){
 
 function pathD(){
   const f=FOOT, n=NODE_POS;
-  return `M${f.x} ${f.y} Q92 540 ${n[0].x} ${n[0].y} Q120 430 ${n[1].x} ${n[1].y} `
-       + `Q224 376 ${n[2].x} ${n[2].y} Q236 250 ${n[3].x} ${n[3].y}`;
+  return `M${f.x} ${f.y} C76 606 78 554 ${n[0].x} ${n[0].y} `
+       + `C190 510 294 558 ${n[1].x} ${n[1].y} `
+       + `C172 448 50 484 ${n[2].x} ${n[2].y} `
+       + `C174 354 260 382 ${n[3].x} ${n[3].y}`;
+}
+
+function nextPathD(){
+  const p = NODE_POS[3];
+  return `M${p.x} ${p.y} C300 286 306 248 346 226 C364 216 378 208 396 196`;
+}
+
+function entryPathD(){
+  const f = FOOT;
+  return `M-42 668 C-8 656 4 630 ${f.x} ${f.y}`;
 }
 
 function buildScene(peak, pdone, ki, total){
   const nodes = NODE_POS.map((p,i)=>{
     const isBoss = i===3, done = i<pdone, current = i===pdone;
-    const label = isBoss ? peak.boss : peak.topics[i];
+    const label = String(isBoss ? peak.boss : peak.topics[i] || 'Practice');
     let inner = "";
     if(done){
       inner = `<circle cx="${p.x}" cy="${p.y}" r="${isBoss?13:9}" fill="var(--green)"/>
                <circle cx="${p.x}" cy="${p.y}" r="${isBoss?13:9}" fill="none" stroke="#fff" stroke-width="2" opacity=".5"/>
                <path d="M${p.x-5} ${p.y} l4 4 l7 -8" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>`;
     } else if(current){
-      const halo = `<ellipse class="halo" cx="${p.x}" cy="${p.y+12}" rx="21" ry="9" fill="var(--acc-soft)" opacity=".8"/>`;
+      const halo = `<ellipse class="halo" cx="${p.x}" cy="${p.y+12}" rx="25" ry="11" fill="var(--yellow-soft)" opacity=".9"/>`;
       if(isBoss){
-        inner = halo + `<circle cx="${p.x}" cy="${p.y}" r="14" fill="#fff"/><circle cx="${p.x}" cy="${p.y}" r="10.5" fill="var(--acc)"/>
+        inner = halo + `<circle cx="${p.x}" cy="${p.y}" r="15" fill="#fff"/><circle cx="${p.x}" cy="${p.y}" r="11.2" fill="var(--yellow)"/>
           <text x="${p.x}" y="${p.y+4}" text-anchor="middle" font-size="13">😺</text>
-          <rect x="${p.x}" y="${p.y-26}" width="3" height="13" fill="var(--acc-deep)"/>
-          <path d="M${p.x+3} ${p.y-26} l11 4 l-11 4 Z" fill="var(--acc)"/>`;
+          <rect x="${p.x}" y="${p.y-28}" width="3" height="15" fill="var(--yellow-deep)"/>
+          <path d="M${p.x+3} ${p.y-28} l13 4.5 l-13 4.5 Z" fill="var(--yellow)"/>`;
       } else {
-        inner = halo + `<circle cx="${p.x}" cy="${p.y}" r="13" fill="#fff"/><circle cx="${p.x}" cy="${p.y}" r="9.5" fill="var(--acc)"/>
+        inner = halo + `<circle cx="${p.x}" cy="${p.y}" r="14" fill="#fff"/><circle cx="${p.x}" cy="${p.y}" r="10.2" fill="var(--yellow)"/>
           <g class="climber"><g transform="translate(${p.x},${p.y-13})">
             <circle cx="0" cy="-3" r="3.6" fill="#fff"/>
             <path d="M-3.3 1 q3.3 -4 6.6 0 l-1 6.5 h-4.6 Z" fill="#fff"/>
-            <path d="M-3.6 -5 a3.8 2.1 0 0 1 7.2 0 Z" fill="var(--acc-deep)"/>
+            <path d="M-3.6 -5 a3.8 2.1 0 0 1 7.2 0 Z" fill="var(--yellow-deep)"/>
           </g></g>`;
       }
     } else {
@@ -284,7 +294,7 @@ function buildScene(peak, pdone, ki, total){
     }
     const w = Math.max(46, label.length*6.4 + 16);
     const ly = p.y - (isBoss?27:25);
-    const lc = current ? "var(--acc-deep)" : "var(--muted)";
+    const lc = current ? "var(--yellow-deep)" : "var(--muted)";
     const lw = current ? "600" : "500";
     const lbl = `<rect x="${p.x-w/2}" y="${ly-12}" width="${w}" height="17" rx="8.5" fill="#fff" opacity="${current?1:.94}"/>
                  <text x="${p.x}" y="${ly}" text-anchor="middle" font-size="10.5" fill="${lc}" font-weight="${lw}">${label}</text>`;
@@ -293,54 +303,94 @@ function buildScene(peak, pdone, ki, total){
 
   let dots = "";
   for(let d=0; d<total; d++){
-    const cy = 150 + d*15;
+    const cy = 180 - d*15;
     dots += `<circle cx="324" cy="${cy}" r="${d===ki?4.5:3}" fill="${d===ki?'#fff':'rgba(255,255,255,.5)'}"/>`;
   }
+  const entryTrail = ki > 0 ? `
+    <path d="${entryPathD()}" fill="none" stroke="rgba(74,48,24,.16)" stroke-width="17" stroke-linecap="round"/>
+    <path d="${entryPathD()}" fill="none" stroke="#A9773E" stroke-width="10" stroke-linecap="round" opacity=".5"/>
+    <path d="${entryPathD()}" fill="none" stroke="#D8B071" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="1.5 10" opacity=".56"/>` : "";
+  const nextTrail = ki < total - 1 ? `
+    <path d="${nextPathD()}" fill="none" stroke="rgba(74,48,24,.14)" stroke-width="17" stroke-linecap="round"/>
+    <path d="${nextPathD()}" fill="none" stroke="#A9773E" stroke-width="10" stroke-linecap="round" opacity=".46"/>
+    <path d="${nextPathD()}" fill="none" stroke="#D8B071" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="1.5 10" opacity=".5"/>` : "";
 
   return `
   <svg class="map" viewBox="0 0 340 720" preserveAspectRatio="xMidYMid slice">
     <defs>
       <linearGradient id="mtMain" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#7FD0AE"/><stop offset="1" stop-color="#4FBD93"/>
+        <stop offset="0" stop-color="#81D7B8"/><stop offset="1" stop-color="#4FBD93"/>
       </linearGradient>
       <linearGradient id="mtFore" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0" stop-color="#5FC79C"/><stop offset="1" stop-color="#43B083"/>
       </linearGradient>
+      <linearGradient id="pathGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#B8874A"/><stop offset="1" stop-color="#8B5E31"/>
+      </linearGradient>
+      <radialGradient id="dawnGlow" cx="50%" cy="45%" r="55%">
+        <stop offset="0" stop-color="#FFECA8" stop-opacity=".75"/>
+        <stop offset=".48" stop-color="#FFD77A" stop-opacity=".28"/>
+        <stop offset="1" stop-color="#FFD77A" stop-opacity="0"/>
+      </radialGradient>
     </defs>
 
-    <circle class="sun-glow" cx="282" cy="70" r="36" fill="#FFE08A"/>
-    <circle cx="282" cy="70" r="22" fill="#FFD45F"/>
-    <circle cx="282" cy="70" r="22" fill="#FFEDB4" opacity=".45"/>
+    <ellipse class="sun-glow" cx="286" cy="92" rx="82" ry="56" fill="url(#dawnGlow)"/>
+    <path d="M234 116 Q282 84 334 112" fill="none" stroke="#FFE6A1" stroke-width="2.5" stroke-linecap="round" opacity=".42"/>
 
-    <g class="cloud"><ellipse cx="74" cy="118" rx="34" ry="15" fill="#fff"/><ellipse cx="96" cy="108" rx="22" ry="14" fill="#fff"/><ellipse cx="52" cy="112" rx="18" ry="11" fill="#fff"/></g>
-    <g class="cloud c2"><ellipse cx="250" cy="176" rx="26" ry="12" fill="#fff" opacity=".92"/><ellipse cx="267" cy="168" rx="17" ry="10" fill="#fff" opacity=".92"/></g>
+    <g class="cloud"><ellipse cx="74" cy="118" rx="34" ry="15" fill="#fff"/><ellipse cx="96" cy="108" rx="22" ry="14" fill="#fff"/><ellipse cx="52" cy="112" rx="18" ry="11" fill="#fff"/><ellipse cx="118" cy="119" rx="16" ry="9" fill="#D7EAF9" opacity=".55"/></g>
+    <g class="cloud c2"><ellipse cx="250" cy="176" rx="26" ry="12" fill="#fff" opacity=".92"/><ellipse cx="267" cy="168" rx="17" ry="10" fill="#fff" opacity=".92"/><ellipse cx="228" cy="178" rx="17" ry="8" fill="#D7EAF9" opacity=".52"/></g>
 
     <g class="bird1"><g class="wing"><path d="M0 0 Q5 -5 10 0 Q15 -5 20 0" fill="none" stroke="#6E8E9E" stroke-width="2" stroke-linecap="round"/></g></g>
     <g class="bird2"><g class="wing"><path d="M0 0 Q4 -4 8 0 Q12 -4 16 0" fill="none" stroke="#7C99A6" stroke-width="1.8" stroke-linecap="round"/></g></g>
     <g class="bird3"><g class="wing"><path d="M0 0 Q4.5 -4.5 9 0 Q13.5 -4.5 18 0" fill="none" stroke="#88A2AE" stroke-width="1.8" stroke-linecap="round"/></g></g>
 
-    <path d="M-10 720 L-10 360 Q70 300 150 350 Q220 398 290 332 Q330 296 360 326 L360 720 Z" fill="#BFE0D6"/>
-    <path d="M-10 720 L20 470 Q120 386 180 430 Q226 350 258 186 Q300 410 360 470 L360 720 Z" fill="url(#mtMain)"/>
-    <path d="M244 214 Q258 184 272 214 Q264 222 258 218 Q252 222 244 214 Z" fill="#fff" opacity=".94"/>
-    <path d="M-10 720 L-10 596 Q90 540 180 598 Q272 656 360 596 L360 720 Z" fill="url(#mtFore)"/>
+    <path d="M-34 720 L-28 414 C20 360 72 386 114 340 C160 290 202 306 246 262 C292 216 338 218 398 256 L398 720 Z" fill="#BFE0D6"/>
+    <path d="M-26 720 L-18 552 C8 444 54 392 98 346 C136 306 168 326 204 284 C248 234 284 240 322 198 C348 170 370 154 394 142 L394 720 Z" fill="url(#mtMain)"/>
+    <path d="M-18 708 C34 656 76 684 130 632 C178 586 222 606 266 560 C310 516 346 524 392 548 L392 720 L-18 720 Z" fill="#68C7A1" opacity=".66"/>
+    <path d="M8 628 C52 578 92 602 136 552 C178 506 224 530 268 478 C304 436 344 438 388 468 L388 720 L8 720 Z" fill="#76CBA8" opacity=".44"/>
+    <path d="M-8 520 C38 462 76 486 120 438 C164 390 208 412 252 364 C294 320 340 320 390 346 L390 720 L-8 720 Z" fill="#86D5B5" opacity=".28"/>
+    <path d="M-22 720 L-14 640 C42 590 92 632 150 596 C204 562 250 590 302 552 C338 526 360 520 382 532 L382 720 Z" fill="url(#mtFore)"/>
+    <path d="M36 552 C84 520 122 526 162 492 C202 458 232 468 276 430" fill="none" stroke="#D7EAF9" stroke-width="19" stroke-linecap="round" opacity=".14"/>
+    <path d="M58 430 C104 386 148 404 190 358 C226 320 266 326 312 286" fill="none" stroke="#D7EAF9" stroke-width="16" stroke-linecap="round" opacity=".13"/>
     <path d="M84 560 q6 16 -3 27 q-10 -9 3 -27Z" fill="#3FA37D" opacity=".45"/>
     <path d="M300 566 q6 16 -3 27 q-10 -9 3 -27Z" fill="#3FA37D" opacity=".4"/>
 
     <g><path d="M40 596 l8 -18 l8 18 Z" fill="#3C8F6E"/><path d="M40 587 l8 -16 l8 16 Z" fill="#4CA37E"/><rect x="46" y="596" width="4" height="7" fill="#9B7B53"/></g>
     <g><path d="M286 588 l7 -15 l7 15 Z" fill="#3C8F6E"/><path d="M286 581 l7 -13 l7 13 Z" fill="#4CA37E"/><rect x="290" y="588" width="4" height="7" fill="#9B7B53"/></g>
-    <circle cx="150" cy="640" r="3" fill="var(--acc)" opacity=".85"/><circle cx="210" cy="628" r="3" fill="#fff" opacity=".85"/><circle cx="120" cy="620" r="2.5" fill="var(--acc-soft)"/>
+    <circle cx="150" cy="640" r="3" fill="var(--yellow)" opacity=".9"/><circle cx="210" cy="628" r="3" fill="#fff" opacity=".85"/><circle cx="120" cy="620" r="2.5" fill="var(--blue-soft)"/>
+    <g opacity=".9">
+      <g transform="translate(78 628)">
+        <path d="M0 8 C2 3 4 1 8 0" fill="none" stroke="#3FA37D" stroke-width="1.4" stroke-linecap="round"/>
+        <circle cx="-2" cy="5" r="2.1" fill="#FFE68A"/><circle cx="2" cy="3" r="2" fill="#F4A277"/><circle cx="6" cy="1" r="1.9" fill="#D7EAF9"/>
+      </g>
+      <g transform="translate(178 594)">
+        <path d="M0 9 C1 4 5 2 9 0" fill="none" stroke="#3FA37D" stroke-width="1.35" stroke-linecap="round"/>
+        <circle cx="-1" cy="6" r="1.9" fill="#D7EAF9"/><circle cx="3" cy="3" r="2.2" fill="#FFE68A"/><circle cx="8" cy="1" r="1.8" fill="#F4A277"/>
+      </g>
+      <g transform="translate(272 536)">
+        <path d="M0 8 C3 4 5 2 10 1" fill="none" stroke="#3FA37D" stroke-width="1.35" stroke-linecap="round"/>
+        <circle cx="-1" cy="6" r="1.8" fill="#FFE68A"/><circle cx="4" cy="3" r="1.9" fill="#D7EAF9"/><circle cx="9" cy="1" r="1.7" fill="#F4A277"/>
+      </g>
+      <g transform="translate(64 470)" opacity=".78">
+        <path d="M0 7 C2 3 5 2 9 0" fill="none" stroke="#3FA37D" stroke-width="1.25" stroke-linecap="round"/>
+        <circle cx="-1" cy="5" r="1.7" fill="#D7EAF9"/><circle cx="4" cy="2.5" r="1.8" fill="#FFE68A"/><circle cx="9" cy="0" r="1.5" fill="#F4A277"/>
+      </g>
+      <g transform="translate(216 404)" opacity=".72">
+        <path d="M0 7 C3 4 5 2 9 1" fill="none" stroke="#3FA37D" stroke-width="1.2" stroke-linecap="round"/>
+        <circle cx="-1" cy="5" r="1.5" fill="#FFE68A"/><circle cx="4" cy="3" r="1.7" fill="#F4A277"/><circle cx="9" cy="1" r="1.5" fill="#D7EAF9"/>
+      </g>
+    </g>
 
-    <path d="${pathD()}" fill="none" stroke="#E7C893" stroke-width="12" stroke-linecap="round"/>
-    <path d="${pathD()}" fill="none" stroke="#FCF4E2" stroke-width="3" stroke-linecap="round" stroke-dasharray="1.5 11"/>
+    ${entryTrail}
+    <path d="${pathD()}" fill="none" stroke="rgba(74,48,24,.22)" stroke-width="19" stroke-linecap="round"/>
+    <path d="${pathD()}" fill="none" stroke="url(#pathGrad)" stroke-width="12" stroke-linecap="round"/>
+    <path d="${pathD()}" fill="none" stroke="#D8B071" stroke-width="3" stroke-linecap="round" stroke-dasharray="1.5 11"/>
+    ${nextTrail}
 
     <g><circle cx="${FOOT.x}" cy="${FOOT.y}" r="10" fill="var(--green)"/><path d="M${FOOT.x-5} ${FOOT.y} l4 4 l7 -8" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></g>
     ${nodes}
 
-    <text x="170" y="126" text-anchor="middle" font-size="15" font-weight="700" fill="#fff" style="paint-order:stroke" stroke="rgba(70,130,160,.35)" stroke-width="3">${peak.name}</text>
-    <g transform="translate(296,150)">
-      <path d="M0 0 l5 -9 l3 5 l3 -4 l5 8 Z" fill="#fff" opacity=".9"/>
-      <text x="4" y="20" text-anchor="middle" font-size="10" font-weight="600" fill="#fff" style="paint-order:stroke" stroke="rgba(70,130,160,.35)" stroke-width="2.5"><tspan id="altVal">1,200</tspan> m</text>
-    </g>
+    <text x="170" y="134" text-anchor="middle" font-size="15" font-weight="700" fill="#fff" style="paint-order:stroke" stroke="rgba(70,130,160,.35)" stroke-width="3">${peak.name}</text>
     ${dots}
   </svg>`;
 }
@@ -361,6 +411,7 @@ function applyAccent(){
 }
 
 function render(){
+  if(!PARTS.length) return;
   const peak = PARTS[partIdx].peaks[peakIdx];
   const total = PARTS[partIdx].peaks.length;
   applyAccent();
@@ -376,12 +427,18 @@ function bindNodes(){
     n.addEventListener('click', ()=>{
       const st = n.dataset.state, i = +n.dataset.i;
       const peak = PARTS[partIdx].peaks[peakIdx];
+      const partName = PARTS[partIdx].name;
+      const partNo = partName === 'Part 1' ? 1 : partName === 'Part 3' ? 3 : 2;
+      const card = i===3 ? peak.cards[0] : peak.cards[i];
+      const question = card?.questions?.find(q => q.part === partNo) || card?.questions?.[0];
       const label = i===3 ? peak.boss : peak.topics[i];
       const go = ()=>{
         const qs = `?p=${partIdx}&pk=${peakIdx}&n=${i}`
-          + `&part=${encodeURIComponent(PARTS[partIdx].name)}`
+          + `&part=${encodeURIComponent(partName)}`
           + `&peak=${encodeURIComponent(peak.name)}`
-          + `&topic=${encodeURIComponent(label)}`;
+          + `&topic=${encodeURIComponent(label)}`
+          + (card ? `&topicId=${encodeURIComponent(card.id)}` : '')
+          + (question ? `&questionId=${encodeURIComponent(question.id)}` : '');
         location.href = (i===3 ? 'examiner.html' : 'card-practice.html') + qs;
       };
       if(st==='lock'){
@@ -433,7 +490,7 @@ document.getElementById('reviewCard').addEventListener('click', ()=>showToast('�
 
 document.getElementById('targetVal').textContent = localStorage.getItem('speaker_target') || '6.5';
 
-(function handleReturn(){
+function handleReturn(){
   const u = new URLSearchParams(location.search);
   if(u.has('p')) partIdx = Math.min(+u.get('p'), PARTS.length-1);
   if(u.has('pk')) peakIdx = Math.min(+u.get('pk'), PARTS[partIdx].peaks.length-1);
@@ -448,7 +505,7 @@ document.getElementById('targetVal').textContent = localStorage.getItem('speaker
   }
   render();
   history.replaceState({}, '', location.pathname);
-})();
+}
 
 (function onboarding(){
   if(localStorage.getItem('speaker_onboarded')) return;
@@ -464,6 +521,17 @@ document.getElementById('targetVal').textContent = localStorage.getItem('speaker
   }
   document.getElementById('obGo').addEventListener('click', finish);
   document.getElementById('obSkip').addEventListener('click', finish);
+})();
+
+(async function initQuestionBank(){
+  try{
+    const bank = await QuestionBank.load();
+    PARTS = bank.parts;
+    if(!bank.loaded) showToast('题库读取失败，已使用内置备用题');
+  }catch(e){
+    console.warn(e);
+  }
+  handleReturn();
 })();
 </script>
 </body>

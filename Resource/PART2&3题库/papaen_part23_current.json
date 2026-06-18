@@ -1,0 +1,4241 @@
+{
+  "source_page": "https://ielts.papaen.com/center/speaking?ielts-speaking=%2Fspeaking_materials%2Findex%3Fpart%25M23%25M1tag%25M20",
+  "api_source": "https://napi.papaen.com/v2/exercise/material_parts",
+  "part23_file_url": "https://tfile.papaen.com/2026/06/07/RmQPMVkI30HkFC5uYtFFjIhw8rLUIGryzC3UL8iD.txt",
+  "module_title": "Part 2&3",
+  "module_version": 6745,
+  "exported_at": "2026-06-17T17:27:06.499446+08:00",
+  "notes": "current includes topics with is_show=1; archive includes all decrypted Part 2&3 records from the file. Original site answer/audio payloads are not included.",
+  "topic_count": 77,
+  "question_count": 450,
+  "topics": [
+    {
+      "index": 1,
+      "id": 1230,
+      "title": "发小",
+      "tag_id": 18,
+      "tag_name": "人物",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778051687,
+      "question_count": 7,
+      "questions": [
+        {
+          "index": 1,
+          "id": 3556,
+          "part": 2,
+          "content": "Describe a friend from your childhood You should say: Who he/she is Where you met each other What you often did together And explain what made you like him/her",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 3555,
+          "part": 3,
+          "content": "What do you think of online social media?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 3554,
+          "part": 3,
+          "content": "Do you still keep in touch with your friends from childhood? Why or why not?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 3553,
+          "part": 3,
+          "content": "How important is childhood friendship to children?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 3552,
+          "part": 3,
+          "content": "What do you think of communicating via social media?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 3551,
+          "part": 3,
+          "content": "Do you use a lot of emojis online?",
+          "is_show": 1
+        },
+        {
+          "index": 7,
+          "id": 3550,
+          "part": 3,
+          "content": "Do you think online communication through social media will replace face-to-face communication?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "id": 1185,
+      "title": "交通拥堵",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 3,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1779184294,
+      "question_count": 7,
+      "questions": [
+        {
+          "index": 1,
+          "id": 3454,
+          "part": 2,
+          "content": "Describe a time when you were stuck in a traffic jam You should say: When it happened Where you were stuck What you did while waiting And explain how you felt in the traffic jam",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 3450,
+          "part": 3,
+          "content": "How can we solve the traffic jam problem?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 3451,
+          "part": 3,
+          "content": "Do you think developing public transportation can solve traffic jam problems?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 3452,
+          "part": 3,
+          "content": "Do you think highways can help reduce traffic jams?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 3453,
+          "part": 3,
+          "content": "What are some effective ways to manage traffic?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 6235,
+          "part": 3,
+          "content": "Would you rather be in a car or a bus in a traffic jam?",
+          "is_show": 1
+        },
+        {
+          "index": 7,
+          "id": 6234,
+          "part": 3,
+          "content": "Do you like to use public transport?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "id": 1117,
+      "title": "语言学习",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 3,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778655557,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 3273,
+          "part": 2,
+          "content": "Describe something that helped you learn a language You should say What it is What language you learned How it helped you learn the language And how you felt about it",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 3269,
+          "part": 3,
+          "content": "What difficulties do people face when learning a language?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 3270,
+          "part": 3,
+          "content": "Do you think language learning is important? Why?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 3271,
+          "part": 3,
+          "content": "Which is better, to study alone or to study in a group? Why?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 3272,
+          "part": 3,
+          "content": "What’s the best way to learn a language?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "id": 1101,
+      "title": "收到特殊蛋糕",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 3,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778052102,
+      "question_count": 7,
+      "questions": [
+        {
+          "index": 1,
+          "id": 3230,
+          "part": 2,
+          "content": "Describe a special cake you received from others You should say When it happened Where it happened Who you got the cake from And explain why it’s a special cake",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 3229,
+          "part": 3,
+          "content": "Do you think it’s good to communicate when eating with your family?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 3228,
+          "part": 3,
+          "content": "Why are some people willing to spend a lot of money on meals or special days?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 5344,
+          "part": 3,
+          "content": "Is there any food in your country that is eaten at special times or on special occasions?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 3226,
+          "part": 3,
+          "content": "What are the difference between special food in China and foreign countries?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 6120,
+          "part": 3,
+          "content": "In your country, do people nowadays cook at home as frequently as people did in the past?",
+          "is_show": 1
+        },
+        {
+          "index": 7,
+          "id": 3227,
+          "part": 3,
+          "content": "Do people usually cook special food in China?",
+          "is_show": 0
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "id": 185,
+      "title": "重要河流/湖泊",
+      "tag_id": 19,
+      "tag_name": "事物",
+      "level": 2,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778655478,
+      "question_count": 9,
+      "questions": [
+        {
+          "index": 1,
+          "id": 678,
+          "part": 2,
+          "content": "Describe an important river/lake in your country You should say: Where it is located How big/long it is What it looks like And explain why it is important",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 672,
+          "part": 3,
+          "content": "How can rivers/lakes benefit local people?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 673,
+          "part": 3,
+          "content": "Do you think rivers/lakes attract tourists?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 676,
+          "part": 3,
+          "content": "How do rivers and lakes affect local tourism?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 677,
+          "part": 3,
+          "content": "Are rivers and lakes good for transport?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 675,
+          "part": 3,
+          "content": "Do you think rivers and lakes attract tourists?",
+          "is_show": 0
+        },
+        {
+          "index": 7,
+          "id": 671,
+          "part": 3,
+          "content": "Do people in your country go swimming in their spare time?",
+          "is_show": 0
+        },
+        {
+          "index": 8,
+          "id": 670,
+          "part": 3,
+          "content": "Is it necessary for everyone to learn swimming?",
+          "is_show": 0
+        },
+        {
+          "index": 9,
+          "id": 668,
+          "part": 3,
+          "content": "Do people like the rivers in your country?",
+          "is_show": 0
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "id": 182,
+      "title": "花费甚少的外出日",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 2,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1779187423,
+      "question_count": 13,
+      "questions": [
+        {
+          "index": 1,
+          "id": 657,
+          "part": 2,
+          "content": "Describe a special day out that cost you little money/didn’t cost you much You should say: When was the day Where you went How much you spent And explain how you feel about the day",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 652,
+          "part": 3,
+          "content": "Do people like to spend their leisure time outside in your country?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 653,
+          "part": 3,
+          "content": "How do people spend their leisure time in China?",
+          "is_show": 0
+        },
+        {
+          "index": 4,
+          "id": 654,
+          "part": 3,
+          "content": "How does technology affect the way people spend their leisure time?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 655,
+          "part": 3,
+          "content": "Do you think only old people have time for leisure?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 6269,
+          "part": 3,
+          "content": "Going out to have holidays is tiring. Why do people still want to do it?",
+          "is_show": 1
+        },
+        {
+          "index": 7,
+          "id": 6268,
+          "part": 3,
+          "content": "Why do people like to have days off?",
+          "is_show": 1
+        },
+        {
+          "index": 8,
+          "id": 6267,
+          "part": 3,
+          "content": "How do people spend their leisure time in your country?",
+          "is_show": 1
+        },
+        {
+          "index": 9,
+          "id": 651,
+          "part": 3,
+          "content": "Is it possible to buy something from a physical store without money?",
+          "is_show": 0
+        },
+        {
+          "index": 10,
+          "id": 650,
+          "part": 3,
+          "content": "Why is online shopping so popular these days?",
+          "is_show": 0
+        },
+        {
+          "index": 11,
+          "id": 649,
+          "part": 3,
+          "content": "Have you ever had a bad shopping experience?",
+          "is_show": 0
+        },
+        {
+          "index": 12,
+          "id": 648,
+          "part": 3,
+          "content": "How can people save as much money as possible?",
+          "is_show": 0
+        },
+        {
+          "index": 13,
+          "id": 647,
+          "part": 3,
+          "content": "Do teenagers spend more money than they used to?",
+          "is_show": 0
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "id": 1920,
+      "title": "想要颁布的环保法律",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1779859249,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6278,
+          "part": 2,
+          "content": "Describe an environmental law you would like your country to introduce You should say: What law it should be Why people should follow the law Whether the law will be popular And explain how you feel about this law",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6282,
+          "part": 3,
+          "content": "What environmentallaws does your country already have?",
+          "is_show": 0
+        },
+        {
+          "index": 3,
+          "id": 6281,
+          "part": 3,
+          "content": "Will there be a law that is universally accepted?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6280,
+          "part": 3,
+          "content": "What kinds of rules do schools in China have?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6279,
+          "part": 3,
+          "content": "How does technology affect the law?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "id": 1913,
+      "title": "别人帮助解决问题",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1779187695,
+      "question_count": 2,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6270,
+          "part": 2,
+          "content": "Describe a time when a person did something tohelp you solve a problem You should say: Who the person is What the problem was How he/she helped you And explain how you felt about the experience",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6271,
+          "part": 3,
+          "content": "How important is it for schools to help children pecome smarter?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "id": 1912,
+      "title": "包含动物的故事或书",
+      "tag_id": 19,
+      "tag_name": "事物",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1779186520,
+      "question_count": 7,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6254,
+          "part": 2,
+          "content": "Describe a story/book with animals in it You should say: What animals are in it What the story/book is about Why you read the story/book And explain what you think of this story/book",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6260,
+          "part": 3,
+          "content": "Why do people always tell children stories with animals?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6259,
+          "part": 3,
+          "content": "What are the advantages of keeping a pet?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6258,
+          "part": 3,
+          "content": "Do many people keep pets in your country?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6257,
+          "part": 3,
+          "content": "Many people regard pets as members of thei family. What do you think?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 6256,
+          "part": 3,
+          "content": "Some people think pets should not be kept in cities. What do you think?",
+          "is_show": 1
+        },
+        {
+          "index": 7,
+          "id": 6255,
+          "part": 3,
+          "content": "Should schools teach children about animals?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "id": 1911,
+      "title": "很久没收到回复的信息",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 2,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1779187249,
+      "question_count": 7,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6253,
+          "part": 2,
+          "content": "Describe a time when you sent a message or anemail to someone but received no reply for a longtime You should say: Who you sent it to What the message/email was about Whether you finally received the reply And explain how you felt about the experience",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6266,
+          "part": 3,
+          "content": "Why do some people feel angry when others don't reply to their message?",
+          "is_show": 0
+        },
+        {
+          "index": 3,
+          "id": 6265,
+          "part": 3,
+          "content": "How do you show your respect in your messages?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6264,
+          "part": 3,
+          "content": "Why do some people prefer sending a messageinstead of making a call?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6263,
+          "part": 3,
+          "content": "What would you do if you did not receive a reply after sending out a message?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 6262,
+          "part": 3,
+          "content": "In what situations do people not respond to messages at all?",
+          "is_show": 1
+        },
+        {
+          "index": 7,
+          "id": 6261,
+          "part": 3,
+          "content": "In what situations do people spend a long time responding to others' messages?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "id": 1909,
+      "title": "组织快乐活动",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1779186098,
+      "question_count": 7,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6243,
+          "part": 2,
+          "content": "Describe a time when you organized a happy eventsuccessfully You should say What the event was How you prepared for it Who helped you to organize it And explain why you think it was a successful event",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6252,
+          "part": 3,
+          "content": "Do you prefer to prepare and organize an activity or just take part in an activity?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6249,
+          "part": 3,
+          "content": "How would you feel when you were not well prepared for something?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6248,
+          "part": 3,
+          "content": "Do people need others' help when organizing things?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6246,
+          "part": 3,
+          "content": "Does everything need to be well prepared?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 6245,
+          "part": 3,
+          "content": "On what occasions do people need to be organized?",
+          "is_show": 1
+        },
+        {
+          "index": 7,
+          "id": 6244,
+          "part": 3,
+          "content": "How can parents help children to be organized?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "id": 1908,
+      "title": "长久目标/抱负",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1779185179,
+      "question_count": 7,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6236,
+          "part": 2,
+          "content": "Describe a long-term goal/ambition you would like to achieve You should say: How long you have had this goal/ambition What it is How you will achieve it And explain why you set it",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6242,
+          "part": 3,
+          "content": "What should people do to achieve their goals?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6241,
+          "part": 3,
+          "content": "What goals do young people usually have?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6240,
+          "part": 3,
+          "content": "Is it necessary to give advice to children?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6239,
+          "part": 3,
+          "content": "What goals do people at your age have?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 6238,
+          "part": 3,
+          "content": "Do people need to have goals?",
+          "is_show": 1
+        },
+        {
+          "index": 7,
+          "id": 6237,
+          "part": 3,
+          "content": "What goals should a society have?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "id": 1907,
+      "title": "遇到困难终成功的人",
+      "tag_id": 18,
+      "tag_name": "人物",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1779183847,
+      "question_count": 2,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6232,
+          "part": 2,
+          "content": "Describe a person who met difficulties but succeeded You should say Who this person is What difficulties he met How he overcame the difficulties And explain how you feel about him",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6233,
+          "part": 3,
+          "content": "In your country, what industry is it easier to besuccessful in?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "id": 1906,
+      "title": "改变重要想法",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1779183260,
+      "question_count": 4,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6228,
+          "part": 2,
+          "content": "Describe a time when you changed an important opinion of yours You should say When you changed your opinion What the original opinion was Why you changed it And explain how you felt about the experience",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6231,
+          "part": 3,
+          "content": "Do children communicate more with teachers orwith parents?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6230,
+          "part": 3,
+          "content": "Whose opinions are more important to children,their parents or teachers?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6229,
+          "part": 3,
+          "content": "When do most children begin to have their ownopinions?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "id": 1905,
+      "title": "特别场合的食物",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778661346,
+      "question_count": 4,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6221,
+          "part": 2,
+          "content": "Describe a food that people eat on special occasions/events You should say: What it is What the special event/occasion is How it is cooked/made And explain why people eat it on that special occasion/event",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6226,
+          "part": 3,
+          "content": "Are there any differences between the food people eat today and the food people ate in the past?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6225,
+          "part": 3,
+          "content": "What are the differences between everyday fooo and festival food?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6223,
+          "part": 3,
+          "content": "Why are there special foods on special occasions or events?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "id": 1904,
+      "title": "擅长学习和说语言的人",
+      "tag_id": 18,
+      "tag_name": "人物",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778661962,
+      "question_count": 6,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6218,
+          "part": 2,
+          "content": "Describe a person who is good at learning andspeaking new languages You should say How you got to know him/her How he/she learns a new language What languages he/she can speak And explain how you feel about him/her",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6227,
+          "part": 3,
+          "content": "Why is it easier for children to learn new things than for adults?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6224,
+          "part": 3,
+          "content": "How do people learn new things?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6222,
+          "part": 3,
+          "content": "Do people learn any languages other than English?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6220,
+          "part": 3,
+          "content": "Does speaking other languages help at work?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 6219,
+          "part": 3,
+          "content": "Are there many people who can speak foreign",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "id": 1903,
+      "title": "喜欢的现场体育赛事",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778660602,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6207,
+          "part": 2,
+          "content": "Describe a live sports event you watched and liked You should say: What it was When and where you watched it Who you watched it with And explain why you liked it",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6211,
+          "part": 3,
+          "content": "What sports matches are suitable for children to attend?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6210,
+          "part": 3,
+          "content": "What are the advantages of watching sports events online?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6209,
+          "part": 3,
+          "content": "Where do people normally watch sports events?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6208,
+          "part": 3,
+          "content": "Why do some people like to watch sports events?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "id": 1902,
+      "title": "遇到的科技问题",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778661085,
+      "question_count": 7,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6206,
+          "part": 2,
+          "content": "Describe a challenging technological problem you faced You should say: What the problem was When and where you faced it How challenging it was And explain how you solved it",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6217,
+          "part": 3,
+          "content": "What can teachers do to stop students from relying too much on AI?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6216,
+          "part": 3,
+          "content": "Do you think students are overly reliant on AI?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6215,
+          "part": 3,
+          "content": "How can AI help in our lives?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6214,
+          "part": 3,
+          "content": "Should children learn to use AI?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 6213,
+          "part": 3,
+          "content": "Do you think people today should learn about AI technology?",
+          "is_show": 1
+        },
+        {
+          "index": 7,
+          "id": 6212,
+          "part": 3,
+          "content": "What are the advantages and disadvantages of AI?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "id": 1901,
+      "title": "在团队中工作",
+      "tag_id": 19,
+      "tag_name": "事物",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778659892,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6201,
+          "part": 2,
+          "content": "Describe a time when you worked in a group You should say: What you did Who you worked with What problems you faced And explain why you worked in the group",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6205,
+          "part": 3,
+          "content": "What group tasks are there in schools?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6204,
+          "part": 3,
+          "content": "Should students learn to do qroup work?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6203,
+          "part": 3,
+          "content": "What should a leader do to make team members want to follow him or her?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6202,
+          "part": 3,
+          "content": "Why do some people prefer to work by themselves?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "id": 1900,
+      "title": "拥有成功商业的人",
+      "tag_id": 18,
+      "tag_name": "人物",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778659391,
+      "question_count": 6,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6195,
+          "part": 2,
+          "content": "Describe a person you know who has a successful business You should say: Who this person is How you got to know him/her Why and how he/she started the business What business he/she does And explain why you think the business is successful",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6200,
+          "part": 3,
+          "content": "What makes a business fail?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6199,
+          "part": 3,
+          "content": "What makes a business successful?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6198,
+          "part": 3,
+          "content": "Do most people prefer shopping at big stores or small stores?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6197,
+          "part": 3,
+          "content": "Should governments provide financial support ta start-ups?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 6196,
+          "part": 3,
+          "content": "Why do some people start their own business?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "id": 1899,
+      "title": "在成功公司工作的人",
+      "tag_id": 18,
+      "tag_name": "人物",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778658723,
+      "question_count": 4,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6184,
+          "part": 2,
+          "content": "Describe a person who works in a successfu company You should say: Who he/she is What he/she does in the company What business the company does And explain why you think it is a successful company",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6187,
+          "part": 3,
+          "content": "Do you think customer satisfaction is important fol a company?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6186,
+          "part": 3,
+          "content": "Do you think companies should donate money to help society?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6185,
+          "part": 3,
+          "content": "Do you think governments should provide financial support to companies?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "id": 1898,
+      "title": "名人出演的广告",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778659153,
+      "question_count": 7,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6188,
+          "part": 2,
+          "content": "Describe an advertisement with a famous person in it You should say: Who the person is Where you can see it What the advertisement is about And explain how you feel about the advertisement",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6194,
+          "part": 3,
+          "content": "Which is more effective, online advertising or offline advertising?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6193,
+          "part": 3,
+          "content": "Is advertising important for a company? Why?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6192,
+          "part": 3,
+          "content": "Why are some advertisements boring?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6191,
+          "part": 3,
+          "content": "What is the most important factor in an advertisement?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 6190,
+          "part": 3,
+          "content": "Why are many advertisements endorsed by celebrities? How useful are they?",
+          "is_show": 1
+        },
+        {
+          "index": 7,
+          "id": 6189,
+          "part": 3,
+          "content": "What are the advantages and disadvantages ofadvertisements?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "id": 1897,
+      "title": "推荐旅行过的地方",
+      "tag_id": 21,
+      "tag_name": "地点",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778658340,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6179,
+          "part": 2,
+          "content": "Describe a place you have travelled to that youwould like to recommend to others You should say: What itis Where it is What you saw and did there And explain why you would like to recommend it toothers",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6183,
+          "part": 3,
+          "content": "Is it important to plan a holiday ahead?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6182,
+          "part": 3,
+          "content": "How do people usually plan holidays?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6181,
+          "part": 3,
+          "content": "What is the ideal length for a holiday?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6180,
+          "part": 3,
+          "content": "Where do people in your country often go for holidays?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "id": 1894,
+      "title": "最近看过的电视/网络节目",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778656570,
+      "question_count": 4,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6164,
+          "part": 2,
+          "content": "Describe a TV show/online program you havewatched recently You should say: What it is What it is about How often you watch it And explain how you feel about it",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6167,
+          "part": 3,
+          "content": "What kinds of TV or online programs are popular in your country?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6166,
+          "part": 3,
+          "content": "What makes a popular TV or online program?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6165,
+          "part": 3,
+          "content": "What are the differences between the TV programsyoung people like to watch and those old peoplelike to watch?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "id": 1892,
+      "title": "喜欢拜访但不想住的家",
+      "tag_id": 21,
+      "tag_name": "地点",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778656038,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6155,
+          "part": 2,
+          "content": "Describe a home that you like to visit but do notwant to live in You should say Where it is What it is like Why you like to visit it And explain why you would not like to live there",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6163,
+          "part": 3,
+          "content": "What's the difference between homes in cities andthose in the countryside?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6162,
+          "part": 3,
+          "content": "What kind of place do people in your country like to live in?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6161,
+          "part": 3,
+          "content": "What do Chinese people do when they visit others?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6160,
+          "part": 3,
+          "content": "Do Chinese people like to visit others' homes?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "id": 1891,
+      "title": "坏掉的电子设备",
+      "tag_id": 19,
+      "tag_name": "事物",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778655282,
+      "question_count": 3,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6152,
+          "part": 2,
+          "content": "Describe a time when you had a problem using anelectronic device You should say: When it happened Where it happened What the problem was And explain how you solved the problem at last",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6154,
+          "part": 3,
+          "content": "What impact do electronic devices have onpeople?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6153,
+          "part": 3,
+          "content": "Why are people keen on buying new electronicdevices?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "id": 1890,
+      "title": "想从事医疗行业的人",
+      "tag_id": 18,
+      "tag_name": "人物",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778056460,
+      "question_count": 3,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6149,
+          "part": 2,
+          "content": "Describe a person you know who would like to choose a career in the medical field (e.g. a doctor, a nurse) You should say: When you knew him/her When he/she started to think about that What he/she would like to do And explain why he/she would like to choose this career",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6151,
+          "part": 3,
+          "content": "Do you think learning biology is interesting for children?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6150,
+          "part": 3,
+          "content": "Do you think being a doctor is easy or difficult?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "id": 1889,
+      "title": "去过的无聊地方",
+      "tag_id": 21,
+      "tag_name": "地点",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778054559,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6144,
+          "part": 2,
+          "content": "Describe a boring place You should say: Where it is Who you went there with What you did there And explain why you think it is a boring place",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6148,
+          "part": 3,
+          "content": "Why are some teachers' classes boring? Are thereany solutions?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6147,
+          "part": 3,
+          "content": "What can people do when they feel bored?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6146,
+          "part": 3,
+          "content": "Why aren't young people willing to listen to theexperiences of older people?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6145,
+          "part": 3,
+          "content": "Why do most children think education is boring?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "id": 1888,
+      "title": "去过的最喜欢的城市",
+      "tag_id": 21,
+      "tag_name": "地点",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778053780,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6136,
+          "part": 2,
+          "content": "Describe your favorite city that you have visited You should say: Where it is How you knew it When you visited it And explain why it is your favourite city",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6143,
+          "part": 3,
+          "content": "Do most people prefer to travel in a modern city or a historical city?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6142,
+          "part": 3,
+          "content": "Do you think a tourist city is also a good place to live? why?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6141,
+          "part": 3,
+          "content": "How do people choose a city to travel to?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6137,
+          "part": 3,
+          "content": "Which is more suitable for young people, urban life or rural life, and which is more suitable for old people?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "id": 1887,
+      "title": "有趣视频",
+      "tag_id": 19,
+      "tag_name": "事物",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778053710,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6131,
+          "part": 2,
+          "content": "Describe an interesting video You should say: When and where you watched it What it is about Why you watched it And explain how you feel about it",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6140,
+          "part": 3,
+          "content": "Are there any differences between the videos thatyoung people and old people like to watch?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6139,
+          "part": 3,
+          "content": "What skills can people learn from watching videos?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6138,
+          "part": 3,
+          "content": "Which is more helpful, watching videos or readingbooks?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6135,
+          "part": 3,
+          "content": "What kind of videos do people in your country liketo watch?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "id": 1886,
+      "title": "早起经历",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778053350,
+      "question_count": 6,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6128,
+          "part": 2,
+          "content": "Describe a time when you got up early You should say: When it was What you did Why you got up early And how you felt about it",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6134,
+          "part": 3,
+          "content": "ls it good to arrive early in any situation?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6133,
+          "part": 3,
+          "content": "Why do some people like to stay up late?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6132,
+          "part": 3,
+          "content": "What kinds of occasions need people to arrive early?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6130,
+          "part": 3,
+          "content": "Why do people get up early?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 6129,
+          "part": 3,
+          "content": "Do you know anyone who likes to get up early?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "id": 1885,
+      "title": "喜欢在家/花园种菜的人",
+      "tag_id": 18,
+      "tag_name": "人物",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778052929,
+      "question_count": 3,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6124,
+          "part": 2,
+          "content": "Describe a person who loves to grow vegetables at home or in the garden You should say: Who this person is What vegetables he/she grows How he/she grows the vegetables And explain why he/she loves growing vegetables",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6126,
+          "part": 3,
+          "content": "Do many people grow vegetables or flowers at home in your country?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6125,
+          "part": 3,
+          "content": "What are the advantages of growing vegetables or flowers at home?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 33,
+      "id": 1884,
+      "title": "喜欢或不喜欢的高建筑",
+      "tag_id": 19,
+      "tag_name": "事物",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778219992,
+      "question_count": 3,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6122,
+          "part": 2,
+          "content": "Describe a tall building you like or dislikeYou should say: What it is used for Where it is What it looks like And explain why you like/dislike it Where it is What it looks like And explain why you like/dislike it",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6127,
+          "part": 3,
+          "content": "What are the differences between those tallbuildings in your country?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6123,
+          "part": 3,
+          "content": "Are there many tall buildings in your country?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 34,
+      "id": 1882,
+      "title": "想颁布的新法律",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 0,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778051877,
+      "question_count": 7,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6113,
+          "part": 2,
+          "content": "Describe a new law you would like to introduce in your country You should say: What law it is What changes this law brings Whether this new law will be popular How you came up with the new law And explain how you feel about this new law",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6119,
+          "part": 3,
+          "content": "How can parents teach children to obey rules?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6118,
+          "part": 3,
+          "content": "What are the benefits for people to obey rules?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6117,
+          "part": 3,
+          "content": "Do you think children can learn about the law outside of school?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6116,
+          "part": 3,
+          "content": "What kinds of behavior are considered as good behavior?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 6115,
+          "part": 3,
+          "content": "Do people in your country usually obey the law?",
+          "is_show": 1
+        },
+        {
+          "index": 7,
+          "id": 6114,
+          "part": 3,
+          "content": "What rules should students follow at school?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 35,
+      "id": 1880,
+      "title": "想有空时去旅游的地方",
+      "tag_id": 21,
+      "tag_name": "地点",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1777534883,
+      "question_count": 3,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6101,
+          "part": 2,
+          "content": "Describe a place you would like to visit in your free time You should say: • Where it is • What you will do there • How long you will stay there • And explain why you would like to visit it",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6103,
+          "part": 3,
+          "content": "Do you think a gap period in life is important?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6102,
+          "part": 3,
+          "content": "Why do you think some people choose not to travel abroad?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 36,
+      "id": 1745,
+      "title": "近期改变的计划",
+      "tag_id": 19,
+      "tag_name": "事物",
+      "level": 1,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778219523,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 5537,
+          "part": 2,
+          "content": "Describe a plan that you had to change recently You should say: When this happened What made you change the plan What the new plan was And how you felt about the change",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 5551,
+          "part": 3,
+          "content": "Do people often change their plans?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 5552,
+          "part": 3,
+          "content": "Would you tell others if you change your plan?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 5553,
+          "part": 3,
+          "content": "How does technology help people make plans?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 5554,
+          "part": 3,
+          "content": "Why do you think parents still make plans for their children nowadays?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "id": 1738,
+      "title": "重要决定",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 3,
+      "is_new": 1,
+      "is_show": 1,
+      "updated_at": 1778219612,
+      "question_count": 7,
+      "questions": [
+        {
+          "index": 1,
+          "id": 5511,
+          "part": 2,
+          "content": "Describe an important decision that you made You should say: What the decision was How you made your decision What the results of the decision were And explain why it was important",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 5512,
+          "part": 3,
+          "content": "Do you think children sometimes have to make important decisions?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 5513,
+          "part": 3,
+          "content": "What important decisions do teenagers need to make after graduation?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 5514,
+          "part": 3,
+          "content": "Who can children turn to for help when making a decision?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 5515,
+          "part": 3,
+          "content": "Do you think advertisements can influence our decisions when shopping?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 5516,
+          "part": 3,
+          "content": "Do you think the influence of advertising is good?",
+          "is_show": 1
+        },
+        {
+          "index": 7,
+          "id": 5517,
+          "part": 3,
+          "content": "How do people usually make important decision?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "id": 1871,
+      "title": "外国的短期停留",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 1,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777530189,
+      "question_count": 4,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6070,
+          "part": 2,
+          "content": "Describe a foreign country you would like to stay or work for a short period of time You should say: Which country it is Where you got to know this country What you will do there Why you will stay or work there just for ashort period of time",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6074,
+          "part": 3,
+          "content": "How can people demonstrate their abilities when working in a foreign country?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6073,
+          "part": 3,
+          "content": "What important skills do people need when working in companies?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6072,
+          "part": 3,
+          "content": "Why do some people not like working in a foreign country?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 39,
+      "id": 1870,
+      "title": "鼓励你保护自然的人",
+      "tag_id": 18,
+      "tag_name": "人物",
+      "level": 1,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777530194,
+      "question_count": 4,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6060,
+          "part": 2,
+          "content": "Describe a person who encouraged you to protect the nature You should say: Who he/she is How he/she encouraged you What he/she encouraged you to do And explain how you feel about this person",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6063,
+          "part": 3,
+          "content": "Do you think there should be laws to protect nature?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6062,
+          "part": 3,
+          "content": "Should schools teach children to get close to nature?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6061,
+          "part": 3,
+          "content": "How can parents teach their children to protect nature?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 40,
+      "id": 1869,
+      "title": "想拥有的科技产品",
+      "tag_id": 19,
+      "tag_name": "事物",
+      "level": 1,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777529218,
+      "question_count": 7,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6059,
+          "part": 2,
+          "content": "Describe a piece of technology(not a phone)that you would like to own You should say: What it is How much it costs What you willuse it for And explain why you would like to own it",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6069,
+          "part": 3,
+          "content": "What are the differences between making friends in real life and online?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6068,
+          "part": 3,
+          "content": "What negative effects does technology have on people's relationships?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6067,
+          "part": 3,
+          "content": "Do you think technology has changed the way people communicate?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6066,
+          "part": 3,
+          "content": "What are the differences between online and face-to-face communication?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 6065,
+          "part": 3,
+          "content": "What technology do young people like to use?",
+          "is_show": 1
+        },
+        {
+          "index": 7,
+          "id": 6064,
+          "part": 3,
+          "content": "What are the differences between the technology of the past and that of today?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 41,
+      "id": 1868,
+      "title": "机智解决问题的人",
+      "tag_id": 18,
+      "tag_name": "人物",
+      "level": 1,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777529855,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6052,
+          "part": 2,
+          "content": "Describe a person who solved a problem in a smart way You should say: Who this person is What the problem was How he/she solved it And explain why you think he/she did it in a smart way",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6058,
+          "part": 3,
+          "content": "Why does modern society need talents of all kinds?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6057,
+          "part": 3,
+          "content": "Why are some people well-rounded and others only good at one thing?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6056,
+          "part": 3,
+          "content": "How do children become smart at school?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6054,
+          "part": 3,
+          "content": "Do you think children are born smart or they learn to become smart?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 42,
+      "id": 1867,
+      "title": "擅长做计划的人",
+      "tag_id": 18,
+      "tag_name": "人物",
+      "level": 1,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777529226,
+      "question_count": 7,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6045,
+          "part": 2,
+          "content": "Describe a person who makes plans a lot You should say: Who he/she is How you knew him/her How you knew him/her What plans he/she makes And explain how you feel about this person",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6055,
+          "part": 3,
+          "content": "Do you think choosing a college major is closely related to a person's future career?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6053,
+          "part": 3,
+          "content": "Is making study plans popular among young people?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6051,
+          "part": 3,
+          "content": "What activities do we need to plan ahead?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6050,
+          "part": 3,
+          "content": "Should children ask their teachers or parents for advice when making plans?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 6049,
+          "part": 3,
+          "content": "Do you think children should plan their future careers?",
+          "is_show": 1
+        },
+        {
+          "index": 7,
+          "id": 6048,
+          "part": 3,
+          "content": "Do you think it's important to plan ahead?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 43,
+      "id": 1866,
+      "title": "喜欢画画的孩子",
+      "tag_id": 19,
+      "tag_name": "事物",
+      "level": 1,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777529234,
+      "question_count": 6,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6037,
+          "part": 2,
+          "content": "Describe a child you know who likes drawing/painting very much You should say: How you knew him/her What he/she is like How often he/she draws/paints And explain why you think he/she likes drawing/painting",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6043,
+          "part": 3,
+          "content": "How do artworks inspire people?",
+          "is_show": 0
+        },
+        {
+          "index": 3,
+          "id": 6042,
+          "part": 3,
+          "content": "Do you think galleries and museums should be free of charge?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6040,
+          "part": 3,
+          "content": "Why do some people visit galleries ormuseums instead of viewing artworks online?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6039,
+          "part": 3,
+          "content": "Why do most children draw more often than adults do?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 6038,
+          "part": 3,
+          "content": "What is the right age for a child to learn drawing?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 44,
+      "id": 1865,
+      "title": "有趣的建筑",
+      "tag_id": 21,
+      "tag_name": "地点",
+      "level": 2,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777530105,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6036,
+          "part": 2,
+          "content": "Describe an interesting building You should say: Where it is What it looks like What function it has And explain why you think it is interesting",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6047,
+          "part": 3,
+          "content": "Why do people like to visit historical sites?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6046,
+          "part": 3,
+          "content": "Is it more important for a building to look good on the outside or on the inside?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6044,
+          "part": 3,
+          "content": "Is it worth spending a lot of money on the exterior appearance of a building?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6041,
+          "part": 3,
+          "content": "What types of buildings are popular in your country?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 45,
+      "id": 1864,
+      "title": "App/ 程序",
+      "tag_id": 19,
+      "tag_name": "事物",
+      "level": 1,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777529246,
+      "question_count": 6,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6029,
+          "part": 2,
+          "content": "Describe a program or app on your computer or phone You should say: What it is When/how you use it Where you found it And explain how you feel about it",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6035,
+          "part": 3,
+          "content": "Do you think young people rely more and more on these programs?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6034,
+          "part": 3,
+          "content": "Should parents limit their children using computer programs and computer games?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6033,
+          "part": 3,
+          "content": "What apps are popular in your country?Why?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6032,
+          "part": 3,
+          "content": "Why do some people not like using apps?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 6031,
+          "part": 3,
+          "content": "What are the differences between old and young people when using apps?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 46,
+      "id": 1861,
+      "title": "完美工作",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 1,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777529143,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6007,
+          "part": 2,
+          "content": "Describe your perfect job You should say: What it is Where you heard about it from What you need to learn to get the job And explain why you think it is your perfect job",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6011,
+          "part": 3,
+          "content": "Is salary the main reason people choose a certain job?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6010,
+          "part": 3,
+          "content": "What should people consider when choosing jobs?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6009,
+          "part": 3,
+          "content": "Do people's ideal jobs change as they grow up?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6008,
+          "part": 3,
+          "content": "What jobs do children want to do when they grow up?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 47,
+      "id": 1859,
+      "title": "朋友学的技能",
+      "tag_id": 18,
+      "tag_name": "人物",
+      "level": 1,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777529978,
+      "question_count": 7,
+      "questions": [
+        {
+          "index": 1,
+          "id": 5992,
+          "part": 2,
+          "content": "Describe one of your friends who learned a skill from someone(not a teacher) You should say: Who he/she is What skill he/she learned How he/she learned And explain whether it would be easier to learn from a teacher",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 5998,
+          "part": 3,
+          "content": "Do you think it is good for older adults to continue learning?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 5997,
+          "part": 3,
+          "content": "Do you think enterprises should provide training for their employees?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 5996,
+          "part": 3,
+          "content": "Is it better to focus on a few subjects or to learn many subjects?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 5995,
+          "part": 3,
+          "content": "Do you think there are too many subjects for students to learn?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 5994,
+          "part": 3,
+          "content": "Should teachers make learning in their classes fun?",
+          "is_show": 1
+        },
+        {
+          "index": 7,
+          "id": 5993,
+          "part": 3,
+          "content": "Is it necessary to keep learning after graduating from school?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 48,
+      "id": 1858,
+      "title": "不享受的音乐活动",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 2,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777529985,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 5987,
+          "part": 2,
+          "content": "Describe a music event that you didn't enjoy You should say: What it was Who you went with Why you decided to go there And explain why you didn't enjoy it",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 5991,
+          "part": 3,
+          "content": "What kind of music events are there in your country?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 5990,
+          "part": 3,
+          "content": "What are the differences between old and young people's music preferences?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 5989,
+          "part": 3,
+          "content": "Do you think children should receive some musical education?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 5988,
+          "part": 3,
+          "content": "What kind of music events do people like today?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 49,
+      "id": 1811,
+      "title": "弄坏东西",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 3,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777537668,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 5877,
+          "part": 2,
+          "content": "Describe a time when you broke something You should say What it was When/where that happened How you broke it And explain what you did after it",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 5881,
+          "part": 3,
+          "content": "Do you think handmade clothes are more valuable?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 5880,
+          "part": 3,
+          "content": "Do you think clothes produced in the factory are of better quality than those made by hand?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 5879,
+          "part": 3,
+          "content": "What kind of people like to fix things by themselves?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 5878,
+          "part": 3,
+          "content": "What kind of things are more likely to be broken by people at home?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 50,
+      "id": 1810,
+      "title": "传统故事",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 2,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777537634,
+      "question_count": 7,
+      "questions": [
+        {
+          "index": 1,
+          "id": 5851,
+          "part": 2,
+          "content": "Describe an interesting traditional story You should say What the story is about When/how you knew it Who told you the story And explain how you felt when you first heard it",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 5857,
+          "part": 3,
+          "content": "Is a good storyline important for a movie?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 5856,
+          "part": 3,
+          "content": "Do all stories for children have happy endings?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 5855,
+          "part": 3,
+          "content": "What can children learn from stories?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 5854,
+          "part": 3,
+          "content": "Why do most children like listening to stories before bedtime?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 5853,
+          "part": 3,
+          "content": "What are the benefits of bedtime stories for children?",
+          "is_show": 1
+        },
+        {
+          "index": 7,
+          "id": 5852,
+          "part": 3,
+          "content": "What kind of stories do children like?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 51,
+      "id": 1809,
+      "title": "突然停电",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 1,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777537627,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 5846,
+          "part": 2,
+          "content": "Describe a time when the electricity suddenly when off You should say When/where it happened How long it lasted What you did during the time And explain how you felt about it",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 5850,
+          "part": 3,
+          "content": "How did people manage to live without electricity in the ancient world?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 5849,
+          "part": 3,
+          "content": "Which is better, electric cars or petrol cars?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 5848,
+          "part": 3,
+          "content": "Do you think electric bicycles will replace ordinary bicycles in the future?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 5847,
+          "part": 3,
+          "content": "Which is better, electric bicycles or ordinary bicycles?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 52,
+      "id": 1808,
+      "title": "有好习惯的朋友",
+      "tag_id": 18,
+      "tag_name": "人物",
+      "level": 1,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777537607,
+      "question_count": 6,
+      "questions": [
+        {
+          "index": 1,
+          "id": 5840,
+          "part": 2,
+          "content": "Describe a good habit your friend has and you want to develop You should say How he/she is What good habit he/she has When/how you notices the good habit And explain how you will develop the some habit",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 5845,
+          "part": 3,
+          "content": "Do you think a person’s good habits would influence those around him/her? How?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 5844,
+          "part": 3,
+          "content": "What can we do to get rid of bad habit?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 5843,
+          "part": 3,
+          "content": "Why do we develop bad habit?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 5842,
+          "part": 3,
+          "content": "What should parents do to help their children develop good habit ?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 5841,
+          "part": 3,
+          "content": "What good habit should children have?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 53,
+      "id": 1807,
+      "title": "钦佩的创作者",
+      "tag_id": 18,
+      "tag_name": "人物",
+      "level": 1,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777537581,
+      "question_count": 6,
+      "questions": [
+        {
+          "index": 1,
+          "id": 5831,
+          "part": 2,
+          "content": "Describe a creative person (e.g. an artist, a musician, etc) you admire You should say Who he/she is How you knew his/her What his/her greatest achievement is And explain why you think he/she is creative",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 5836,
+          "part": 3,
+          "content": "What can we do to help old children learn music?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 5835,
+          "part": 3,
+          "content": "What can we do to help children keep creative?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 5834,
+          "part": 3,
+          "content": "Do you think pictures and videos in news reports are important?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 5833,
+          "part": 3,
+          "content": "How do artists acquire inspiration?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 5832,
+          "part": 3,
+          "content": "Do you think children should learn to place musical instruments?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 54,
+      "id": 1806,
+      "title": "家中老物件",
+      "tag_id": 19,
+      "tag_name": "事物",
+      "level": 2,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777537573,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 5826,
+          "part": 2,
+          "content": "Describe an important old thing that your family has kept for a long time You should say What it is How/when your family first got this thing How long your family has kept it And explain why this thing is important to your family",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 5830,
+          "part": 3,
+          "content": "What are the differences between the things that people keep today and the things that people kept in the past?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 5829,
+          "part": 3,
+          "content": "What are the differences between the things old people keep and those young people keep?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 5828,
+          "part": 3,
+          "content": "Why do people keep old things?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 5827,
+          "part": 3,
+          "content": "What kind of old things do people like to keep?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 55,
+      "id": 1805,
+      "title": "想再去的旅行",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 2,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777537539,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 5819,
+          "part": 2,
+          "content": "Describe a trip you would like to make again You should say where and when you went Who you made the trip with What you did during the trip And explain why you would like to make the trip again",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 5823,
+          "part": 3,
+          "content": "Why do some people prefer to travel in their own country rather than going abroad?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 5822,
+          "part": 3,
+          "content": "What would happen if no preparation were made before the trip",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 5821,
+          "part": 3,
+          "content": "What should we prepare before a trip",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 5820,
+          "part": 3,
+          "content": "Why do people like traveling?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 56,
+      "id": 1802,
+      "title": "重要的好朋友",
+      "tag_id": 18,
+      "tag_name": "人物",
+      "level": 1,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777537530,
+      "question_count": 3,
+      "questions": [
+        {
+          "index": 1,
+          "id": 5801,
+          "part": 2,
+          "content": "Describe a good friend who is important to you You should say Who he/she is How/when you got to know him/her How long you have known each other And explain why he/she is important to you",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 5803,
+          "part": 3,
+          "content": "Do you think a child’s relationship with friends can be replaces by that with other people, like parents or other family members?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 5802,
+          "part": 3,
+          "content": "Do you think it is better for children to have few close friends or many casual friends?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 57,
+      "id": 1557,
+      "title": "自然之地",
+      "tag_id": 21,
+      "tag_name": "地点",
+      "level": 3,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777537730,
+      "question_count": 7,
+      "questions": [
+        {
+          "index": 1,
+          "id": 4708,
+          "part": 2,
+          "content": "Describe a natural place (e.g. parks, mountains) You should say: Where this place is How you knew this place What it is like And explain why you like to visit it",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 4709,
+          "part": 3,
+          "content": "What kind of people like to visit natural places?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 4710,
+          "part": 3,
+          "content": "What are the differences between a natural place and a city?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 4711,
+          "part": 3,
+          "content": "Do you think that going to the park is the only way to get close to nature?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 4712,
+          "part": 3,
+          "content": "What can people gain from going to natural places?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 4713,
+          "part": 3,
+          "content": "Are there any wild animals in the city?",
+          "is_show": 1
+        },
+        {
+          "index": 7,
+          "id": 4714,
+          "part": 3,
+          "content": "Do you think it is a good idea to let animals stay in local parks for people to see?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 58,
+      "id": 1473,
+      "title": "钦佩的运动员",
+      "tag_id": 18,
+      "tag_name": "人物",
+      "level": 0,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777537708,
+      "question_count": 7,
+      "questions": [
+        {
+          "index": 1,
+          "id": 4324,
+          "part": 2,
+          "content": "Describe a sportsperson you admire You should say: Who he/she is What you know about him/her What he/she is like in real life What achievement he/she has made And explain why you admire him/her",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 4323,
+          "part": 3,
+          "content": "Why are there so few top athletes?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 4322,
+          "part": 3,
+          "content": "What is the most popular sport in your country?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 4321,
+          "part": 3,
+          "content": "Is it easy to identify children's talents?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 4320,
+          "part": 3,
+          "content": "Is talent important in sports?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 4319,
+          "part": 3,
+          "content": "What qualities make an athlete?",
+          "is_show": 1
+        },
+        {
+          "index": 7,
+          "id": 4318,
+          "part": 3,
+          "content": "Should students have physical education and do sports at school?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 59,
+      "id": 1382,
+      "title": "迷路",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 0,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777537378,
+      "question_count": 8,
+      "questions": [
+        {
+          "index": 1,
+          "id": 4057,
+          "part": 2,
+          "content": "Describe an occasion when you lost your way You should say: Where you were What happened How you felt And explain how you found your way",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 4056,
+          "part": 3,
+          "content": "Why do some people get lost more easily than others?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 4055,
+          "part": 3,
+          "content": "Do you think it is important to be able to read a map?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 4054,
+          "part": 3,
+          "content": "Do you think it is important to do some preparation before you travel to new places?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 4053,
+          "part": 3,
+          "content": "How can people find their way when they are lost?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 4052,
+          "part": 3,
+          "content": "Is a paper map still necessary?",
+          "is_show": 1
+        },
+        {
+          "index": 7,
+          "id": 4051,
+          "part": 3,
+          "content": "Why do some people have a good sense of direction?",
+          "is_show": 1
+        },
+        {
+          "index": 8,
+          "id": 4050,
+          "part": 3,
+          "content": "How do people react when they get lost?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 60,
+      "id": 1372,
+      "title": "让你失望的电影",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 2,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777534997,
+      "question_count": 7,
+      "questions": [
+        {
+          "index": 1,
+          "id": 3977,
+          "part": 2,
+          "content": "Describe a movie you watched recently that you felt disappointed with You should say: When it was Why you didn't like it Why you decided to watch it",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 3974,
+          "part": 3,
+          "content": "Should the director pay a lot of money to famous actors?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 3973,
+          "part": 3,
+          "content": "Why are Japanese animated films so popular?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 3972,
+          "part": 3,
+          "content": "Do you think films with famous actors or actresses are more popular?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 3971,
+          "part": 3,
+          "content": "Are historical films popular in your country? Why?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 3970,
+          "part": 3,
+          "content": "What are the different types of films in your country?",
+          "is_show": 1
+        },
+        {
+          "index": 7,
+          "id": 3969,
+          "part": 3,
+          "content": "Do you believe movie reviews",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 61,
+      "id": 1009,
+      "title": "禁用手机的场合",
+      "tag_id": 21,
+      "tag_name": "地点",
+      "level": 2,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777529180,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6001,
+          "part": 2,
+          "content": "Describe an occasion when you were not allowed to use your mobile phone You should say: When it was Where it was Why you were not allowed to use your mobile phone And how you felt about it",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 2987,
+          "part": 3,
+          "content": "Do you think it is necessary to have laws on the use of mobile phones?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 2986,
+          "part": 3,
+          "content": "Is it a waste of time to take pictures with mobile phones?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 2985,
+          "part": 3,
+          "content": "What positive and negative impact do mobile phones have on friendships?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 2984,
+          "part": 3,
+          "content": "How do young and old people use mobile phones differently?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 62,
+      "id": 976,
+      "title": "微笑的场合",
+      "tag_id": 21,
+      "tag_name": "地点",
+      "level": 2,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777535027,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6000,
+          "part": 2,
+          "content": "Describe an occasion when many people were smiling You should say: When it happened Who you were with What happened And explain why most people were smiling",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 2908,
+          "part": 3,
+          "content": "Do people smile more when they are younger or older?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 2907,
+          "part": 3,
+          "content": "Do women smile more than men? Why?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 2906,
+          "part": 3,
+          "content": "Why do most people smile in photographs?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 2905,
+          "part": 3,
+          "content": "Do you think people who like to smile are more friendly?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 63,
+      "id": 968,
+      "title": "想提升的天赋",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 1,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777537554,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 5805,
+          "part": 2,
+          "content": "Describe a natural talent (sports/music, etc) you want to improve You should say What it is When you discovered it How you want to improve it And how you feel about it",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 2892,
+          "part": 3,
+          "content": "Do you think it is more interesting to watch famous people’s or ordinary people’s shows?",
+          "is_show": 0
+        },
+        {
+          "index": 3,
+          "id": 2891,
+          "part": 3,
+          "content": "Why do people like to watch talent shows?",
+          "is_show": 0
+        },
+        {
+          "index": 4,
+          "id": 2890,
+          "part": 3,
+          "content": "Is it possible for us to know whether children who are 3 or 4 years old will become musicians and painters when they grow up?",
+          "is_show": 0
+        },
+        {
+          "index": 5,
+          "id": 2889,
+          "part": 3,
+          "content": "Do you think artists with talents should focus on their talents?",
+          "is_show": 0
+        }
+      ]
+    },
+    {
+      "index": 64,
+      "id": 936,
+      "title": "鼓励别人做不愿做的事",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 2,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777535019,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 2818,
+          "part": 2,
+          "content": "Describe a time when you encouraged someone to do something that he/she didn't want to do You should say: Who he or she is What you encouraged him/her to do How he/she reacted And explain why you encouraged him/her?",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 2817,
+          "part": 3,
+          "content": "Do you think some people are better than others at persuading?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 2816,
+          "part": 3,
+          "content": "What kind of encouragement should parents give?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 2815,
+          "part": 3,
+          "content": "When should parents encourage their children?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 2814,
+          "part": 3,
+          "content": "What do you think young people spend most of their money on?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 65,
+      "id": 892,
+      "title": "发挥想象力",
+      "tag_id": 19,
+      "tag_name": "事物",
+      "level": 2,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777535014,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6030,
+          "part": 2,
+          "content": "Describe a time you needed to use your imagination You should say: When it was Why you needed to use imagination How difficult or easy it was And explain how you felt about it",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 2704,
+          "part": 3,
+          "content": "What subjects are helpful for children's imaginations?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 2703,
+          "part": 3,
+          "content": "What kinds of jobs require imagination?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 2702,
+          "part": 3,
+          "content": "Do you think imagination is essential for scientists ?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 2701,
+          "part": 3,
+          "content": "Do you think adults can have lots of imagination?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 66,
+      "id": 828,
+      "title": "第一次说外语",
+      "tag_id": 0,
+      "tag_name": "",
+      "level": 0,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777537418,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 2540,
+          "part": 2,
+          "content": "Describe the time when you first talked in a foreign language You should say Where you were Who you were with What you talked about And explain how you felt about it",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 2539,
+          "part": 3,
+          "content": "Do you think minority languages will disappear?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 2538,
+          "part": 3,
+          "content": "Does a person still need to learn languages, if he or she is good at English?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 2537,
+          "part": 3,
+          "content": "Which skill is more important, speaking or writing?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 2536,
+          "part": 3,
+          "content": "At what age should children start learning a foreign language?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 67,
+      "id": 813,
+      "title": "读到的有用的书",
+      "tag_id": 0,
+      "tag_name": "",
+      "level": 0,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777537679,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 2486,
+          "part": 2,
+          "content": "Describe a book you read that you found useful You should say What it is When and where did you read it Why it is useful And explain your feeling about it",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 2485,
+          "part": 3,
+          "content": "Some people say that it is easier for children who start reading from a young age to succeed, do you agree?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 2484,
+          "part": 3,
+          "content": "What’s the difference between paper books and e-books?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 2483,
+          "part": 3,
+          "content": "What’s the difference between the reading habits of old people and young people?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 2482,
+          "part": 3,
+          "content": "What are the types of books that young people like to read?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 68,
+      "id": 532,
+      "title": "乐于助人的人",
+      "tag_id": 18,
+      "tag_name": "人物",
+      "level": 2,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777535006,
+      "question_count": 8,
+      "questions": [
+        {
+          "index": 1,
+          "id": 1744,
+          "part": 2,
+          "content": "Describe a person who like to help others You should say: Who this person is? What he helps others Why he help others and explain how do you feel about him or her.",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6028,
+          "part": 3,
+          "content": "Who should people ask for help,colleagues or family members?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6027,
+          "part": 3,
+          "content": "What kind of help do people need when looking for a new job?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6024,
+          "part": 3,
+          "content": "Should children help their parents with household chores?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 1743,
+          "part": 3,
+          "content": "Why are some people willing to help others?",
+          "is_show": 0
+        },
+        {
+          "index": 6,
+          "id": 1742,
+          "part": 3,
+          "content": "Who should teach children to help others? Parents or teachers?",
+          "is_show": 0
+        },
+        {
+          "index": 7,
+          "id": 1741,
+          "part": 3,
+          "content": "Do people nowadays help others more than in the past?",
+          "is_show": 0
+        },
+        {
+          "index": 8,
+          "id": 1740,
+          "part": 3,
+          "content": "In what kinds of professions do people help others more?",
+          "is_show": 0
+        }
+      ]
+    },
+    {
+      "index": 69,
+      "id": 921,
+      "title": "对家庭重要的东西",
+      "tag_id": 0,
+      "tag_name": "",
+      "level": 0,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777529830,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 5999,
+          "part": 2,
+          "content": "Describe something important that has been kept in your family for a long time You should say: What it is When your family had it How your family got it And explain why it is important to your family",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 2776,
+          "part": 3,
+          "content": "What's the influence of technology on museums?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 2775,
+          "part": 3,
+          "content": "What kinds of things are kept in museums?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 2774,
+          "part": 3,
+          "content": "What's the difference between things valued by people in the past and today?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 2773,
+          "part": 3,
+          "content": "What things do families keep for a long time?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 70,
+      "id": 1043,
+      "title": "自行车/摩托车/汽车旅行",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 3,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777529839,
+      "question_count": 7,
+      "questions": [
+        {
+          "index": 1,
+          "id": 3087,
+          "part": 2,
+          "content": "Describe a bicycle/motorcycle/car trip you would like to go on You should say: Who you would like to go with Where you would like to go When you would like to go And explain why you would like to go by bicycle/motorcycle/car",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 3086,
+          "part": 3,
+          "content": "Do you think people need to change the way of transportation drastically to protect the environment?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 3085,
+          "part": 3,
+          "content": "Which form of vehicle is more popular in your country, bikes, cars or motorcycles?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 3084,
+          "part": 3,
+          "content": "How are the transportation systems in urban and rural areas different?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 3083,
+          "part": 3,
+          "content": "Do you think air pollution comes mostly from vehicles?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 3082,
+          "part": 3,
+          "content": "Do you think people need to drastically change their methods of transportation to protect the environment?",
+          "is_show": 1
+        },
+        {
+          "index": 7,
+          "id": 3081,
+          "part": 3,
+          "content": "Which vehicle is most popular in your country, bikes, cars or motorcycles?",
+          "is_show": 0
+        }
+      ]
+    },
+    {
+      "index": 71,
+      "id": 1041,
+      "title": "为家人骄傲",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 3,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777529748,
+      "question_count": 8,
+      "questions": [
+        {
+          "index": 1,
+          "id": 6097,
+          "part": 2,
+          "content": "Describe a time when you felt proud of a family member You should say: When it happened Who the person is What the person did And explain why you felt proud of him/her",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6100,
+          "part": 3,
+          "content": "What do you think about children working hard just for grades?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6099,
+          "part": 3,
+          "content": "Do rewards help a child become better?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 3075,
+          "part": 3,
+          "content": "When would parents feel proud of their children?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 3074,
+          "part": 3,
+          "content": "Is it good to reward children very often? Why?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 3073,
+          "part": 3,
+          "content": "Should parents reward children?Why and how?",
+          "is_show": 1
+        },
+        {
+          "index": 7,
+          "id": 3072,
+          "part": 3,
+          "content": "On what occasions would adults be proud of themselves?",
+          "is_show": 1
+        },
+        {
+          "index": 8,
+          "id": 3071,
+          "part": 3,
+          "content": "When do parents feel proud of their children?",
+          "is_show": 0
+        }
+      ]
+    },
+    {
+      "index": 72,
+      "id": 1040,
+      "title": "花费超过预期的物品",
+      "tag_id": 19,
+      "tag_name": "事物",
+      "level": 1,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777530159,
+      "question_count": 6,
+      "questions": [
+        {
+          "index": 1,
+          "id": 3070,
+          "part": 2,
+          "content": "Describe an item on which you spent more than expected You should say: What it is How much you spent on it Why you bought it And explain why you think you spent more than expected",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 3069,
+          "part": 3,
+          "content": "Do you often buy more than you expected?",
+          "is_show": 0
+        },
+        {
+          "index": 3,
+          "id": 3068,
+          "part": 3,
+          "content": "Do people buy things they don't need?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 3067,
+          "part": 3,
+          "content": "What do you think young people spend most of their money on?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 3066,
+          "part": 3,
+          "content": "Do you think it is important to save money?Why?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 3065,
+          "part": 3,
+          "content": "Do you often buy more than you expect?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 73,
+      "id": 528,
+      "title": "给别人建议",
+      "tag_id": 19,
+      "tag_name": "事物",
+      "level": 3,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777529191,
+      "question_count": 9,
+      "questions": [
+        {
+          "index": 1,
+          "id": 1719,
+          "part": 2,
+          "content": "Describe a time that you gave advice to others You should say: When it was Who you gave advice to What the advice was Why you gave advice And explain how you felt about the advice",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 6080,
+          "part": 3,
+          "content": "What are the problems if you ask too many people for advice?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 6078,
+          "part": 3,
+          "content": "What are the personalities of people whose job is to give advice to others?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 6076,
+          "part": 3,
+          "content": "Is it good to ask advice from strangers online?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 6075,
+          "part": 3,
+          "content": "Should people prepare before giving advice?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 1718,
+          "part": 3,
+          "content": "Whose advice is more helpful, parents’ or friends’?",
+          "is_show": 0
+        },
+        {
+          "index": 7,
+          "id": 1717,
+          "part": 3,
+          "content": "What kinds of advice do parents give to their children?",
+          "is_show": 0
+        },
+        {
+          "index": 8,
+          "id": 1716,
+          "part": 3,
+          "content": "How do experts give advice to others?",
+          "is_show": 0
+        },
+        {
+          "index": 9,
+          "id": 1715,
+          "part": 3,
+          "content": "What advice do parents give to teenagers about making friends?",
+          "is_show": 0
+        }
+      ]
+    },
+    {
+      "index": 74,
+      "id": 197,
+      "title": "受欢迎的人",
+      "tag_id": 18,
+      "tag_name": "人物",
+      "level": 2,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777537760,
+      "question_count": 14,
+      "questions": [
+        {
+          "index": 1,
+          "id": 779,
+          "part": 2,
+          "content": "Describe a popular person You should say: Who this person is What he or she is like Why you think this person is popular How this person influences the public",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 5918,
+          "part": 3,
+          "content": "Why do people want to be popular?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 5917,
+          "part": 3,
+          "content": "Is it easier to become popular nowadays?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 5916,
+          "part": 3,
+          "content": "Do you think good teacher are always popular among students?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 5915,
+          "part": 3,
+          "content": "Is it important for a teacher to be popular?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 778,
+          "part": 3,
+          "content": "What kinds of people are more popular at school?",
+          "is_show": 0
+        },
+        {
+          "index": 7,
+          "id": 777,
+          "part": 3,
+          "content": "Why are some people less famous?",
+          "is_show": 0
+        },
+        {
+          "index": 8,
+          "id": 776,
+          "part": 3,
+          "content": "What are the qualities of being a good teacher?",
+          "is_show": 1
+        },
+        {
+          "index": 9,
+          "id": 771,
+          "part": 3,
+          "content": "Why are some students popular in school?",
+          "is_show": 1
+        },
+        {
+          "index": 10,
+          "id": 770,
+          "part": 3,
+          "content": "Do you think popular stars have more freedom or less freedom?",
+          "is_show": 0
+        },
+        {
+          "index": 11,
+          "id": 769,
+          "part": 3,
+          "content": "What influences do popular stars have on teenagers?",
+          "is_show": 0
+        },
+        {
+          "index": 12,
+          "id": 768,
+          "part": 3,
+          "content": "Do you think children should imitate their idols?",
+          "is_show": 0
+        },
+        {
+          "index": 13,
+          "id": 767,
+          "part": 3,
+          "content": "Do you know any popular star who really likes helping other people?",
+          "is_show": 0
+        },
+        {
+          "index": 14,
+          "id": 766,
+          "part": 3,
+          "content": "What are the qualities of being popular?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 75,
+      "id": 524,
+      "title": "想见的名人",
+      "tag_id": 0,
+      "tag_name": "",
+      "level": 0,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777529168,
+      "question_count": 5,
+      "questions": [
+        {
+          "index": 1,
+          "id": 5747,
+          "part": 2,
+          "content": "Describe a famous person you would like to meet You should say: Who he/she is How you knew him/her How/where you would like to meet him/her And explain why you would like to meet him/ her",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 1702,
+          "part": 3,
+          "content": "Why can some celebrities stay famous for a long time while some cannot?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 1701,
+          "part": 3,
+          "content": "What are the advantages and disadvantages of becoming a celebrity?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 1700,
+          "part": 3,
+          "content": "What influences can famous people have on the society?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 1699,
+          "part": 3,
+          "content": "How can people become famous?",
+          "is_show": 1
+        }
+      ]
+    },
+    {
+      "index": 76,
+      "id": 683,
+      "title": "第一次尝试的兴奋活动",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 3,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777537590,
+      "question_count": 8,
+      "questions": [
+        {
+          "index": 1,
+          "id": 2091,
+          "part": 2,
+          "content": "Describe an exciting activity you have tried for the first time You should say What it is When/where you did it Why you thought it was exciting And explain how you felt about it",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 5839,
+          "part": 3,
+          "content": "Do you think that children adapt to new things more easily than adult?",
+          "is_show": 1
+        },
+        {
+          "index": 3,
+          "id": 5838,
+          "part": 3,
+          "content": "Why are some people keen on doing dangerous activities?",
+          "is_show": 1
+        },
+        {
+          "index": 4,
+          "id": 5837,
+          "part": 3,
+          "content": "Why are some people unwilling to try new things?",
+          "is_show": 1
+        },
+        {
+          "index": 5,
+          "id": 2090,
+          "part": 3,
+          "content": "Do you think it is necessary to spend some money on celebrations?",
+          "is_show": 0
+        },
+        {
+          "index": 6,
+          "id": 2089,
+          "part": 3,
+          "content": "How much time do people need to prepare celebrations?",
+          "is_show": 0
+        },
+        {
+          "index": 7,
+          "id": 2088,
+          "part": 3,
+          "content": "How do people celebrate their personal events?",
+          "is_show": 0
+        },
+        {
+          "index": 8,
+          "id": 2087,
+          "part": 3,
+          "content": "What personal events do people usually celebrate?",
+          "is_show": 0
+        }
+      ]
+    },
+    {
+      "index": 77,
+      "id": 198,
+      "title": "不寻常的一餐",
+      "tag_id": 20,
+      "tag_name": "事件",
+      "level": 3,
+      "is_new": 0,
+      "is_show": 1,
+      "updated_at": 1777537769,
+      "question_count": 11,
+      "questions": [
+        {
+          "index": 1,
+          "id": 791,
+          "part": 2,
+          "content": "Describe an unusual meal you had You should say： When you had it Where you had it Whom you had it with And explain why it was unusual",
+          "is_show": 1
+        },
+        {
+          "index": 2,
+          "id": 783,
+          "part": 3,
+          "content": "Do you think people are less willing to cook meals by themselves these days，compared to the past?",
+          "is_show": 0
+        },
+        {
+          "index": 3,
+          "id": 782,
+          "part": 3,
+          "content": "What do you think are the benefits of having dinner together?",
+          "is_show": 0
+        },
+        {
+          "index": 4,
+          "id": 781,
+          "part": 3,
+          "content": "Do young people like to spend time with their families or friends?",
+          "is_show": 0
+        },
+        {
+          "index": 5,
+          "id": 780,
+          "part": 3,
+          "content": "Do you think having dinner at home is a good idea?",
+          "is_show": 1
+        },
+        {
+          "index": 6,
+          "id": 789,
+          "part": 3,
+          "content": "What are the advantages and disadvantages of eating in restaurants?",
+          "is_show": 1
+        },
+        {
+          "index": 7,
+          "id": 788,
+          "part": 3,
+          "content": "Do people in your country value food culture?",
+          "is_show": 1
+        },
+        {
+          "index": 8,
+          "id": 787,
+          "part": 3,
+          "content": "Do people in your country socialize in restaurants? Why?",
+          "is_show": 1
+        },
+        {
+          "index": 9,
+          "id": 786,
+          "part": 3,
+          "content": "Why do people choose to eat out instead of ordering takeout?",
+          "is_show": 1
+        },
+        {
+          "index": 10,
+          "id": 785,
+          "part": 3,
+          "content": "Do people eat fast food at home?",
+          "is_show": 1
+        },
+        {
+          "index": 11,
+          "id": 784,
+          "part": 3,
+          "content": "What fast food is there in your country?",
+          "is_show": 1
+        }
+      ]
+    }
+  ]
+}
