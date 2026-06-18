@@ -2,22 +2,19 @@
 
 雅思口语练习小程序（Taro + React + TS）。后端复用仓库根目录的 Next.js `/api/*`。
 
-## 一次性脚手架（在你本机做，因为要配合微信开发者工具验证）
+## 运行（工具链已建好，不用再 taro init）
 
-1. 安装 Taro CLI：`npm i -g @tarojs/cli@4.2.0`
-2. 在仓库根目录生成工程（覆盖到本目录）：
-   ```
-   taro init miniprogram
-   ```
-   选项：框架 **React**、语言 **TypeScript**、CSS **Sass**、模板 **default**、包管理 **npm**。
-3. 生成后，把本目录下我已写好的源码覆盖进去：
-   - `src/app.config.ts`
-   - `src/lib/api.ts`
-   - `src/lib/recorder.ts`
-   - `src/pages/practice/index.tsx`
-   - `src/pages/practice/index.config.ts`
-4. `cd miniprogram && npm install`
-5. `npm run dev:weapp`（生成 `dist/`，用微信开发者工具打开 `dist/` 这个目录）
+工程配置（`package.json` / `config/` / `babel.config.js` / `tsconfig.json` / `project.config.json`）和全部源码都已就绪，已验证 `build:weapp` 编译通过。
+
+1. `cd miniprogram && npm install`
+2. `npm run dev:weapp`（生成/监听 `dist/`）
+3. 用**微信开发者工具**导入项目，目录选 `miniprogram/dist`
+
+## 页面
+
+- `pages/map/index` — 登山地图（三段 Part 切换、节点点亮、tabBar 首页）
+- `pages/practice/index` — 跟读练习（录音→讯飞打分→反馈），由地图节点带参数进入
+- `pages/profile/index` — 我的（目标分、进度概览）
 
 ## 微信开发者工具里
 

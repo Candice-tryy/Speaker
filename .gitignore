@@ -14,3 +14,9 @@ next-env.d.ts
 # env files
 .env*
 !.env.example
+
+# taro mini program build artifacts
+miniprogram/dist/
+miniprogram/.swc/
+miniprogram/.temp/
+miniprogram/.rn_temp/
