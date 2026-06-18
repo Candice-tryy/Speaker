@@ -4,6 +4,7 @@ import Taro, { useRouter } from "@tarojs/taro";
 import { getBank, scoreAudio, type Topic, type Question, type ScoreResult } from "../../lib/api";
 import { startRecording, ensureRecordPermission, type RecordingController } from "../../lib/recorder";
 import { markNodeDone, nodeKey, needForPart } from "../../lib/store";
+import "./index.scss";
 
 type Phase = "loading" | "ready" | "recording" | "scoring" | "done" | "error";
 
@@ -24,6 +25,15 @@ export default function Practice() {
   const [errMsg, setErrMsg] = useState("");
   const [rec, setRec] = useState<RecordingController | null>(null);
   const [showList, setShowList] = useState(false);
+  const [elapsed, setElapsed] = useState(0);
+
+  // Tick a recording timer so the user sees it's live and how long they've read.
+  useEffect(() => {
+    if (phase !== "recording") return;
+    setElapsed(0);
+    const timer = setInterval(() => setElapsed((s) => s + 1), 1000);
+    return () => clearInterval(timer);
+  }, [phase]);
 
   useEffect(() => {
     getBank()
@@ -163,9 +173,15 @@ export default function Practice() {
         </Button>
       )}
       {phase === "recording" && (
-        <Button style="background:#EC7CA8;color:#fff;border-radius:999px;font-size:16px" onClick={onStop}>
-          ⏹ 录音中…点此结束
-        </Button>
+        <View>
+          <View className="rec-live">
+            <View className="rec-dot" />
+            <Text>录音中 {elapsed}s</Text>
+          </View>
+          <Button style="background:#EC7CA8;color:#fff;border-radius:999px;font-size:16px" onClick={onStop}>
+            ⏹ 点此结束
+          </Button>
+        </View>
       )}
       {phase === "scoring" && (
         <View style="text-align:center;color:#1E7A66;font-size:15px">评分中…</View>

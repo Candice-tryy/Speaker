@@ -9,6 +9,7 @@ import {
   needForPart,
   nodeKey,
   setSettings,
+  touchStreak,
 } from "../../lib/store";
 import "./index.scss";
 
@@ -28,7 +29,7 @@ export default function Map() {
   const [draftBand, setDraftBand] = useState(getSettings().targetBand);
 
   useDidShow(() => {
-    setLocal(getSettings());
+    setLocal(getSettings().onboarded ? touchStreak() : getSettings());
     setTick((t) => t + 1);
     if (parts.length === 0) loadBank();
   });

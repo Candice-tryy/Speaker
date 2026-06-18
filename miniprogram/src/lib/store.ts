@@ -11,9 +11,25 @@ export interface Settings {
   streak: number;
   name?: string;
   onboarded?: boolean;
+  lastActive?: string; // YYYY-MM-DD of the last day the app was opened
 }
 
 const DEFAULT_SETTINGS: Settings = { targetBand: 6.5, streak: 1, onboarded: false };
+
+function ymd(d = new Date()): string {
+  return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+}
+
+// Update the daily streak when the app is shown: same day = no change, the
+// next calendar day = +1, a gap = reset to 1.
+export function touchStreak(): Settings {
+  const s = getSettings();
+  const today = ymd();
+  if (s.lastActive === today) return s;
+  const yesterday = ymd(new Date(Date.now() - 86400000));
+  const streak = s.lastActive === yesterday ? (s.streak || 0) + 1 : 1;
+  return setSettings({ streak, lastActive: today });
+}
 
 export function getProgress(): Record<string, number> {
   try {

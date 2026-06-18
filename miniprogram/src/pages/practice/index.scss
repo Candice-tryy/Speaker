@@ -1,0 +1,21 @@
+.rec-live {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: #c9537f;
+  font-size: 14px;
+  font-weight: 600;
+}
+.rec-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ec7ca8;
+  animation: recpulse 1s ease-in-out infinite;
+}
+@keyframes recpulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+}
