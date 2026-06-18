@@ -9,9 +9,11 @@ const SETTINGS_KEY = "speaker_settings";
 export interface Settings {
   targetBand: number;
   streak: number;
+  name?: string;
+  onboarded?: boolean;
 }
 
-const DEFAULT_SETTINGS: Settings = { targetBand: 6.5, streak: 1 };
+const DEFAULT_SETTINGS: Settings = { targetBand: 6.5, streak: 1, onboarded: false };
 
 export function getProgress(): Record<string, number> {
   try {

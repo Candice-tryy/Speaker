@@ -23,6 +23,32 @@ export interface RecordingController {
   cancel: () => void;
 }
 
+// Make sure 录音 permission is granted before we start. If the user denied it
+// earlier, RecorderManager.start would silently fail, so we route them to the
+// settings panel to re-enable. Returns true when recording may proceed.
+export async function ensureRecordPermission(): Promise<boolean> {
+  try {
+    const setting = await Taro.getSetting();
+    const state = setting.authSetting["scope.record"];
+    if (state === true) return true;
+    if (state === false) {
+      const res = await Taro.openSetting();
+      return res.authSetting["scope.record"] === true;
+    }
+    // undefined: never asked — authorize triggers the prompt.
+    await Taro.authorize({ scope: "scope.record" });
+    return true;
+  } catch {
+    // authorize rejected => denied; offer settings as a last chance.
+    try {
+      const res = await Taro.openSetting();
+      return res.authSetting["scope.record"] === true;
+    } catch {
+      return false;
+    }
+  }
+}
+
 export function startRecording(): Promise<RecordingController> {
   return new Promise((resolve, reject) => {
     const manager = Taro.getRecorderManager();

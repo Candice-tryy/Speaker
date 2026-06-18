@@ -163,6 +163,27 @@
   font-size: 18px;
   color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  position: relative;
+}
+.dot-current::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: -6px;
+  right: -6px;
+  bottom: -6px;
+  border-radius: 50%;
+  border: 3px solid var(--ring, #3fc196);
+  opacity: 0.5;
+  animation: ring 1.8s ease-out infinite;
+}
+.dot-locked {
+  opacity: 0.45;
+}
+
+@keyframes ring {
+  0% { transform: scale(0.9); opacity: 0.6; }
+  100% { transform: scale(1.35); opacity: 0; }
 }
 .node-label {
   margin-top: 6px;
@@ -170,4 +191,64 @@
   color: #4b5563;
   text-align: center;
   line-height: 1.3;
+}
+
+.onboard {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #8fd3ff, #d9f0ff 55%, #eaf7ef);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+.onboard-card {
+  background: #fff;
+  border-radius: 26px;
+  padding: 32px 26px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(46, 156, 151, 0.18);
+}
+.onboard-emoji {
+  font-size: 48px;
+}
+.onboard-title {
+  display: block;
+  margin-top: 12px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e7a66;
+}
+.onboard-sub {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #6b7280;
+}
+.onboard-bands {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+.onboard-band {
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 15px;
+  background: #eef7f3;
+  color: #2e9c97;
+}
+.onboard-band-on {
+  background: #3fc196;
+  color: #fff;
+  font-weight: 600;
+}
+.onboard-go {
+  margin-top: 26px;
+  background: #3fc196;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 16px;
 }

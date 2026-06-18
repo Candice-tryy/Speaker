@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { View, Text, Button, ScrollView } from "@tarojs/components";
 import Taro, { useRouter } from "@tarojs/taro";
 import { getBank, scoreAudio, type Topic, type Question, type ScoreResult } from "../../lib/api";
-import { startRecording, type RecordingController } from "../../lib/recorder";
+import { startRecording, ensureRecordPermission, type RecordingController } from "../../lib/recorder";
 import { markNodeDone, nodeKey, needForPart } from "../../lib/store";
 
 type Phase = "loading" | "ready" | "recording" | "scoring" | "done" | "error";
@@ -62,6 +62,11 @@ export default function Practice() {
   );
 
   async function onStart() {
+    const ok = await ensureRecordPermission();
+    if (!ok) {
+      Taro.showToast({ title: "需要麦克风权限才能跟读", icon: "none" });
+      return;
+    }
     try {
       const controller = await startRecording();
       setRec(controller);
