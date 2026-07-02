@@ -1,0 +1,256 @@
+.profile-shell {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f4fbf8 0%, #f9fcfb 56%, #fffaf6 100%);
+  overflow: hidden;
+}
+
+.profile-actions {
+  position: fixed;
+  top: 34rpx;
+  right: 24rpx;
+  z-index: 10;
+  display: flex;
+  gap: 12rpx;
+}
+
+.round-action {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  color: #3585c2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36rpx;
+  font-weight: 900;
+  box-shadow: 0 8rpx 22rpx rgba(53, 133, 194, 0.14);
+}
+
+.profile-body {
+  padding: 104rpx 34rpx 48rpx;
+}
+
+.profile-head {
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+  margin-bottom: 28rpx;
+}
+
+.avatar {
+  width: 92rpx;
+  height: 92rpx;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3fc196, #5daee6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42rpx;
+  font-weight: 900;
+}
+
+.profile-name,
+.profile-level,
+.section-title,
+.card-title,
+.card-desc {
+  display: block;
+}
+
+.profile-name {
+  color: #2e4d44;
+  font-size: 42rpx;
+  font-weight: 900;
+}
+
+.profile-level {
+  margin-top: 6rpx;
+  color: #7b8f88;
+  font-size: 25rpx;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14rpx;
+  margin-bottom: 34rpx;
+}
+
+.stat-grid view {
+  padding: 22rpx 10rpx;
+  border-radius: 28rpx;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 10rpx 28rpx rgba(40, 90, 72, 0.06);
+}
+
+.stat-grid text:first-child {
+  display: block;
+  color: #1e7a66;
+  font-size: 36rpx;
+  font-weight: 900;
+}
+
+.stat-grid text:last-child {
+  display: block;
+  margin-top: 6rpx;
+  color: #7b8f88;
+  font-size: 22rpx;
+}
+
+.section-title {
+  margin: 28rpx 0 14rpx;
+  color: #2e4d44;
+  font-size: 28rpx;
+  font-weight: 900;
+}
+
+.profile-card {
+  padding: 28rpx;
+  border-radius: 30rpx;
+  background: #fff;
+  box-shadow: 0 12rpx 32rpx rgba(40, 90, 72, 0.07);
+}
+
+.card-title {
+  color: #2e4d44;
+  font-size: 28rpx;
+  font-weight: 900;
+}
+
+.card-desc {
+  margin-top: 9rpx;
+  color: #7b8f88;
+  font-size: 24rpx;
+  line-height: 1.55;
+}
+
+.band-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+  margin-top: 22rpx;
+}
+
+.band-chip {
+  padding: 14rpx 26rpx;
+  border-radius: 999rpx;
+  background: #eef7f3;
+  color: #2e9c97;
+  font-size: 26rpx;
+  font-weight: 800;
+}
+
+.band-chip.active {
+  background: #3fc196;
+  color: #fff;
+}
+
+.persona-box {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 150rpx;
+  margin-top: 20rpx;
+  padding: 22rpx 24rpx;
+  border-radius: 24rpx;
+  background: #f7fbf9;
+  color: #37524b;
+  font-size: 26rpx;
+  line-height: 1.5;
+}
+
+.save-btn {
+  margin-top: 18rpx;
+  padding: 22rpx;
+  border-radius: 24rpx;
+  background: #3fc196;
+  color: #fff;
+  text-align: center;
+  font-size: 27rpx;
+  font-weight: 900;
+}
+
+.score-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.score-row view text:first-child {
+  display: block;
+  color: #1e7a66;
+  font-size: 48rpx;
+  font-weight: 900;
+}
+
+.score-row view text:last-child {
+  display: block;
+  color: #7b8f88;
+  font-size: 23rpx;
+}
+
+.score-row > text {
+  color: #c98d16;
+  font-size: 27rpx;
+  font-weight: 900;
+}
+
+.chart-line {
+  height: 68rpx;
+  margin: 18rpx 0 24rpx;
+  border-radius: 22rpx;
+  background:
+    linear-gradient(135deg, transparent 0 12%, #3fc196 13% 15%, transparent 16% 30%, #3fc196 31% 33%, transparent 34% 48%, #5daee6 49% 52%, transparent 53%),
+    #f3fbf8;
+}
+
+.progress-row {
+  margin-top: 18rpx;
+}
+
+.progress-row > view:first-child {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 9rpx;
+}
+
+.progress-row text:first-child {
+  color: #37524b;
+  font-size: 25rpx;
+  font-weight: 800;
+}
+
+.progress-row text:last-child {
+  color: #2e9c97;
+  font-size: 24rpx;
+}
+
+.bar {
+  height: 14rpx;
+  border-radius: 999rpx;
+  overflow: hidden;
+  background: #dcefe8;
+}
+
+.bar view {
+  height: 100%;
+  border-radius: 999rpx;
+  background: #3fc196;
+}
+
+.profile-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 80rpx;
+  transform: translateX(-50%);
+  max-width: 520rpx;
+  padding: 18rpx 28rpx;
+  border-radius: 24rpx;
+  background: #2e4d44;
+  color: #fff;
+  font-size: 24rpx;
+  text-align: center;
+  white-space: nowrap;
+}

@@ -57,7 +57,7 @@ export function isNodeDone(key: string, need = 1): boolean {
 // Topic nodes light up after enough questions pass: 3 for Part 1 / Part 2&3,
 // 1 for the combo (串题) part — matching the question-bank redesign.
 export function needForPart(partName: string): number {
-  return partName === "Part 2串题" ? 1 : 3;
+  return partName === "Part 2串题" || partName.includes("串题") || partName.includes("涓查") ? 1 : 3;
 }
 
 export function getSettings(): Settings {

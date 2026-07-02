@@ -319,17 +319,35 @@ export default function ClimbingMap({ parts, loaded }: { parts: Part[]; loaded: 
   const [sceneAnim, setSceneAnim] = useState<"" | "exitUp" | "enterDown">("");
   const [mist, setMist] = useState<{ key: number; dir: "up" | "down" } | null>(null);
   const [toast, setToast] = useState("");
+  const [toastVisible, setToastVisible] = useState(false);
   const [onboard, setOnboard] = useState(false);
   const [persona, setPersona] = useState("");
 
   const animatingRef = useRef(false);
-  const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const toastHideTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const toastClearTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const toastShowFrame = useRef<number | null>(null);
   const stageRef = useRef<HTMLDivElement>(null);
 
   const showToast = useCallback((msg: string) => {
+    if (toastShowFrame.current) cancelAnimationFrame(toastShowFrame.current);
+    if (toastHideTimer.current) clearTimeout(toastHideTimer.current);
+    if (toastClearTimer.current) clearTimeout(toastClearTimer.current);
+    setToastVisible(false);
     setToast(msg);
-    if (toastTimer.current) clearTimeout(toastTimer.current);
-    toastTimer.current = setTimeout(() => setToast(""), 1600);
+    toastShowFrame.current = requestAnimationFrame(() => {
+      toastShowFrame.current = requestAnimationFrame(() => setToastVisible(true));
+    });
+    toastHideTimer.current = setTimeout(() => setToastVisible(false), 1450);
+    toastClearTimer.current = setTimeout(() => setToast(""), 1800);
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (toastShowFrame.current) cancelAnimationFrame(toastShowFrame.current);
+      if (toastHideTimer.current) clearTimeout(toastHideTimer.current);
+      if (toastClearTimer.current) clearTimeout(toastClearTimer.current);
+    };
   }, []);
 
   const getDone = useCallback(
@@ -352,8 +370,14 @@ export default function ClimbingMap({ parts, loaded }: { parts: Part[]; loaded: 
     const u = new URLSearchParams(window.location.search);
     let pi = 1;
     let ki = 0;
-    if (u.has("p")) pi = Math.min(Number(u.get("p")), parts.length - 1);
-    if (u.has("pk")) ki = Math.min(Number(u.get("pk")), (parts[pi]?.peaks.length ?? 1) - 1);
+    if (u.has("p")) {
+      const requestedPart = Number(u.get("p"));
+      if (Number.isFinite(requestedPart)) pi = Math.max(0, Math.min(requestedPart, parts.length - 1));
+    }
+    if (u.has("pk")) {
+      const requestedPeak = Number(u.get("pk"));
+      if (Number.isFinite(requestedPeak)) ki = Math.max(0, Math.min(requestedPeak, (parts[pi]?.peaks.length ?? 1) - 1));
+    }
 
     if (u.get("done") === "1") {
       const n = Number(u.get("n"));
@@ -390,7 +414,7 @@ export default function ClimbingMap({ parts, loaded }: { parts: Part[]; loaded: 
       if (animatingRef.current) return;
       const next = peakIdx + dir;
       if (next < 0 || next >= total) {
-        showToast(dir > 0 ? "已是最高峰 ⛰" : "已在山脚");
+        showToast(dir > 0 ? "山顶风景已收集完啦" : "已在山脚");
         return;
       }
       animatingRef.current = true;
@@ -575,7 +599,7 @@ export default function ClimbingMap({ parts, loaded }: { parts: Part[]; loaded: 
           </div>
         </div>
 
-        {toast ? <div className={`${styles.toast} ${styles.show}`}>{toast}</div> : null}
+        {toast ? <div className={`${styles.toast} ${toastVisible ? styles.show : ""}`}>{toast}</div> : null}
 
         <div className={`${styles.onboard} ${onboard ? styles.show : ""}`}>
           <div className={styles.obCard}>

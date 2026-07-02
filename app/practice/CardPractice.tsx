@@ -310,9 +310,10 @@ export default function CardPractice({ card }: { card: CardData }) {
   const showScore = !!fb && !fb.rejected;
 
   function goMap(done: boolean) {
+    const base = `?p=${card.p || "1"}&pk=${card.pk || "0"}`;
     const qs = done
-      ? `?p=${card.p}&pk=${card.pk}&n=${card.n}&done=1&topic=${encodeURIComponent(card.crumb)}`
-      : "";
+      ? `${base}&n=${card.n}&done=1&topic=${encodeURIComponent(card.crumb)}`
+      : base;
     router.push(`/map${qs}`);
   }
 
@@ -375,6 +376,7 @@ export default function CardPractice({ card }: { card: CardData }) {
           </div>
         </div>
 
+        <div className={styles.scroll}>
         <div className={styles.main}>
           <div
             className={styles.qcard}
@@ -466,6 +468,8 @@ export default function CardPractice({ card }: { card: CardData }) {
           <div className={styles.rectip}>
             {scoring ? "正在听你的发音…" : recording ? "录音中… 松手提交" : "长按录音 · 松手提交"}
           </div>
+        </div>
+
         </div>
 
         {toast ? <div className={`${styles.toast} ${styles.show}`}>{toast}</div> : null}

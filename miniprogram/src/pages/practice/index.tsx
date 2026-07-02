@@ -1,39 +1,47 @@
-import { useEffect, useMemo, useState } from "react";
-import { View, Text, Button, ScrollView } from "@tarojs/components";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { View, Text, ScrollView } from "@tarojs/components";
 import Taro, { useRouter } from "@tarojs/taro";
-import { getBank, scoreAudio, type Topic, type Question, type ScoreResult } from "../../lib/api";
-import { startRecording, ensureRecordPermission, type RecordingController } from "../../lib/recorder";
-import { markNodeDone, nodeKey, needForPart } from "../../lib/store";
+import { getBank, scoreAudio, type Question, type ScoreResult, type Topic } from "../../lib/api";
+import { ensureRecordPermission, startRecording, type RecordingController } from "../../lib/recorder";
+import { getSettings, markNodeDone, needForPart, nodeKey } from "../../lib/store";
 import "./index.scss";
 
 type Phase = "loading" | "ready" | "recording" | "scoring" | "done" | "error";
+type Mode = "follow" | "mock";
+
+function decode(value = "") {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return value;
+  }
+}
 
 export default function Practice() {
   const router = useRouter();
   const params = router.params || {};
-  const partName = decodeURIComponent(params.part || "Part 2&3");
+  const partName = decode(params.part || "Part 2&3");
   const partIdx = Number(params.pi ?? 1);
   const peakIdx = Number(params.peak ?? 0);
   const nodeIdx = Number(params.node ?? 0);
   const topicId = params.topicId || "";
 
   const [phase, setPhase] = useState<Phase>("loading");
+  const [mode, setMode] = useState<Mode>("follow");
   const [topic, setTopic] = useState<Topic | null>(null);
   const [qIdx, setQIdx] = useState(0);
   const [passed, setPassed] = useState<Record<number, boolean>>({});
   const [result, setResult] = useState<ScoreResult | null>(null);
   const [errMsg, setErrMsg] = useState("");
   const [rec, setRec] = useState<RecordingController | null>(null);
+  const [answerOpen, setAnswerOpen] = useState(true);
   const [showList, setShowList] = useState(false);
   const [elapsed, setElapsed] = useState(0);
+  const [toast, setToast] = useState("");
+  const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const touchX = useRef<number | null>(null);
 
-  // Tick a recording timer so the user sees it's live and how long they've read.
-  useEffect(() => {
-    if (phase !== "recording") return;
-    setElapsed(0);
-    const timer = setInterval(() => setElapsed((s) => s + 1), 1000);
-    return () => clearInterval(timer);
-  }, [phase]);
+  const target = getSettings().targetBand;
 
   useEffect(() => {
     getBank()
@@ -42,39 +50,44 @@ export default function Practice() {
         let card: Topic | null = null;
         for (const peak of part?.peaks || []) {
           const found = peak.cards.find((c) => String(c.id) === String(topicId));
-          if (found) {
-            card = found;
-            break;
-          }
+          if (found) card = found;
         }
         if (!card) card = part?.peaks[peakIdx]?.cards[nodeIdx] || part?.peaks[0]?.cards[0] || null;
         setTopic(card);
         setPhase(card ? "ready" : "error");
         if (!card) setErrMsg("题库为空");
       })
-      .catch((e) => {
-        setErrMsg(String(e?.errMsg || e));
+      .catch((error) => {
+        setErrMsg(String(error?.errMsg || error));
         setPhase("error");
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() => {
+    if (phase !== "recording") return;
+    setElapsed(0);
+    const timer = setInterval(() => setElapsed((s) => s + 1), 1000);
+    return () => clearInterval(timer);
+  }, [phase]);
+
+  function showToast(message: string) {
+    setToast(message);
+    if (toastTimer.current) clearTimeout(toastTimer.current);
+    toastTimer.current = setTimeout(() => setToast(""), 1600);
+  }
+
   const questions: Question[] = topic?.questions || [];
   const need = Math.min(needForPart(partName), questions.length || 1);
   const passedCount = Object.values(passed).filter(Boolean).length;
   const current = questions[qIdx];
-
-  // For 跟读, read the Band7 model answer aloud (the reference 讯飞 scores
-  // against); fall back to the question text when a topic has no sample.
-  const refText = useMemo(
-    () => current?.answer || current?.content || "",
-    [current]
-  );
+  const refText = useMemo(() => current?.answer || current?.content || "", [current]);
+  const passedThis = !!result && !result.rejected && result.band >= target - 0.5;
 
   async function onStart() {
     const ok = await ensureRecordPermission();
     if (!ok) {
-      Taro.showToast({ title: "需要麦克风权限才能跟读", icon: "none" });
+      showToast("需要麦克风权限才能跟读");
       return;
     }
     try {
@@ -99,157 +112,174 @@ export default function Practice() {
         const nextPassed = { ...passed, [qIdx]: true };
         setPassed(nextPassed);
         const count = Object.values(nextPassed).filter(Boolean).length;
-        if (count >= need) {
-          markNodeDone(nodeKey(partIdx, peakIdx, nodeIdx));
-          Taro.showToast({ title: "点亮这一关 ✨", icon: "none" });
-        }
+        if (count >= need) markNodeDone(nodeKey(partIdx, peakIdx, nodeIdx));
       }
-    } catch (e) {
-      setErrMsg(String((e as any)?.errMsg || e));
+    } catch (error) {
+      setErrMsg(String((error as any)?.errMsg || error));
       setPhase("error");
     } finally {
       setRec(null);
     }
   }
 
-  function goTo(i: number) {
-    setQIdx(i);
+  function goTo(index: number) {
+    const bounded = Math.max(0, Math.min(index, questions.length - 1));
+    setQIdx(bounded);
     setResult(null);
     setPhase("ready");
     setShowList(false);
+    setAnswerOpen(true);
   }
 
-  function next() {
-    if (qIdx < questions.length - 1) goTo(qIdx + 1);
-    else Taro.navigateBack();
+  function nextAfterPass() {
+    if (qIdx < questions.length - 1) {
+      goTo(qIdx + 1);
+      return;
+    }
+    Taro.navigateBack();
+  }
+
+  function backMap() {
+    Taro.navigateBack();
+  }
+
+  function openProfile() {
+    Taro.navigateTo({ url: "/pages/profile/index?returnTo=practice" });
   }
 
   if (phase === "loading") {
-    return <View style="padding:48px;text-align:center;color:#1E7A66">加载题库中…</View>;
+    return <View className="practice-loading">加载题库中...</View>;
   }
+
   if (phase === "error") {
     return (
-      <View style="padding:32px;color:#C9537F">
+      <View className="practice-error">
         <Text>出错了：{errMsg}</Text>
+        <View className="error-btn" onClick={() => Taro.navigateBack()}>返回地图</View>
       </View>
     );
   }
 
   return (
-    <View style="min-height:100vh;background:#D9F0FF;padding:16px 20px 32px;box-sizing:border-box">
-      <View style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-        <Text style="font-size:14px;color:#1E7A66;font-weight:600">
-          第 {qIdx + 1}/{questions.length} 题 · 已过 {passedCount}/{need}
-        </Text>
-        <Text
-          style="font-size:13px;color:#2E9C97;background:#fff;padding:6px 12px;border-radius:999px"
-          onClick={() => setShowList(true)}
-        >
-          题目列表
-        </Text>
-      </View>
-
-      <View style="background:#fff;border-radius:20px;padding:20px;box-shadow:0 8px 24px rgba(46,156,151,0.12)">
-        <Text style="font-size:13px;color:#2E9C97">
-          {topic?.tag || partName} · Part {current?.part}
-        </Text>
-        <View style="height:8px" />
-        <Text style="font-size:17px;line-height:1.5;color:#1f2937">{current?.content}</Text>
-      </View>
-
-      <View style="height:16px" />
-
-      <View style="background:#fff;border-radius:20px;padding:20px">
-        <Text style="font-size:13px;color:#2E9C97">跟读这段</Text>
-        <View style="height:8px" />
-        <Text style="font-size:15px;line-height:1.6;color:#374151">{refText}</Text>
-      </View>
-
-      <View style="height:24px" />
-
-      {phase === "ready" && (
-        <Button style="background:#3FC196;color:#fff;border-radius:999px;font-size:16px" onClick={onStart}>
-          🎤 开始跟读
-        </Button>
-      )}
-      {phase === "recording" && (
-        <View>
-          <View className="rec-live">
-            <View className="rec-dot" />
-            <Text>录音中 {elapsed}s</Text>
+    <View className="practice-shell">
+      <View className="practice-phone">
+        <View className="practice-top">
+          <View className="icon-btn" onClick={backMap}>‹</View>
+          <View className="crumb">
+            <Text>{partName} · {topic?.title || topic?.tag || "Practice"}</Text>
           </View>
-          <Button style="background:#EC7CA8;color:#fff;border-radius:999px;font-size:16px" onClick={onStop}>
-            ⏹ 点此结束
-          </Button>
+          <View className="top-actions">
+            <View className="icon-btn" onClick={() => setShowList(true)}>☰</View>
+            <View className="target-pill">🎯 {target.toFixed(1)}</View>
+            <View className="icon-btn" onClick={openProfile}>⚙</View>
+          </View>
         </View>
-      )}
-      {phase === "scoring" && (
-        <View style="text-align:center;color:#1E7A66;font-size:15px">评分中…</View>
-      )}
 
-      {phase === "done" && result && (
-        <View style="background:#fff;border-radius:20px;padding:24px;text-align:center">
-          {result.rejected ? (
-            <Text style="font-size:16px;color:#C9537F">没听清，请再读一遍～</Text>
-          ) : (
-            <View>
-              <Text style="font-size:40px;font-weight:700;color:#1E7A66">{result.band.toFixed(1)}</Text>
-              <View style="height:6px" />
-              <Text style="font-size:13px;color:#6b7280">
-                发音 {result.pronunciation.toFixed(1)} · 流利度 {result.fluency.toFixed(1)}
-                {result.source === "mock" ? " · (mock)" : ""}
-              </Text>
-              <View style="height:14px" />
-              <Text style="font-size:15px;line-height:1.6;color:#374151">{result.advice}</Text>
+        <View
+          className="practice-main"
+          onTouchStart={(event) => {
+            touchX.current = (event as any).touches?.[0]?.clientX ?? null;
+          }}
+          onTouchEnd={(event) => {
+            if (touchX.current === null) return;
+            const dx = ((event as any).changedTouches?.[0]?.clientX ?? touchX.current) - touchX.current;
+            touchX.current = null;
+            if (Math.abs(dx) > 46) goTo(qIdx + (dx < 0 ? 1 : -1));
+          }}
+        >
+          <View className="question-card">
+            <Text className="kind">Current card · Part {current?.part || ""}</Text>
+            <Text className="question-text">{current?.content || "暂无题目"}</Text>
+            <Text className="question-meta">Q{qIdx + 1}/{questions.length} · 已过 {passedCount}/{need}</Text>
+          </View>
+
+          <View className={`answer-box ${answerOpen ? "open" : ""}`}>
+            <View className="answer-toggle" onClick={() => setAnswerOpen((v) => !v)}>⌃</View>
+            {answerOpen && (
+              <View className="answer-panel">
+                <Text>{refText || "这个题目还没有范文，先用自己的话试着回答。"}</Text>
+                <View className="answer-tools">
+                  <View onClick={() => showToast("示范朗读稍后接入")}>示范朗读</View>
+                  <View onClick={() => showToast("个性化生成稍后接入")}>个性化</View>
+                </View>
+              </View>
+            )}
+          </View>
+        </View>
+
+        <View className="practice-dock">
+          <View className="mode-seg">
+            <Text className={mode === "follow" ? "active" : ""} onClick={() => setMode("follow")}>跟读练习</Text>
+            <Text className={mode === "mock" ? "active" : ""} onClick={() => setMode("mock")}>模拟作答</Text>
+          </View>
+          <Text className="goal-line">
+            {mode === "follow" ? `跟读到 ${(target - 0.5).toFixed(1)} 即可通关` : "隐藏范文，用自己的话完整回答"}
+          </Text>
+
+          {phase === "ready" && (
+            <View className="rec-button" onClick={onStart}>
+              <Text>🎙</Text>
             </View>
           )}
-          <View style="height:20px;display:flex;gap:10px;justify-content:center">
-            <Button
-              style="background:#EAF3F0;color:#1E7A66;border-radius:999px;font-size:14px"
-              onClick={() => goTo(qIdx)}
-            >
-              再读一次
-            </Button>
-            <Button
-              style="background:#3FC196;color:#fff;border-radius:999px;font-size:14px"
-              onClick={next}
-            >
-              {qIdx < questions.length - 1 ? "下一题" : "完成"}
-            </Button>
-          </View>
+          {phase === "recording" && (
+            <View className="rec-button recording" onClick={onStop}>
+              <View className="ring" />
+              <Text>{elapsed}s</Text>
+            </View>
+          )}
+          {phase === "scoring" && <View className="scoring">正在听你的发音...</View>}
+          <Text className="rec-tip">{phase === "recording" ? "点击结束并提交" : "点击录音 · 再点提交"}</Text>
         </View>
-      )}
 
-      {showList && (
-        <View
-          style="position:fixed;left:0;right:0;top:0;bottom:0;background:rgba(0,0,0,0.35);display:flex;align-items:flex-end"
-          onClick={() => setShowList(false)}
-        >
-          <View
-            style="background:#fff;width:100%;border-radius:20px 20px 0 0;max-height:64vh;padding:20px"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <Text style="font-size:16px;font-weight:700;color:#1E7A66">题目列表</Text>
-            <View style="height:12px" />
-            <ScrollView scrollY style="max-height:48vh">
-              {questions.map((q, i) => (
-                <View
-                  key={q.id}
-                  onClick={() => goTo(i)}
-                  style={`display:flex;gap:10px;padding:12px;border-radius:12px;margin-bottom:8px;${
-                    i === qIdx ? "background:#EAF7F1" : "background:#F7F9F9"
-                  }`}
-                >
-                  <Text style="font-size:13px;color:#2E9C97;min-width:48px">
-                    {passed[i] ? "✓ " : ""}P{q.part}
-                  </Text>
-                  <Text style="font-size:13px;color:#374151;flex:1">{q.content}</Text>
-                </View>
-              ))}
-            </ScrollView>
+        {phase === "done" && result && (
+          <View className="sheet-mask" onClick={() => setPhase("ready")}>
+            <View className="feedback-sheet" onClick={(event) => event.stopPropagation()}>
+              <View className="grab" />
+              {result.rejected ? (
+                <Text className="reject">没听清，请再读一遍</Text>
+              ) : (
+                <>
+                  <View className="score-row">
+                    <Text className="score">{result.band.toFixed(1)}</Text>
+                    <View className="dims">
+                      <View><Text>Pronunciation</Text><Text>{result.pronunciation.toFixed(1)}</Text></View>
+                      <View><Text>Fluency</Text><Text>{result.fluency.toFixed(1)}</Text></View>
+                    </View>
+                  </View>
+                  <Text className="advice">{result.advice}</Text>
+                </>
+              )}
+              <View className="feedback-actions">
+                <View className="retry-btn" onClick={() => setPhase("ready")}>再练一次</View>
+                {passedThis && <View className="pass-btn" onClick={nextAfterPass}>点亮这一关</View>}
+              </View>
+            </View>
           </View>
-        </View>
-      )}
+        )}
+
+        {showList && (
+          <View className="sheet-mask" onClick={() => setShowList(false)}>
+            <View className="question-sheet" onClick={(event) => event.stopPropagation()}>
+              <View className="grab" />
+              <Text className="sheet-title">{topic?.title || "题目列表"}</Text>
+              <ScrollView scrollY className="question-list">
+                {questions.map((q, index) => (
+                  <View
+                    key={q.id}
+                    className={`question-row ${index === qIdx ? "active" : ""}`}
+                    onClick={() => goTo(index)}
+                  >
+                    <Text>Q{index + 1}</Text>
+                    <Text>{q.content}</Text>
+                  </View>
+                ))}
+              </ScrollView>
+            </View>
+          </View>
+        )}
+
+        {toast ? <View className="practice-toast">{toast}</View> : null}
+      </View>
     </View>
   );
 }

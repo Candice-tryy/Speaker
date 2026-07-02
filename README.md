@@ -1,4 +1,14 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Speaker
+
+Speaker is an IELTS speaking practice prototype with three active layers:
+
+- `preview/` static prototype and visual reference.
+- `app/` Next.js Web/PWA plus backend API.
+- `miniprogram/` WeChat mini program built with Taro.
+
+Read [PROJECT_STRUCTURE.md](./PROJECT_STRUCTURE.md) first if you need to know which version is current, which folders are historical prototypes, and where to edit for Web, mini program, or future app work.
+
+This project was originally bootstrapped with [Next.js](https://nextjs.org).
 
 ## Getting Started
 

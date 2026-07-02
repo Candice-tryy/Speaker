@@ -20,3 +20,4 @@ miniprogram/dist/
 miniprogram/.swc/
 miniprogram/.temp/
 miniprogram/.rn_temp/
+miniprogram/project.private.config.json

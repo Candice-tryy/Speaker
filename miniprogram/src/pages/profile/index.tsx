@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { View, Text } from "@tarojs/components";
-import { useDidShow } from "@tarojs/taro";
+import { View, Text, Textarea } from "@tarojs/components";
+import Taro, { useDidShow } from "@tarojs/taro";
 import { getProgress, getSettings, setSettings } from "../../lib/store";
+import "./index.scss";
 
 const BANDS = [5.5, 6.0, 6.5, 7.0, 7.5];
-const SECTIONS = [
+const PART_TOTALS = [
   { idx: 0, name: "Part 1", total: 60 },
   { idx: 1, name: "Part 2&3", total: 77 },
   { idx: 2, name: "Part 2串题", total: 13 },
@@ -13,74 +14,116 @@ const SECTIONS = [
 export default function Profile() {
   const [settings, setLocal] = useState(getSettings());
   const [progress, setProgress] = useState(getProgress());
+  const [persona, setPersona] = useState(getSettings().name || "");
+  const [toast, setToast] = useState("");
 
   useDidShow(() => {
-    setLocal(getSettings());
+    const latest = getSettings();
+    setLocal(latest);
+    setPersona(latest.name || "");
     setProgress(getProgress());
   });
 
-  function doneCount(partIdx: number): number {
-    return Object.keys(progress).filter((k) => k.startsWith(`${partIdx}-`)).length;
+  function showToast(message: string) {
+    setToast(message);
+    setTimeout(() => setToast(""), 1500);
   }
 
-  function pickBand(b: number) {
-    setLocal(setSettings({ targetBand: b }));
+  function doneCount(partIdx?: number): number {
+    return Object.entries(progress)
+      .filter(([key]) => partIdx === undefined || key.startsWith(`${partIdx}-`))
+      .reduce((sum, [, value]) => sum + Math.max(0, Number(value) || 0), 0);
   }
+
+  function pickBand(band: number) {
+    setLocal(setSettings({ targetBand: band }));
+    showToast(`目标分已设为 ${band.toFixed(1)}`);
+  }
+
+  function savePersona() {
+    setLocal(setSettings({ name: persona.trim() }));
+    showToast(persona.trim() ? "人设已保存" : "已清空人设");
+  }
+
+  const totalDone = doneCount();
+  const exp = totalDone * 20;
 
   return (
-    <View style="min-height:100vh;background:linear-gradient(180deg,#E7DEF8,#F3EFFB);padding:24px 20px">
-      <View style="display:flex;align-items:center;gap:14px;margin-bottom:20px">
-        <View style="width:56px;height:56px;border-radius:50%;background:#9B82DC;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px">
-          🧗
+    <View className="profile-shell">
+      <View className="profile-actions">
+        <View className="round-action" onClick={() => Taro.navigateBack()}>‹</View>
+        <View className="round-action" onClick={() => Taro.reLaunch({ url: "/pages/map/index" })}>⛰</View>
+      </View>
+
+      <View className="profile-body">
+        <View className="profile-head">
+          <View className="avatar">S</View>
+          <View>
+            <Text className="profile-name">Candice</Text>
+            <Text className="profile-level">Lv.3 · 攀登者</Text>
+          </View>
         </View>
-        <View>
-          <Text style="font-size:18px;font-weight:700;color:#4b3b7a">我的口语</Text>
-          <View style="height:4px" />
-          <Text style="font-size:13px;color:#6E54B8">🔥 连续 {settings.streak} 天</Text>
+
+        <View className="stat-grid">
+          <View><Text>{settings.streak || 1}</Text><Text>连续天数</Text></View>
+          <View><Text>{totalDone}</Text><Text>已点亮关</Text></View>
+          <View><Text>{exp}</Text><Text>累计经验</Text></View>
+        </View>
+
+        <Text className="section-title">目标分</Text>
+        <View className="profile-card">
+          <Text className="card-title">我的目标 band</Text>
+          <Text className="card-desc">影响练习页通关线。后续会接入语料难度、打分宽容度和词汇高亮权重。</Text>
+          <View className="band-row">
+            {BANDS.map((band) => (
+              <Text
+                key={band}
+                className={`band-chip ${settings.targetBand === band ? "active" : ""}`}
+                onClick={() => pickBand(band)}
+              >
+                {band.toFixed(1)}
+              </Text>
+            ))}
+          </View>
+        </View>
+
+        <Text className="section-title">个性化人设</Text>
+        <View className="profile-card">
+          <Text className="card-title">你的身份和爱好</Text>
+          <Text className="card-desc">写一句关于你的描述，AI 生成范文时会代入“你”，让回答更自然。</Text>
+          <Textarea
+            className="persona-box"
+            value={persona}
+            onInput={(event) => setPersona(String(event.detail.value || ""))}
+            placeholder="例如：我是一名爱爬山和摄影的大三学生。"
+          />
+          <View className="save-btn" onClick={savePersona}>保存人设</View>
+        </View>
+
+        <Text className="section-title">学习进度</Text>
+        <View className="profile-card">
+          <View className="score-row">
+            <View><Text>{settings.targetBand.toFixed(1)}</Text><Text>当前目标分</Text></View>
+            <Text>+{exp} XP</Text>
+          </View>
+          <View className="chart-line" />
+          {PART_TOTALS.map((part) => {
+            const done = doneCount(part.idx);
+            const pct = Math.min(100, Math.round((done / part.total) * 100));
+            return (
+              <View className="progress-row" key={part.name}>
+                <View>
+                  <Text>{part.name}</Text>
+                  <Text>{done} / {part.total} 关</Text>
+                </View>
+                <View className="bar"><View style={`width:${pct}%`} /></View>
+              </View>
+            );
+          })}
         </View>
       </View>
 
-      <View style="background:#fff;border-radius:20px;padding:20px;margin-bottom:16px">
-        <Text style="font-size:14px;font-weight:600;color:#4b3b7a">目标分</Text>
-        <View style="height:12px" />
-        <View style="display:flex;gap:8px;flex-wrap:wrap">
-          {BANDS.map((b) => (
-            <Text
-              key={b}
-              onClick={() => pickBand(b)}
-              style={`padding:8px 14px;border-radius:999px;font-size:14px;${
-                settings.targetBand === b
-                  ? "background:#6E54B8;color:#fff;font-weight:600"
-                  : "background:#F0EAF9;color:#6E54B8"
-              }`}
-            >
-              {b.toFixed(1)}
-            </Text>
-          ))}
-        </View>
-      </View>
-
-      <View style="background:#fff;border-radius:20px;padding:20px">
-        <Text style="font-size:14px;font-weight:600;color:#4b3b7a">进度</Text>
-        <View style="height:12px" />
-        {SECTIONS.map((s) => {
-          const done = doneCount(s.idx);
-          const pct = Math.min(100, Math.round((done / s.total) * 100));
-          return (
-            <View key={s.name} style="margin-bottom:14px">
-              <View style="display:flex;justify-content:space-between;margin-bottom:6px">
-                <Text style="font-size:13px;color:#374151">{s.name}</Text>
-                <Text style="font-size:13px;color:#6E54B8">
-                  {done}/{s.total}
-                </Text>
-              </View>
-              <View style="height:8px;background:#EFEAF8;border-radius:999px;overflow:hidden">
-                <View style={`height:8px;width:${pct}%;background:#9B82DC;border-radius:999px`} />
-              </View>
-            </View>
-          );
-        })}
-      </View>
+      {toast ? <View className="profile-toast">{toast}</View> : null}
     </View>
   );
 }

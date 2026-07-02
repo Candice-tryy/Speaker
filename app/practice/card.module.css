@@ -21,7 +21,9 @@
 
 /* top */
 .top {
+  z-index: 10;
   padding: 18px 20px 0;
+  flex: none;
 }
 .toprow {
   display: flex;
@@ -117,11 +119,23 @@
 }
 
 /* main */
-.main {
+.scroll {
   flex: 1;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+.main {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  min-height: 560px;
   padding: 28px 22px 0;
 }
 
@@ -268,7 +282,7 @@
 
 /* bottom dock */
 .dock {
-  padding: 10px 22px 22px;
+  padding: 18px 22px 34px;
 }
 .seg {
   display: flex;

@@ -252,22 +252,28 @@
   position: absolute;
   left: 50%;
   bottom: 120px;
-  transform: translateX(-50%) translateY(10px);
-  background: #2e4d44;
-  color: #fff;
-  font-size: 12.5px;
-  padding: 9px 15px;
-  border-radius: 14px;
+  transform: translateX(-50%) translateY(16px) scale(0.97);
+  background: rgba(255, 250, 229, 0.82);
+  color: var(--yellow-deep);
+  font-size: 12px;
+  font-weight: 650;
+  padding: 7px 13px;
+  border: 0.5px solid rgba(246, 200, 79, 0.32);
+  border-radius: 999px;
   opacity: 0;
   pointer-events: none;
-  transition: 0.3s;
+  transition:
+    opacity 0.34s ease,
+    transform 0.38s cubic-bezier(0.2, 0.8, 0.2, 1);
   z-index: 20;
   white-space: nowrap;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 8px 18px rgba(201, 141, 22, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 .toast.show {
   opacity: 1;
-  transform: translateX(-50%) translateY(0);
+  transform: translateX(-50%) translateY(0) scale(1);
 }
 
 .onboard {
