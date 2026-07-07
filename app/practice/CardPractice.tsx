@@ -122,6 +122,7 @@ export default function CardPractice({ card }: { card: CardData }) {
   );
   const currentAnswer = activeQuestion?.answer || card.answer;
   const currentText = activeQuestion?.qtext || activeQuestion?.content || card.qtext;
+  const scoreRefText = currentAnswer || activeQuestion?.content || currentText;
   const currentBullets = isTopicFlow ? activeQuestion?.bullets || [card.crumb] : card.bullets;
   const progressKey = `speaker_topic_flow_${card.part}_${card.topicId}`;
   const firstPassQuestions = card.questions.slice(0, requiredPassCount);
@@ -170,7 +171,7 @@ export default function CardPractice({ card }: { card: CardData }) {
           body: JSON.stringify({
             mode: modeRef.current,
             recited: recitedRef.current,
-            refText: currentAnswer,
+            refText: scoreRefText,
             audio,
           }),
         });
@@ -184,7 +185,7 @@ export default function CardPractice({ card }: { card: CardData }) {
         setScoring(false);
       }
     },
-    [showToast, currentAnswer]
+    [showToast, scoreRefText]
   );
 
   // Long-press recording: release anywhere ends the take, finalizes the PCM, submits.
@@ -518,7 +519,9 @@ export default function CardPractice({ card }: { card: CardData }) {
               </svg>
             </div>
             <div className={styles.panel}>
-              <div className={styles.ans}>{highlightAnswer(currentAnswer, openWord)}</div>
+              <div className={styles.ans}>
+                {currentAnswer ? highlightAnswer(currentAnswer, openWord) : "这个题目还没有范文，先用自己的话试着回答。"}
+              </div>
               <div className={styles.anstools}>
                 <button onClick={() => showToast("🔊 示范朗读中…")}>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

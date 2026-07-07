@@ -4,11 +4,12 @@ import type { Bank, Part, Peak, Question, Topic } from "./types";
 
 const RESOURCE = path.join(process.cwd(), "Resource");
 const PATHS = {
-  part1: path.join(RESOURCE, "PART1\u9898\u5e93", "papaen_part1_archive.json"),
+  part1: path.join(RESOURCE, "PART1\u9898\u5e93", "papaen_part1_current.json"),
   part1Answers: path.join(RESOURCE, "PART1\u9898\u5e93", "part1_band7_sample_answers.md"),
   part23: path.join(RESOURCE, "PART2&3\u9898\u5e93", "papaen_part23_current.json"),
   part23Answers: path.join(RESOURCE, "PART2&3\u9898\u5e93", "part23_band7_sample_answers.json"),
   part2Combo: path.join(RESOURCE, "PART2\u4e32\u9898\u9898\u5e93", "papaen_part2_combo_current.json"),
+  part2ComboAnswers: path.join(RESOURCE, "PART2\u4e32\u9898\u9898\u5e93", "part2_combo_band7_sample_answers.json"),
 };
 
 export const PART2_COMBO = "Part 2\u4e32\u9898";
@@ -94,6 +95,7 @@ function parsePart1MarkdownAnswers(markdown: string): Map<string, string> {
 
 function normalizeTopic(topic: any, partHint: number, answerByContent = new Map<string, string>()): Topic {
   const questions: Question[] = (topic.questions || [])
+    .filter((q: any) => q.is_show !== 0)
     .map((q: any) => ({
       id: String(q.id),
       index: q.index,
@@ -117,12 +119,50 @@ function normalizeTopic(topic: any, partHint: number, answerByContent = new Map<
   };
 }
 
+const ANSWER_FIT_STOPWORDS = new Set(
+  ("the a an of to in on at for and or but is are was were be been being do does did done you your yours i my me mine " +
+    "we our ours they their theirs he she it its this that these those there here what when where which who whom whose " +
+    "why how think thing things people person often usually really very much many more most some any all with without " +
+    "about would could should shall will can may might must have has had having not no yes than then also just like get " +
+    "make made take took time way day good important because while still even other others such into from out over").split(/\s+/)
+);
+
+function keywordSet(text: unknown): Set<string> {
+  return new Set(
+    cleanText(text)
+      .toLowerCase()
+      .replace(/[^a-z\s]/g, " ")
+      .split(/\s+/)
+      .filter((word) => word.length > 2 && !ANSWER_FIT_STOPWORDS.has(word))
+  );
+}
+
+function questionAnswerFit(question: unknown, answerWords: Set<string>): number {
+  const questionWords = keywordSet(question);
+  if (!questionWords.size) return 0;
+  let hits = 0;
+  questionWords.forEach((word) => {
+    if (answerWords.has(word)) hits += 1;
+  });
+  return hits / questionWords.size;
+}
+
 function normalizeAnswers(data: any, options: { includeParts?: number[] } = {}): Map<string, string> {
   const includeParts = options.includeParts ? new Set(options.includeParts) : null;
   const out = new Map<string, string>();
   (data?.topics || []).forEach((topic: any) => {
-    (topic.answers || []).forEach((item: any) => {
+    const siblings: any[] = topic.answers || [];
+    siblings.forEach((item: any) => {
       if (includeParts && !includeParts.has(Number(item.part))) return;
+      // The generated sample-answer file sometimes attaches an answer body that
+      // actually discusses a sibling question from the same topic. Only keep an
+      // answer when no sibling question fits its body better than its own.
+      const answerWords = keywordSet(item.answer);
+      const ownFit = questionAnswerFit(item.question, answerWords);
+      const misassigned = siblings.some(
+        (other: any) => other !== item && questionAnswerFit(other.question, answerWords) > ownFit
+      );
+      if (misassigned) return;
       out.set(String(item.question_id), cleanText(item.answer));
     });
   });
@@ -229,25 +269,26 @@ function indexBank(parts: Part[]): Pick<Bank, "topics" | "questions"> {
 export async function load(): Promise<Bank> {
   if (cache) return cache;
   try {
-    const [part1Data, part1AnswerText, part23Data, comboData, answerData] = await Promise.all([
+    const [part1Data, part1AnswerText, part23Data, comboData, answerData, comboAnswerData] = await Promise.all([
       loadJSON(PATHS.part1),
       loadText(PATHS.part1Answers).catch(() => ""),
       loadJSON(PATHS.part23),
       loadJSON(PATHS.part2Combo),
       loadJSON(PATHS.part23Answers).catch(() => ({ topics: [] })),
+      loadJSON(PATHS.part2ComboAnswers).catch(() => ({ topics: [] })),
     ]);
-    // The external Part 2 sample-answer file currently contains many semantic
-    // mismatches (for example, a traffic-jam prompt answered as an object
-    // story). Keep the reliable Part 3 discussion answers, but do not attach
-    // those generated Part 2 samples as if they were canonical cue-card answers.
-    const answerMap = normalizeAnswers(answerData, { includeParts: [3] });
+    const answerMap = normalizeAnswers(answerData);
+    const comboAnswerMap = normalizeAnswers(comboAnswerData, { includeParts: [4] });
     const part1AnswerMap = parsePart1MarkdownAnswers(part1AnswerText);
     const part1Topics = ((part1Data as any).topics || []).map((t: any) => normalizeTopic(t, 1, part1AnswerMap));
     const part23Topics = withAnswers(
       ((part23Data as any).topics || []).map((t: any) => normalizeTopic(t, 2)),
       answerMap
     );
-    const comboTopics = ((comboData as any).topics || []).map((t: any) => normalizeTopic(t, 4));
+    const comboTopics = withAnswers(
+      ((comboData as any).topics || []).map((t: any) => normalizeTopic(t, 4)),
+      comboAnswerMap
+    );
     const parts = makeParts(part1Topics, part23Topics, comboTopics);
     cache = { parts, ...indexBank(parts), loaded: true };
   } catch (error) {
@@ -291,11 +332,11 @@ export function splitCueCard(text: string): { title: string; bullets: string[] }
   return { title, bullets };
 }
 
-export function fallbackAnswer(question: Question | undefined, topic: Topic | undefined): string {
-  if (question?.answer) return question.answer;
-  return `I would like to talk about ${
-    topic?.title || "this topic"
-  }. In my opinion, the most important point is balance. I would answer it with a clear example, then explain one reason and one personal feeling, so the response sounds natural and complete.`;
+// No fabricated fallback: an invented "balance" boilerplate reads like a
+// mismatched answer on the card. Empty means the UI shows a "no sample yet"
+// placeholder instead.
+export function fallbackAnswer(question: Question | undefined, _topic: Topic | undefined): string {
+  return question?.answer || "";
 }
 
 export interface PracticeQuestion extends Question {

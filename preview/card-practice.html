@@ -266,6 +266,10 @@ function escapeHTML(value){
 }
 
 function renderAnswer(answer){
+  if(!String(answer || '').trim()){
+    $('#ans').innerHTML = '<span style="color:var(--muted)">这个题目还没有范文，先用自己的话试着回答。</span>';
+    return;
+  }
   const defs = [
     ['in my opinion', '表达观点', 'In my opinion, ...'],
     ['the key point', '关键点', 'the key point is balance'],

@@ -1,8 +1,8 @@
-# Question Bank Redesign Changes
+# Question Bank Redesign Changes (archived snapshot, 2026-06-19)
 
-Updated: 2026-06-19
+> **归档快照，不再维护。** 本文记录 2026-06-19 那一轮题库重构的改动与当日数据量。文中所有题目/话题计数都是当日值，会随每次 `bank:publish` 漂移（例如串题 current 已从当时的 13 个变为 27 个）。现行结构与流程以 [PROJECT_STRUCTURE.md](../../PROJECT_STRUCTURE.md) 为准，产品规格以 [speaking_spec.md](../../speaking_spec.md) 为准。
 
-This file records the current round of product and code changes for the IELTS speaking question-bank redesign.
+This file records the 2026-06-19 round of product and code changes for the IELTS speaking question-bank redesign.
 
 ## Confirmed Product Structure
 

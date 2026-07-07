@@ -6,7 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "bank:scrape": "node scripts/scrape-papaen-questions.mjs",
+    "bank:answers": "node scripts/generate-band7-answers.mjs",
+    "bank:miniprogram": "node scripts/generate-miniprogram-bank.mjs",
+    "bank:cloud-seed": "node scripts/export-cloud-bank-seed.mjs",
+    "bank:cloud-publish": "node scripts/publish-cloud-bank.mjs",
+    "bank:update": "npm run bank:scrape && npm run bank:answers && npm run bank:miniprogram && npm run bank:cloud-seed",
+    "bank:publish": "npm run bank:update && npm run bank:cloud-publish"
   },
   "dependencies": {
     "next": "16.2.9",
@@ -15,11 +22,13 @@
     "sharp": "^0.35.3"
   },
   "devDependencies": {
+    "@cloudbase/node-sdk": "^3.18.3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.9",
-    "typescript": "^5"
+    "typescript": "^5",
+    "ws": "^8.21.0"
   }
 }

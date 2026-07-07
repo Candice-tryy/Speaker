@@ -14,3 +14,6 @@ declare const process: {
     [key: string]: string | undefined;
   };
 };
+
+declare const __CLOUD_ENV_ID__: string;
+declare const __USE_LOCAL_BANK_API__: boolean;

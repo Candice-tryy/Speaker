@@ -78,6 +78,12 @@ function decode(value = "") {
   }
 }
 
+// Compact crumb labels so the header row fits beside the capsule button.
+// All labels render at the same font size, matching the "PART1" reference.
+function shortPartLabel(name: string): string {
+  return name === "Part 1" ? "PART1" : name.replace(/^Part\s*/i, "P");
+}
+
 export default function Practice() {
   const router = useRouter();
   const params = router.params || {};
@@ -151,6 +157,7 @@ export default function Practice() {
   const requiredQuestionIds = useMemo(() => new Set(questions.slice(0, need).map((q) => q.id)), [questions, need]);
   const passedCount = passedQuestionIds.filter((id) => requiredQuestionIds.has(id)).length;
   const current = questions[qIdx];
+  const sampleAnswer = current?.answer || "";
   const refText = useMemo(() => current?.answer || current?.content || "", [current]);
   const passed = !!result && !result.rejected && result.band >= target - 0.5;
   const showScore = !!result && !result.rejected;
@@ -284,7 +291,7 @@ export default function Practice() {
           <View className="toprow">
             <View className="back" onClick={() => Taro.navigateBack()}><Image className="icon" src={ICONS.back} /></View>
             <View className="crumb">
-              <Text className="crumb-b">{partName}</Text>
+              <Text className="crumb-b">{shortPartLabel(partName)}</Text>
             </View>
             <View className="top-actions">
               <View className="settings" onClick={() => setShowList(true)}><Image className="icon" src={ICONS.list} /></View>
@@ -343,7 +350,7 @@ export default function Practice() {
               </View>
               <View className="panel">
                 <View className="ans">
-                  {refText ? highlightAnswer(refText, setWord) : <Text>这个题目还没有范文，先用自己的话试着回答。</Text>}
+                  {sampleAnswer ? highlightAnswer(sampleAnswer, setWord) : <Text>这个题目还没有范文，先用自己的话试着回答。</Text>}
                 </View>
                 <View className="anstools">
                   <View onClick={() => showToast("🔊 示范朗读中…")}><Image className="icon" src={ICONS.speaker} /><Text>示范朗读</Text></View>

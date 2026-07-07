@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Image, View, Text, Textarea } from "@tarojs/components";
 import Taro, { useDidShow } from "@tarojs/taro";
-import { FALLBACK_PARTS, getBank, type Part } from "../../lib/api";
+import { getBank, type Part } from "../../lib/api";
 import { ICONS, MIST } from "../../lib/icons.gen";
 import { buildScene, svgToDataUrl, type SceneNode } from "../../lib/scene";
 import { getProgress, getSettings, setSettings, touchStreak } from "../../lib/store";
@@ -28,7 +28,7 @@ function touchPoint(event: unknown, listName: "touches" | "changedTouches"): Tou
 }
 
 export default function Map() {
-  const [parts, setParts] = useState<Part[]>(FALLBACK_PARTS);
+  const [parts, setParts] = useState<Part[]>([]);
   const [partIdx, setPartIdx] = useState(1);
   const [peakIdx, setPeakIdx] = useState(0);
   const [prog, setProg] = useState<Record<string, number>>(getProgress());
@@ -92,14 +92,14 @@ export default function Map() {
   function loadBank() {
     getBank()
       .then((bank) => {
-        const nextParts = bank.parts.length > 0 ? bank.parts : FALLBACK_PARTS;
+        const nextParts = bank.parts;
         setParts(nextParts);
         setPartIdx(Math.min(1, Math.max(0, nextParts.length - 1)));
         setPeakIdx(0);
         if (!bank.loaded) showToast("题库读取失败，已使用内置备用题");
       })
       .catch(() => {
-        setParts(FALLBACK_PARTS);
+        setParts([]);
         showToast("题库读取失败，已使用内置备用题");
       });
   }

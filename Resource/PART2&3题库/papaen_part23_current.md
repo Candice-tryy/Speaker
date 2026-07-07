@@ -1,9 +1,9 @@
-﻿# Papaen IELTS Speaking Part 2&3 Current Questions
+# Papaen IELTS Speaking Part 2&3 Current
 
 - Topic count: 77
 - Question count: 450
 - Source version: 6745
-- Exported at: 2026-06-17T17:27:06.499446+08:00
+- Exported at: 2026-07-07T06:32:16.537Z
 
 ## 1. 发小 / 人物 / NEW
 1. [Part 2] Describe a friend from your childhood You should say: Who he/she is Where you met each other What you often did together And explain what made you like him/her
@@ -37,7 +37,7 @@
 4. [Part 3] Is there any food in your country that is eaten at special times or on special occasions?
 5. [Part 3] What are the difference between special food in China and foreign countries?
 6. [Part 3] In your country, do people nowadays cook at home as frequently as people did in the past?
-7. [Part 3] Do people usually cook special food in China?
+7. [Part 3 / HIDDEN] Do people usually cook special food in China?
 
 ## 5. 重要河流/湖泊 / 事物 / NEW
 1. [Part 2] Describe an important river/lake in your country You should say: Where it is located How big/long it is What it looks like And explain why it is important
@@ -45,29 +45,29 @@
 3. [Part 3] Do you think rivers/lakes attract tourists?
 4. [Part 3] How do rivers and lakes affect local tourism?
 5. [Part 3] Are rivers and lakes good for transport?
-6. [Part 3] Do you think rivers and lakes attract tourists?
-7. [Part 3] Do people in your country go swimming in their spare time?
-8. [Part 3] Is it necessary for everyone to learn swimming?
-9. [Part 3] Do people like the rivers in your country?
+6. [Part 3 / HIDDEN] Do you think rivers and lakes attract tourists?
+7. [Part 3 / HIDDEN] Do people in your country go swimming in their spare time?
+8. [Part 3 / HIDDEN] Is it necessary for everyone to learn swimming?
+9. [Part 3 / HIDDEN] Do people like the rivers in your country?
 
 ## 6. 花费甚少的外出日 / 事件 / NEW
 1. [Part 2] Describe a special day out that cost you little money/didn’t cost you much You should say: When was the day Where you went How much you spent And explain how you feel about the day
 2. [Part 3] Do people like to spend their leisure time outside in your country?
-3. [Part 3] How do people spend their leisure time in China?
+3. [Part 3 / HIDDEN] How do people spend their leisure time in China?
 4. [Part 3] How does technology affect the way people spend their leisure time?
 5. [Part 3] Do you think only old people have time for leisure?
 6. [Part 3] Going out to have holidays is tiring. Why do people still want to do it?
 7. [Part 3] Why do people like to have days off?
 8. [Part 3] How do people spend their leisure time in your country?
-9. [Part 3] Is it possible to buy something from a physical store without money?
-10. [Part 3] Why is online shopping so popular these days?
-11. [Part 3] Have you ever had a bad shopping experience?
-12. [Part 3] How can people save as much money as possible?
-13. [Part 3] Do teenagers spend more money than they used to?
+9. [Part 3 / HIDDEN] Is it possible to buy something from a physical store without money?
+10. [Part 3 / HIDDEN] Why is online shopping so popular these days?
+11. [Part 3 / HIDDEN] Have you ever had a bad shopping experience?
+12. [Part 3 / HIDDEN] How can people save as much money as possible?
+13. [Part 3 / HIDDEN] Do teenagers spend more money than they used to?
 
 ## 7. 想要颁布的环保法律 / 事件 / NEW
 1. [Part 2] Describe an environmental law you would like your country to introduce You should say: What law it should be Why people should follow the law Whether the law will be popular And explain how you feel about this law
-2. [Part 3] What environmentallaws does your country already have?
+2. [Part 3 / HIDDEN] What environmentallaws does your country already have?
 3. [Part 3] Will there be a law that is universally accepted?
 4. [Part 3] What kinds of rules do schools in China have?
 5. [Part 3] How does technology affect the law?
@@ -87,7 +87,7 @@
 
 ## 10. 很久没收到回复的信息 / 事件 / NEW
 1. [Part 2] Describe a time when you sent a message or anemail to someone but received no reply for a longtime You should say: Who you sent it to What the message/email was about Whether you finally received the reply And explain how you felt about the experience
-2. [Part 3] Why do some people feel angry when others don't reply to their message?
+2. [Part 3 / HIDDEN] Why do some people feel angry when others don't reply to their message?
 3. [Part 3] How do you show your respect in your messages?
 4. [Part 3] Why do some people prefer sending a messageinstead of making a call?
 5. [Part 3] What would you do if you did not receive a reply after sending out a message?
@@ -320,7 +320,7 @@
 
 ## 43. 喜欢画画的孩子 / 事物
 1. [Part 2] Describe a child you know who likes drawing/painting very much You should say: How you knew him/her What he/she is like How often he/she draws/paints And explain why you think he/she likes drawing/painting
-2. [Part 3] How do artworks inspire people?
+2. [Part 3 / HIDDEN] How do artworks inspire people?
 3. [Part 3] Do you think galleries and museums should be free of charge?
 4. [Part 3] Why do some people visit galleries ormuseums instead of viewing artworks online?
 5. [Part 3] Why do most children draw more often than adults do?
@@ -392,8 +392,8 @@
 2. [Part 3] Do you think a person’s good habits would influence those around him/her? How?
 3. [Part 3] What can we do to get rid of bad habit?
 4. [Part 3] Why do we develop bad habit?
-5. [Part 3] What should parents do to help their children develop good habit ?
-6. [Part 3] What good habit should children have?
+5. [Part 3] What should parents do to help their children develop good habit ？
+6. [Part 3] What good habit should children have？
 
 ## 53. 钦佩的创作者 / 人物
 1. [Part 2] Describe a creative person (e.g. an artist, a musician, etc) you admire You should say Who he/she is How you knew his/her What his/her greatest achievement is And explain why you think he/she is creative
@@ -475,10 +475,10 @@
 
 ## 63. 想提升的天赋 / 事件
 1. [Part 2] Describe a natural talent (sports/music, etc) you want to improve You should say What it is When you discovered it How you want to improve it And how you feel about it
-2. [Part 3] Do you think it is more interesting to watch famous people’s or ordinary people’s shows?
-3. [Part 3] Why do people like to watch talent shows?
-4. [Part 3] Is it possible for us to know whether children who are 3 or 4 years old will become musicians and painters when they grow up?
-5. [Part 3] Do you think artists with talents should focus on their talents?
+2. [Part 3 / HIDDEN] Do you think it is more interesting to watch famous people’s or ordinary people’s shows?
+3. [Part 3 / HIDDEN] Why do people like to watch talent shows?
+4. [Part 3 / HIDDEN] Is it possible for us to know whether children who are 3 or 4 years old will become musicians and painters when they grow up?
+5. [Part 3 / HIDDEN] Do you think artists with talents should focus on their talents?
 
 ## 64. 鼓励别人做不愿做的事 / 事件
 1. [Part 2] Describe a time when you encouraged someone to do something that he/she didn't want to do You should say: Who he or she is What you encouraged him/her to do How he/she reacted And explain why you encouraged him/her?
@@ -494,14 +494,14 @@
 4. [Part 3] Do you think imagination is essential for scientists ?
 5. [Part 3] Do you think adults can have lots of imagination?
 
-## 66. 第一次说外语 / 
+## 66. 第一次说外语
 1. [Part 2] Describe the time when you first talked in a foreign language You should say Where you were Who you were with What you talked about And explain how you felt about it
 2. [Part 3] Do you think minority languages will disappear?
 3. [Part 3] Does a person still need to learn languages, if he or she is good at English?
 4. [Part 3] Which skill is more important, speaking or writing?
 5. [Part 3] At what age should children start learning a foreign language?
 
-## 67. 读到的有用的书 / 
+## 67. 读到的有用的书
 1. [Part 2] Describe a book you read that you found useful You should say What it is When and where did you read it Why it is useful And explain your feeling about it
 2. [Part 3] Some people say that it is easier for children who start reading from a young age to succeed, do you agree?
 3. [Part 3] What’s the difference between paper books and e-books?
@@ -513,12 +513,12 @@
 2. [Part 3] Who should people ask for help,colleagues or family members?
 3. [Part 3] What kind of help do people need when looking for a new job?
 4. [Part 3] Should children help their parents with household chores?
-5. [Part 3] Why are some people willing to help others?
-6. [Part 3] Who should teach children to help others? Parents or teachers?
-7. [Part 3] Do people nowadays help others more than in the past?
-8. [Part 3] In what kinds of professions do people help others more?
+5. [Part 3 / HIDDEN] Why are some people willing to help others?
+6. [Part 3 / HIDDEN] Who should teach children to help others? Parents or teachers?
+7. [Part 3 / HIDDEN] Do people nowadays help others more than in the past?
+8. [Part 3 / HIDDEN] In what kinds of professions do people help others more?
 
-## 69. 对家庭重要的东西 / 
+## 69. 对家庭重要的东西
 1. [Part 2] Describe something important that has been kept in your family for a long time You should say: What it is When your family had it How your family got it And explain why it is important to your family
 2. [Part 3] What's the influence of technology on museums?
 3. [Part 3] What kinds of things are kept in museums?
@@ -528,28 +528,28 @@
 ## 70. 自行车/摩托车/汽车旅行 / 事件
 1. [Part 2] Describe a bicycle/motorcycle/car trip you would like to go on You should say: Who you would like to go with Where you would like to go When you would like to go And explain why you would like to go by bicycle/motorcycle/car
 2. [Part 3] Do you think people need to change the way of transportation drastically to protect the environment?
-3. [Part 3] Which form of vehicle is more popular in your country, bikes, cars or motorcycles?
-4. [Part 3] How are the transportation systems in urban and rural areas different?
-5. [Part 3] Do you think air pollution comes mostly from vehicles?
+3. [Part 3] Which form of vehicle is more popular in your country, bikes, cars or motorcycles？
+4. [Part 3] How are the transportation systems in urban and rural areas different？
+5. [Part 3] Do you think air pollution comes mostly from vehicles？
 6. [Part 3] Do you think people need to drastically change their methods of transportation to protect the environment?
-7. [Part 3] Which vehicle is most popular in your country, bikes, cars or motorcycles?
+7. [Part 3 / HIDDEN] Which vehicle is most popular in your country, bikes, cars or motorcycles？
 
 ## 71. 为家人骄傲 / 事件
 1. [Part 2] Describe a time when you felt proud of a family member You should say: When it happened Who the person is What the person did And explain why you felt proud of him/her
 2. [Part 3] What do you think about children working hard just for grades?
 3. [Part 3] Do rewards help a child become better?
-4. [Part 3] When would parents feel proud of their children?
+4. [Part 3] When would parents feel proud of their children？
 5. [Part 3] Is it good to reward children very often? Why?
-6. [Part 3] Should parents reward children?Why and how?
+6. [Part 3] Should parents reward children？Why and how？
 7. [Part 3] On what occasions would adults be proud of themselves?
-8. [Part 3] When do parents feel proud of their children?
+8. [Part 3 / HIDDEN] When do parents feel proud of their children？
 
 ## 72. 花费超过预期的物品 / 事物
 1. [Part 2] Describe an item on which you spent more than expected You should say: What it is How much you spent on it Why you bought it And explain why you think you spent more than expected
-2. [Part 3] Do you often buy more than you expected?
-3. [Part 3] Do people buy things they don't need?
+2. [Part 3 / HIDDEN] Do you often buy more than you expected?
+3. [Part 3] Do people buy things they don't need？
 4. [Part 3] What do you think young people spend most of their money on?
-5. [Part 3] Do you think it is important to save money?Why?
+5. [Part 3] Do you think it is important to save money？Why?
 6. [Part 3] Do you often buy more than you expect?
 
 ## 73. 给别人建议 / 事物
@@ -558,28 +558,28 @@
 3. [Part 3] What are the personalities of people whose job is to give advice to others?
 4. [Part 3] Is it good to ask advice from strangers online?
 5. [Part 3] Should people prepare before giving advice?
-6. [Part 3] Whose advice is more helpful, parents’ or friends’?
-7. [Part 3] What kinds of advice do parents give to their children?
-8. [Part 3] How do experts give advice to others?
-9. [Part 3] What advice do parents give to teenagers about making friends?
+6. [Part 3 / HIDDEN] Whose advice is more helpful, parents’ or friends’?
+7. [Part 3 / HIDDEN] What kinds of advice do parents give to their children?
+8. [Part 3 / HIDDEN] How do experts give advice to others?
+9. [Part 3 / HIDDEN] What advice do parents give to teenagers about making friends?
 
-## 74. 受欢迎的人 / 人物
+## 74. 受欢迎的人【海外】 / 人物
 1. [Part 2] Describe a popular person You should say: Who this person is What he or she is like Why you think this person is popular How this person influences the public
 2. [Part 3] Why do people want to be popular?
 3. [Part 3] Is it easier to become popular nowadays?
 4. [Part 3] Do you think good teacher are always popular among students?
 5. [Part 3] Is it important for a teacher to be popular?
-6. [Part 3] What kinds of people are more popular at school?
-7. [Part 3] Why are some people less famous?
-8. [Part 3] What are the qualities of being a good teacher?
+6. [Part 3 / HIDDEN] What kinds of people are more popular at school?
+7. [Part 3 / HIDDEN] Why are some people less famous?
+8. [Part 3] What are the qualities of being a good teacher？
 9. [Part 3] Why are some students popular in school?
-10. [Part 3] Do you think popular stars have more freedom or less freedom?
-11. [Part 3] What influences do popular stars have on teenagers?
-12. [Part 3] Do you think children should imitate their idols?
-13. [Part 3] Do you know any popular star who really likes helping other people?
-14. [Part 3] What are the qualities of being popular?
+10. [Part 3 / HIDDEN] Do you think popular stars have more freedom or less freedom？
+11. [Part 3 / HIDDEN] What influences do popular stars have on teenagers？
+12. [Part 3 / HIDDEN] Do you think children should imitate their idols？
+13. [Part 3 / HIDDEN] Do you know any popular star who really likes helping other people？
+14. [Part 3] What are the qualities of being popular？
 
-## 75. 想见的名人 / 
+## 75. 想见的名人
 1. [Part 2] Describe a famous person you would like to meet You should say: Who he/she is How you knew him/her How/where you would like to meet him/her And explain why you would like to meet him/ her
 2. [Part 3] Why can some celebrities stay famous for a long time while some cannot?
 3. [Part 3] What are the advantages and disadvantages of becoming a celebrity?
@@ -591,17 +591,17 @@
 2. [Part 3] Do you think that children adapt to new things more easily than adult?
 3. [Part 3] Why are some people keen on doing dangerous activities?
 4. [Part 3] Why are some people unwilling to try new things?
-5. [Part 3] Do you think it is necessary to spend some money on celebrations?
-6. [Part 3] How much time do people need to prepare celebrations?
-7. [Part 3] How do people celebrate their personal events?
-8. [Part 3] What personal events do people usually celebrate?
+5. [Part 3 / HIDDEN] Do you think it is necessary to spend some money on celebrations?
+6. [Part 3 / HIDDEN] How much time do people need to prepare celebrations?
+7. [Part 3 / HIDDEN] How do people celebrate their personal events?
+8. [Part 3 / HIDDEN] What personal events do people usually celebrate?
 
 ## 77. 不寻常的一餐 / 事件
 1. [Part 2] Describe an unusual meal you had You should say： When you had it Where you had it Whom you had it with And explain why it was unusual
-2. [Part 3] Do you think people are less willing to cook meals by themselves these days，compared to the past?
-3. [Part 3] What do you think are the benefits of having dinner together?
-4. [Part 3] Do young people like to spend time with their families or friends?
-5. [Part 3] Do you think having dinner at home is a good idea?
+2. [Part 3 / HIDDEN] Do you think people are less willing to cook meals by themselves these days，compared to the past？
+3. [Part 3 / HIDDEN] What do you think are the benefits of having dinner together？
+4. [Part 3 / HIDDEN] Do young people like to spend time with their families or friends？
+5. [Part 3] Do you think having dinner at home is a good idea？
 6. [Part 3] What are the advantages and disadvantages of eating in restaurants?
 7. [Part 3] Do people in your country value food culture?
 8. [Part 3] Do people in your country socialize in restaurants? Why?

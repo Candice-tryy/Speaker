@@ -1,10 +1,11 @@
 const QuestionBank = (() => {
   const PATHS = {
-    part1: '../Resource/PART1%E9%A2%98%E5%BA%93/papaen_part1_archive.json',
+    part1: '../Resource/PART1%E9%A2%98%E5%BA%93/papaen_part1_current.json',
     part1Answers: '../Resource/PART1%E9%A2%98%E5%BA%93/part1_band7_sample_answers.md',
     part23: '../Resource/PART2%263%E9%A2%98%E5%BA%93/papaen_part23_current.json',
     part23Answers: '../Resource/PART2%263%E9%A2%98%E5%BA%93/part23_band7_sample_answers.json',
-    part2Combo: '../Resource/PART2%E4%B8%B2%E9%A2%98%E9%A2%98%E5%BA%93/papaen_part2_combo_current.json'
+    part2Combo: '../Resource/PART2%E4%B8%B2%E9%A2%98%E9%A2%98%E5%BA%93/papaen_part2_combo_current.json',
+    part2ComboAnswers: '../Resource/PART2%E4%B8%B2%E9%A2%98%E9%A2%98%E5%BA%93/part2_combo_band7_sample_answers.json'
   };
 
   const PART2_COMBO = 'Part 2串题';
@@ -62,7 +63,7 @@ const QuestionBank = (() => {
   }
 
   function normalizeTopic(topic, partHint, answerByContent = new Map()) {
-    const questions = (topic.questions || []).map(q => ({
+    const questions = (topic.questions || []).filter(q => q.is_show !== 0).map(q => ({
       id: String(q.id),
       index: q.index,
       part: q.part || partHint,
@@ -84,12 +85,46 @@ const QuestionBank = (() => {
     };
   }
 
+  const ANSWER_FIT_STOPWORDS = new Set(
+    ('the a an of to in on at for and or but is are was were be been being do does did done you your yours i my me mine ' +
+      'we our ours they their theirs he she it its this that these those there here what when where which who whom whose ' +
+      'why how think thing things people person often usually really very much many more most some any all with without ' +
+      'about would could should shall will can may might must have has had having not no yes than then also just like get ' +
+      'make made take took time way day good important because while still even other others such into from out over').split(/\s+/)
+  );
+
+  function keywordSet(text) {
+    return new Set(
+      cleanText(text)
+        .toLowerCase()
+        .replace(/[^a-z\s]/g, ' ')
+        .split(/\s+/)
+        .filter(word => word.length > 2 && !ANSWER_FIT_STOPWORDS.has(word))
+    );
+  }
+
+  function questionAnswerFit(question, answerWords) {
+    const questionWords = keywordSet(question);
+    if (!questionWords.size) return 0;
+    let hits = 0;
+    questionWords.forEach(word => { if (answerWords.has(word)) hits += 1; });
+    return hits / questionWords.size;
+  }
+
   function normalizeAnswers(data, includeParts) {
     const include = includeParts ? new Set(includeParts) : null;
     const out = new Map();
     (data?.topics || []).forEach(topic => {
-      (topic.answers || []).forEach(item => {
+      const siblings = topic.answers || [];
+      siblings.forEach(item => {
         if (include && !include.has(Number(item.part))) return;
+        // The generated sample-answer file sometimes attaches an answer body
+        // that actually discusses a sibling question from the same topic. Only
+        // keep an answer when no sibling question fits its body better.
+        const answerWords = keywordSet(item.answer);
+        const ownFit = questionAnswerFit(item.question, answerWords);
+        const misassigned = siblings.some(other => other !== item && questionAnswerFit(other.question, answerWords) > ownFit);
+        if (misassigned) return;
         out.set(String(item.question_id), cleanText(item.answer));
       });
     });
@@ -185,18 +220,20 @@ const QuestionBank = (() => {
   async function load() {
     if (cache) return cache;
     try {
-      const [part1Data, part1AnswerText, part23Data, comboData, answerData] = await Promise.all([
+      const [part1Data, part1AnswerText, part23Data, comboData, answerData, comboAnswerData] = await Promise.all([
         loadJSON(PATHS.part1),
         loadText(PATHS.part1Answers).catch(() => ''),
         loadJSON(PATHS.part23),
         loadJSON(PATHS.part2Combo),
-        loadJSON(PATHS.part23Answers).catch(() => ({ topics: [] }))
+        loadJSON(PATHS.part23Answers).catch(() => ({ topics: [] })),
+        loadJSON(PATHS.part2ComboAnswers).catch(() => ({ topics: [] }))
       ]);
-      const answerMap = normalizeAnswers(answerData, [3]);
+      const answerMap = normalizeAnswers(answerData);
+      const comboAnswerMap = normalizeAnswers(comboAnswerData, [4]);
       const part1AnswerMap = parsePart1MarkdownAnswers(part1AnswerText);
       const part1Topics = (part1Data.topics || []).map(t => normalizeTopic(t, 1, part1AnswerMap));
       const part23Topics = withAnswers((part23Data.topics || []).map(t => normalizeTopic(t, 2)), answerMap);
-      const comboTopics = (comboData.topics || []).map(t => normalizeTopic(t, 4));
+      const comboTopics = withAnswers((comboData.topics || []).map(t => normalizeTopic(t, 4)), comboAnswerMap);
       const parts = makeParts(part1Topics, part23Topics, comboTopics);
       cache = { parts, ...indexBank(parts), loaded: true };
     } catch (error) {
@@ -247,9 +284,10 @@ const QuestionBank = (() => {
     return { title, bullets };
   }
 
-  function fallbackAnswer(question, topic) {
-    if (question?.answer) return question.answer;
-    return `I would like to talk about ${topic?.title || 'this topic'}. In my opinion, the most important point is balance. I would answer it with a clear example, then explain one reason and one personal feeling, so the response sounds natural and complete.`;
+  // No fabricated fallback: an invented boilerplate reads like a mismatched
+  // answer on the card. Empty means the UI shows a "no sample yet" placeholder.
+  function fallbackAnswer(question) {
+    return question?.answer || '';
   }
 
   function partQuestionNo(partName) {

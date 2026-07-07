@@ -1,14 +1,13 @@
-import Taro from "@tarojs/taro";
+﻿import Taro from "@tarojs/taro";
 
-// Point this at the Next.js backend (the repo root app/api/*).
-// Dev: your computer's LAN IP while `npm run dev` runs at the repo root —
-// works from both the devtools simulator and a real phone on the same Wi-Fi.
-// (IP changes when you switch networks: re-check with `ipconfig`.)
-// Prod: your ICP-filed HTTPS domain (must be in 服务器域名 whitelist).
+// Used by scoring and explicit local bank debugging. The question bank itself
+// is cloud-first and only falls back to this URL when USE_LOCAL_BANK_API=1.
+// For production scoring, replace this with a whitelisted HTTPS API domain.
 export const BASE_URL = "http://172.20.10.3:3000";
 
 export interface Question {
   id: string;
+  index?: number;
   part: number;
   content: string;
   is_show?: number;
@@ -24,8 +23,12 @@ export interface PracticeQuestion extends Question {
 }
 export interface Topic {
   id: string;
+  index?: number;
   title: string;
   tag?: string;
+  level?: unknown;
+  isNew?: boolean;
+  isShow?: boolean;
   part: number;
   questions: Question[];
 }
@@ -49,92 +52,14 @@ export interface ScoreResult {
   rejected?: boolean;
 }
 
-export const FALLBACK_PARTS: Part[] = [
-  {
-    name: "Part 1",
-    peaks: [
-      {
-        name: "日常表达",
-        topics: ["Hometown", "Study", "Weekend", "Food", "Weather"],
-        boss: "Warm-up Boss",
-        done: 0,
-        cards: [
-          makeTopic("p1-home", "Hometown", 1, ["Where is your hometown?", "What do you like about it?", "Has it changed much?"]),
-          makeTopic("p1-study", "Study", 1, ["What do you study?", "Why did you choose it?", "Do you enjoy your major?"]),
-          makeTopic("p1-weekend", "Weekend", 1, ["What do you usually do on weekends?", "Do you prefer staying in or going out?", "How do you relax?"]),
-          makeTopic("p1-food", "Food", 1, ["What food do you like?", "Can you cook?", "Do you often eat out?"]),
-          makeTopic("p1-weather", "Weather", 1, ["What weather do you like?", "Does weather affect your mood?", "What is the weather like in your city?"]),
-        ],
-      },
-    ],
-  },
-  {
-    name: "Part 2&3",
-    peaks: [
-      {
-        name: "人物与经历",
-        topics: ["A helpful person", "A good decision", "A trip", "A skill", "A gift"],
-        boss: "Examiner Boss",
-        done: 0,
-        cards: [
-          makeTopic("p23-person", "A helpful person", 2, ["Describe a person who helped you.", "Who is this person?", "How did they help you?"]),
-          makeTopic("p23-decision", "A good decision", 2, ["Describe a good decision you made.", "When did you make it?", "Why was it important?"]),
-          makeTopic("p23-trip", "A trip", 2, ["Describe a memorable trip.", "Where did you go?", "What made it special?"]),
-          makeTopic("p23-skill", "A skill", 2, ["Describe a skill you want to learn.", "What is it?", "Why do you want to learn it?"]),
-          makeTopic("p23-gift", "A gift", 2, ["Describe a gift you received.", "Who gave it to you?", "Why did you like it?"]),
-        ],
-      },
-      {
-        name: "地点与物品",
-        topics: ["A quiet place", "A cafe", "A useful object", "A photo", "A book"],
-        boss: "Examiner Boss",
-        done: 0,
-        cards: [
-          makeTopic("p23-place", "A quiet place", 2, ["Describe a quiet place you like.", "Where is it?", "What do you do there?"]),
-          makeTopic("p23-cafe", "A cafe", 2, ["Describe a cafe you like.", "Where is it?", "Why do you go there?"]),
-          makeTopic("p23-object", "A useful object", 2, ["Describe a useful object.", "What is it?", "How do you use it?"]),
-          makeTopic("p23-photo", "A photo", 2, ["Describe a photo you like.", "When was it taken?", "Why is it meaningful?"]),
-          makeTopic("p23-book", "A book", 2, ["Describe a book you enjoyed.", "What is it about?", "Why did you like it?"]),
-        ],
-      },
-    ],
-  },
-  {
-    name: "Part 2串题",
-    peaks: [
-      {
-        name: "当季串题",
-        topics: ["发小", "旅行", "学习", "礼物"],
-        boss: "Combo Boss",
-        done: 0,
-        cards: [
-          // part 4 = combo questions, matching the real bank's numbering so
-          // toPracticeQuestions' part filter keeps them.
-          makeTopic("combo-friend", "发小", 4, ["Describe a childhood friend.", "How did you meet?", "What did you do together?"]),
-          makeTopic("combo-trip", "旅行", 4, ["Describe a trip you planned.", "Where did you go?", "What happened?"]),
-          makeTopic("combo-study", "学习", 4, ["Describe something useful you learned.", "How did you learn it?", "How do you use it?"]),
-          makeTopic("combo-gift", "礼物", 4, ["Describe a meaningful gift.", "Who gave it to you?", "Why was it special?"]),
-        ],
-      },
-    ],
-  },
+const BANK_CACHE_KEY = "speaker_current_bank_cache_v1";
+const BANK_MANIFEST_COLLECTION = "bank_manifest";
+const BANK_PARTS_COLLECTION = "bank_parts";
+const ACTIVE_MANIFEST_ID = "active";
+const GENERATED_FALLBACK_PATHS = [
+  "assets/question-bank.generated.json",
+  "/assets/question-bank.generated.json",
 ];
-
-function makeTopic(id: string, title: string, part: number, prompts: string[]): Topic {
-  return {
-    id,
-    title,
-    tag: title,
-    part,
-    questions: prompts.map((content, index) => ({
-      id: `${id}-q${index + 1}`,
-      part,
-      content,
-      answer:
-        "In my opinion, the key point is to give a clear example and explain why it matters. For example, I would connect the topic with my daily life and add one specific detail.",
-    })),
-  };
-}
 
 export function partQuestionNo(partName: string): number {
   if (partName === "Part 1") return 1;
@@ -156,11 +81,11 @@ export function splitCueCard(text: string): { title: string; bullets: string[] }
   return { title, bullets };
 }
 
-export function fallbackAnswer(question: Question | undefined, topic: Topic | undefined): string {
-  if (question?.answer) return question.answer;
-  return `I would like to talk about ${
-    topic?.title || "this topic"
-  }. In my opinion, the most important point is balance. I would answer it with a clear example, then explain one reason and one personal feeling, so the response sounds natural and complete.`;
+// No fabricated fallback: an invented "balance" boilerplate reads like a
+// mismatched answer on the card. Empty means the UI shows a "no sample yet"
+// placeholder instead.
+export function fallbackAnswer(question: Question | undefined, _topic: Topic | undefined): string {
+  return question?.answer || "";
 }
 
 export function toPracticeQuestions(topic: Topic, partName: string): PracticeQuestion[] {
@@ -185,19 +110,110 @@ export function toPracticeQuestions(topic: Topic, partName: string): PracticeQue
     });
 }
 
+function sanitizeParts(parts: Part[]): Part[] {
+  return (parts || []).map((part) => ({
+    ...part,
+    peaks: (part.peaks || []).map((peak) => ({
+      ...peak,
+      cards: (peak.cards || [])
+        .map((topic) => ({
+          ...topic,
+          questions: (topic.questions || []).filter((q) => q.is_show !== 0),
+        }))
+        .filter((topic) => topic.questions.length > 0),
+    })).filter((peak) => peak.cards.length > 0),
+  })).filter((part) => part.peaks.length > 0);
+}
+
+function readCachedBank(): Part[] | null {
+  try {
+    const value = Taro.getStorageSync(BANK_CACHE_KEY);
+    if (value && Array.isArray(value.parts) && value.parts.length > 0) return sanitizeParts(value.parts);
+  } catch {}
+  return null;
+}
+
+function writeCachedBank(parts: Part[], version?: string) {
+  try {
+    Taro.setStorageSync(BANK_CACHE_KEY, { version, cachedAt: Date.now(), parts });
+  } catch {}
+}
+
+async function getGeneratedFallbackParts(): Promise<Part[]> {
+  const fs = Taro.getFileSystemManager?.();
+  if (!fs) return [];
+  for (const filePath of GENERATED_FALLBACK_PATHS) {
+    try {
+      const source = fs.readFileSync(filePath, "utf8") as string;
+      const data = JSON.parse(source);
+      return sanitizeParts(data.parts || []);
+    } catch {}
+  }
+  return [];
+}
+
+async function getCloudBank(): Promise<{ parts: Part[]; version?: string } | null> {
+  if (!__CLOUD_ENV_ID__) return null;
+  const cloud = (Taro as any).cloud;
+  if (!cloud) return null;
+  if (!cloud.__speakerInited) {
+    cloud.init({ env: __CLOUD_ENV_ID__, traceUser: true });
+    cloud.__speakerInited = true;
+  }
+  const db = cloud.database();
+  const manifestResult = await db.collection(BANK_MANIFEST_COLLECTION).doc(ACTIVE_MANIFEST_ID).get();
+  const manifest = manifestResult?.data || {};
+  const version = String(manifest.activeVersion || "");
+  if (!version) return null;
+
+  const partOrder: string[] = Array.isArray(manifest.parts) && manifest.parts.length
+    ? manifest.parts
+    : ["Part 1", "Part 2&3", "Part 2串题"];
+  const parts: Part[] = [];
+  for (const partName of partOrder) {
+    const result = await db
+      .collection(BANK_PARTS_COLLECTION)
+      .where({ version, name: partName })
+      .limit(1)
+      .get();
+    const part = result?.data?.[0]?.part;
+    if (part?.name && Array.isArray(part.peaks)) parts.push(part);
+  }
+  const cleanParts = sanitizeParts(parts);
+  return cleanParts.length ? { parts: cleanParts, version } : null;
+}
+
 export async function getBank(): Promise<{ parts: Part[]; loaded: boolean }> {
   try {
-    const res = await Taro.request({
-      url: `${BASE_URL}/api/bank`,
-      method: "GET",
-      timeout: 8000,
-    });
-    const data = res.data as { parts?: Part[]; loaded?: boolean };
-    if (Array.isArray(data.parts) && data.parts.length > 0) {
-      return { parts: data.parts, loaded: data.loaded !== false };
+    const cloudBank = await getCloudBank();
+    if (cloudBank?.parts?.length) {
+      writeCachedBank(cloudBank.parts, cloudBank.version);
+      return { parts: cloudBank.parts, loaded: true };
     }
   } catch {}
-  return { parts: FALLBACK_PARTS, loaded: false };
+
+  const cached = readCachedBank();
+  if (cached?.length) return { parts: cached, loaded: true };
+
+  if (__USE_LOCAL_BANK_API__) {
+    try {
+      const res = await Taro.request({
+        url: `${BASE_URL}/api/bank`,
+        method: "GET",
+        timeout: 8000,
+      });
+      const data = res.data as { parts?: Part[]; loaded?: boolean };
+      if (Array.isArray(data.parts) && data.parts.length > 0) {
+        const parts = sanitizeParts(data.parts);
+        if (parts.length) return { parts, loaded: data.loaded !== false };
+      }
+    } catch {}
+  }
+  try {
+    return { parts: await getGeneratedFallbackParts(), loaded: false };
+  } catch {
+    return { parts: [], loaded: false };
+  }
 }
 
 export async function scoreAudio(params: {
@@ -225,7 +241,7 @@ export async function scoreAudio(params: {
       band: 6.5,
       pronunciation: 6.5,
       fluency: 6.5,
-      advice: "后端暂时没连上，先用演示评分：保持语速稳定，再把句尾收清楚。",
+      advice: "The scoring API is not available, so this is a demo score. Keep your pace steady and make the final sentence clearer.",
       source: "mock",
     };
   }

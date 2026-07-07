@@ -1,11 +1,11 @@
 {
-  "source_page": "https://ielts.papaen.com/center/speaking?ielts-speaking=%2Fspeaking_materials%2Findex%3Fpart%25M23%25M1tag%25M20",
+  "source_page": "https://ielts.papaen.com/center/speaking?ielts-speaking=%2Fspeaking_materials%2Findex",
   "api_source": "https://napi.papaen.com/v2/exercise/material_parts",
   "part23_file_url": "https://tfile.papaen.com/2026/06/07/RmQPMVkI30HkFC5uYtFFjIhw8rLUIGryzC3UL8iD.txt",
   "module_title": "Part 2&3",
   "module_version": 6745,
-  "exported_at": "2026-06-17T17:27:06.499446+08:00",
-  "notes": "current includes topics with is_show=1; archive includes all decrypted Part 2&3 records from the file. Original site answer/audio payloads are not included.",
+  "exported_at": "2026-07-07T06:32:16.537Z",
+  "notes": "current includes topics with is_show=1; question records are preserved and can still be filtered by question is_show at runtime. Source answer/audio payloads are not included.",
   "topic_count": 77,
   "question_count": 450,
   "topics": [
@@ -2727,14 +2727,14 @@
           "index": 5,
           "id": 5842,
           "part": 3,
-          "content": "What should parents do to help their children develop good habit ?",
+          "content": "What should parents do to help their children develop good habit ？",
           "is_show": 1
         },
         {
           "index": 6,
           "id": 5841,
           "part": 3,
-          "content": "What good habit should children have?",
+          "content": "What good habit should children have？",
           "is_show": 1
         }
       ]
@@ -3679,21 +3679,21 @@
           "index": 3,
           "id": 3085,
           "part": 3,
-          "content": "Which form of vehicle is more popular in your country, bikes, cars or motorcycles?",
+          "content": "Which form of vehicle is more popular in your country, bikes, cars or motorcycles？",
           "is_show": 1
         },
         {
           "index": 4,
           "id": 3084,
           "part": 3,
-          "content": "How are the transportation systems in urban and rural areas different?",
+          "content": "How are the transportation systems in urban and rural areas different？",
           "is_show": 1
         },
         {
           "index": 5,
           "id": 3083,
           "part": 3,
-          "content": "Do you think air pollution comes mostly from vehicles?",
+          "content": "Do you think air pollution comes mostly from vehicles？",
           "is_show": 1
         },
         {
@@ -3707,7 +3707,7 @@
           "index": 7,
           "id": 3081,
           "part": 3,
-          "content": "Which vehicle is most popular in your country, bikes, cars or motorcycles?",
+          "content": "Which vehicle is most popular in your country, bikes, cars or motorcycles？",
           "is_show": 0
         }
       ]
@@ -3749,7 +3749,7 @@
           "index": 4,
           "id": 3075,
           "part": 3,
-          "content": "When would parents feel proud of their children?",
+          "content": "When would parents feel proud of their children？",
           "is_show": 1
         },
         {
@@ -3763,7 +3763,7 @@
           "index": 6,
           "id": 3073,
           "part": 3,
-          "content": "Should parents reward children?Why and how?",
+          "content": "Should parents reward children？Why and how？",
           "is_show": 1
         },
         {
@@ -3777,7 +3777,7 @@
           "index": 8,
           "id": 3071,
           "part": 3,
-          "content": "When do parents feel proud of their children?",
+          "content": "When do parents feel proud of their children？",
           "is_show": 0
         }
       ]
@@ -3812,7 +3812,7 @@
           "index": 3,
           "id": 3068,
           "part": 3,
-          "content": "Do people buy things they don't need?",
+          "content": "Do people buy things they don't need？",
           "is_show": 1
         },
         {
@@ -3826,7 +3826,7 @@
           "index": 5,
           "id": 3066,
           "part": 3,
-          "content": "Do you think it is important to save money?Why?",
+          "content": "Do you think it is important to save money？Why?",
           "is_show": 1
         },
         {
@@ -3918,7 +3918,7 @@
     {
       "index": 74,
       "id": 197,
-      "title": "受欢迎的人",
+      "title": "受欢迎的人【海外】",
       "tag_id": 18,
       "tag_name": "人物",
       "level": 2,
@@ -3980,7 +3980,7 @@
           "index": 8,
           "id": 776,
           "part": 3,
-          "content": "What are the qualities of being a good teacher?",
+          "content": "What are the qualities of being a good teacher？",
           "is_show": 1
         },
         {
@@ -3994,35 +3994,35 @@
           "index": 10,
           "id": 770,
           "part": 3,
-          "content": "Do you think popular stars have more freedom or less freedom?",
+          "content": "Do you think popular stars have more freedom or less freedom？",
           "is_show": 0
         },
         {
           "index": 11,
           "id": 769,
           "part": 3,
-          "content": "What influences do popular stars have on teenagers?",
+          "content": "What influences do popular stars have on teenagers？",
           "is_show": 0
         },
         {
           "index": 12,
           "id": 768,
           "part": 3,
-          "content": "Do you think children should imitate their idols?",
+          "content": "Do you think children should imitate their idols？",
           "is_show": 0
         },
         {
           "index": 13,
           "id": 767,
           "part": 3,
-          "content": "Do you know any popular star who really likes helping other people?",
+          "content": "Do you know any popular star who really likes helping other people？",
           "is_show": 0
         },
         {
           "index": 14,
           "id": 766,
           "part": 3,
-          "content": "What are the qualities of being popular?",
+          "content": "What are the qualities of being popular？",
           "is_show": 1
         }
       ]
@@ -4169,28 +4169,28 @@
           "index": 2,
           "id": 783,
           "part": 3,
-          "content": "Do you think people are less willing to cook meals by themselves these days，compared to the past?",
+          "content": "Do you think people are less willing to cook meals by themselves these days，compared to the past？",
           "is_show": 0
         },
         {
           "index": 3,
           "id": 782,
           "part": 3,
-          "content": "What do you think are the benefits of having dinner together?",
+          "content": "What do you think are the benefits of having dinner together？",
           "is_show": 0
         },
         {
           "index": 4,
           "id": 781,
           "part": 3,
-          "content": "Do young people like to spend time with their families or friends?",
+          "content": "Do young people like to spend time with their families or friends？",
           "is_show": 0
         },
         {
           "index": 5,
           "id": 780,
           "part": 3,
-          "content": "Do you think having dinner at home is a good idea?",
+          "content": "Do you think having dinner at home is a good idea？",
           "is_show": 1
         },
         {

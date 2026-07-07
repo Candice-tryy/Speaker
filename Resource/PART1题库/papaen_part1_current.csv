@@ -1,0 +1,378 @@
+topic_index,topic_id,topic_title,tag_id,tag_name,level,is_new,topic_is_show,question_index,question_id,part,question_is_show,content
+1,438,The area you live in,21,地点,1,1,1,1,1465,1,1,What are some changes in the area recently?
+1,438,The area you live in,21,地点,1,1,1,2,4995,1,1,Are the people in your neighborhood nice and friendly？
+1,438,The area you live in,21,地点,1,1,1,3,4994,1,1,Do you live in a noisy or a quiet area?
+1,438,The area you live in,21,地点,1,1,1,4,1466,1,1,Do you know any of your neighbors?
+1,438,The area you live in,21,地点,1,1,1,5,1464,1,1,Do you like the area that you live in?
+1,438,The area you live in,21,地点,1,1,1,6,1463,1,1,What changes have been made to the area recently?
+1,438,The area you live in,21,地点,1,1,1,7,1462,1,1,Do you know any famous people in your area?
+1,438,The area you live in,21,地点,1,1,1,8,1461,1,1,Where do you like to go in that area?
+2,12,Work or study,19,事物,1,1,1,1,98,1,1,What subject(s) are you studying?
+2,12,Work or study,19,事物,1,1,1,2,104,1,1,What technology do you use when you study?
+2,12,Work or study,19,事物,1,1,1,3,108,1,1,Who helps you the most？And how?
+2,12,Work or study,19,事物,1,1,1,4,109,1,1,How much time do you spend on your studies each week?
+2,12,Work or study,19,事物,1,1,1,5,103,1,1,Do you prefer to study in the mornings or in the afternoons?
+2,12,Work or study,19,事物,1,1,1,6,102,1,1,Are you looking forward to working?
+2,12,Work or study,19,事物,1,1,1,7,101,1,1,Is it very interesting?
+2,12,Work or study,19,事物,1,1,1,8,100,1,1,Do you like your subject?(Why?/Why not?)
+2,12,Work or study,19,事物,1,1,1,9,99,1,1,Why did you choose to study that subject?/Why did you choose to study those subjects?
+2,12,Work or study,19,事物,1,1,1,10,5002,1,1,Do you think that your subject is popular in your country?
+2,12,Work or study,19,事物,1,1,1,11,5003,1,1,Do you have any plans for your studies in the next five years?
+2,12,Work or study,19,事物,1,1,1,12,5005,1,1,Do you want to change your major?
+2,12,Work or study,19,事物,1,1,1,13,5006,1,1,What changes would you like to see in your school?
+2,12,Work or study,19,事物,1,1,1,14,5009,1,1,What do you think is the most important at the moment?
+2,12,Work or study,19,事物,1,1,1,15,93,1,1,What work do you do?
+2,12,Work or study,19,事物,1,1,1,16,97,1,1,Do you miss being a student?
+2,12,Work or study,19,事物,1,1,1,17,110,1,1,Do you want to change jobs?
+2,12,Work or study,19,事物,1,1,1,18,111,1,1,What kinds of technology do you use at work?
+2,12,Work or study,19,事物,1,1,1,19,96,1,1,Is your work interesting?
+2,12,Work or study,19,事物,1,1,1,20,95,1,1,Do you like your job?
+2,12,Work or study,19,事物,1,1,1,21,94,1,1,"Why did you choose to do that type of work (or, that job)?"
+2,12,Work or study,19,事物,1,1,1,22,5004,1,1,What are the benefits of being your age?
+2,12,Work or study,19,事物,1,1,1,23,5007,1,1,What requirements did you need to meet to get current job？
+2,12,Work or study,19,事物,1,1,1,24,106,1,0,Do you like your subject?
+2,12,Work or study,19,事物,1,1,1,25,5008,1,1,Do you have any plants for your work in the next five years?
+2,12,Work or study,19,事物,1,1,1,26,5010,1,0,What technology do you use at work?
+3,9,Hometown,21,地点,1,1,1,1,67,1,1,Did you learn about the history of your hometown at school?
+3,9,Hometown,21,地点,1,1,1,2,66,1,1,What’s your hometown famous for?
+3,9,Hometown,21,地点,1,1,1,3,65,1,1,How long have you lived there?
+3,9,Hometown,21,地点,1,1,1,4,64,1,1,Is that a big city or a small place?
+3,9,Hometown,21,地点,1,1,1,5,63,1,0,What's (the name of) your hometown ?
+3,9,Hometown,21,地点,1,1,1,6,62,1,1,Do you think you will continue living there for a long time?
+3,9,Hometown,21,地点,1,1,1,7,61,1,1,Is there anything you dislike about it?
+3,9,Hometown,21,地点,1,1,1,8,60,1,1,What do you like about your hometown?
+3,9,Hometown,21,地点,1,1,1,9,59,1,1,Do you like living there?
+3,9,Hometown,21,地点,1,1,1,10,58,1,1,Do you like your hometown?
+3,9,Hometown,21,地点,1,1,1,11,57,1,1,How long have you been living there?
+3,9,Hometown,21,地点,1,1,1,12,56,1,1,Please describe your hometown a little.
+3,9,Hometown,21,地点,1,1,1,13,55,1,1,Is your hometown a big city or a small place?
+3,9,Hometown,21,地点,1,1,1,14,54,1,1,Where would you like to live?
+3,9,Hometown,21,地点,1,1,1,15,53,1,1,Do you plan to continue living there?
+3,9,Hometown,21,地点,1,1,1,16,52,1,1,Where's your hometown?
+4,8,Home/Accommodation,21,地点,1,1,1,1,51,1,1,Do you think it is important to live in a comfortable environment?
+4,8,Home/Accommodation,21,地点,1,1,1,2,50,1,1,What makes you feel pleasant in your home?
+4,8,Home/Accommodation,21,地点,1,1,1,3,49,1,1,What’s your favorite room in your apartment or house?
+4,8,Home/Accommodation,21,地点,1,1,1,4,48,1,1,What kind of house or flat do you want to live in in the future?
+4,8,Home/Accommodation,21,地点,1,1,1,5,46,1,1,Do you live in a house or a flat?
+4,8,Home/Accommodation,21,地点,1,1,1,6,45,1,1,What part of your home do you like the most?
+4,8,Home/Accommodation,21,地点,1,1,1,7,44,1,1,Please describe the room you live in.
+4,8,Home/Accommodation,21,地点,1,1,1,8,43,1,1,Do you prefer living in a house or a flat?
+4,8,Home/Accommodation,21,地点,1,1,1,9,42,1,1,Are the transport facilities to your home very good?
+4,8,Home/Accommodation,21,地点,1,1,1,10,41,1,1,What do you usually do in your house/flat/room?
+4,8,Home/Accommodation,21,地点,1,1,1,11,40,1,1,Which room does your family spend most of the time in?
+4,8,Home/Accommodation,21,地点,1,1,1,12,39,1,1,Can you describe the place where you live?
+4,8,Home/Accommodation,21,地点,1,1,1,13,38,1,1,What’s the difference between where you are living now and where you have lived in the past?
+4,8,Home/Accommodation,21,地点,1,1,1,14,37,1,1,Do you plan to live there for a long time?
+4,8,Home/Accommodation,21,地点,1,1,1,15,36,1,1,How long have you lived there?
+4,8,Home/Accommodation,21,地点,1,1,1,16,35,1,1,Who do you live with?
+4,8,Home/Accommodation,21,地点,1,1,1,17,34,1,1,What kind of housing/accommodation do you live in?
+5,1705,Sports programs,19,事物,2,1,1,1,5396,1,1,Do you like watching sports programs on TV?
+5,1705,Sports programs,19,事物,2,1,1,2,5397,1,1,Do you like to watch live sports games?
+5,1705,Sports programs,19,事物,2,1,1,3,5398,1,1,Who do you like to watch sports games with?
+5,1705,Sports programs,19,事物,2,1,1,4,5399,1,1,What kinds of games do you expect to watch in the future?
+5,1705,Sports programs,19,事物,2,1,1,5,6251,1,1,Have you ever watched a sports game in astadium?
+5,1705,Sports programs,19,事物,2,1,1,6,6250,1,1,Do you prefer to watch sports games alone or witha group of friends?
+6,1181,Evening time,19,事物,2,1,1,1,3439,1,1,What do you usually do in the evening?
+6,1181,Evening time,19,事物,2,1,1,2,3440,1,1,What did you do in the evening when you were little? Why?
+6,1181,Evening time,19,事物,2,1,1,3,3441,1,1,Are there any differences between what you do in the evening now and what you did in the past?
+6,1181,Evening time,19,事物,2,1,1,4,3443,1,1,Do you spend your evenings doing the same things on both weekdays and weekends?
+6,1181,Evening time,19,事物,2,1,1,5,6247,1,1,What do you hate doing in the evening？
+6,1181,Evening time,19,事物,2,1,1,6,3442,1,1,Do you like the morning or evening?
+6,1181,Evening time,19,事物,2,1,1,7,3438,1,0,Do you like the morning or the evening?
+7,1163,Watch,19,事物,1,1,1,1,3372,1,1,Do you wear a watch?
+7,1163,Watch,19,事物,1,1,1,2,3373,1,1,Have you ever received a watch as a gift?
+7,1163,Watch,19,事物,1,1,1,3,3374,1,1,Why do some people wear expensive watches?
+7,1163,Watch,19,事物,1,1,1,4,3377,1,1,Do you think watch is important for you? Why?
+7,1163,Watch,19,事物,1,1,1,5,3375,1,0,Are watches important to you? Why?
+8,1158,Cars,19,事物,1,1,1,1,6108,1,1,Do you think car colours are important？
+8,1158,Cars,19,事物,1,1,1,2,3364,1,1,Did you enjoy traveling by car when you were a kid?
+8,1158,Cars,19,事物,1,1,1,3,3363,1,1,What types of cars do you like?
+8,1158,Cars,19,事物,1,1,1,4,3362,1,1,Do you prefer to be a driver or a passenger?
+8,1158,Cars,19,事物,1,1,1,5,3361,1,1,What do you usually do when there is a traffic jam?
+9,1085,Websites,19,事物,1,1,1,1,3177,1,1,What kinds of websites do you often visit?
+9,1085,Websites,19,事物,1,1,1,2,3179,1,1,What is your favourite website?
+9,1085,Websites,19,事物,1,1,1,3,3181,1,1,Are there any changes to the websites you ofter visit？
+9,1085,Websites,19,事物,1,1,1,4,3180,1,1,What kinds of websites are popular in your country?
+9,1085,Websites,19,事物,1,1,1,5,3178,1,0,Have there been any changes about the websites you usually use?
+10,1068,Mirrors,19,事物,1,1,1,1,3153,1,0,Do you like looking at yourself in the mirror? How often?
+10,1068,Mirrors,19,事物,1,1,1,2,3152,1,1,Would you use mirrors to decorate your room?
+10,1068,Mirrors,19,事物,1,1,1,3,3151,1,1,Do you usually take a mirror with you ?
+10,1068,Mirrors,19,事物,1,1,1,4,3150,1,1,Have you ever bought mirrors?
+10,1068,Mirrors,19,事物,1,1,1,5,3149,1,1,Do you like looking at yourself in the mirror?How often?
+11,1896,Films/cinemas,20,事件,1,1,1,1,6178,1,1,Do you prefer to watch films at home or in the cinema?
+11,1896,Films/cinemas,20,事件,1,1,1,2,6177,1,1,How often do you watch films?
+11,1896,Films/cinemas,20,事件,1,1,1,3,6176,1,1,Do you think going to the cinema is a good way to spend time with friends?
+11,1896,Films/cinemas,20,事件,1,1,1,4,6175,1,1,Do you often go to the cinema with your friends?
+11,1896,Films/cinemas,20,事件,1,1,1,5,6174,1,1,Did you ever go to the cinema alone as a child?
+11,1896,Films/cinemas,20,事件,1,1,1,6,6173,1,1,Did you often watch films when you were a child?
+11,1896,Films/cinemas,20,事件,1,1,1,7,6172,1,1,What films do you like?
+12,1895,Old buildings,21,地点,1,1,1,1,6171,1,1,Are there any old buildings you want to see in the future? why?
+12,1895,Old buildings,21,地点,1,1,1,2,6170,1,1,Do you prefer living in an old building or a modern house?
+12,1895,Old buildings,21,地点,1,1,1,3,6169,1,1,Do you think we should preserve old buildings in cities?
+12,1895,Old buildings,21,地点,1,1,1,4,6168,1,1,Have you ever seen old buildings in the city?
+13,1893,Jokes & Comedies,20,事件,1,1,1,1,6159,1,1,Have you ever watched a live show?
+13,1893,Jokes & Comedies,20,事件,1,1,1,2,6158,1,1,Do you like to watch comedies?
+13,1893,Jokes & Comedies,20,事件,1,1,1,3,6157,1,1,Do your friends like to tell jokes?
+13,1893,Jokes & Comedies,20,事件,1,1,1,4,6156,1,1,Are you good at telling jokes?
+14,1881,Parks,21,地点,1,1,1,1,6112,1,1,Are there any parks you want to go to in the future?
+14,1881,Parks,21,地点,1,1,1,2,6111,1,1,Would you like to see more parks in your city?
+14,1881,Parks,21,地点,1,1,1,3,6110,1,1,Do you still like going to parks now?
+14,1881,Parks,21,地点,1,1,1,4,6109,1,1,Did you like going to parks as a child?
+15,1491,social media,19,事物,1,1,1,1,6096,1,1,When did you start using social media?
+15,1491,social media,19,事物,1,1,1,2,6095,1,1,Have you ever posted anything on social media?
+15,1491,social media,19,事物,1,1,1,3,4374,1,0,From when you started using social media？
+15,1491,social media,19,事物,1,1,1,4,4375,1,1,Do you think you spend too much time on social media?
+15,1491,social media,19,事物,1,1,1,5,4376,1,1,What do people do on social media？
+15,1491,social media,19,事物,1,1,1,6,4377,1,1,Do your friends use social medial？
+16,1461,Clothing,19,事物,3,1,1,1,4275,1,1,What kind of clothes do you like to wear?
+16,1461,Clothing,19,事物,3,1,1,2,4272,1,1,Do you prefer to wear comfortable and casual clothes or smart clothes?
+16,1461,Clothing,19,事物,3,1,1,3,4274,1,1,Do you like wearing T-shirts?
+16,1461,Clothing,19,事物,3,1,1,4,4273,1,1,Do you spend a lot of time choosing clothes?
+17,1415,the city you live in,21,地点,2,1,1,1,4117,1,1,What city do you live in?
+17,1415,the city you live in,21,地点,2,1,1,2,4998,1,1,What's the weather like where you live?
+17,1415,the city you live in,21,地点,2,1,1,3,4123,1,1,Are there people of different ages living in this city?
+17,1415,the city you live in,21,地点,2,1,1,4,4121,1,1,Is this city your permanent residence?
+17,1415,the city you live in,21,地点,2,1,1,5,4120,1,1,Are there big changes in this city?
+17,1415,the city you live in,21,地点,2,1,1,6,4119,1,1,How long have you lived in this city?
+17,1415,the city you live in,21,地点,2,1,1,7,4118,1,1,Do you like this city? Why?
+17,1415,the city you live in,21,地点,2,1,1,8,5001,1,1,Do you often see your neighbors？
+17,1415,the city you live in,21,地点,2,1,1,9,4999,1,1,Are the people friendly in the city？
+17,1415,the city you live in,21,地点,2,1,1,10,5000,1,1,Is the city friendly to children and old people?
+18,1357,dream and ambition,20,事件,1,1,1,1,3874,1,0,Do you think you are an ambitious person?
+18,1357,dream and ambition,20,事件,1,1,1,2,3873,1,0,What is your dream job?
+18,1357,dream and ambition,20,事件,1,1,1,3,3872,1,0,Are you the kind of person who follows their dreams?
+18,1357,dream and ambition,20,事件,1,1,1,4,3871,1,0,What was your childhood dream?
+19,317,Morning routines,19,事物,3,1,1,1,1187,1,1,What do you do in the mornings?
+19,317,Morning routines,19,事物,3,1,1,2,1186,1,1,Is breakfast important?
+19,317,Morning routines,19,事物,3,1,1,3,1185,1,1,What is your morning routine?
+19,317,Morning routines,19,事物,3,1,1,4,1184,1,1,Do you like to get up early in the morning?
+20,233,Teachers,18,人物,1,1,1,1,899,1,1,Do you have a favorite teacher?
+20,233,Teachers,18,人物,1,1,1,2,5062,1,0,Who is your favourite teacher?
+20,233,Teachers,18,人物,1,1,1,3,5063,1,1,In what way has your favourite teacher helped you?
+20,233,Teachers,18,人物,1,1,1,4,5064,1,1,Do you have a teacher from your past that you still remember?
+20,233,Teachers,18,人物,1,1,1,5,5067,1,1,Are you still in touch with your primary school teachers?
+20,233,Teachers,18,人物,1,1,1,6,902,1,1,Do you want to be a teacher in the future?
+20,233,Teachers,18,人物,1,1,1,7,901,1,0,Do you think teachers should be angry at students or not?
+20,233,Teachers,18,人物,1,1,1,8,900,1,0,What's the different between young and old teachers?
+20,233,Teachers,18,人物,1,1,1,9,898,1,0,What kinds of teachers do you like?
+21,1020,Headphones,19,事物,1,1,1,1,3034,1,1,"In what conditions, you won't use headphones？"
+21,1020,Headphones,19,事物,1,1,1,2,3033,1,1,When would you use headphones？
+21,1020,Headphones,19,事物,1,1,1,3,3032,1,0,Which ones do you use more in your country？
+21,1020,Headphones,19,事物,1,1,1,4,3031,1,0,What do you do with them? Why？
+21,1020,Headphones,19,事物,1,1,1,5,3030,1,0,In what situations would you not use headphones？
+21,1020,Headphones,19,事物,1,1,1,6,3029,1,0,"Which are used more in your country, headphones or microphones？"
+21,1020,Headphones,19,事物,1,1,1,7,3028,1,1,Do you use headphones？
+21,1020,Headphones,19,事物,1,1,1,8,3027,1,0,What do you do with headphones?
+21,1020,Headphones,19,事物,1,1,1,9,3026,1,0,When do you use headphones？
+21,1020,Headphones,19,事物,1,1,1,10,3025,1,1,What kind of headphones do you use？
+22,677,History,0,,0,1,1,1,2063,1,1,When was the last time you read about history?
+22,677,History,0,,0,1,1,2,2062,1,1,Have you ever been to history museums?
+22,677,History,0,,0,1,1,3,2061,1,1,Did you like history when you were young?
+22,677,History,0,,0,1,1,4,2060,1,1,Do you like history?
+23,741,Shopping,20,事件,3,1,1,1,6107,1,1,Do you prefer online shopping or in-store shopping？
+23,741,Shopping,20,事件,3,1,1,2,6106,1,1,How often do you go shopping？
+23,741,Shopping,20,事件,3,1,1,3,2288,1,0,Do you think expensive products are always better than cheaper ones?
+23,741,Shopping,20,事件,3,1,1,4,2287,1,0,Is it difficult for you to make choices (when you shop)?
+23,741,Shopping,20,事件,3,1,1,5,2286,1,0,Do you compare prices when you shop? Why?
+23,741,Shopping,20,事件,3,1,1,6,2285,1,1,Do you like shopping?
+24,736,Tidiness,0,,1,1,1,1,6105,1,1,Did you use to keep your room tidy as a child？
+24,736,Tidiness,0,,1,1,1,2,6104,1,1,Do you like to keep things tidy？
+24,736,Tidiness,0,,1,1,1,3,2274,1,0,Are you a tidy person?
+24,736,Tidiness,0,,1,1,1,4,2273,1,0,Do you think people should be tidy all the time?
+24,736,Tidiness,0,,1,1,1,5,2272,1,0,Are you tidier at work or at home?
+24,736,Tidiness,0,,1,1,1,6,2271,1,0,Is your room tidy?
+24,736,Tidiness,0,,1,1,1,7,2270,1,0,What do you think of a tidy house?
+24,736,Tidiness,0,,1,1,1,8,2269,1,0,Do people think you are a tidy person?
+25,1018,Science,19,事物,1,1,1,1,3024,1,1,Do Chinese people often visit science museums?
+25,1018,Science,19,事物,1,1,1,2,3023,1,1,Do you like watching science TV programs?
+25,1018,Science,19,事物,1,1,1,3,3022,1,1,What kinds of interesting things you have done with science?
+25,1018,Science,19,事物,1,1,1,4,3021,1,1,Which science subject is interesting to you?
+25,1018,Science,19,事物,1,1,1,5,3020,1,0,What kinds of interesting things have you done with science?
+25,1018,Science,19,事物,1,1,1,6,3019,1,0,Which science subject interests you?
+25,1018,Science,19,事物,1,1,1,7,3018,1,1,When did you start to learn about science？
+25,1018,Science,19,事物,1,1,1,8,3017,1,1,Do you like science?
+26,924,Singing,19,事物,3,1,1,1,2787,1,0,Did you enjoy singing when you were younger?
+26,924,Singing,19,事物,3,1,1,2,2786,1,0,Will you take singing lessons in the future?
+26,924,Singing,19,事物,3,1,1,3,2785,1,0,When do you sing?
+26,924,Singing,19,事物,3,1,1,4,2784,1,1,Do you like singing? Why or why not?
+26,924,Singing,19,事物,3,1,1,5,2783,1,1,Have you ever learnt how to sing?
+26,924,Singing,19,事物,3,1,1,6,2782,1,1,Who do you want to sing for?
+26,924,Singing,19,事物,3,1,1,7,2781,1,1,Do you think singing can bring happiness to people?
+27,1335,Art,20,事件,3,1,1,1,3831,1,1,Do you like modern art or traditional art?
+27,1335,Art,20,事件,3,1,1,2,3830,1,1,Do you want to be an artist?
+27,1335,Art,20,事件,3,1,1,3,3829,1,1,Do you like visiting art galleries?
+27,1335,Art,20,事件,3,1,1,4,3828,1,1,Do you like art?
+28,1311,Music,20,事件,1,1,1,1,6094,1,1,Does happy music make you feel more excited？
+28,1311,Music,20,事件,1,1,1,2,6093,1,1,Do you prefer sad or happy music？
+28,1311,Music,20,事件,1,1,1,3,3756,1,0,What music do you dislike?
+28,1311,Music,20,事件,1,1,1,4,3755,1,0,What's the most popular type of music where you live?
+28,1311,Music,20,事件,1,1,1,5,3754,1,0,Which singer or musician would you like to see in person?
+28,1311,Music,20,事件,1,1,1,6,3753,1,0,What music do your friends like? Do you enjoy the same type of music?
+28,1311,Music,20,事件,1,1,1,7,3752,1,0,Do you often listen to one type of music?
+28,1311,Music,20,事件,1,1,1,8,3751,1,0,What music do you like?
+29,1307,Outer space and stars【海外】【疑似淘汰】,20,事件,2,1,1,1,3731,1,0,Are you interested in films concerning outer space and stars?
+29,1307,Outer space and stars【海外】【疑似淘汰】,20,事件,2,1,1,2,3730,1,0,Have you ever learned about outer space and stars?
+29,1307,Outer space and stars【海外】【疑似淘汰】,20,事件,2,1,1,3,3729,1,1,Do you want to know more about outer space?
+29,1307,Outer space and stars【海外】【疑似淘汰】,20,事件,2,1,1,4,3728,1,1,Do you want to go into outer space in the future?
+29,1307,Outer space and stars【海外】【疑似淘汰】,20,事件,2,1,1,5,3727,1,1,Do you like science fiction movies?Why?
+29,1307,Outer space and stars【海外】【疑似淘汰】,20,事件,2,1,1,6,3726,1,1,Have you ever learnt about outer space and stars?
+30,1724,Hobby,19,事物,2,0,1,1,5446,1,1,Do you have any hobbies?
+30,1724,Hobby,19,事物,2,0,1,2,5447,1,1,Did you have any hobbies when you were a child?
+30,1724,Hobby,19,事物,2,0,1,3,5448,1,1,Do you have a hobby that you've had since childhood?
+30,1724,Hobby,19,事物,2,0,1,4,5763,1,0,Have you been to a party recently?
+30,1724,Hobby,19,事物,2,0,1,5,5449,1,1,Do you have the same hobbies as your family members?
+31,1502,Advertisement,19,事物,2,0,1,1,5908,1,1,Do you often see advertisements when you are on your phone or computer?
+31,1502,Advertisement,19,事物,2,0,1,2,4426,1,1,Is there an advertisement that made an impression on you when you were a child?
+31,1502,Advertisement,19,事物,2,0,1,3,4427,1,1,Do you see a lot of advertising on trains or other transport?
+31,1502,Advertisement,19,事物,2,0,1,4,4428,1,1,Do you like advertisements?
+31,1502,Advertisement,19,事物,2,0,1,5,4429,1,1,What kind of advertising do you like?
+32,1435,Gifts,19,事物,2,0,1,1,4164,1,1,Have you ever sent handmade gifts to others?
+32,1435,Gifts,19,事物,2,0,1,2,4165,1,1,Have you ever received a great gift?
+32,1435,Gifts,19,事物,2,0,1,3,4166,1,1,What do you consider when choosing a gift?
+32,1435,Gifts,19,事物,2,0,1,4,4167,1,1,Do you think you are good at choosing gifts?
+32,1435,Gifts,19,事物,2,0,1,5,5541,1,1,What gift have you received recently?
+32,1435,Gifts,19,事物,2,0,1,6,5501,1,0,Are you good at giving gifts?
+32,1435,Gifts,19,事物,2,0,1,7,5502,1,0,When do you usually give gifts to others?
+32,1435,Gifts,19,事物,2,0,1,8,5503,1,0,Do expensive gifts better express your feelings?
+33,1167,buildings,21,地点,1,0,1,1,5940,1,1,ls there a building that you would like to visit?
+33,1167,buildings,21,地点,1,0,1,2,5939,1,1,Do you take photos of buildings?
+33,1167,buildings,21,地点,1,0,1,3,5938,1,1,Are there tall buildings near your home?
+33,1167,buildings,21,地点,1,0,1,4,3398,1,0,Have you ever seen some old buildings in the city?
+33,1167,buildings,21,地点,1,0,1,5,3396,1,0,Would you prefer to live in an old building or a modern house?
+34,1069,Dreams,19,事物,1,0,1,1,5977,1,1,Can you remember the dreams you had?
+34,1069,Dreams,19,事物,1,0,1,2,3157,1,1,Do you want to make your dreams come true?
+34,1069,Dreams,19,事物,1,0,1,3,3156,1,1,Do you think dreams have special meaning?
+34,1069,Dreams,19,事物,1,0,1,4,3154,1,1,Can you often remember your dreams?
+35,1857,Life stages,18,人物,2,0,1,1,5966,1,1,At what age do you think people are the happiest?
+35,1857,Life stages,18,人物,2,0,1,2,5965,1,1,Do you enjoy being the age you are now?
+35,1857,Life stages,18,人物,2,0,1,3,5964,1,1,How do people remember each stage of their lives?
+35,1857,Life stages,18,人物,2,0,1,4,5963,1,1,Do you have any plans for the next five years?
+35,1857,Life stages,18,人物,2,0,1,5,5962,1,1,What do you think is the most important at the moment?
+35,1857,Life stages,18,人物,2,0,1,6,5960,1,1,What did you often do with your friends in your childhood?
+36,1853,Reading,20,事件,2,0,1,1,5986,1,1,Do you prefer scanning or detailed reading?
+36,1853,Reading,20,事件,2,0,1,2,5985,1,1,"When do you need to read carefully,and when not?"
+36,1853,Reading,20,事件,2,0,1,3,5984,1,1,Do you prefer to read on paper or on a screen?
+36,1853,Reading,20,事件,2,0,1,4,5983,1,1,Do you like reading?
+37,1852,Walking,20,事件,2,0,1,1,5982,1,1,Where did you go for a walk lately?
+37,1852,Walking,20,事件,2,0,1,2,5981,1,1,Where would you like to take a long walk if you had the chance?
+37,1852,Walking,20,事件,2,0,1,3,5980,1,1,Why do people like to walk in parks?
+37,1852,Walking,20,事件,2,0,1,4,5979,1,1,Did you often go outside to have a walk when you were a child?
+37,1852,Walking,20,事件,2,0,1,5,5978,1,1,Do you walk a lot?
+38,1850,Sports team,19,事物,3,0,1,1,5970,1,1,What are the differences between team sports and individual sports?
+38,1850,Sports team,19,事物,3,0,1,2,5969,1,1,Do you like to watch team games?Why?
+38,1850,Sports team,19,事物,3,0,1,3,5968,1,1,Have you ever been part of a sports team?
+38,1850,Sports team,19,事物,3,0,1,4,5967,1,1,Is team sports popular in your culture?
+39,1849,Day off,20,事件,2,0,1,1,5961,1,1,What would you like to do if you had a day off tomorrow?
+39,1849,Day off,20,事件,2,0,1,2,5959,1,1,Do you usually spend your days off with your parents or with your friends?
+39,1849,Day off,20,事件,2,0,1,3,5958,1,1,What do you usually do when you have days off?
+39,1849,Day off,20,事件,2,0,1,4,5957,1,1,When was the last time you had a few days off?
+40,1848,Food,19,事物,1,0,1,1,6085,1,1,Has your favourite food changed since you were a child?
+40,1848,Food,19,事物,1,0,1,2,6084,1,1,Do you eat different foods at dfferent times of the year?
+40,1848,Food,19,事物,1,0,1,3,6083,1,1,Is there any food you dislike?
+40,1848,Food,19,事物,1,0,1,4,5956,1,1,What is your favourite food?
+41,1824,Typing,20,事件,2,0,1,1,5972,1,1,How do you improve your typing?
+41,1824,Typing,20,事件,2,0,1,2,5971,1,1,When did you learn how to type on a keyboard?
+41,1824,Typing,20,事件,2,0,1,3,5946,1,1,Do you type on a desktop or laptop keyboard every day?
+41,1824,Typing,20,事件,2,0,1,4,5945,1,1,Do you prefer typing or handwriting?
+42,1823,Childhood activities,20,事件,1,0,1,1,5937,1,1,Did you prefer to do activities alone or with agroup of people when you were a child?
+42,1823,Childhood activities,20,事件,1,0,1,2,5936,1,1,What were your favourite activities when you werea child?
+43,1822,Views,21,地点,2,0,1,1,5935,1,1,Do you prefer views in your own country or in other countries
+43,1822,Views,21,地点,2,0,1,2,5934,1,1,Do you prefer views in urban areas or rural areas?
+43,1822,Views,21,地点,2,0,1,3,5933,1,1,Do you like taking pictures of different views
+44,1803,Going out,20,事件,2,0,1,1,5810,1,1,How often do you use cash?
+44,1803,Going out,20,事件,2,0,1,2,5809,1,1,Do you often bring cash with you?
+44,1803,Going out,20,事件,2,0,1,3,5808,1,1,Do you always take your mobile phone with you when going out?
+44,1803,Going out,20,事件,2,0,1,4,5807,1,1,Do you bring food or snacks with you when going out?
+45,1801,Rules,19,事物,2,0,1,1,5906,1,1,Would you like to work as a teacher in a rule-free school?
+45,1801,Rules,19,事物,2,0,1,2,5905,1,1,Have you ever had a really strict teacher?
+45,1801,Rules,19,事物,2,0,1,3,5874,1,1,Do you prefer to have more or fewer rules at school?
+45,1801,Rules,19,事物,2,0,1,4,5800,1,1,Do you have a teacher who does his or her job very well?/3.Have you ever had a very dedicated teacher?
+45,1801,Rules,19,事物,2,0,1,5,5799,1,1,Do you think students would benefit more from more rules?
+45,1801,Rules,19,事物,2,0,1,6,5798,1,1,Are there any rules for students at your school?
+46,1800,Doing something well,20,事件,2,0,1,1,5797,1,1,Do you often tell your friends when they do something well?
+46,1800,Doing something well,20,事件,2,0,1,2,5796,1,1,Do you have an experience that your teacher thought you did a good job?
+46,1800,Doing something well,20,事件,2,0,1,3,5795,1,1,Do you have an experience that you did something well?
+47,1797,Public places,21,地点,1,0,1,1,5873,1,1,Do you often go to public places near where you live?
+47,1797,Public places,21,地点,1,0,1,2,5806,1,1,Would you like to see more public places near where you live?
+47,1797,Public places,21,地点,1,0,1,3,5786,1,1,Do you wear headphones in public places?
+47,1797,Public places,21,地点,1,0,1,4,5785,1,1,Have you ever talked with someone you don’t know in public places?
+48,1598,Pets and animals,19,事物,3,0,1,1,4948,1,1,What is the most popular animal in China?
+48,1598,Pets and animals,19,事物,3,0,1,2,4947,1,1,Have you ever had a pet before?
+48,1598,Pets and animals,19,事物,3,0,1,3,4946,1,1,"Where do you prefer to keep your pet, indoors or outdoors?"
+48,1598,Pets and animals,19,事物,3,0,1,4,4945,1,1,What's your favourite animal? Why?
+49,1500,Crowded place,21,地点,3,0,1,1,4417,1,1,Is the city where you live crowded?
+49,1500,Crowded place,21,地点,3,0,1,2,4418,1,1,Is there a crowded place near where you live?
+49,1500,Crowded place,21,地点,3,0,1,3,4419,1,1,Do most people like crowded places?
+49,1500,Crowded place,21,地点,3,0,1,4,4420,1,1,Do you like crowded places?
+49,1500,Crowded place,21,地点,3,0,1,5,4421,1,1,When was the last time you were in a crowded place?
+50,1495,Memory,19,事物,3,0,1,1,5663,1,1,How do you remember important things?
+50,1495,Memory,19,事物,3,0,1,2,4393,1,1,Why do some people have good memory while others just don' t?
+50,1495,Memory,19,事物,3,0,1,3,4394,1,1,Why do more people rely on cellphones to memorize things?
+50,1495,Memory,19,事物,3,0,1,4,4395,1,1,Are you good at memorizing things?
+50,1495,Memory,19,事物,3,0,1,5,4396,1,1,Have you ever forgotten something that was important?
+50,1495,Memory,19,事物,3,0,1,6,4397,1,1,What do you need to remember in your daily life?
+51,1084,Taking photos,20,事件,3,0,1,1,3173,1,1,Do you like taking photos?
+51,1084,Taking photos,20,事件,3,0,1,2,5401,1,1,Do you like taking selfies?
+51,1084,Taking photos,20,事件,3,0,1,3,5167,1,1,Where do you like to go to take photos?
+51,1084,Taking photos,20,事件,3,0,1,4,5402,1,1,What is your favourite family photo?
+51,1084,Taking photos,20,事件,3,0,1,5,3174,1,1,Do you like taking selfies?
+51,1084,Taking photos,20,事件,3,0,1,6,3176,1,1,What is your favorite family photo?
+51,1084,Taking photos,20,事件,3,0,1,7,3175,1,1,Do you want to improve your picture taking skills?
+52,319,Shoes,19,事物,2,0,1,1,1200,1,0,Will you spend a lot of money on shoes?
+52,319,Shoes,19,事物,2,0,1,2,1199,1,1,Do you like buying shoes? How often?
+52,319,Shoes,19,事物,2,0,1,3,1198,1,0,"Which do you prefer, fashionable shoes or comfortable shoes?"
+52,319,Shoes,19,事物,2,0,1,4,1197,1,1,"Which do you prefer, expensive shoes or comfortable shoes?"
+52,319,Shoes,19,事物,2,0,1,5,1196,1,1,How much money do you usually spend on shoes?
+52,319,Shoes,19,事物,2,0,1,6,1195,1,0,Do you spend a lot of money on shoes?
+52,319,Shoes,19,事物,2,0,1,7,1194,1,0,How often do you buy shoes?
+52,319,Shoes,19,事物,2,0,1,8,1193,1,1,Have you ever bought shoes online?
+52,319,Shoes,19,事物,2,0,1,9,1192,1,0,Do you know anyone who likes to buy a lot of shoes?
+52,319,Shoes,19,事物,2,0,1,10,1191,1,0,What are your favorite type of shoes?
+53,242,Plants,19,事物,3,0,1,1,949,1,1,Do you know anything about growing plants?
+53,242,Plants,19,事物,3,0,1,2,948,1,1,Do Chinese people send plants as gifts?
+53,242,Plants,19,事物,3,0,1,3,947,1,1,Did you grow any plants when you were young?
+53,242,Plants,19,事物,3,0,1,4,946,1,1,Do you keep plants at home?
+54,245,Spare time,20,事件,1,0,1,1,5654,1,1,Would you like to have more free time in the future?
+54,245,Spare time,20,事件,1,0,1,2,5653,1,1,"Which day do you have more free time on, Saturday or Sunday?"
+54,245,Spare time,20,事件,1,0,1,3,5652,1,1,Do you often have free time?
+54,245,Spare time,20,事件,1,0,1,4,962,1,1,What do you and your family like to do in spare time?
+54,245,Spare time,20,事件,1,0,1,5,961,1,1,Do you think you will spend more time with your family?
+54,245,Spare time,20,事件,1,0,1,6,960,1,1,Do you like to spend time with your family?
+54,245,Spare time,20,事件,1,0,1,7,959,1,1,What do you usually do when you are free?
+55,514,Borrowing/lending,20,事件,2,0,1,1,5907,1,1,Do you mind if others borrow money from you?
+55,514,Borrowing/lending,20,事件,2,0,1,2,1646,1,1,Have you ever borrowed books from others?
+55,514,Borrowing/lending,20,事件,2,0,1,3,1645,1,1,Have you ever borrowed money from others?
+55,514,Borrowing/lending,20,事件,2,0,1,4,1644,1,1,Do you like to lend things to others?
+55,514,Borrowing/lending,20,事件,2,0,1,5,1643,1,1,How do you feel when people don’t return things they borrowed from you?
+56,435,Sharing,20,事件,3,0,1,1,5870,1,1,What kinds of news do you share with our friends?
+56,435,Sharing,20,事件,3,0,1,2,5869,1,1,Who is the first person you like to share good news with?
+56,435,Sharing,20,事件,3,0,1,3,1453,1,1,Did your parents teach you to share when you were a child?
+56,435,Sharing,20,事件,3,0,1,4,1452,1,1,What kind of things do you like to share with others?
+56,435,Sharing,20,事件,3,0,1,5,1451,1,1,What kind of things are not suitable for sharing?
+56,435,Sharing,20,事件,3,0,1,6,1450,1,1,Do you have anything to share with others recently?
+57,878,Museum,0,,0,0,1,1,2667,1,1,When was the last time you visited a museum?
+57,878,Museum,0,,0,0,1,2,2666,1,1,Do you often visit museums?
+57,878,Museum,0,,0,0,1,3,2665,1,1,Do you think museums are important?
+57,878,Museum,0,,0,0,1,4,2664,1,0,Do you think there should be more museums in your hometown?
+57,878,Museum,0,,0,0,1,5,2663,1,1,Are there any museums in your hometown?
+57,878,Museum,0,,0,0,1,6,2662,1,0,How often do you visit museums?（or Do you often visit a museum）
+57,878,Museum,0,,0,0,1,7,2661,1,0,Do you like visiting museums? Why?
+58,668,Scenery,20,事件,3,0,1,1,5944,1,1,What are the most beautiful sights you have seen while travelling?
+58,668,Scenery,20,事件,3,0,1,2,5943,1,1,Do you like to take scenery pictures?
+58,668,Scenery,20,事件,3,0,1,3,5942,1,1,Do you prefer the mountains or the sea?
+58,668,Scenery,20,事件,3,0,1,4,5941,1,1,Do you look out the window at the scenery when travelling by bus or car?
+58,668,Scenery,20,事件,3,0,1,5,2039,1,0,Is there good scenery in cities?
+58,668,Scenery,20,事件,3,0,1,6,2038,1,0,Do you like to take pictures of good scenery with your smart phone? Why?
+58,668,Scenery,20,事件,3,0,1,7,2037,1,0,Is there good scenery in your hometown?
+58,668,Scenery,20,事件,3,0,1,8,2036,1,0,"When you travel, do you like to live in hotels with scenic views?"
+59,1277,Morning time,19,事物,2,0,1,1,3693,1,1,Do you like getting up early in the morning?
+59,1277,Morning time,19,事物,2,0,1,2,3692,1,1,What do you usually do in the morning?
+59,1277,Morning time,19,事物,2,0,1,3,3691,1,1,What did you do in the morning when you were little? Why?
+59,1277,Morning time,19,事物,2,0,1,4,3690,1,1,Are there any differences between what you do in the morning now and what you did in the past?
+59,1277,Morning time,19,事物,2,0,1,5,3689,1,1,Do you spend your mornings doing the same things on both weekends and weekdays? Why or why not?
+60,1319,Happy things,20,事件,3,0,1,1,3776,1,1,Do you think people are happy when buying new things?
+60,1319,Happy things,20,事件,3,0,1,2,3775,1,1,Do you feel happy when buying new things?
+60,1319,Happy things,20,事件,3,0,1,3,3774,1,1,When do you feel happy at work? Why?
+60,1319,Happy things,20,事件,3,0,1,4,3773,1,1,Is there anything that has made you feel happy lately?
+60,1319,Happy things,20,事件,3,0,1,5,3772,1,1,What do you think will make you feel happy in the future?
+60,1319,Happy things,20,事件,3,0,1,6,3771,1,1,What made you happy when you were little?
