@@ -92,7 +92,7 @@ async function fetchEncryptedFile(fileUrl) {
   return JSON.parse(decrypted);
 }
 
-function normalizeTopic(topic, index) {
+function normalizeTopic(topic, index, options = {}) {
   const questions = (topic.sub_questions || [])
     .map((question, questionIndex) => ({
       index: questionIndex + 1,
@@ -103,7 +103,7 @@ function normalizeTopic(topic, index) {
     }))
     .filter((question) => question.content);
 
-  return {
+  const normalized = {
     index: index + 1,
     id: topic.id,
     title: cleanText(topic.title),
@@ -116,11 +116,17 @@ function normalizeTopic(topic, index) {
     question_count: questions.length,
     questions,
   };
+  if (options.preserveSourcePayload) {
+    normalized.source_payload = topic;
+  }
+  return normalized;
 }
 
 function makeBank({ target, moduleInfo, topics, scope }) {
   const scopedTopics = scope === "current" ? topics.filter((topic) => topic.is_show !== 0) : topics;
-  const normalizedTopics = scopedTopics.map(normalizeTopic);
+  const normalizedTopics = scopedTopics.map((topic, index) =>
+    normalizeTopic(topic, index, { preserveSourcePayload: scope === "archive" })
+  );
   const questionCount = normalizedTopics.reduce((sum, topic) => sum + topic.questions.length, 0);
   return {
     source_page: SOURCE_PAGE,
@@ -132,7 +138,7 @@ function makeBank({ target, moduleInfo, topics, scope }) {
     notes:
       scope === "current"
         ? "current includes topics with is_show=1; question records are preserved and can still be filtered by question is_show at runtime. Source answer/audio payloads are not included."
-        : "archive includes all decrypted records from the source file. Source answer/audio payloads are not included.",
+        : "archive includes all decrypted records from the source file. Normalized question records are provided for lookup, and source_payload preserves original answer/audio fields when present.",
     topic_count: normalizedTopics.length,
     question_count: questionCount,
     topics: normalizedTopics,
