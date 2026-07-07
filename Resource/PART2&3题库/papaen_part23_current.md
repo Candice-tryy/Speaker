@@ -3,7 +3,7 @@
 - Topic count: 77
 - Question count: 450
 - Source version: 6745
-- Exported at: 2026-07-07T06:32:16.537Z
+- Exported at: 2026-07-07T09:31:32.676Z
 
 ## 1. 发小 / 人物 / NEW
 1. [Part 2] Describe a friend from your childhood You should say: Who he/she is Where you met each other What you often did together And explain what made you like him/her

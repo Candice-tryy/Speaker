@@ -4,7 +4,7 @@
   "part1_file_url": "https://tfile.papaen.com/2026/06/07/FyJ5A9uaz23zcak3KoUxOCkCh1qIW533GfIgW8Sq.txt",
   "module_title": "Part 1",
   "module_version": 4468,
-  "exported_at": "2026-07-07T06:32:12.501Z",
+  "exported_at": "2026-07-07T09:31:28.578Z",
   "notes": "current includes topics with is_show=1; question records are preserved and can still be filtered by question is_show at runtime. Source answer/audio payloads are not included.",
   "topic_count": 60,
   "question_count": 377,
