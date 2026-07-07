@@ -1,11 +1,13 @@
 # IELTS Speaking Part 1 Band 7 Sample Answers
 
-- Source file: papaen_part1_archive.json
-- Topic count: 344
-- Question count: 1814
-- Generated at: 2026-06-17T17:06:08.863416+08:00
+- Source file: papaen_part1_current.json
+- Topic count: 60
+- Question count: 377
+- Generated at: 2026-07-07T09:14:32.907Z
+- Generator: deepseek-chat via https://api.deepseek.com/v1
+- Cache: Resource\band7_answer_cache.json
 
-Note: Answers are written in a Band-7-oriented Part 1 style: direct, natural, 2-4 sentences, with a reason or small detail. You can personalize names, places, and examples before memorising or practising.
+Note: These answers are pre-generated with an LLM and should be personalised before memorising or practising.
 
 ## 1. The area you live in
 - Tag: 地点
@@ -13,35 +15,35 @@ Note: Answers are written in a Band-7-oriented Part 1 style: direct, natural, 2-
 
 ### Q1. What are some changes in the area recently?
 
-There have been a few noticeable changes recently. It is fairly convenient, and I like having small shops and quiet streets within walking distance. I think these changes make daily life a bit more convenient and pleasant.
+There’ve been quite a few changes lately—most noticeably, they’ve pedestrianised the main high street, so now there’s no traffic, just people walking and outdoor seating. A couple of new coffee shops and a small bakery have opened too. It’s made the whole area feel much more lively and relaxed.
 
-### Q2. Are the people in your neighborhood nice and friendly?
+### Q2. Are the people in your neighborhood nice and friendly？
 
-Yes, most of them are quite friendly. We may not have deep conversations every day, but people are generally polite and willing to help if something small comes up.
+Yeah, most of them are really nice. My next-door neighbour often brings over extra fruit from her garden, and a few of us help each other carry groceries or keep an eye on each other’s flats when someone’s away. It feels like a proper community.
 
 ### Q3. Do you live in a noisy or a quiet area?
 
-I would say it is mostly quiet, especially in the evening. There is some traffic during rush hour, but overall it is a comfortable place to live and I can usually rest without much disturbance.
+I live in a fairly quiet area, which is a residential suburb on the outskirts of the city. There are very few cars passing by, and I can often hear birds singing in the morning. The only real noise comes from the occasional lawnmower on weekends.
 
 ### Q4. Do you know any of your neighbors?
 
-Yes, I know a few of them, but not very closely. We usually greet each other in the lift or help with small things, which makes the neighbourhood feel friendlier.
+Yes, I know a few of my neighbours quite well. The family next door, for instance, often chat with me when we're both taking out the bins or watering plants. We even swapped house keys once so they could feed my cat while I was away.
 
 ### Q5. Do you like the area that you live in?
 
-Yes, I would say so. It is fairly convenient, and I like having small shops and quiet streets within walking distance. For me, the most important thing is that my neighbourhood feels natural and useful rather than just fashionable.
+Yeah, I really do. I live in a quiet suburb just outside the city, and there’s a big park nearby where I go for a run most mornings. The neighbours are friendly too—last weekend, one of them even brought over some homemade cookies. It just feels safe and calm after a long day.
 
 ### Q6. What changes have been made to the area recently?
 
-There have been a few noticeable changes recently. It is fairly convenient, and I like having small shops and quiet streets within walking distance. I think these changes make daily life a bit more convenient and pleasant.
+They’ve put in a new cycle lane along the main road, which has really changed how people get around. Also, an old car park was turned into a small park with benches and trees. It’s made the area feel much greener and quieter, honestly.
 
 ### Q7. Do you know any famous people in your area?
 
-Not personally, no. There may be some well-known people from my area, but I have never met them, so I would not say fame is a big part of local life.
+No, not really. I live in a quiet suburb, so we don’t get many celebrities around here. Once, I think I saw a local news presenter at the supermarket, but I’m not even sure it was her. It’s the kind of place where everyone just gets on with their own lives.
 
 ### Q8. Where do you like to go in that area?
 
-Usually somewhere convenient and not too crowded. If it is related to my neighbourhood, I prefer a place where I can feel comfortable and take my time rather than rush through it.
+I really enjoy going to the little park near my home, especially in the evenings. There's a small pond with ducks, and I like to sit on a bench there and read. It's surprisingly quiet for being in the middle of the city, so it helps me unwind after work.
 
 ## 2. Work or study
 - Tag: 事物
@@ -49,107 +51,99 @@ Usually somewhere convenient and not too crowded. If it is related to my neighbo
 
 ### Q1. What subject(s) are you studying?
 
-I am studying subjects related to English and communication. I chose them because they are practical, and they also train me to express ideas more clearly in real situations.
+I’m studying computer science, with a focus on artificial intelligence. Right now, I’m working on a project about using machine learning to predict traffic patterns in my city. It’s challenging, but I enjoy seeing how code can solve real-world problems.
 
 ### Q2. What technology do you use when you study?
 
-I would say the first thing that comes to mind is English-related subjects. It is not something extraordinary, but it suits my lifestyle quite well. They help me build practical skills, especially when I need to organise my ideas clearly.
+I mainly use my laptop for studying, especially for writing essays and researching online. I also rely on apps like Quizlet to memorise vocabulary, which is handy because I can quickly test myself during a short break. Honestly, I couldn't imagine studying without these tools now.
 
-### Q3. Who helps you the most?And how?
+### Q3. Who helps you the most？And how?
 
-Probably someone close to me, like a friend or a family member. I find it easier to talk about my studies with people I trust, because the conversation feels more relaxed and honest.
+My older sister helps me the most. She’s a graphic designer, so whenever I get stuck on a tricky presentation for my marketing course, she sits down with me and shows me how to structure the slides. Last week, she even helped me choose the right colour palette. I’m really grateful for that.
 
 ### Q4. How much time do you spend on your studies each week?
 
-For me, my studies is quite familiar and easy to relate to. They help me build practical skills, especially when I need to organise my ideas clearly. I think that is why I can talk about it naturally without exaggerating my answer.
+I’d say I spend around 25 to 30 hours a week on my studies, mainly in the library working on assignments and reading for my history modules. I try to keep a steady routine, so I usually do a couple of hours each evening, and a bit more at weekends. It works well for me.
 
 ### Q5. Do you prefer to study in the mornings or in the afternoons?
 
-Yes, generally speaking. They help me build practical skills, especially when I need to organise my ideas clearly. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+I definitely prefer studying in the mornings. My mind feels much sharper right after breakfast, so I can focus better on reading or writing tasks. For example, I usually tackle my grammar exercises before noon, because by afternoon I start feeling a bit sluggish and less productive.
 
 ### Q6. Are you looking forward to working?
 
-Yes, generally speaking. They help me build practical skills, especially when I need to organise my ideas clearly. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Honestly, yes, I am. I've been studying for years now, and I'm really excited to finally apply what I've learned in a real office environment, maybe helping to design marketing campaigns. It feels like the next logical step, and I'm eager to start earning my own money.
 
 ### Q7. Is it very interesting?
 
-Yes, generally speaking. They help me build practical skills, especially when I need to organise my ideas clearly. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Honestly, not really. I'm a lab technician, so most of my day is running the same tests on water samples. It's repetitive work, but I find it satisfying when the results are spot on and I can sign off a clean report.
 
 ### Q8. Do you like your subject?(Why?/Why not?)
 
-I am studying subjects related to English and communication. I chose them because they are practical, and they also train me to express ideas more clearly in real situations.
+Honestly, I really do like my subject – I’m studying environmental science. I find it fascinating because we get to do fieldwork, like testing water quality in local rivers. It makes the theory feel real. Plus, I feel like I’m learning something that actually matters for the planet.
 
 ### Q9. Why did you choose to study that subject?/Why did you choose to study those subjects?
 
-I am studying subjects related to English and communication. I chose them because they are practical, and they also train me to express ideas more clearly in real situations.
+I chose to study economics because I’ve always been curious about how money and markets actually shape people’s lives. I remember watching a documentary about poverty in rural India, and it made me want to understand the systems behind it. Plus, my dad runs a small business, so I grew up hearing about supply and demand at the dinner table.
 
 ### Q10. Do you think that your subject is popular in your country?
 
-I am studying subjects related to English and communication. I chose them because they are practical, and they also train me to express ideas more clearly in real situations.
+Honestly, not really. I’m studying archaeology, which most people here see as a bit obscure. When I tell relatives or friends at parties, they often say, “So, you dig up old pots?” But I think it’s slowly gaining more attention through TV documentaries.
 
 ### Q11. Do you have any plans for your studies in the next five years?
 
-Yes, I probably would. I do not have a very fixed plan, but I can imagine my studies still being relevant to me in the future, especially if my lifestyle becomes busier.
+Yes, I definitely do. I'm planning to pursue a master's degree in environmental engineering within the next two years, hopefully at a university with strong research facilities. After that, I'd like to gain some hands-on experience through an internship in renewable energy before deciding on a PhD. It's quite a structured timeline.
 
 ### Q12. Do you want to change your major?
 
-I am studying subjects related to English and communication. I chose them because they are practical, and they also train me to express ideas more clearly in real situations.
+No, I don’t want to change my major. I’m studying environmental science, and I chose it because I care about real-world issues like water pollution. Last semester, we tested samples from a local river, and that hands-on work confirmed I’m in the right field.
 
 ### Q13. What changes would you like to see in your school?
 
-There have been a few noticeable changes recently. They help me build practical skills, especially when I need to organise my ideas clearly. I think these changes make daily life a bit more convenient and pleasant.
+Honestly, I’d like to see more practical, hands-on learning in my school. For instance, in science classes, we spend too much time on theory but rarely get to use proper lab equipment. If we could do real experiments every week, I think I’d understand the concepts much better and stay more engaged.
 
 ### Q14. What do you think is the most important at the moment?
 
-I would say the first thing that comes to mind is English-related subjects. It is not something extraordinary, but it suits my lifestyle quite well. They help me build practical skills, especially when I need to organise my ideas clearly.
+I think the most important thing at the moment is staying focused on my final-year project, because it determines my graduation grade. I’m researching renewable energy storage systems, and I need to finish the lab experiments before the deadline. So, that’s really my top priority right now.
 
 ### Q15. What work do you do?
 
-I am not working full-time at the moment, as most of my energy goes into my studies. However, I am trying to build useful skills now so that I can adapt more easily when I start my career.
+I work as a graphic designer for a small branding agency. My main focus is creating visual identities for local businesses, like logos and packaging for coffee shops or bakeries. It’s a mix of creative work and client meetings, which keeps things interesting for me.
 
 ### Q16. Do you miss being a student?
 
-Yes, generally speaking. They help me build practical skills, especially when I need to organise my ideas clearly. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Yeah, I do miss being a student sometimes. I miss the freedom of just focusing on learning without worrying about bills or deadlines at work. I used to love spending whole afternoons in the library reading, just getting lost in a topic. Real life feels a bit more rushed now.
 
 ### Q17. Do you want to change jobs?
 
-Yes, generally speaking. They help me build practical skills, especially when I need to organise my ideas clearly. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+No, not at the moment. I'm a graphic designer at a small agency, and I really enjoy the creative freedom I get there. We just landed a big project for a local coffee brand, so I'm excited to see that through before thinking about any moves.
 
 ### Q18. What kinds of technology do you use at work?
 
-I usually prefer a simple and practical kind. When it comes to my studies, I care more about whether they fit my real needs than whether they look impressive.
+To be honest, I rely heavily on my laptop and a good pair of noise-cancelling headphones. I spend most of my day using project management software like Trello to keep track of tasks, and I'm constantly on Zoom for client meetings. Without these, I'd really struggle to stay organised.
 
 ### Q19. Is your work interesting?
 
-Yes, generally speaking. They help me build practical skills, especially when I need to organise my ideas clearly. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Honestly, yes, I find it fascinating. I’m a graphic designer, so every project is like a puzzle – last week I had to redesign a logo for a local bakery, and figuring out how to blend their vintage feel with a modern look was really satisfying. It never gets boring.
 
 ### Q20. Do you like your job?
 
-Yes, I would say so. They help me build practical skills, especially when I need to organise my ideas clearly. For me, the most important thing is that my studies feels natural and useful rather than just fashionable.
+Honestly, yes, I really do enjoy my job. I'm a graphic designer, so I get to work on creative projects like designing logos and social media posts. It doesn't feel like a chore because I'm always learning new software and seeing my ideas come to life.
 
 ### Q21. Why did you choose to do that type of work (or, that job)?
 
-Mainly because my studies feels useful or meaningful to me. They help me build practical skills, especially when I need to organise my ideas clearly. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
+I chose to work as a graphic designer because I’ve always loved combining art with problem-solving. I remember designing a logo for a friend’s small bakery years ago, and seeing how it helped their business grow—that satisfaction made me want to pursue it professionally. It just felt like the right fit for my skills.
 
 ### Q22. What are the benefits of being your age?
 
-I would say the first thing that comes to mind is English-related subjects. It is not something extraordinary, but it suits my lifestyle quite well. They help me build practical skills, especially when I need to organise my ideas clearly.
+Honestly, I think the biggest benefit of being 24 is having that sweet spot of energy and freedom. I can still stay up late studying for certifications without crashing, but I also have enough life experience to make decent decisions. Plus, I'm not tied down by a mortgage or kids yet, so I can actually take weekend trips on a whim.
 
-### Q23. What requirements did you need to meet to get current job?
+### Q23. What requirements did you need to meet to get current job？
 
-I would say the first thing that comes to mind is English-related subjects. It is not something extraordinary, but it suits my lifestyle quite well. They help me build practical skills, especially when I need to organise my ideas clearly.
-
-### Q24. Do you like your subject?
-
-I am studying subjects related to English and communication. I chose them because they are practical, and they also train me to express ideas more clearly in real situations.
+I needed a degree in civil engineering and at least three years of site experience. I also had to pass a technical interview where I explained how I'd handled a foundation issue on a previous project. Getting the professional engineering license was the toughest part, honestly.
 
 ### Q25. Do you have any plants for your work in the next five years?
 
-Yes, I probably would. I do not have a very fixed plan, but I can imagine my studies still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q26. What technology do you use at work?
-
-I would say the first thing that comes to mind is English-related subjects. It is not something extraordinary, but it suits my lifestyle quite well. They help me build practical skills, especially when I need to organise my ideas clearly.
+Yes, absolutely. I’m planning to take on more project management responsibilities at my current firm within the next couple of years. I’ve already signed up for a certified course in agile methodologies next month, so I’m hoping to lead a small team by the time I turn thirty.
 
 ## 3. Hometown
 - Tag: 地点
@@ -157,67 +151,63 @@ I would say the first thing that comes to mind is English-related subjects. It i
 
 ### Q1. Did you learn about the history of your hometown at school?
 
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, my hometown was connected with some ordinary but memorable moments in my life.
+No, not really. We covered the general history of the country, but my hometown barely got a mention. I remember one lesson in primary school where we looked at an old photo of the main market square from the 1950s, but that was about it.
 
 ### Q2. What’s your hometown famous for?
 
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It has changed a lot over the years, but it still feels familiar and comfortable to me.
+My hometown is famous for its historic old town, complete with cobblestone streets and a medieval cathedral that draws tourists. It's also known for a local pastry called *sugar cakes*, which are sold at every corner bakery. Visitors often leave with boxes of them.
 
 ### Q3. How long have you lived there?
 
-For me, my hometown is quite familiar and easy to relate to. It has changed a lot over the years, but it still feels familiar and comfortable to me. I think that is why I can talk about it naturally without exaggerating my answer.
+I've lived in my hometown for about 22 years now, ever since I was born. I only moved away briefly for university, but I came back after graduating because my family and most of my childhood friends are still here. It's just where I feel most at home.
 
 ### Q4. Is that a big city or a small place?
 
-Yes, generally speaking. It has changed a lot over the years, but it still feels familiar and comfortable to me. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q5. What's (the name of) your hometown ?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It has changed a lot over the years, but it still feels familiar and comfortable to me.
+It's a medium-sized city, not too big like London, but definitely not a small village. We've got around 300,000 people, so you still get traffic jams in the morning, but you can also walk to the park in ten minutes. I like that balance.
 
 ### Q6. Do you think you will continue living there for a long time?
 
-Yes, generally speaking. It has changed a lot over the years, but it still feels familiar and comfortable to me. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+I’m not entirely sure, honestly. I love my hometown because my family and closest friends are all here, but the job opportunities are quite limited. If I find a good position locally, I’d be happy to stay. Otherwise, I might have to move to a bigger city for work.
 
 ### Q7. Is there anything you dislike about it?
 
-Yes, I would say so. It has changed a lot over the years, but it still feels familiar and comfortable to me. For me, the most important thing is that my hometown feels natural and useful rather than just fashionable.
+To be honest, I'm not a big fan of the traffic situation. During rush hour, it can take me nearly an hour just to get across town, which gets pretty frustrating when I'm trying to get to work or meet friends.
 
 ### Q8. What do you like about your hometown?
 
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It has changed a lot over the years, but it still feels familiar and comfortable to me.
+What I really like about my hometown is the strong sense of community. For example, there’s a local market every Sunday where neighbours chat and share fresh produce. It makes the place feel friendly and close-knit, which I miss when I’m away.
 
 ### Q9. Do you like living there?
 
-Yes, I would say so. It has changed a lot over the years, but it still feels familiar and comfortable to me. For me, the most important thing is that my hometown feels natural and useful rather than just fashionable.
+Yes, I really do. I live in a coastal town, so there’s always fresh sea air and I can walk along the pier after work. It’s also small enough that I bump into familiar faces at the local bakery, which gives it a warm, community feel.
 
 ### Q10. Do you like your hometown?
 
-Yes, I would say so. It has changed a lot over the years, but it still feels familiar and comfortable to me. For me, the most important thing is that my hometown feels natural and useful rather than just fashionable.
+Yes, I really do. I grew up in a small coastal town in the south, so I love the fresh sea air and the quiet pace of life. Even now, just walking along the harbour with a coffee makes me feel completely at ease. I think that’s something you can’t find in a big city.
 
 ### Q11. How long have you been living there?
 
-For me, my hometown is quite familiar and easy to relate to. It has changed a lot over the years, but it still feels familiar and comfortable to me. I think that is why I can talk about it naturally without exaggerating my answer.
+I’ve been living in my hometown, a small coastal town in the south, for about twenty years now. I moved back after finishing university because my family’s seafood restaurant needed help. It’s been nice watching the old pier get rebuilt over the last few years.
 
 ### Q12. Please describe your hometown a little.
 
-For me, my hometown is quite familiar and easy to relate to. It has changed a lot over the years, but it still feels familiar and comfortable to me. I think that is why I can talk about it naturally without exaggerating my answer.
+I’m from a small coastal town called Kochi in southern India. It’s famous for its Chinese fishing nets and the spice markets along the waterfront. The best part is the smell of fresh seafood and cardamom in the air. Honestly, I feel very lucky to have grown up there.
 
 ### Q13. Is your hometown a big city or a small place?
 
-Yes, generally speaking. It has changed a lot over the years, but it still feels familiar and comfortable to me. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+My hometown is a small city, really—it's called Canterbury in the UK, with about 55,000 people. It's compact enough that I could walk from the cathedral to the high street in ten minutes, but we still have a university and a train station. I actually prefer that scale.
 
 ### Q14. Where would you like to live?
 
-Usually somewhere convenient and not too crowded. If it is related to my hometown, I prefer a place where I can feel comfortable and take my time rather than rush through it.
+Honestly, I'd love to live somewhere by the sea, like a coastal town in Cornwall. I find the sound of waves really calming, and I enjoy being able to go for a walk along the beach after work. It feels more relaxing than a big city.
 
 ### Q15. Do you plan to continue living there?
 
-Yes, I probably would. I do not have a very fixed plan, but I can imagine my hometown still being relevant to me in the future, especially if my lifestyle becomes busier.
+No, I don't plan to stay in my hometown forever. I love the quiet streets and my family nearby, but there aren't many job opportunities in my field. I'd like to move to a bigger city like Shanghai within the next two years to find better work.
 
 ### Q16. Where's your hometown?
 
-Usually somewhere convenient and not too crowded. If it is related to my hometown, I prefer a place where I can feel comfortable and take my time rather than rush through it.
+My hometown is a small coastal town called Brighton, in the south of England. It’s right on the sea, with pebble beaches and a long pier. I grew up there, so I know every corner—the fish-and-chip shops, the old lanes, and the sound of seagulls in the morning.
 
 ## 4. Home/Accommodation
 - Tag: 地点
@@ -225,71 +215,71 @@ Usually somewhere convenient and not too crowded. If it is related to my hometow
 
 ### Q1. Do you think it is important to live in a comfortable environment?
 
-Yes, I would say so. It is not very large, but it is comfortable enough for relaxing and concentrating. For me, the most important thing is that my home feels natural and useful rather than just fashionable.
+Absolutely. A comfortable environment directly affects your mood and productivity. For instance, since I rearranged my desk to face the window and added a small plant, I focus better on my work. It's not about luxury, just having a space that feels calm and functional for your daily routine.
 
 ### Q2. What makes you feel pleasant in your home?
 
-I would say the first thing that comes to mind is my bedroom. It is not something extraordinary, but it suits my lifestyle quite well. It is not very large, but it is comfortable enough for relaxing and concentrating.
+Honestly, just curling up on my sofa with a good cup of tea and a novel makes me feel instantly relaxed. I also love when the afternoon sun streams through my living room window—it makes the whole space feel warm and cosy. That’s really my favourite part of the day.
 
 ### Q3. What’s your favorite room in your apartment or house?
 
-My favourite would probably be my bedroom. I like it because it feels natural to me, not forced. It is not very large, but it is comfortable enough for relaxing and concentrating.
+I’d say my favourite room is the kitchen. It’s where I start every morning making coffee, and I love the natural light that pours in through the big window. I also enjoy trying out new recipes there on weekends, so it feels warm and alive.
 
 ### Q4. What kind of house or flat do you want to live in in the future?
 
-I usually prefer a simple and practical kind. When it comes to my home, I care more about whether it fit my real needs than whether it look impressive.
+I’d love to live in a modern flat with a balcony, preferably in a quiet area but close to the city centre. That way, I could enjoy a cup of coffee outside in the morning and still walk to work or meet friends easily. It would feel both peaceful and convenient.
 
 ### Q5. Do you live in a house or a flat?
 
-Yes, generally speaking. It is not very large, but it is comfortable enough for relaxing and concentrating. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+I live in a flat in the city centre. It’s a small two-bedroom place on the fourth floor, so I get a nice view of the park nearby. I chose it because it’s close to work and the shops, which makes my daily routine much easier.
 
 ### Q6. What part of your home do you like the most?
 
-I would say the first thing that comes to mind is my bedroom. It is not something extraordinary, but it suits my lifestyle quite well. It is not very large, but it is comfortable enough for relaxing and concentrating.
+I’d say the kitchen, without a doubt. It’s where everything happens—I make my morning coffee there, and on weekends I often bake bread, which fills the whole flat with a lovely smell. It just feels warm and cosy, especially when it’s raining outside.
 
 ### Q7. Please describe the room you live in.
 
-For me, my home is quite familiar and easy to relate to. It is not very large, but it is comfortable enough for relaxing and concentrating. I think that is why I can talk about it naturally without exaggerating my answer.
+I live in a bright, south-facing bedroom on the third floor. It’s not huge, but I’ve got a large window that looks out onto a quiet street, so it feels airy. My desk is by the window, where I usually study or read in the afternoon.
 
 ### Q8. Do you prefer living in a house or a flat?
 
-Yes, generally speaking. It is not very large, but it is comfortable enough for relaxing and concentrating. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+I definitely prefer living in a house. I grew up in a terraced house with a small garden, and I love having that outdoor space to sit in the sun or grow herbs. Flats feel a bit too confined for me, especially with no private garden.
 
 ### Q9. Are the transport facilities to your home very good?
 
-Yes, generally speaking. It is not very large, but it is comfortable enough for relaxing and concentrating. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Yes, they're decent enough. There's a bus stop just around the corner, and the metro station is about a ten-minute walk away. I rely on the bus most mornings to get to work, and it's usually pretty reliable, though it can get crowded during peak hours.
 
 ### Q10. What do you usually do in your house/flat/room?
 
-I would say the first thing that comes to mind is my bedroom. It is not something extraordinary, but it suits my lifestyle quite well. It is not very large, but it is comfortable enough for relaxing and concentrating.
+Honestly, I spend most of my time in my living room. I usually curl up on the sofa with a cup of tea and read a novel, or I’ll put on a podcast while I tidy up my bookshelf. It’s just my cosy little space to unwind after work.
 
 ### Q11. Which room does your family spend most of the time in?
 
-I would probably choose my bedroom. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
+We’re almost always in the living room. It’s got the big sofa and the TV, so we end up there after dinner—my mum reads, my dad watches the news, and I scroll on my phone. It’s just the cosiest spot in the house.
 
 ### Q12. Can you describe the place where you live?
 
-Yes, generally speaking. It is not very large, but it is comfortable enough for relaxing and concentrating. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Sure. I live in a two-bedroom flat on the fifth floor of a modern building in the city centre. There’s a small balcony where I keep some potted plants, and I often have my morning coffee out there. It’s compact but feels cosy.
 
 ### Q13. What’s the difference between where you are living now and where you have lived in the past?
 
-I would say the first thing that comes to mind is my bedroom. It is not something extraordinary, but it suits my lifestyle quite well. It is not very large, but it is comfortable enough for relaxing and concentrating.
+I’m currently living in a modern apartment in the city centre, which is quite compact but has a great view of the skyline. In the past, I lived in a spacious suburban house with a garden, where I could barbecue in summer. The main difference is definitely the space and the pace of life—now it’s busier and more convenient.
 
 ### Q14. Do you plan to live there for a long time?
 
-Yes, I probably would. I do not have a very fixed plan, but I can imagine my home still being relevant to me in the future, especially if my lifestyle becomes busier.
+Yes, I think I’ll stay here for at least a few more years. The location is really convenient—I can walk to the supermarket and the train station in under ten minutes. Plus, I’ve just repainted the living room and fixed the kitchen shelves, so it feels like home now.
 
 ### Q15. How long have you lived there?
 
-For me, my home is quite familiar and easy to relate to. It is not very large, but it is comfortable enough for relaxing and concentrating. I think that is why I can talk about it naturally without exaggerating my answer.
+I've lived in my current flat for about six years now, ever since I moved out of my parents' house. It's a small but comfortable place near the city centre, and I've really settled into the area—I know all the local shopkeepers and the best spots for a quiet coffee.
 
 ### Q16. Who do you live with?
 
-Probably someone close to me, like a friend or a family member. I find it easier to talk about my home with people I trust, because the conversation feels more relaxed and honest.
+I live with my parents and my younger sister in a flat near the city centre. It’s quite lively because my sister is always playing the piano, and my mum cooks dinner every evening. Actually, I really enjoy coming home to the smell of her cooking after a long day.
 
 ### Q17. What kind of housing/accommodation do you live in?
 
-I usually prefer a simple and practical kind. When it comes to my home, I care more about whether it fit my real needs than whether it look impressive.
+I live in a two-bedroom flat on the sixth floor of a modern apartment block. It's got a small balcony overlooking a park, which I really like for my morning coffee. The building has a gym downstairs, so I can exercise without going far.
 
 ## 5. Sports programs
 - Tag: 事物
@@ -297,27 +287,27 @@ I usually prefer a simple and practical kind. When it comes to my home, I care m
 
 ### Q1. Do you like watching sports programs on TV?
 
-Yes, I would say so. It helps me stay active, and it is also a good way to release stress. For me, the most important thing is that sport feels natural and useful rather than just fashionable.
+Honestly, not really. I find them a bit repetitive, especially the endless analysis before and after matches. I'd much rather be outside playing football myself or watching a quick highlight reel online. It just feels more dynamic than sitting through a full broadcast.
 
 ### Q2. Do you like to watch live sports games?
 
-Yes, I would say so. It helps me stay active, and it is also a good way to release stress. For me, the most important thing is that sport feels natural and useful rather than just fashionable.
+Yeah, I really enjoy watching live sports games. There's just something electric about being in the stadium with the crowd, like the roar after a goal or the tension during a penalty shootout. I remember going to a local football match last year, and the atmosphere was incredible—it made the whole experience unforgettable.
 
 ### Q3. Who do you like to watch sports games with?
 
-Probably someone close to me, like a friend or a family member. I find it easier to talk about sport with people I trust, because the conversation feels more relaxed and honest.
+I usually watch sports games with my dad. He’s a huge cricket fan, so we sit together on the sofa, order pizza, and argue over umpire decisions. It makes the match much more exciting than watching alone.
 
 ### Q4. What kinds of games do you expect to watch in the future?
 
-I usually prefer a simple and practical kind. When it comes to sport, I care more about whether it fit my real needs than whether it look impressive.
+I’d love to watch more live football matches, especially from the Premier League, because the atmosphere in the stadium is electric. I’m also curious about new mixed martial arts events—they seem intense and strategic. Maybe I’ll catch a few finals in person if I can get tickets.
 
 ### Q5. Have you ever watched a sports game in astadium?
 
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of sport, and it made the topic feel more real to me.
+Yes, I have. I went to a football match at Wembley Stadium in London a couple of years ago. The atmosphere was incredible—the roar of the crowd when a goal was scored was deafening. It felt completely different from watching it on TV.
 
 ### Q6. Do you prefer to watch sports games alone or witha group of friends?
 
-Yes, generally speaking. It helps me stay active, and it is also a good way to release stress. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+I much prefer watching sports games with a group of friends. There's nothing like sharing the tension of a penalty shootout or celebrating a last-minute goal together. Last weekend, for example, I watched the Champions League final at a friend's place, and the collective roar when the winning goal went in was just electric.
 
 ## 6. Evening time
 - Tag: 事物
@@ -325,31 +315,27 @@ Yes, generally speaking. It helps me stay active, and it is also a good way to r
 
 ### Q1. What do you usually do in the evening?
 
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
+Usually I wind down after work by cooking a simple meal — something like pasta with vegetables. Then I’ll watch an episode of a series or read a novel for about an hour before bed. It helps me relax and clear my mind from the day.
 
 ### Q2. What did you do in the evening when you were little? Why?
 
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
+When I was little, I’d often play board games with my family after dinner, like Snakes and Ladders or Monopoly. I think we did that because it was a way to bond without screens, and I always loved the excitement of rolling the dice and hoping for a win.
 
 ### Q3. Are there any differences between what you do in the evening now and what you did in the past?
 
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, evening time was connected with some ordinary but memorable moments in my life.
+Yes, definitely. When I was a student, I used to spend evenings doing homework or hanging out with friends at the local park. Now I work full-time, so my evenings are mostly about unwinding—cooking a proper meal, watching a series, or reading a book before bed. It's much quieter now.
 
 ### Q4. Do you spend your evenings doing the same things on both weekdays and weekends?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+No, not really. On weekdays I'm usually winding down after work, so I'll just have dinner and watch a series or read. But at weekends, I often meet friends for a meal or go to the cinema, so the evenings are more social and relaxed.
 
-### Q5. What do you hate doing in the evening?
+### Q5. What do you hate doing in the evening？
 
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
+Honestly, I can't stand doing household chores in the evening, especially washing dishes. After a long day, the last thing I want is to be scrubbing greasy plates and pans. It just feels like a tedious way to end the day when I'd rather unwind.
 
 ### Q6. Do you like the morning or evening?
 
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that evening time feels natural and useful rather than just fashionable.
-
-### Q7. Do you like the morning or the evening?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that evening time feels natural and useful rather than just fashionable.
+I definitely prefer the evening. There's a calmness that settles in after the day's work is done, and I love unwinding with a cup of herbal tea while reading a novel or watching the sunset from my balcony. It feels like my own time.
 
 ## 7. Watch
 - Tag: 事物
@@ -357,47 +343,43 @@ Yes, I would say so. It is not the biggest part of my life, but it can still aff
 
 ### Q1. Do you wear a watch?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Yes, I do wear a watch. I have a simple black Casio that I put on every morning before leaving the house. I like it because I can check the time quickly during meetings without pulling out my phone.
 
 ### Q2. Have you ever received a watch as a gift?
 
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of watch, and it made the topic feel more real to me.
+Yes, I have. A couple of years ago, my parents gave me a sleek, silver Seiko watch for my birthday. I was genuinely surprised because I’d never owned a proper watch before, and I still wear it almost every day—it’s practical and reminds me of them.
 
 ### Q3. Why do some people wear expensive watches?
 
-Mainly because watch feels useful or meaningful to me. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
+Some people wear expensive watches as a status symbol—like a Rolex or an Omega, it shows they’ve achieved a certain level of success. Others appreciate the craftsmanship, like the precise Swiss movement or the sapphire crystal face. For instance, my uncle wears his Patek Philippe to business meetings, and he says it’s a conversation starter.
 
 ### Q4. Do you think watch is important for you? Why?
 
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that watch feels natural and useful rather than just fashionable.
-
-### Q5. Are watches important to you? Why?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that watch feels natural and useful rather than just fashionable.
+Honestly, yes, a watch is important for me because I rely on it to stay on schedule during my day. For example, when I'm coaching students, I glance at my wrist to time the speaking exercises instead of pulling out my phone. It's just quicker and keeps me focused.
 
 ## 8. Cars
 - Tag: 事物
 - Status: NEW
 
-### Q1. Do you think car colours are important?
+### Q1. Do you think car colours are important？
 
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that cars feels natural and useful rather than just fashionable.
+Honestly, not really. I mean, a bright red car might look flashy, but what matters to me is whether it's reliable and fuel-efficient. My friend chose a white car just because it stays cooler in summer, but I'd pick function over colour any day.
 
 ### Q2. Did you enjoy traveling by car when you were a kid?
 
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, cars was connected with some ordinary but memorable moments in my life.
+Yeah, I really did. My dad had this old blue station wagon, and we’d take road trips to the beach every summer. I loved lying in the back seat watching the trees blur past, and we’d always stop for ice cream at a little shop near the coast.
 
 ### Q3. What types of cars do you like?
 
-I usually prefer a simple and practical kind. When it comes to cars, I care more about whether they fit my real needs than whether they look impressive.
+Honestly, I’m really into electric cars, especially the Tesla Model 3. I love how quiet and smooth they are to drive, and the instant acceleration feels amazing compared to petrol cars. Plus, it’s nice knowing I’m not pumping fumes into the air every time I go for a spin.
 
 ### Q4. Do you prefer to be a driver or a passenger?
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+I definitely prefer being a driver. I like having control over the route and the music, especially when I’m driving my own car—it’s a small hatchback. As a passenger, I sometimes feel a bit restless or even car-sick if the driver brakes too hard. So, I’d rather be behind the wheel.
 
 ### Q5. What do you usually do when there is a traffic jam?
 
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
+If I’m stuck in a traffic jam, I usually put on some music or listen to a podcast to pass the time. Last week, I was stuck for nearly an hour, so I called my mum for a chat. It makes the wait feel much shorter.
 
 ## 9. Websites
 - Tag: 事物
@@ -405,47 +387,39 @@ I would say the first thing that comes to mind is something simple and practical
 
 ### Q1. What kinds of websites do you often visit?
 
-I usually prefer a simple and practical kind. When it comes to websites, I care more about whether they fit my real needs than whether they look impressive.
+I mostly visit news websites like the BBC and The Guardian to stay updated on current events, plus YouTube for tutorials and entertainment. I also use Reddit quite a bit for niche communities, like photography forums. It covers both learning and relaxing for me.
 
 ### Q2. What is your favourite website?
 
-My favourite would probably be something simple and practical. I like it because it feels natural to me, not forced. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
+Honestly, I’d say YouTube is my favourite website. I use it almost every day, mainly to watch travel vlogs and cooking tutorials. It’s just so convenient having everything from street food tours in Bangkok to detailed pasta recipes all in one place. I love how it makes learning new things feel effortless.
 
-### Q3. Are there any changes to the websites you ofter visit?
+### Q3. Are there any changes to the websites you ofter visit？
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+To be honest, not really—I still mostly stick to the same ones I've used for years, like YouTube for tutorials and Reddit for news discussions. The only small change is I've started checking a local food blog more often since I moved flats and wanted to find good nearby restaurants.
 
 ### Q4. What kinds of websites are popular in your country?
 
-I usually prefer a simple and practical kind. When it comes to websites, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q5. Have there been any changes about the websites you usually use?
-
-For me, websites is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
+Honestly, social media and video-sharing platforms are huge here, especially ones like Weibo and Bilibili. People use them for everything from following celebrities to learning new skills. For instance, I often see friends sharing short cooking tutorials or funny clips from these sites. It's just how most of us stay connected and entertained.
 
 ## 10. Mirrors
 - Tag: 事物
 - Status: NEW
 
-### Q1. Do you like looking at yourself in the mirror? How often?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that mirrors feels natural and useful rather than just fashionable.
-
 ### Q2. Would you use mirrors to decorate your room?
 
-Yes, I probably would. I do not have a very fixed plan, but I can imagine mirrors still being relevant to me in the future, especially if my lifestyle becomes busier.
+Yeah, I probably would, but in a subtle way. I like the idea of a large mirror leaning against a wall to make a small room feel bigger. In my bedroom, I have a simple framed one above my dresser—it’s practical for getting ready, but also reflects light nicely.
 
 ### Q3. Do you usually take a mirror with you ?
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+No, I don’t usually carry a mirror with me. I just check my reflection in my phone screen or a shop window if I need to. The only time I take one is when I’m travelling and staying somewhere unfamiliar—then a small compact mirror comes in handy.
 
 ### Q4. Have you ever bought mirrors?
 
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of mirrors, and it made the topic feel more real to me.
+Yes, I have. A few years ago, I bought a large oval mirror for my bedroom from a flea market. It had a beautiful wooden frame with carved flowers, and I thought it would make the room feel bigger. I still have it hanging above my dresser.
 
 ### Q5. Do you like looking at yourself in the mirror?How often?
 
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that mirrors feels natural and useful rather than just fashionable.
+Yeah, I do check myself in the mirror quite often—probably a few times a day. I’ll glance in the bathroom mirror after washing my face, or quickly check my hair and shirt before heading out the door. It’s not obsessive, just a quick practical thing to make sure I look presentable.
 
 ## 11. Films/cinemas
 - Tag: 事件
@@ -453,31 +427,31 @@ Yes, I would say so. They are not the biggest part of my life, but they can stil
 
 ### Q1. Do you prefer to watch films at home or in the cinema?
 
-Yes, generally speaking. They are an easy way to relax and also learn about different people and cultures. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+I definitely prefer watching films at the cinema. The big screen and surround sound make action scenes so much more immersive, like when I saw *Dune* last year—the desert landscapes felt enormous. Plus, I love the ritual of grabbing popcorn and finding a good seat. At home, I get too easily distracted by my phone.
 
 ### Q2. How often do you watch films?
 
-Probably a few times a week, although it depends on how busy I am. They are an easy way to relax and also learn about different people and cultures. That is why films has become a fairly normal part of my routine.
+I'd say I watch films about once or twice a week, usually on weekends when I have more free time. Last Saturday, for instance, I watched a science fiction movie called *Dune* on streaming. It's a nice way to unwind after a busy week.
 
 ### Q3. Do you think going to the cinema is a good way to spend time with friends?
 
-Yes, generally speaking. They are an easy way to relax and also learn about different people and cultures. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Yes, definitely. There's something about sharing a film together—like laughing at a comedy or gasping during a tense scene—that brings everyone closer. After the movie, my friends and I always grab bubble tea and debate our favourite moments. It's a simple, low-pressure way to catch up without awkward silences.
 
 ### Q4. Do you often go to the cinema with your friends?
 
-Yes, generally speaking. They are an easy way to relax and also learn about different people and cultures. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Honestly, not as often as I'd like. We usually try to catch a film together maybe once a month, especially when a big Marvel or action movie comes out. Last time, we went to see Dune and grabbed pizza afterwards, which made it a proper night out.
 
 ### Q5. Did you ever go to the cinema alone as a child?
 
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of films, and it made the topic feel more real to me.
+No, I never went to the cinema alone as a child. I always went with my parents or older brother, usually to see animated films like *Finding Nemo*. I think I would have felt a bit nervous sitting by myself in a dark room full of strangers back then.
 
 ### Q6. Did you often watch films when you were a child?
 
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, films was connected with some ordinary but memorable moments in my life.
+Yeah, I watched quite a lot of films as a child. My dad used to rent DVDs from the local shop every Friday, and we’d watch things like *The Lion King* or *Home Alone* together. I remember really looking forward to those evenings—it was our little ritual.
 
 ### Q7. What films do you like?
 
-I would say the first thing that comes to mind is comedies or realistic dramas. It is not something extraordinary, but it suits my lifestyle quite well. They are an easy way to relax and also learn about different people and cultures.
+Honestly, I'm a big fan of psychological thrillers. I love how they play with your mind—films like *Shutter Island* or *Gone Girl* keep me guessing right until the end. The twists and complex characters really draw me in. I find them much more engaging than simple action movies.
 
 ## 12. Old buildings
 - Tag: 地点
@@ -485,19 +459,19 @@ I would say the first thing that comes to mind is comedies or realistic dramas. 
 
 ### Q1. Are there any old buildings you want to see in the future? why?
 
-Yes, I probably would. I do not have a very fixed plan, but I can imagine old buildings still being relevant to me in the future, especially if my lifestyle becomes busier.
+Yeah, I'd really love to see the Colosseum in Rome one day. I've read so much about its history and the gladiator fights that took place there. It's not just about the age—it's the stories and the sheer scale of the structure that fascinate me. I think standing inside it would feel incredible.
 
 ### Q2. Do you prefer living in an old building or a modern house?
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+I’d say I prefer a modern house, mainly because of the convenience. Modern places usually have better insulation, so it’s warmer in winter, and the plumbing works more reliably. My friend lives in an old flat, and she’s always dealing with leaky pipes or draughty windows, which puts me off.
 
 ### Q3. Do you think we should preserve old buildings in cities?
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Yes, absolutely. Old buildings give a city character and a sense of history. For instance, in my hometown, we have an old clock tower from the 1800s that locals still use as a meeting point. I think preserving places like that helps us remember where we came from, instead of just filling cities with identical glass towers.
 
 ### Q4. Have you ever seen old buildings in the city?
 
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of old buildings, and it made the topic feel more real to me.
+Yes, absolutely. In my hometown, there’s a whole district of old colonial buildings with shuttered windows and peeling paint. I remember walking past them on my way to school—they had these high, arched doorways and a faint smell of old wood inside. It’s like stepping into a different century.
 
 ## 13. Jokes & Comedies
 - Tag: 事件
@@ -505,19 +479,19 @@ Yes, I have, although it was not a very dramatic experience. I remember it becau
 
 ### Q1. Have you ever watched a live show?
 
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of jokes comedies, and it made the topic feel more real to me.
+Yeah, I’ve been to a couple of live comedy shows. Last year I saw a stand-up comedian at a small theatre in town, and the energy was completely different from watching on TV—everyone laughing together made it so much more enjoyable.
 
 ### Q2. Do you like to watch comedies?
 
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that jokes comedies feels natural and useful rather than just fashionable.
+Yeah, I really enjoy watching comedies, especially sitcoms like *The Office*. They're a great way to unwind after a long day—I actually laughed out loud at the episode where Jim pranks Dwight with the fake fax. It just lifts my mood instantly.
 
 ### Q3. Do your friends like to tell jokes?
 
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that jokes comedies feels natural and useful rather than just fashionable.
+Yes, quite a few of them do. My friend Tom, for instance, is always cracking dry, observational jokes about things like queuing at the post office or dodgy WiFi. It makes our coffee breaks feel much more relaxed and lively.
 
 ### Q4. Are you good at telling jokes?
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Honestly, not really. I can never remember the punchline properly, so I usually mess it up halfway through. My friends just end up laughing at me fumbling, not at the joke itself. I'm much better at laughing at other people's jokes.
 
 ## 14. Parks
 - Tag: 地点
@@ -525,19 +499,19 @@ Yes, generally speaking. They are not the biggest part of my life, but they can 
 
 ### Q1. Are there any parks you want to go to in the future?
 
-Yes, I probably would. I do not have a very fixed plan, but I can imagine parks still being relevant to me in the future, especially if my lifestyle becomes busier.
+Yes, I'd love to visit High Line Park in New York City one day. It's built on an old elevated railway track, and I've seen photos of the wildflowers and walking paths winding between skyscrapers. It seems like a perfect blend of nature and city life.
 
 ### Q2. Would you like to see more parks in your city?
 
-Yes, I probably would. I do not have a very fixed plan, but I can imagine parks still being relevant to me in the future, especially if my lifestyle becomes busier.
+Yeah, definitely. I’d love to see more parks in my city, especially near the busy neighbourhoods where kids don’t have safe places to play. Last weekend, I saw a small patch of land near my flat just covered in rubbish—that could easily be a nice little garden with benches.
 
 ### Q3. Do you still like going to parks now?
 
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that parks feels natural and useful rather than just fashionable.
+Yeah, I still enjoy going to parks, though not as often as when I was a kid. Now I go mainly to unwind after a long week—just sitting on a bench with a coffee, watching people play badminton or walk their dogs. It’s a simple way to clear my head without much effort.
 
 ### Q4. Did you like going to parks as a child?
 
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, parks was connected with some ordinary but memorable moments in my life.
+Yes, I loved going to parks as a child. There was a big one near my home with a pond and swings, and I’d spend hours there with my friends, playing tag or feeding the ducks. It felt like a little adventure every time, away from school and homework.
 
 ## 15. social media
 - Tag: 事物
@@ -545,27 +519,23 @@ Yes, especially when I was younger. At that time I did not think about it deeply
 
 ### Q1. When did you start using social media?
 
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, social media feels less like a task and more like a way to relax.
+I started using social media when I was around 13, mainly because my friends were all on Facebook. I remember creating an account to chat with classmates and share photos from school trips. It felt exciting at first, but looking back, I was pretty careless with privacy settings.
 
 ### Q2. Have you ever posted anything on social media?
 
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of social media, and it made the topic feel more real to me.
-
-### Q3. From when you started using social media?
-
-For me, social media is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
+Yes, I have. I posted a photo of my homemade lasagna on Instagram last month. It wasn't perfect, but my friends commented and asked for the recipe. That was nice. I don't post very often, just when something feels worth sharing.
 
 ### Q4. Do you think you spend too much time on social media?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Honestly, yes, I do. I catch myself scrolling through Instagram or TikTok for almost an hour before bed, and that's time I could use to read a book or just relax properly. I've started setting a timer to keep it more under control.
 
-### Q5. What do people do on social media?
+### Q5. What do people do on social media？
 
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
+People do all sorts of things on social media. A lot of them share photos from their daily life, like what they had for lunch or where they went on holiday. Others use it to follow news or watch short videos, and many just scroll through their feed to pass the time on the bus.
 
-### Q6. Do your friends use social medial?
+### Q6. Do your friends use social medial？
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Yeah, most of them do. They're always on Instagram sharing holiday photos or tagging each other in memes. A couple of friends prefer WhatsApp groups for chatting instead, so it varies a bit, but social media is definitely a big part of how we stay in touch.
 
 ## 16. Clothing
 - Tag: 事物
@@ -573,19 +543,19 @@ Yes, generally speaking. It is not the biggest part of my life, but it can still
 
 ### Q1. What kind of clothes do you like to wear?
 
-I usually prefer a simple and practical kind. When it comes to clothing, I care more about whether it fit my real needs than whether it look impressive.
+I really like wearing comfortable, casual clothes—mostly cotton T-shirts and jeans. For example, I have a few plain grey and navy tops that I can mix easily. They’re practical for walking around the city or meeting friends, and I don’t have to fuss over what to put on. That’s my style, really.
 
 ### Q2. Do you prefer to wear comfortable and casual clothes or smart clothes?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Honestly, I'd choose comfortable and casual clothes every time. I spend most of my day at home studying, so I live in loose joggers and cotton t-shirts. They let me move freely when I'm hunched over my desk, and I can stretch out on the sofa without worrying about creasing anything.
 
 ### Q3. Do you like wearing T-shirts?
 
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that clothing feels natural and useful rather than just fashionable.
+Yeah, I really like wearing T-shirts. They’re comfortable and easy to throw on, especially when I’m just heading out to run errands or meet friends for coffee. I have a few favourites—one’s a plain navy one from Uniqlo that I’ve had for years. It just feels right.
 
 ### Q4. Do you spend a lot of time choosing clothes?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+No, not really. I tend to stick with what I know works, like a pair of well-fitted jeans and a plain T-shirt. I'd rather spend those extra minutes reading or having breakfast than deciding between two similar shirts.
 
 ## 17. the city you live in
 - Tag: 地点
@@ -593,63 +563,47 @@ Yes, generally speaking. It is not the biggest part of my life, but it can still
 
 ### Q1. What city do you live in?
 
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
+I live in Manchester, in the north-west of England. It’s a lively city with a famous music scene and lots of red-brick buildings. I really enjoy walking through the Northern Quarter at the weekend—there are so many independent cafes and vintage shops to explore.
 
 ### Q2. What's the weather like where you live?
 
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
+I live in Mumbai, so the weather is mostly hot and humid throughout the year. Right now, during the monsoon, it rains heavily for hours—I literally had to wade through ankle-deep water on my way to work yesterday. But honestly, the cool breeze after a downpour makes it worth it.
 
 ### Q3. Are there people of different ages living in this city?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Yes, definitely. In my city you’ll see young families with kids in the parks, university students crowding the cafés, and plenty of retired folks walking their dogs along the river. For example, my own street has a primary school at one end and a community centre for seniors at the other, so all ages mix naturally.
 
 ### Q4. Is this city your permanent residence?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+No, it’s not my permanent residence. I’ve been living here for university, but my family home is in a smaller coastal town about three hours away. I go back there during semester breaks to see my parents and our dog.
 
 ### Q5. Are there big changes in this city?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Not really, no. I mean, the skyline is pretty much the same as it was ten years ago. They've added a few new metro stations, but the old market areas and the main square have stayed exactly how they've always been. It's a pretty stable place, to be honest.
 
 ### Q6. How long have you lived in this city?
 
-For me, this topic is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
+I’ve lived in London for about six years now. I moved here right after university for a job in digital marketing, and the city’s energy just kept me here. I still remember my first Tube ride, getting lost at Oxford Circus.
 
 ### Q7. Do you like this city? Why?
 
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that this topic feels natural and useful rather than just fashionable.
+Yes, I really like it. It’s got a great mix of old and new—I love walking through the historic lanes near the old cathedral, and then just ten minutes later I can grab a coffee in a modern rooftop café. The city feels alive but not overwhelming.
 
-### Q8. Do you often see your neighbors?
+### Q8. Do you often see your neighbors？
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Honestly, not very often. I live in a high-rise apartment block, so most neighbours keep to themselves. I do occasionally bump into the elderly lady next door when I’m taking out the recycling, and we’ll have a quick chat about the weather. It’s friendly, but not frequent.
 
-### Q9. Are the people friendly in the city?
+### Q9. Are the people friendly in the city？
 
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that this topic feels natural and useful rather than just fashionable.
+Yes, I'd say people are generally friendly, especially in my neighbourhood. Just yesterday, a neighbour I'd never spoken to before helped me carry my shopping bags up three flights of stairs. It's that kind of small, spontaneous kindness that makes the city feel welcoming.
 
 ### Q10. Is the city friendly to children and old people?
 
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that this topic feels natural and useful rather than just fashionable.
+Yeah, I’d say it’s pretty friendly. There are playgrounds with soft surfaces in most parks, and libraries run free story-time sessions for kids. For older people, the buses have low floors and priority seats, and many shops offer small discounts for pensioners. It’s not perfect, but it works well enough.
 
 ## 18. dream and ambition
 - Tag: 事件
 - Status: NEW
-
-### Q1. Do you think you are an ambitious person?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. What is your dream job?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q3. Are you the kind of person who follows their dreams?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. What was your childhood dream?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
 
 ## 19. Morning routines
 - Tag: 事物
@@ -657,19 +611,19 @@ I would say the first thing that comes to mind is something simple and practical
 
 ### Q1. What do you do in the mornings?
 
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
+Sure, I usually start with a glass of water and then make a quick coffee. After that, I’ll check my phone for messages or the news while having a simple breakfast, like toast or oatmeal. It’s not very exciting, but it gets me ready for the day ahead.
 
 ### Q2. Is breakfast important?
 
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that morning routines feels natural and useful rather than just fashionable.
+Yeah, I think breakfast is pretty important. If I skip it, I usually feel sluggish by mid-morning and can't focus properly in class. For me, even just having a quick bowl of porridge or a banana makes a big difference. So I try not to miss it.
 
 ### Q3. What is your morning routine?
 
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
+Right, so my morning routine is pretty straightforward. I usually wake up around seven, stumble to the kitchen, and put the kettle on for a strong cup of black coffee. Then I'll sit by the window for about fifteen minutes with my cat, just sort of waking up slowly before I jump in the shower.
 
 ### Q4. Do you like to get up early in the morning?
 
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that morning routines feels natural and useful rather than just fashionable.
+Honestly, I'm not a natural early riser. I prefer to wake up around 7:30, so I can have a coffee and some toast without rushing. Getting up earlier than that, say 5 or 6, just makes me feel groggy and unproductive for the rest of the morning.
 
 ## 20. Teachers
 - Tag: 人物
@@ -677,165 +631,91 @@ Yes, I would say so. They are not the biggest part of my life, but they can stil
 
 ### Q1. Do you have a favorite teacher?
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. Who is your favourite teacher?
-
-Probably someone close to me, like a friend or a family member. I find it easier to talk about teachers with people I trust, because the conversation feels more relaxed and honest.
+Yes, my high school history teacher, Mr. Chen. He made lessons come alive by acting out historical events—once he dressed up as a Ming dynasty general to explain a battle. That passion stuck with me, and I still remember those classes clearly. He really cared about making learning exciting.
 
 ### Q3. In what way has your favourite teacher helped you?
 
-For me, teachers is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
+My favourite teacher, Mrs. Chen, really helped me build confidence in maths. She would stay after class to explain tricky problems step by step until I understood. Once, she even drew diagrams with coloured pens to show how algebra connects to real life, which made it click for me.
 
 ### Q4. Do you have a teacher from your past that you still remember?
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Yes, I often think about my high school chemistry teacher, Mr. Chen. He had this incredible way of explaining complex formulas using everyday examples, like comparing chemical bonds to friends holding hands. I remember he stayed after class to help me with a difficult experiment, and that kindness really stuck with me.
 
 ### Q5. Are you still in touch with your primary school teachers?
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+No, I'm not. The last time I saw my primary school teacher was at my graduation ceremony. She gave me a little book of poems, which I still keep on my shelf. It's a lovely memory, but we just drifted apart after I moved to secondary school.
 
 ### Q6. Do you want to be a teacher in the future?
 
-Yes, I probably would. I do not have a very fixed plan, but I can imagine teachers still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q7. Do you think teachers should be angry at students or not?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q8. What's the different between young and old teachers?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q9. What kinds of teachers do you like?
-
-I usually prefer a simple and practical kind. When it comes to teachers, I care more about whether they fit my real needs than whether they look impressive.
+No, I don’t think I’d want to be a teacher. I’ve seen how much energy my own teachers put into planning lessons and marking papers late into the night. I prefer jobs where I can move around more and have quieter evenings, like working in a design studio.
 
 ## 21. Headphones
 - Tag: 事物
 - Status: NEW
 
-### Q1. In what conditions, you won't use headphones?
+### Q1. In what conditions, you won't use headphones？
 
-For me, my phone is quite familiar and easy to relate to. It is useful for communication and planning, but it can also be distracting. I think that is why I can talk about it naturally without exaggerating my answer.
+I wouldn’t use headphones if I’m walking alone on a quiet street at night, because I need to hear traffic or footsteps around me for safety. Also, if a friend tries to talk to me while we’re cooking together, I’ll take them off immediately—it’s just rude otherwise.
 
-### Q2. When would you use headphones?
+### Q2. When would you use headphones？
 
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, my phone feels less like a task and more like a way to relax.
+I use headphones mostly when I'm commuting on the tube. The noise of the train is just too distracting, so I pop them on to listen to a podcast or some music. It really helps me zone out and makes the journey feel much shorter.
 
-### Q3. Which ones do you use more in your country?
+### Q7. Do you use headphones？
 
-I would probably choose something simple and practical. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
+Yeah, I do use headphones quite often, especially when I'm commuting or studying. I have a pair of over-ear Sony ones that block out noise really well, so I can focus on podcasts or instrumental music without being distracted by traffic or people chatting around me.
 
-### Q4. What do you do with them? Why?
+### Q10. What kind of headphones do you use？
 
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is useful for communication and planning, but it can also be distracting.
-
-### Q5. In what situations would you not use headphones?
-
-For me, my phone is quite familiar and easy to relate to. It is useful for communication and planning, but it can also be distracting. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q6. Which are used more in your country, headphones or microphones?
-
-I would probably choose something simple and practical. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
-
-### Q7. Do you use headphones?
-
-Yes, generally speaking. It is useful for communication and planning, but it can also be distracting. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q8. What do you do with headphones?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is useful for communication and planning, but it can also be distracting.
-
-### Q9. When do you use headphones?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, my phone feels less like a task and more like a way to relax.
-
-### Q10. What kind of headphones do you use?
-
-I usually prefer a simple and practical kind. When it comes to my phone, I care more about whether it fit my real needs than whether it look impressive.
+I mostly use wireless earbuds, the small in-ear type. I got a pair of Sony ones last year, and they’re great for blocking out noise on the bus. I prefer them over big over-ear headphones because they’re easy to carry around.
 
 ## 22. History
+- Tag: 
 - Status: NEW
 
 ### Q1. When was the last time you read about history?
 
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, history feels less like a task and more like a way to relax.
+The last time I read about history was just last week, actually. I was reading an article about the construction of the Great Wall during the Ming Dynasty, and I found it fascinating how they used local materials like stone and packed earth. It made me appreciate the sheer effort involved.
 
 ### Q2. Have you ever been to history museums?
 
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of history, and it made the topic feel more real to me.
+Yes, I have. I visited the War Remnants Museum in Ho Chi Minh City a few years ago. The exhibits were intense but really eye-opening, especially the old military vehicles and photographs. I spent hours there reading the captions. It made history feel much more real than just reading a textbook.
 
 ### Q3. Did you like history when you were young?
 
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, history was connected with some ordinary but memorable moments in my life.
+No, not really. I found it quite dull at school because we just memorised dates and names. I remember struggling to stay awake during lessons about the Tudors. But visiting a castle with my dad once made me appreciate the stories behind the facts a little more.
 
 ### Q4. Do you like history?
 
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that history feels natural and useful rather than just fashionable.
+Oh, absolutely, I love history. I’m especially drawn to stories about ordinary people during wartime, like the diaries of Londoners in the Blitz. It makes the past feel real and human, not just a list of dates.
 
 ## 23. Shopping
 - Tag: 事件
 - Status: NEW
 
-### Q1. Do you prefer online shopping or in-store shopping?
+### Q1. Do you prefer online shopping or in-store shopping？
 
-Yes, generally speaking. I try to be practical and compare options before buying things. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+I’d say I prefer online shopping for most things, like books or electronics, because it saves time and I can compare prices easily. But for clothes or shoes, I still like going to the store—I need to try them on to be sure they fit properly before buying.
 
-### Q2. How often do you go shopping?
+### Q2. How often do you go shopping？
 
-Probably a few times a week, although it depends on how busy I am. I try to be practical and compare options before buying things. That is why shopping has become a fairly normal part of my routine.
-
-### Q3. Do you think expensive products are always better than cheaper ones?
-
-It can be, depending on the situation. Personally, I do not find shopping too difficult to deal with, but it require a bit of patience and flexibility sometimes.
-
-### Q4. Is it difficult for you to make choices (when you shop)?
-
-It can be, depending on the situation. Personally, I do not find shopping too difficult to deal with, but it require a bit of patience and flexibility sometimes.
-
-### Q5. Do you compare prices when you shop? Why?
-
-Yes, generally speaking. I try to be practical and compare options before buying things. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Honestly, not that often—maybe once or twice a week. I'll pop into the supermarket on my way home from work to grab groceries like milk and bread, but I only go clothes shopping when I really need something, like a new pair of trainers. It saves me time and money.
 
 ### Q6. Do you like shopping?
 
-Yes, I would say so. I try to be practical and compare options before buying things. For me, the most important thing is that shopping feels natural and useful rather than just fashionable.
+Honestly, not really. I only enjoy it when I have a specific goal, like picking up a new book or grabbing ingredients for a recipe. Wandering around shops without a purpose just feels like a chore to me.
 
 ## 24. Tidiness
+- Tag: 
 - Status: NEW
 
-### Q1. Did you use to keep your room tidy as a child?
+### Q1. Did you use to keep your room tidy as a child？
 
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, tidiness was connected with some ordinary but memorable moments in my life.
+Not really, if I'm honest. When I was young, my room was always a mess—books everywhere, clothes on the chair, and toy cars scattered across the floor. My mum used to nag me to tidy up, but I only did it when she threatened to take my game console away.
 
-### Q2. Do you like to keep things tidy?
+### Q2. Do you like to keep things tidy？
 
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that tidiness feels natural and useful rather than just fashionable.
-
-### Q3. Are you a tidy person?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Do you think people should be tidy all the time?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q5. Are you tidier at work or at home?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q6. Is your room tidy?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q7. What do you think of a tidy house?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q8. Do people think you are a tidy person?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Yes, I’m pretty particular about keeping things tidy. I find it hard to concentrate if my desk is cluttered with loose papers or empty coffee cups, so I usually spend a few minutes each evening putting everything back in its place. It just helps me feel more in control.
 
 ## 25. Science
 - Tag: 事物
@@ -843,67 +723,47 @@ Yes, generally speaking. It is not the biggest part of my life, but it can still
 
 ### Q1. Do Chinese people often visit science museums?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Not that often, to be honest. While big cities like Beijing and Shanghai have excellent science museums, many families prefer shopping malls or parks on weekends. I remember visiting one in Guangzhou only once with my school—it was fascinating, but it’s not a regular outing for most people.
 
 ### Q2. Do you like watching science TV programs?
 
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that science feels natural and useful rather than just fashionable.
+Yes, I quite enjoy them, especially nature documentaries like *Planet Earth*. I find it fascinating to see how animals adapt in remote places, and the slow-motion footage of a hunting cheetah is incredible. It makes science feel real and exciting, not just something from a textbook.
 
 ### Q3. What kinds of interesting things you have done with science?
 
-I usually prefer a simple and practical kind. When it comes to science, I care more about whether it fit my real needs than whether it look impressive.
+I once built a simple volcano model for a school project using baking soda and vinegar. Watching it fizz and erupt was fascinating, and it sparked my curiosity about chemical reactions. I’ve also tried growing crystals at home—salt ones—just to see how they form. It felt like creating my own little science experiment.
 
 ### Q4. Which science subject is interesting to you?
 
-I am studying subjects related to English and communication. I chose them because they are practical, and they also train me to express ideas more clearly in real situations.
+I find biology really fascinating, especially how the human body works. For instance, I love learning about how our immune system fights off viruses—it’s like a tiny army inside us. That practical connection to health makes it far more engaging than just memorising formulas.
 
-### Q5. What kinds of interesting things have you done with science?
+### Q7. When did you start to learn about science？
 
-I usually prefer a simple and practical kind. When it comes to science, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q6. Which science subject interests you?
-
-I am studying subjects related to English and communication. I chose them because they are practical, and they also train me to express ideas more clearly in real situations.
-
-### Q7. When did you start to learn about science?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, science feels less like a task and more like a way to relax.
+I started learning about science in primary school, around age seven. I remember our teacher showing us how to grow cress seeds on cotton wool, and I was amazed when they actually sprouted. That simple experiment really sparked my curiosity about how things work.
 
 ### Q8. Do you like science?
 
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that science feels natural and useful rather than just fashionable.
+Yes, I do like science quite a lot. I'm especially fascinated by biology—I remember dissecting a frog in school and being amazed at how everything inside connected. It made me appreciate how complex our own bodies are. I think that's what draws me to it.
 
 ## 26. Singing
 - Tag: 事物
 - Status: NEW
 
-### Q1. Did you enjoy singing when you were younger?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, singing was connected with some ordinary but memorable moments in my life.
-
-### Q2. Will you take singing lessons in the future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine singing still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q3. When do you sing?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, singing feels less like a task and more like a way to relax.
-
 ### Q4. Do you like singing? Why or why not?
 
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that singing feels natural and useful rather than just fashionable.
+Oh, I absolutely love singing. It’s such a mood booster for me—whether I’m in the shower belting out pop songs or humming along to the radio while driving. It just helps me shake off stress and feel more energetic.
 
 ### Q5. Have you ever learnt how to sing?
 
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of singing, and it made the topic feel more real to me.
+No, I’ve never actually had singing lessons. I just sing along to songs in the car or in the shower, mostly pop tunes. I think I’d need a lot of practice to sound decent, but I enjoy it anyway.
 
 ### Q6. Who do you want to sing for?
 
-Probably someone close to me, like a friend or a family member. I find it easier to talk about singing with people I trust, because the conversation feels more relaxed and honest.
+If I could sing well, I’d want to sing for my grandmother. She used to hum old folk songs while cooking, and I think she’d love hearing me return the favour. It would be a personal, quiet moment—just for her, maybe in her kitchen.
 
 ### Q7. Do you think singing can bring happiness to people?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Absolutely. I think singing is a great way to lift your spirits. When I’m feeling stressed, I sometimes belt out a song in the shower, and it genuinely changes my mood. There’s something about the physical act of singing, like controlling your breath and hearing your own voice, that feels really freeing and joyful.
 
 ## 27. Art
 - Tag: 事件
@@ -911,7281 +771,736 @@ Yes, generally speaking. It is not the biggest part of my life, but it can still
 
 ### Q1. Do you like modern art or traditional art?
 
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that art feels natural and useful rather than just fashionable.
+I definitely prefer traditional art. I love the skill and patience you can see in old oil paintings, like the way Rembrandt captures light and shadow. Modern art sometimes feels too abstract for me—I remember staring at a blank white canvas in a gallery and just feeling confused, to be honest.
 
 ### Q2. Do you want to be an artist?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+No, I don't think I'd want to be an artist. I enjoy looking at paintings and visiting galleries, but I don't have the patience or technical skill to create anything myself. I'd rather appreciate art than struggle with a brush and canvas for hours.
 
 ### Q3. Do you like visiting art galleries?
 
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that art feels natural and useful rather than just fashionable.
+Yes, I really do enjoy visiting art galleries, especially when they feature modern or contemporary pieces. I love how a single painting or sculpture can make you stop and think differently about everyday life. Last month, I spent a whole afternoon at the Tate Modern just looking at one installation—it was incredibly thought-provoking.
 
 ### Q4. Do you like art?
 
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that art feels natural and useful rather than just fashionable.
+Yeah, I really do. I'm especially drawn to modern art—there's this gallery near my place that has a huge abstract painting with bold reds and blues, and I can just stand there for ages trying to figure out what the artist was thinking. It's like a puzzle for the eyes.
 
 ## 28. Music
 - Tag: 事件
 - Status: NEW
 
-### Q1. Does happy music make you feel more excited?
+### Q1. Does happy music make you feel more excited？
 
-Yes, generally speaking. It can change my mood quickly, especially when I am tired or travelling somewhere. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Oh, absolutely. When I hear upbeat pop songs with a fast tempo, like something by Dua Lipa, I can't help but tap my foot or even start dancing around my room. It just gives me this sudden burst of energy that makes me want to move or sing along.
 
-### Q2. Do you prefer sad or happy music?
+### Q2. Do you prefer sad or happy music？
 
-Yes, generally speaking. It can change my mood quickly, especially when I am tired or travelling somewhere. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Honestly, I lean towards happy music most of the time. I love putting on something upbeat, like Bruno Mars, while I'm cooking or cleaning – it just lifts my mood instantly. Sad music can be nice for a quiet evening, but I'd rather stay cheerful.
 
-### Q3. What music do you dislike?
-
-I would say the first thing that comes to mind is soft pop music. It is not something extraordinary, but it suits my lifestyle quite well. It can change my mood quickly, especially when I am tired or travelling somewhere.
-
-### Q4. What's the most popular type of music where you live?
-
-I usually prefer a simple and practical kind. When it comes to music, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q5. Which singer or musician would you like to see in person?
-
-I would probably choose soft pop music. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
-
-### Q6. What music do your friends like? Do you enjoy the same type of music?
-
-I usually prefer a simple and practical kind. When it comes to music, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q7. Do you often listen to one type of music?
-
-Yes, generally speaking. It can change my mood quickly, especially when I am tired or travelling somewhere. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q8. What music do you like?
-
-I would say the first thing that comes to mind is soft pop music. It is not something extraordinary, but it suits my lifestyle quite well. It can change my mood quickly, especially when I am tired or travelling somewhere.
-
-## 29. Outer space and stars
+## 29. Outer space and stars【海外】【疑似淘汰】
 - Tag: 事件
 - Status: NEW
 
-### Q1. Are you interested in films concerning outer space and stars?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that this topic feels natural and useful rather than just fashionable.
-
-### Q2. Have you ever learned about outer space and stars?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of this topic, and it made the topic feel more real to me.
-
 ### Q3. Do you want to know more about outer space?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Yeah, I'd really like to know more about outer space. I'm especially curious about black holes and how they actually warp time. I once watched a documentary on neutron stars, and it blew my mind—it made me want to understand the science behind those incredible cosmic events.
 
 ### Q4. Do you want to go into outer space in the future?
 
-Yes, I probably would. I do not have a very fixed plan, but I can imagine this topic still being relevant to me in the future, especially if my lifestyle becomes busier.
+Honestly, no, I don't think I'd want to go into outer space. I find the idea thrilling in movies, but in reality, I’d be terrified of the zero gravity and the isolation. I’m quite happy just stargazing from my balcony with a cup of tea.
 
 ### Q5. Do you like science fiction movies?Why?
 
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that this topic feels natural and useful rather than just fashionable.
+Yeah, I really enjoy science fiction movies. I love how they explore big ideas like space travel and alien life. For instance, *Interstellar* made me think about time in a completely new way—it’s not just fun, it’s thought-provoking.
 
 ### Q6. Have you ever learnt about outer space and stars?
 
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of this topic, and it made the topic feel more real to me.
+Yes, I learned quite a bit about outer space and stars in school. I remember studying the solar system, like how Mars has a reddish surface and Saturn has rings made of ice. We even built a small model of the planets out of clay, which made it much more memorable.
 
-## 30. Young people
-- Tag: 人物
-
-### Q1. What activities do young people like to do in your country?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. Do you like spending time with teenagers?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that young people feels natural and useful rather than just fashionable.
-
-### Q3. Do you care about teenagers' fashion trend?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Do you know what the fashion trend among young people is like in your country?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that young people feels natural and useful rather than just fashionable.
-
-## 31. Quiet/noisy places
-- Tag: 地点
-
-### Q1. Do you like quiet or noisy places?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that quiet noisy places feels natural and useful rather than just fashionable.
-
-### Q2. Would you like to go to quiet or noisy places on weekends when you are free?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine quiet noisy places still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-## 32. Party
-- Tag: 事件
-
-### Q1. Do you like parties?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that art feels natural and useful rather than just fashionable.
-
-### Q2. How often did you have a party when you were a kid?
-
-Probably a few times a week, although it depends on how busy I am. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. That is why art has become a fairly normal part of my routine.
-
-### Q3. Have you ever organized a party?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of art, and it made the topic feel more real to me.
-
-### Q4. Do you prefer to go to small parties or big parties?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q5. Have you ever been to a party recently?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of art, and it made the topic feel more real to me.
-
-## 33. Hobby
+## 30. Hobby
 - Tag: 事物
+- Status: CURRENT
 
 ### Q1. Do you have any hobbies?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Yeah, I’d say my main hobby is playing the guitar. I picked it up a couple of years ago, and now I try to practice for about half an hour every evening. It’s a nice way to unwind after a long day, especially when I’m learning a new song.
 
 ### Q2. Did you have any hobbies when you were a child?
 
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, hobby was connected with some ordinary but memorable moments in my life.
+Yeah, I was really into collecting stamps when I was a kid. I had this big album with stamps from different countries, and I remember spending hours sorting them by colour or theme. It was simple but I genuinely loved looking at the tiny pictures and learning where each one came from.
 
 ### Q3. Do you have a hobby that you've had since childhood?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Have you been to a party recently?
-
-For me, hobby is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
+Yeah, I’ve been drawing ever since I was a kid. I still remember sitting on the kitchen floor with crayons, sketching my family’s cat. It’s something I can always fall back on when I need to unwind, even now.
 
 ### Q5. Do you have the same hobbies as your family members?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Not really. My dad loves fishing, but I’ve never had the patience for sitting by a lake all day. My mum enjoys gardening, which I sometimes help with, but my own hobby is photography—I prefer capturing flowers rather than planting them. So we overlap a little, but mostly we’re different.
 
-## 34. Sports
-- Tag: 事件
-
-### Q1. Were any of your school friends very good at sport?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, sport was connected with some ordinary but memorable moments in my life.
-
-### Q2. Do you think it’s important for children to do sport at school?
-
-Yes, I would say so. It helps me stay active, and it is also a good way to release stress. For me, the most important thing is that sport feels natural and useful rather than just fashionable.
-
-### Q3. What was your favourite sport while you were at school?
-
-My favourite would probably be badminton. I like it because it feels natural to me, not forced. It helps me stay active, and it is also a good way to release stress.
-
-### Q4. How much sport did you do when you were at school?
-
-For me, sport is quite familiar and easy to relate to. It helps me stay active, and it is also a good way to release stress. I think that is why I can talk about it naturally without exaggerating my answer.
-
-## 35. Advertisement
+## 31. Advertisement
 - Tag: 事物
+- Status: CURRENT
 
 ### Q1. Do you often see advertisements when you are on your phone or computer?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Oh, constantly. Every time I open a free app or watch a YouTube video, there’s an ad popping up, often for something like a fast-food deal or a new game. I’ve gotten so used to just tapping "skip" after five seconds that I barely register them anymore.
 
 ### Q2. Is there an advertisement that made an impression on you when you were a child?
 
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, advertisement was connected with some ordinary but memorable moments in my life.
+Oh, definitely. I still remember this old animated ad for a local chocolate spread—it showed a little boy flying on a spoon over a giant jar of it. I think it stuck with me because I genuinely believed, for a while, that eating it would somehow give me super strength. It felt magical back then.
 
 ### Q3. Do you see a lot of advertising on trains or other transport?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Yes, quite a lot. On the London Underground, for instance, there are digital screens above the doors that cycle through ads for everything from insurance to fast food. It’s hard to avoid them during a commute, especially when you’re standing face-to-face with them.
 
 ### Q4. Do you like advertisements?
 
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that advertisement feels natural and useful rather than just fashionable.
+Honestly, not really. Most ads feel a bit repetitive, like the same car commercials or perfume promotions. But I did enjoy that old IKEA advert with the singing lamp – it was so unexpected it actually made me laugh. That’s the only type I’d bother watching twice.
 
 ### Q5. What kind of advertising do you like?
 
-I usually prefer a simple and practical kind. When it comes to advertisement, I care more about whether it fit my real needs than whether it look impressive.
+I'm quite drawn to humorous ads, especially the ones that tell a little story. For example, I still remember a beer commercial where a dog keeps stealing the man's slippers—it made me laugh and actually remember the brand. I think clever, funny advertising sticks in your mind much better than loud, repetitive ones.
 
-## 36. Feeling bored
-- Tag: 事件
-
-### Q1. Do you often feel bored?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. When would you feel bored?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, feeling bored feels less like a task and more like a way to relax.
-
-### Q3. What do you do when you feel bored?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q4. Do you think childhood is boring or adulthood is boring?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 37. Gifts
+## 32. Gifts
 - Tag: 事物
+- Status: CURRENT
 
 ### Q1. Have you ever sent handmade gifts to others?
 
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of gifts, and it made the topic feel more real to me.
+Yes, I have. For a close friend's birthday last year, I knitted a simple scarf. It wasn't perfect, but she really appreciated the time I spent on it. I think handmade gifts can feel more personal than something bought from a shop.
 
 ### Q2. Have you ever received a great gift?
 
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of gifts, and it made the topic feel more real to me.
+Absolutely. My parents gave me a vintage guitar for my 18th birthday—a 1970s acoustic that still has a warm, rich sound. I wasn’t expecting anything that personal, and it’s become something I treasure and play almost every week. That gift really stayed with me.
 
 ### Q3. What do you consider when choosing a gift?
 
-I would say the first thing that comes to mind is something practical but personal. It is not something extraordinary, but it suits my lifestyle quite well. They do not have to be expensive; what matters more is whether they feel thoughtful.
+I mainly think about the person’s interests. For example, if my friend loves cooking, I might get her a quality Japanese chef’s knife or a spice subscription box. I also check if it’s practical—no point giving something that’ll just gather dust. That way, the gift feels thoughtful and useful.
 
 ### Q4. Do you think you are good at choosing gifts?
 
-Yes, generally speaking. They do not have to be expensive; what matters more is whether they feel thoughtful. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Yeah, I think I'm pretty good at it. I pay close attention when people mention things they like, even casually. For example, my sister once said she loved a particular brand of scented candle, so I got her one for her birthday, and she was genuinely surprised I remembered. It's really about listening.
 
 ### Q5. What gift have you received recently?
 
-I would say the first thing that comes to mind is something practical but personal. It is not something extraordinary, but it suits my lifestyle quite well. They do not have to be expensive; what matters more is whether they feel thoughtful.
+I just received a beautiful leather journal from my best friend for my birthday. She knows I love writing down my thoughts, and this one has a deep blue cover with gold-edged pages. I’ve already started using it to jot down travel ideas.
 
-### Q6. Are you good at giving gifts?
-
-Yes, generally speaking. They do not have to be expensive; what matters more is whether they feel thoughtful. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q7. When do you usually give gifts to others?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, gifts feels less like a task and more like a way to relax.
-
-### Q8. Do expensive gifts better express your feelings?
-
-It can be, depending on the situation. Personally, I do not find gifts too difficult to deal with, but they require a bit of patience and flexibility sometimes.
-
-## 38. friends
-- Tag: 人物
-
-### Q1. Why are some places suitable for meeting while others are not?
-
-Mainly because my friends feels useful or meaningful to me. They make ordinary days more enjoyable, especially when I need someone to talk to. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q2. Is there a difference between where you meet friends now and where you used to meet them in the past?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, my friends was connected with some ordinary but memorable moments in my life.
-
-### Q3. Would you invite friends to your home?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine my friends still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q4. Do you prefer to spend time with one friend or with a group of friends?
-
-Yes, generally speaking. They make ordinary days more enjoyable, especially when I need someone to talk to. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q5. Do you have a friend you have known for a long time?
-
-Yes, generally speaking. They make ordinary days more enjoyable, especially when I need someone to talk to. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q6. What do you usually do with your friends?
-
-I would say the first thing that comes to mind is a close friend from school. It is not something extraordinary, but it suits my lifestyle quite well. They make ordinary days more enjoyable, especially when I need someone to talk to.
-
-### Q7. Where do you often meet each other?
-
-Usually somewhere convenient and not too crowded. If it is related to my friends, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-### Q8. Do you often go out with your friends?
-
-Yes, generally speaking. They make ordinary days more enjoyable, especially when I need someone to talk to. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q9. How important are friends to you?
-
-For me, my friends is quite familiar and easy to relate to. They make ordinary days more enjoyable, especially when I need someone to talk to. I think that is why I can talk about it naturally without exaggerating my answer.
-
-## 39. Books and reading habits
-- Tag: 事物
-
-### Q1. Do you often read books? When?
-
-Yes, generally speaking. It gives me a break from screens and lets me slow down a little. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Do you read differently now than you did before?（Are your reading habits now different than before）
-
-Yes, generally speaking. It gives me a break from screens and lets me slow down a little. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Have you ever read a novel that has been adapted into a film?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of reading, and it made the topic feel more real to me.
-
-### Q4. Which do you prefer, reading books or watching movies?
-
-I would probably choose short stories. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
-
-### Q5. Do you read more or less now than when you were younger?
-
-Yes, generally speaking. It gives me a break from screens and lets me slow down a little. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q6. Has what you read changed over time?
-
-For me, reading is quite familiar and easy to relate to. It gives me a break from screens and lets me slow down a little. I think that is why I can talk about it naturally without exaggerating my answer.
-
-## 40. Collecting things
-- Tag: 事件
-
-### Q1. Do you collect things?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. Are there any items you’ve kept from your childhood?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q3. Would you keep old things for a long time? Why?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine collecting things still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q4. Where do you usually keep things you need?
-
-Usually somewhere convenient and not too crowded. If it is related to collecting things, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-## 41. Talents
-- Tag: 事物
-
-### Q1. Do you have a talent, or something you are good at?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. Was it mastered recently or when you were young?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, talents was connected with some ordinary but memorable moments in my life.
-
-### Q3. Do you think your talent could be useful for your future work? Why?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine talents still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q4. Do you think anyone in your family has the same talent?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q5. Did you master this skill recently or when you were young?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, talents was connected with some ordinary but memorable moments in my life.
-
-### Q6. Do you think your talent can be useful for your future work? Why?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine talents still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-## 42. buildings
+## 33. buildings
 - Tag: 地点
+- Status: CURRENT
 
 ### Q1. ls there a building that you would like to visit?
 
-For me, buildings is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
+Oh, definitely—I’d love to visit the Sagrada Familia in Barcelona. I’ve seen photos of those towering, intricate spires and the colourful stained glass inside, and I imagine standing there would feel completely different from just looking at pictures. I’d also be curious to see how the construction is progressing.
 
 ### Q2. Do you take photos of buildings?
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Yes, I do. I often photograph old buildings like the Victorian houses in my neighbourhood, especially when the light catches the brickwork in the late afternoon. I’m not an architect or anything, but I find the details around windows and doors really interesting to capture.
 
 ### Q3. Are there tall buildings near your home?
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+No, not really. I live in a quiet suburban area, so most buildings are only two or three storeys high. The tallest thing nearby is the church steeple, which is maybe four storeys. I actually prefer it this way—it feels less crowded and more open.
 
-### Q4. Have you ever seen some old buildings in the city?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of buildings, and it made the topic feel more real to me.
-
-### Q5. Would you prefer to live in an old building or a modern house?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine buildings still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-## 43. Sitting down
-- Tag: 事件
-
-### Q1. When you were a child, did you usually sit on the floor?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, sitting down feels less like a task and more like a way to relax.
-
-### Q2. Do you feel sleepy when you are sitting down?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Do you always sit down for a long time?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Where is your favorite place to sit?
-
-Usually somewhere convenient and not too crowded. If it is related to sitting down, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-## 44. street market
-- Tag: 事件
-
-### Q1. Are there many street markets in China?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. When was the last time you went to a street market?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, street market feels less like a task and more like a way to relax.
-
-### Q3. Do you prefer to go shopping in the shopping mall or on the street market?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. What do people usually buy on the street market?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 45. Mobile phone
+## 34. Dreams
 - Tag: 事物
-
-### Q1. Have you ever lost your mobile phone?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of my phone, and it made the topic feel more real to me.
-
-### Q2. Do you remember your first phone?
-
-Yes, generally speaking. It is useful for communication and planning, but it can also be distracting. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Do you often use your mobile phone for texting or for calls?
-
-Yes, generally speaking. It is useful for communication and planning, but it can also be distracting. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Will you buy a new one in the future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine my phone still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q5. How has your mobile phone changed your life?
-
-For me, my phone is quite familiar and easy to relate to. It is useful for communication and planning, but it can also be distracting. I think that is why I can talk about it naturally without exaggerating my answer.
-
-## 46. Time management
-- Tag: 事件
-
-### Q1. How do you plan your time in a day
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine time management still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q2. Is it easy to manage time
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. When do you find it hard to allocate time?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, time management feels less like a task and more like a way to relax.
-
-### Q4. Is it hard to allocate time
-
-It can be, depending on the situation. Personally, I do not find time management too difficult to deal with, but it require a bit of patience and flexibility sometimes.
-
-### Q5. Do you like being busy?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that time management feels natural and useful rather than just fashionable.
-
-### Q6. Do you like being busy?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that time management feels natural and useful rather than just fashionable.
-
-## 47. Lost and found
-- Tag: 事件
-
-### Q1. What will you do if you find something lost by others?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. Do you report to the police when finding something lost by others? Why ?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Have you ever lost things?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of lost and found, and it made the topic feel more real to me.
-
-### Q4. Will you post on social media if you lose your item?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine lost and found still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-## 48. Emails
-- Tag: 事件
-
-### Q1. Do you think sending emails will be more or less popular in the future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine emails still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q2. Is sending emails popular in China?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that emails feels natural and useful rather than just fashionable.
-
-### Q3. When would you send emails to others?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, emails feels less like a task and more like a way to relax.
-
-### Q4. Do you often send emails?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 49. Art
-- Tag: 事物
-
-### Q1. Did you learn drawing when you were a kid?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, art was connected with some ordinary but memorable moments in my life.
-
-### Q2. Do you want to learn artistic things?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Do you like to go to the gallery?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that art feels natural and useful rather than just fashionable.
-
-### Q4. Do you like drawing?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that art feels natural and useful rather than just fashionable.
-
-## 50. Dreams
-- Tag: 事物
+- Status: CURRENT
 
 ### Q1. Can you remember the dreams you had?
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Not really, to be honest. I might recall bits and pieces right after waking up, like a strange image of flying over my old school, but within an hour it's completely gone. I suppose I'm just not someone who holds onto dreams.
 
 ### Q2. Do you want to make your dreams come true?
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Yeah, absolutely. I’d love to turn my dream of opening a small bookshop into reality someday. It’s not just about selling books—I want to create a cosy space where people can sit and read, maybe with a coffee corner. That goal keeps me motivated to save and plan.
 
 ### Q3. Do you think dreams have special meaning?
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Not really, to be honest. I see dreams more as random brain activity while we sleep. For example, last week I dreamed I was flying over my old school, but it had no deeper meaning—just my mind mixing up memories from the day before.
 
 ### Q4. Can you often remember your dreams?
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Honestly, not that often. I might remember fragments right after waking up, like a weird image or a sound, but it fades within minutes. The only exception is if something really unusual happens, like a dream where I was flying over my hometown—that one stuck with me for days.
 
-## 51. Public gardens and parks
-- Tag: 地点
-
-### Q1. Would you like to play in a public garden or park?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine parks still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q2. What do you like to do when visiting a park?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q3. How are the parks today different from those you visited as a kid?
-
-For me, parks is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q4. Would you prefer to play in a personal garden or public garden?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine parks still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q5. How have parks changed today compared to the time when you were a kid?
-
-For me, parks is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q6. Would you prefer to play in a private garden or public garden?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine parks still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q7. How have parks changed compared to when you were a kid?
-
-For me, parks is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q8. Are public gardens important in China?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that parks feels natural and useful rather than just fashionable.
-
-### Q9. Are there many public gardens in China?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q10. Why do people in cities like public gardens?
-
-Mainly because parks feels useful or meaningful to me. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q11. What do you think are the benefits of having gardens in cities?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q12. Do you think there are enough public gardens or parks in your hometown?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 52. Swimming
-- Tag: 事件
-
-### Q1. Do you like swimming?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that swimming feels natural and useful rather than just fashionable.
-
-### Q2. Is it difficult to learn how to swim?
-
-It can be, depending on the situation. Personally, I do not find swimming too difficult to deal with, but it require a bit of patience and flexibility sometimes.
-
-### Q3. Where do Chinese like to go swimming?
-
-Usually somewhere convenient and not too crowded. If it is related to swimming, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-### Q4. What is the difference between swimming in the pool and swimming in the sea?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 53. Computer
-- Tag: 事物
-
-### Q1. In what conditions would you use a computer?
-
-For me, computers is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q2. When was the first time you used a computer?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, computers feels less like a task and more like a way to relax.
-
-### Q3. What would your life be like without computers?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q4. In what conditions would it be difficult for you to use a computer?
-
-For me, computers is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q5. How often do you use computer?
-
-Probably a few times a week, although it depends on how busy I am. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. That is why computers has become a fairly normal part of my routine.
-
-### Q6. What kinds of computers are popular in China?
-
-I usually prefer a simple and practical kind. When it comes to computers, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q7. What do you usually use your computer for?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q8. Who taught you how to use a computer?
-
-Probably someone close to me, like a friend or a family member. I find it easier to talk about computers with people I trust, because the conversation feels more relaxed and honest.
-
-### Q9. Do you think computers have changed your life a lot?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 54. Life stages
+## 35. Life stages
 - Tag: 人物
+- Status: CURRENT
 
 ### Q1. At what age do you think people are the happiest?
 
-For me, life stages is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
+Honestly, I think it’s around early childhood, maybe four to six years old. At that age, you’re not burdened by school pressure or adult responsibilities. I remember just playing in the park, eating ice cream without worrying about anything—pure, simple joy.
 
 ### Q2. Do you enjoy being the age you are now?
 
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that life stages feels natural and useful rather than just fashionable.
+Yes, I do enjoy being 28. I feel like I have enough life experience to make good decisions, but I'm still young enough to be energetic. Last weekend, I spontaneously joined a football game with strangers at the park, and that freedom feels really good right now.
 
 ### Q3. How do people remember each stage of their lives?
 
-For me, life stages is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
+People tend to remember key milestones—like starting school, getting a first job, or moving out—because those moments often come with strong emotions or photos. For example, my mum still talks about her university graduation because she has a framed picture on the wall. It’s those vivid snapshots, not everyday routines, that stick with us.
 
 ### Q4. Do you have any plans for the next five years?
 
-Yes, I probably would. I do not have a very fixed plan, but I can imagine life stages still being relevant to me in the future, especially if my lifestyle becomes busier.
+Yes, I’ve got a few plans. I’m hoping to finish my master’s degree in environmental science within the next two years, and then find a job with a renewable energy company. I’d also like to move out of my parents’ flat and get my own place, maybe near the coast.
 
 ### Q5. What do you think is the most important at the moment?
 
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
+I think right now, the most important thing for me is staying consistent with my studies. I'm preparing for a big exam next month, so I make sure I review my notes every evening and do practice tests on weekends. That focus keeps me from falling behind.
 
 ### Q6. What did you often do with your friends in your childhood?
 
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
+We used to spend hours cycling around the neighbourhood, especially after school. I remember we’d race each other down the hill near my house and then stop at the corner shop for cheap ice lollies. It felt like we had all the time in the world back then.
 
-## 55. Reading
+## 36. Reading
 - Tag: 事件
+- Status: CURRENT
 
 ### Q1. Do you prefer scanning or detailed reading?
 
-Yes, generally speaking. It gives me a break from screens and lets me slow down a little. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Oh, I definitely prefer detailed reading. When I pick up a novel like *The Kite Runner* or a non-fiction book about history, I want to absorb every line and feel the story. Scanning feels too rushed for me—I’d miss the small details that make the book special, like a character’s quiet gesture.
 
 ### Q2. When do you need to read carefully,and when not?
 
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, reading feels less like a task and more like a way to relax.
+Oh, I definitely need to read carefully when I'm signing a contract or studying for an exam, like checking the terms of a rental agreement or memorising key definitions for a test. But when I'm just scrolling through social media or reading a casual magazine article, I skim through quickly, just getting the gist without worrying about every word.
 
 ### Q3. Do you prefer to read on paper or on a screen?
 
-Yes, generally speaking. It gives me a break from screens and lets me slow down a little. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Oh, definitely on paper. There's something about the texture of a page and the way you can flip back and forth easily that a screen just can't replicate. Plus, my eyes get tired staring at a tablet for too long, so I always choose a physical book when I'm reading for pleasure.
 
 ### Q4. Do you like reading?
 
-Yes, I would say so. It gives me a break from screens and lets me slow down a little. For me, the most important thing is that reading feels natural and useful rather than just fashionable.
+Yes, I really enjoy reading, especially novels and travel books. I find it’s a great way to unwind after a busy day. For instance, last week I finished a historical novel set in ancient Rome, and I loved how it made me feel like I was actually there.
 
-## 56. Walking
+## 37. Walking
 - Tag: 事件
+- Status: CURRENT
 
 ### Q1. Where did you go for a walk lately?
 
-Usually somewhere convenient and not too crowded. If it is related to walking, I prefer a place where I can feel comfortable and take my time rather than rush through it.
+I just went for a walk along the river near my apartment last Sunday. The weather was perfect, so I strolled past the old bridge and watched a few swans gliding on the water. It was really peaceful, and I even stopped to grab a coffee from a little kiosk on the way back.
 
 ### Q2. Where would you like to take a long walk if you had the chance?
 
-Usually somewhere convenient and not too crowded. If it is related to walking, I prefer a place where I can feel comfortable and take my time rather than rush through it.
+I'd love to take a long walk along the coastal path in Cornwall, in southwest England. I've seen photos of the rugged cliffs and wildflowers there, and I imagine stopping to watch the waves crash against the rocks. It feels like the perfect escape from city noise.
 
 ### Q3. Why do people like to walk in parks?
 
-Mainly because walking feels useful or meaningful to me. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
+Honestly, I think it’s the combination of fresh air and greenery that draws people in. Walking on a soft, winding path past trees and a pond just feels more relaxing than pacing along a noisy pavement. It’s a simple way to clear your head without going far from home.
 
 ### Q4. Did you often go outside to have a walk when you were a child?
 
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, walking was connected with some ordinary but memorable moments in my life.
+Yeah, I did. I grew up near a big park, so I’d go there almost every day after school with my friends. We’d race each other along the paths and collect fallen leaves. It was just a simple way to burn off energy before dinner.
 
 ### Q5. Do you walk a lot?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Yeah, I do walk quite a bit. I live fairly close to my workplace, so I usually walk there and back every day unless the weather's really bad. It takes about 20 minutes each way, and I find it's a nice way to clear my head before and after work.
 
-## 57. Keys
+## 38. Sports team
 - Tag: 事物
-
-### Q1. Do you think it's a good idea to leave your keys with a neighbour?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. Do you often forget the keys and lock yourself out?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q3. Have you ever lost your keys?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of keys, and it made the topic feel more real to me.
-
-### Q4. Do you always bring a lot of keys with you?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 58. Sports team
-- Tag: 事物
+- Status: CURRENT
 
 ### Q1. What are the differences between team sports and individual sports?
 
-I would say the first thing that comes to mind is badminton. It is not something extraordinary, but it suits my lifestyle quite well. It helps me stay active, and it is also a good way to release stress.
+Well, team sports like football or basketball involve a lot of coordination and passing, so you have to rely on others to score. Individual sports like tennis or swimming are more about your own performance and mental focus. I think team sports teach you to share credit, while individual sports push you to be self-reliant.
 
 ### Q2. Do you like to watch team games?Why?
 
-Yes, I would say so. It helps me stay active, and it is also a good way to release stress. For me, the most important thing is that sport feels natural and useful rather than just fashionable.
+Yeah, I really enjoy watching team games, especially football. There's something thrilling about seeing players coordinate their moves and pass the ball under pressure. I remember watching a local match last month—the crowd was roaring every time someone scored, and the energy was just contagious.
 
 ### Q3. Have you ever been part of a sports team?
 
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of sport, and it made the topic feel more real to me.
+Yes, I was part of my school’s basketball team for two years. I really enjoyed the teamwork and the early morning practices we had before class. It taught me a lot about discipline and how to stay calm under pressure during matches.
 
 ### Q4. Is team sports popular in your culture?
 
-Yes, I would say so. It helps me stay active, and it is also a good way to release stress. For me, the most important thing is that sport feels natural and useful rather than just fashionable.
+Yes, team sports are very popular in my culture. Football is huge—kids play it in the streets after school, and adults gather in cafes to watch big matches together. Cricket is also common during summer holidays. It's a big part of how people socialise.
 
-## 59. Day off
+## 39. Day off
 - Tag: 事件
+- Status: CURRENT
 
 ### Q1. What would you like to do if you had a day off tomorrow?
 
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
+If I had a day off tomorrow, I’d head out early to a quiet coastal town nearby. I’d walk along the beach, grab some fresh seafood for lunch, and just read my book by the shore. It’s a simple way to reset and feel properly relaxed.
 
 ### Q2. Do you usually spend your days off with your parents or with your friends?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+I usually spend my days off with my friends rather than my parents. Last Saturday, for example, a few of us went hiking in the nearby hills and grabbed lunch at a small café. It’s just more relaxed and spontaneous that way.
 
 ### Q3. What do you usually do when you have days off?
 
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
+If I have a full day off, I usually sleep in a bit, then head out for a long walk in the park with my headphones on. Later, I might meet a friend for coffee or just cook something nice at home. It's my chance to really unwind without rushing anywhere.
 
 ### Q4. When was the last time you had a few days off?
 
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, day off feels less like a task and more like a way to relax.
+The last time I had a few days off was about two months ago, when I took a long weekend to visit my cousin in the countryside. We spent the time hiking through the hills and cooking big meals together, which felt really refreshing after a hectic work period.
 
-## 60. Food
+## 40. Food
 - Tag: 事物
+- Status: CURRENT
 
 ### Q1. Has your favourite food changed since you were a child?
 
-For me, food is quite familiar and easy to relate to. It is closely connected with comfort, culture, and daily routine. I think that is why I can talk about it naturally without exaggerating my answer.
+Yes, definitely. When I was a kid, I couldn’t get enough of sugary cereals and chicken nuggets, but now I prefer home-cooked meals like stir-fried vegetables with rice. I think my taste buds matured, and I also became more aware of eating healthily, so my favourite foods have shifted completely.
 
 ### Q2. Do you eat different foods at dfferent times of the year?
 
-Yes, generally speaking. It is closely connected with comfort, culture, and daily routine. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Yes, definitely. In summer, I eat lots of fresh salads and cold fruits like watermelon because it's too hot for heavy meals. But in winter, I prefer hearty soups and stews, like a good chicken broth with vegetables. It just feels more comforting when the weather's cold.
 
 ### Q3. Is there any food you dislike?
 
-Yes, I would say so. It is closely connected with comfort, culture, and daily routine. For me, the most important thing is that food feels natural and useful rather than just fashionable.
+Oh, definitely. I can't stand coriander—the fresh leaves, I mean. It has this soapy, almost metallic taste to me, which ruins any dish it's in. I remember ordering a Thai green curry once and having to pick out every single leaf before I could eat it.
 
 ### Q4. What is your favourite food?
 
-My favourite would probably be simple home-cooked food. I like it because it feels natural to me, not forced. It is closely connected with comfort, culture, and daily routine.
+My favourite food is definitely sushi, especially salmon nigiri. I love the combination of fresh, buttery fish with perfectly seasoned rice and a touch of soy sauce. It’s light, satisfying, and never feels heavy—I could eat it every day if I could afford it!
 
-## 61. Place of work/study
-- Tag: 地点
-
-### Q1. Do you prefer to work alone or in a group?
-
-Yes, generally speaking. They help me build practical skills, especially when I need to organise my ideas clearly. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. Do you prefer to work at home orin the workplace?
-
-Yes, generally speaking. They help me build practical skills, especially when I need to organise my ideas clearly. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q3. What is your favourite subject?
-
-I am studying subjects related to English and communication. I chose them because they are practical, and they also train me to express ideas more clearly in real situations.
-
-### Q4. What part of your school do you like the most?
-
-I would say the first thing that comes to mind is English-related subjects. It is not something extraordinary, but it suits my lifestyle quite well. They help me build practical skills, especially when I need to organise my ideas clearly.
-
-### Q5. What is your favourite place to study?
-
-My favourite would probably be English-related subjects. I like it because it feels natural to me, not forced. They help me build practical skills, especially when I need to organise my ideas clearly.
-
-### Q6. Do you prefer to study at home or in a library?
-
-Yes, generally speaking. They help me build practical skills, especially when I need to organise my ideas clearly. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 62. Typing
+## 41. Typing
 - Tag: 事件
+- Status: CURRENT
 
 ### Q1. How do you improve your typing?
 
-For me, typing is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
+I practise regularly by typing out song lyrics or short news articles, focusing on accuracy first. I also use free online typing tests that highlight my frequent mistakes, like hitting 'i' instead of 'o'. That helps me slow down and correct my finger placement.
 
 ### Q2. When did you learn how to type on a keyboard?
 
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, typing feels less like a task and more like a way to relax.
+I learned to type properly when I was about 12, in a school computer lab. We had these old desktop computers and a teacher who made us cover our hands with a cloth so we couldn’t peek at the keys. It was frustrating at first, but it really helped me memorise the layout.
 
 ### Q3. Do you type on a desktop or laptop keyboard every day?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Oh, I use a laptop keyboard every day, mainly because I work from home and my laptop’s right there on my desk. I find the keys a bit softer than a desktop’s, which helps when I’m typing up reports or emails for hours.
 
 ### Q4. Do you prefer typing or handwriting?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+I definitely prefer typing, especially for longer pieces of writing like essays or work emails. It’s much faster, and I can easily fix mistakes without crossing things out or using correction fluid. For quick notes, though, I still grab a pen and a sticky pad.
 
-## 63. Childhood activities
+## 42. Childhood activities
 - Tag: 事件
+- Status: CURRENT
 
 ### Q1. Did you prefer to do activities alone or with agroup of people when you were a child?
 
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, childhood activities was connected with some ordinary but memorable moments in my life.
+I definitely preferred being in a group when I was a kid. I remember organising football games in the park with my neighbours every weekend. Being part of a team just made everything more exciting—like building dens together or having water fights. I think I just loved the energy and laughter that came with company.
 
 ### Q2. What were your favourite activities when you werea child?
 
-My favourite would probably be something simple and practical. I like it because it feels natural to me, not forced. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
+Back when I was a kid, I absolutely loved building things with LEGO bricks. I'd spend hours creating spaceships and castles, and I remember once making a replica of my own house, which took me the whole weekend. It was just so satisfying to see something come together from scratch.
 
-## 64. Views
+## 43. Views
 - Tag: 地点
+- Status: CURRENT
 
 ### Q1. Do you prefer views in your own country or in other countries
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+I honestly prefer views in other countries, just because everything feels fresh and unfamiliar. For example, seeing the terraced rice fields in Vietnam was breathtaking in a way I don't get at home. Still, there's nothing quite like the comfort of my local coastline when I need to unwind.
 
 ### Q2. Do you prefer views in urban areas or rural areas?
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+I definitely prefer rural views. There’s something about open fields and rolling hills that instantly relaxes me. Last weekend I sat by a lake watching cows graze nearby—no traffic noise, just birds and wind. Urban skylines are exciting, but rural scenery feels like a breath of fresh air.
 
 ### Q3. Do you like taking pictures of different views
 
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that views feels natural and useful rather than just fashionable.
+Yes, I really enjoy taking pictures of different views, especially when I’m hiking or traveling. I love capturing wide landscapes like mountains at sunrise or a quiet coastal scene—it’s my way of holding onto those moments. It makes me appreciate the beauty around me more.
 
-## 65. Working with old people
+## 44. Going out
 - Tag: 事件
-
-### Q1. Do you enjoy spending time with old people?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that this topic feels natural and useful rather than just fashionable.
-
-### Q2. What are the benefits of being friends with or working with old people?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q3. Are you happy to work with old people?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Have you ever worked with old people?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of this topic, and it made the topic feel more real to me.
-
-## 66. Going out
-- Tag: 事件
+- Status: CURRENT
 
 ### Q1. How often do you use cash?
 
-Probably a few times a week, although it depends on how busy I am. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. That is why going out has become a fairly normal part of my routine.
+Hardly ever, to be honest. I mainly use my phone to tap and pay for things like coffee or groceries. The only time I carry cash is if I'm heading to a local market where the stalls prefer notes and coins. It's just so much more convenient.
 
 ### Q2. Do you often bring cash with you?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+I rarely bring cash, to be honest. I usually just rely on my phone to pay for things, like when I grab a coffee or take the bus. The only time I carry notes is if I'm heading to a market stall that doesn't take card payments. It's just simpler that way.
 
 ### Q3. Do you always take your mobile phone with you when going out?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Yes, I almost always take my phone when I go out. It’s my main way to check bus times, pay for things with Google Pay, and stay in touch if plans change. I’d feel a bit lost without it, honestly—especially when I’m meeting friends in an unfamiliar area.
 
 ### Q4. Do you bring food or snacks with you when going out?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Not really, I prefer to buy food when I'm out rather than carry it with me. If I'm heading to the park or on a long train journey, I might grab a packet of crisps or a banana, but that's about it. I'd rather travel light.
 
-## 67. Rules
+## 45. Rules
 - Tag: 事物
+- Status: CURRENT
 
 ### Q1. Would you like to work as a teacher in a rule-free school?
 
-Yes, I probably would. I do not have a very fixed plan, but I can imagine rules still being relevant to me in the future, especially if my lifestyle becomes busier.
+No, I wouldn't. I think some structure is essential for learning. Without basic rules, students might run around or shout during lessons, and that would make it impossible for anyone to concentrate. I’d much rather teach in a school with clear, fair guidelines.
 
 ### Q2. Have you ever had a really strict teacher?
 
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of rules, and it made the topic feel more real to me.
+Yes, I had a maths teacher in high school who was incredibly strict. She’d make us stand up if we forgot our homework, and she’d check every single notebook page. It felt harsh at the time, but looking back, it taught me real discipline.
 
 ### Q3. Do you prefer to have more or fewer rules at school?
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Honestly, I’d prefer fewer rules at school, as long as they’re about safety. I remember we couldn’t even chew gum in class, which felt pointless. I think strict dress codes or bans on chatting during breaks just create resentment rather than helping us focus. A bit more freedom would make school feel less like a prison.
 
 ### Q4. Do you have a teacher who does his or her job very well?/3.Have you ever had a very dedicated teacher?
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Yes, I had a history teacher in high school who was incredibly dedicated. She would stay after class to help anyone struggling with dates or essay structures, and she even organised weekend trips to historical sites. Her passion made the subject come alive for me.
 
 ### Q5. Do you think students would benefit more from more rules?
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+No, I don't think more rules would help. Students already have enough structure with timetables and homework deadlines. What they really need is freedom to explore their own interests, like choosing a book to read or a science project topic. That builds real motivation.
 
 ### Q6. Are there any rules for students at your school?
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Yes, there are quite a few rules at my school. For instance, students have to wear a uniform, and mobile phones must be kept in lockers during class time. We're also not allowed to eat in the library or run in the hallways. These rules help keep things orderly and safe.
 
-## 68. Doing something well
+## 46. Doing something well
 - Tag: 事件
+- Status: CURRENT
 
 ### Q1. Do you often tell your friends when they do something well?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Yes, I do. If a friend gives a really good presentation at work or cooks a fantastic meal, I’ll tell them straight away. It feels natural to acknowledge their effort, and it usually makes them smile. I think a quick, honest compliment strengthens our bond.
 
 ### Q2. Do you have an experience that your teacher thought you did a good job?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Yeah, actually. In my final year of high school, my English teacher praised me for a presentation I gave on climate change. I’d spent a lot of time finding clear graphs and examples, and she said I explained the topic in a way that was easy for everyone to understand. That felt really rewarding.
 
 ### Q3. Do you have an experience that you did something well?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Oh, absolutely. I once baked a really complicated chocolate soufflé for my mum’s birthday, and it actually rose perfectly. I’d been so nervous because they can easily collapse, but when I took it out of the oven, it looked just like the picture in the recipe book.
 
-## 69. Carrying things
-- Tag: 事件
-
-### Q1. What do you do if your item is heavy?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q2. What do you often carry with you?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-## 70. Public places
+## 47. Public places
 - Tag: 地点
+- Status: CURRENT
 
 ### Q1. Do you often go to public places near where you live?
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Yes, I do. There's a lovely park just a five-minute walk from my flat, so I head there a couple of times a week, usually for a morning jog or to sit and read. The fresh air really helps me clear my head after a long day.
 
 ### Q2. Would you like to see more public places near where you live?
 
-Yes, I probably would. I do not have a very fixed plan, but I can imagine public places still being relevant to me in the future, especially if my lifestyle becomes busier.
+Sure, I'd really like to see more public places near where I live. There's only one small park in my neighbourhood, and it gets crowded on weekends. A proper library or a community garden would be great—somewhere quiet where I could read or help plant vegetables with my neighbours.
 
 ### Q3. Do you wear headphones in public places?
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Yes, I do wear headphones in public quite often. For example, when I'm commuting on the Tube, I put on my noise-cancelling ones to block out the chatter and engine noise. It helps me focus on a podcast or just relax without being disturbed.
 
 ### Q4. Have you ever talked with someone you don’t know in public places?
 
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of public places, and it made the topic feel more real to me.
+Yes, I have. I remember once at a bus stop, an elderly lady asked me about the route, and we ended up chatting about the neighbourhood for a few minutes. It felt nice—just a simple, friendly exchange that made the wait less dull.
 
-## 71. Being Busy
-- Tag: 事件
-
-### Q1. Are you busier now than when you were a child?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, being busy was connected with some ordinary but memorable moments in my life.
-
-### Q2. When are you busy?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, being busy feels less like a task and more like a way to relax.
-
-### Q3. Why are you busy?
-
-Mainly because being busy feels useful or meaningful to me. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q4. Are you often busy?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 72. Praising
-- Tag: 事件
-
-### Q1. Have you ever been praised or encouraged by your teacher?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of praising, and it made the topic feel more real to me.
-
-### Q2. Do you think parents should often praise their children?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. When was the last time you praised someone?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, praising feels less like a task and more like a way to relax.
-
-### Q4. How you feel when you are praised?
-
-For me, praising is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q5. Have you had any achievement recently?
-
-For me, praising is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-## 73. Saying ‘thank you’
-- Tag: 事件
-
-### Q1. Why do people need to say 'thank you'?
-
-Mainly because saying thank you feels useful or meaningful to me. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q2. On what occasions do you say 'thank you'?
-
-For me, saying thank you is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. Do people in your country often say 'thank you'?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Have you ever sent a thank you card to others?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of saying thank you, and it made the topic feel more real to me.
-
-## 74. Machine
+## 48. Pets and animals
 - Tag: 事物
-
-### Q1. Do you think it is important to read the instructions?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that machine feels natural and useful rather than just fashionable.
-
-### Q2. Do you read the instructions before using a machine?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Do you think washing machines and sweeping machines are important?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that machine feels natural and useful rather than just fashionable.
-
-### Q4. What is your favourite machine in your home?
-
-My favourite would probably be something simple and practical. I like it because it feels natural to me, not forced. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 75. Traffic
-- Tag: 事物
-
-### Q1. Are there a lot of crosswalks around the place where you live?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Is there anything you would like to change about the traffic in your area?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that traffic feels natural and useful rather than just fashionable.
-
-## 76. Hats/caps
-- Tag: 事物
-
-### Q1. Is wearing hats popular in your country?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that hats caps feels natural and useful rather than just fashionable.
-
-### Q2. Where do you like to buy hats?
-
-Usually somewhere convenient and not too crowded. If it is related to hats caps, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-### Q3. What kinds of hats do you have?
-
-I usually prefer a simple and practical kind. When it comes to hats caps, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q4. Do you like to wear hats?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that hats caps feels natural and useful rather than just fashionable.
-
-## 77. Where you live
-- Tag: 地点
-
-### Q1. Tell me about the community where you live.
-
-For me, where you live is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q2. Is it suitable for young people to live in your community?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Is there anything you would like to change about?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that where you live feels natural and useful rather than just fashionable.
-
-## 78. Send messages
-- Tag: 事件
-
-### Q1. Do you like to send messages?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that send messages feels natural and useful rather than just fashionable.
-
-### Q2. When do you send messages?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, send messages feels less like a task and more like a way to relax.
-
-### Q3. Do you reply messages in time?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 79. History
-- Tag: 事物
-
-### Q1. Have you ever studied any history?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of history, and it made the topic feel more real to me.
-
-### Q2. How do you learn history?
-
-For me, history is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. What are the benefits of learning history?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q4. Do you think learning history is important?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that history feels natural and useful rather than just fashionable.
-
-## 80. Stories
-- Tag: 事物
-
-### Q1. What stories did you like when you were young?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q2. Do you love stories in your childhood?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q3. Do you prefer listening to stories or reading them?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q4. Have you ever written any story before?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of stories, and it made the topic feel more real to me.
-
-### Q5. Did you ever write a story when you were a child?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of stories, and it made the topic feel more real to me.
-
-## 81. Your favourite item at home
-- Tag: 事物
-
-### Q1. What is the thing you like the most in your home?
-
-I would say the first thing that comes to mind is my bedroom. It is not something extraordinary, but it suits my lifestyle quite well. It is not very large, but it is comfortable enough for relaxing and concentrating.
-
-### Q2. Why do you like it?
-
-Mainly because my home feels useful or meaningful to me. It is not very large, but it is comfortable enough for relaxing and concentrating. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q3. What makes your home more comfortable?
-
-I would say the first thing that comes to mind is my bedroom. It is not something extraordinary, but it suits my lifestyle quite well. It is not very large, but it is comfortable enough for relaxing and concentrating.
-
-### Q4. What is the view like around the place where you live?
-
-I would say the first thing that comes to mind is my bedroom. It is not something extraordinary, but it suits my lifestyle quite well. It is not very large, but it is comfortable enough for relaxing and concentrating.
-
-## 82. Teamwork
-- Tag: 事物
-
-### Q1. Do you like teamwork?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that teamwork feels natural and useful rather than just fashionable.
-
-### Q2. Have you teamed up with someone else before?
-
-For me, teamwork is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. What do you learn from working in a team?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q4. What do you dislike about teamwork?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 83. Meeting new people&friends
-- Tag: 事件
-
-### Q1. Do you meet new people more often now in the past?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, my friends was connected with some ordinary but memorable moments in my life.
-
-### Q2. Do you like making friends?
-
-Yes, I would say so. They make ordinary days more enjoyable, especially when I need someone to talk to. For me, the most important thing is that my friends feels natural and useful rather than just fashionable.
-
-### Q3. Did you make a lot of friends when you were a child?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, my friends was connected with some ordinary but memorable moments in my life.
-
-### Q4. What do you often talk about with your friends?
-
-I would say the first thing that comes to mind is a close friend from school. It is not something extraordinary, but it suits my lifestyle quite well. They make ordinary days more enjoyable, especially when I need someone to talk to.
-
-### Q5. Have you made any new friends recently?
-
-For me, my friends is quite familiar and easy to relate to. They make ordinary days more enjoyable, especially when I need someone to talk to. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q6. Do you like meeting new people?
-
-Yes, I would say so. They make ordinary days more enjoyable, especially when I need someone to talk to. For me, the most important thing is that my friends feels natural and useful rather than just fashionable.
-
-### Q7. Where can you meet new people?
-
-Usually somewhere convenient and not too crowded. If it is related to my friends, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-### Q8. Do you enjoy talking to new people?
-
-Yes, I would say so. They make ordinary days more enjoyable, especially when I need someone to talk to. For me, the most important thing is that my friends feels natural and useful rather than just fashionable.
-
-## 84. Good view
-- Tag: 事物
-
-### Q1. What is the view like around the place where you live?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. Have you seen an unforgettable view?
-
-For me, good view is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. Would you take photos when you see a good view?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine good view still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q4. What is your favourite place? Why?
-
-My favourite would probably be something simple and practical. I like it because it feels natural to me, not forced. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 85. Place of study/work
-- Tag: 地点
-
-### Q1. Do you prefer to study at home or in a library?
-
-Yes, generally speaking. They help me build practical skills, especially when I need to organise my ideas clearly. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. What is your favourite place to study?
-
-My favourite would probably be English-related subjects. I like it because it feels natural to me, not forced. They help me build practical skills, especially when I need to organise my ideas clearly.
-
-### Q3. What part of your school do you like the most?
-
-I would say the first thing that comes to mind is English-related subjects. It is not something extraordinary, but it suits my lifestyle quite well. They help me build practical skills, especially when I need to organise my ideas clearly.
-
-### Q4. What is your favourite subject?
-
-I am studying subjects related to English and communication. I chose them because they are practical, and they also train me to express ideas more clearly in real situations.
-
-### Q5. Do you prefer to work at home or in the workplace?
-
-Yes, generally speaking. They help me build practical skills, especially when I need to organise my ideas clearly. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q6. Do you prefer to work alone or in a group?
-
-Yes, generally speaking. They help me build practical skills, especially when I need to organise my ideas clearly. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 86. Free time
-- Tag: 事件
-
-### Q1. What do you like to do in your free time?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 87. Music&Musical instruments
-- Tag: 事物
-
-### Q1. Do a lot of people like music?
-
-Yes, I would say so. It can change my mood quickly, especially when I am tired or travelling somewhere. For me, the most important thing is that music feels natural and useful rather than just fashionable.
-
-### Q2. Do schools in your country have music lessons?
-
-Yes, generally speaking. It can change my mood quickly, especially when I am tired or travelling somewhere. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Have you ever learned to play a musical instrument?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of music, and it made the topic feel more real to me.
-
-### Q4. What musical instruments do you enjoy listening to the most?
-
-I would say the first thing that comes to mind is soft pop music. It is not something extraordinary, but it suits my lifestyle quite well. It can change my mood quickly, especially when I am tired or travelling somewhere.
-
-### Q5. Do you think children should learn to play an instrument at school?
-
-Yes, generally speaking. It can change my mood quickly, especially when I am tired or travelling somewhere. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q6. Do you think music education is important to children?
-
-Yes, I would say so. It can change my mood quickly, especially when I am tired or travelling somewhere. For me, the most important thing is that music feels natural and useful rather than just fashionable.
-
-## 88. Perfume
-- Tag: 事物
-
-### Q1. Do you like perfume?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that perfume feels natural and useful rather than just fashionable.
-
-### Q2. Do you use perfume?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Where do you spray perfume?
-
-Usually somewhere convenient and not too crowded. If it is related to perfume, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-### Q4. Do you send perfume to others as a gift?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q5. Do you spend a lot of money on buying perfume?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 89. Laughing
-- Tag: 事件
-
-### Q1. Do you enjoy watching interesting and funny movies?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that laughing feels natural and useful rather than just fashionable.
-
-### Q2. Do you think you are a funny person?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Are you a person who often makes others laugh?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Do you always laugh at funny things?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q5. When was the last time you laughed?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, laughing feels less like a task and more like a way to relax.
-
-## 90. Road and streets
-- Tag: 地点
-
-### Q1. Are the roads in the area where you live busy?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. How do people cross the road in the city where you live?
-
-For me, road and streets is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. How is the condition of the roads in your city?
-
-For me, road and streets is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q4. Do you think the roads in your city need improvement?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 91. coins
-- Tag: 事物
-
-### Q1. Do you often take coins with you?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. Have you collected coins?
-
-For me, coins is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. Is it convenient to use coins?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q4. Do you use coins in your daily life?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q5. Did you use coins as a child?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, coins was connected with some ordinary but memorable moments in my life.
-
-## 92. Talking with others
-- Tag: 事件
-
-### Q1. Do you like to talk with others?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that talking with others feels natural and useful rather than just fashionable.
-
-### Q2. Do you like to talk a lot with others?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that talking with others feels natural and useful rather than just fashionable.
-
-### Q3. Did you like to talk with others when you were a child?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, talking with others was connected with some ordinary but memorable moments in my life.
-
-## 93. Bike
-- Tag: 事物
-
-### Q1. Did you have a bike when you were young?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, bike was connected with some ordinary but memorable moments in my life.
-
-### Q2. Do you have a bike now?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Do you often ride a bike now?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Are bikes popular in China?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that bike feels natural and useful rather than just fashionable.
-
-## 94. Transport
-- Tag: 事物
-
-### Q1. Which means of transport is convenient?
-
-I would probably choose badminton. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
-
-### Q2. Which means of transport is expensive?
-
-I would probably choose badminton. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
-
-### Q3. Do most young people prefer to take public transport to school or to work?
-
-Yes, generally speaking. It helps me stay active, and it is also a good way to release stress. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. What are the advantages of using public transport?
-
-I would say the first thing that comes to mind is badminton. It is not something extraordinary, but it suits my lifestyle quite well. It helps me stay active, and it is also a good way to release stress.
-
-## 95. Teacher
-- Tag: 人物
-
-### Q1. Do you think teachers are different now than the past?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. Do you have a favorite teacher?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q3. Do you remember one of your teachers?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q4. Do you want to be a teacher in the future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine teachers still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-## 96. Pets and animals
-- Tag: 事物
+- Status: CURRENT
 
 ### Q1. What is the most popular animal in China?
 
-I would say the first thing that comes to mind is dogs. It is not something extraordinary, but it suits my lifestyle quite well. They make people feel calmer, and they are often easier to connect with than expected.
+I’d say dogs are probably the most popular animal in China right now. You see them everywhere in parks, especially little fluffy ones like poodles or corgis. Many young people in cities keep them as companions, and they even dress them up in cute outfits for walks.
 
 ### Q2. Have you ever had a pet before?
 
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of animals, and it made the topic feel more real to me.
+Yes, I had a golden retriever named Max when I was growing up. He was incredibly loyal and would always wait by the door for me to come home from school. I still remember teaching him to fetch a tennis ball in our backyard.
 
 ### Q3. Where do you prefer to keep your pet, indoors or outdoors?
 
-Usually somewhere convenient and not too crowded. If it is related to animals, I prefer a place where I can feel comfortable and take my time rather than rush through it.
+I prefer keeping my pet indoors, honestly. My cat, Mittens, is much safer inside where she can't get hit by a car or fight with strays. She sleeps on the sofa all day and watches birds from the window, so she seems perfectly content.
 
 ### Q4. What's your favourite animal? Why?
 
-My favourite would probably be dogs. I like it because it feels natural to me, not forced. They make people feel calmer, and they are often easier to connect with than expected.
+My favourite animal is the dog, specifically golden retrievers. I grew up with one named Max, and he was incredibly loyal and patient with me as a kid. I still remember how he’d wag his tail wildly the moment I walked through the door after school. That genuine, unconditional affection is something I really value.
 
-## 97. Challenges
-- Tag: 事物
-
-### Q1. How do you usually deal with challenges in daily life?
-
-For me, challenges is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q2. Do you like to live a life that has a lot of challenges?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that challenges feels natural and useful rather than just fashionable.
-
-### Q3. Do you like to challenge yourself?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that challenges feels natural and useful rather than just fashionable.
-
-### Q4. What subject do you think is the most challenging at school?
-
-I am studying subjects related to English and communication. I chose them because they are practical, and they also train me to express ideas more clearly in real situations.
-
-## 98. News
-- Tag: 事物
-
-### Q1. Have you read the news this morning?
-
-For me, news is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q2. Do you often talk with your friends about the news?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q3. How do your friends get news?
-
-For me, news is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q4. How do you usually find news?
-
-For me, news is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q5. Are you very interested in the news?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that news feels natural and useful rather than just fashionable.
-
-## 99. Life stage
-- Tag: 事件
-
-### Q1. How do people remember each stage of their lives?
-
-For me, life stage is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q2. Do you have any plans for the next five years?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine life stage still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q3. What do you think is the most important at the moment?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q4. What did you often do with your friends in your childhood?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 100. Small businesses
-- Tag: 事物
-
-### Q1. Have you ever thought about starting your own business?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of small businesses, and it made the topic feel more real to me.
-
-### Q2. Do you prefer buying things in big companies or small businesses?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q3. Have you ever worked in small businesses?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of small businesses, and it made the topic feel more real to me.
-
-### Q4. Do you know many small businesses?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 101. Libraries
+## 49. Crowded place
 - Tag: 地点
-
-### Q1. What do you usually do in the library?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q2. Do Chinese kids often go to the library?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q3. Did you go to library when you were a kid?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, libraries was connected with some ordinary but memorable moments in my life.
-
-### Q4. Do you often go to library?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 102. Exciting activities
-- Tag: 事物
-
-### Q1. Would you like to try scuba diving and bungee jumping?
-
-Yes, I would like to try them at least once. I might feel nervous at the beginning, but I think the sense of excitement and achievement would make the experience worth remembering.
-
-### Q2. Has anything exciting happened to you recently?
-
-Yes, something fairly exciting happened recently. I tried a new activity with friends, and even though it was not a huge event, it broke my routine and gave me something fresh to talk about.
-
-### Q3. What do you think were exciting activities when you were a child?
-
-I would say the first thing that comes to mind is hiking or trying a new outdoor activity. It is not something extraordinary, but it suits my lifestyle quite well. They can be a little scary at first, but that is also what makes them memorable.
-
-### Q4. Have you ever tried any exciting activities?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of exciting activities, and it made the topic feel more real to me.
-
-## 103. Internet
-- Tag: 事物
-
-### Q1. What would you do without the internet?
-
-Life would be much less convenient without the internet. I would probably spend more time asking people for information or doing things offline, which might be healthier in some ways but definitely slower.
-
-### Q2. Do you think you spend too much time online?
-
-Yes, generally speaking. It saves me a lot of time, although I try not to rely on it for absolutely everything. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. How does the internet influence people?
-
-For me, the internet is quite familiar and easy to relate to. It saves me a lot of time, although I try not to rely on it for absolutely everything. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q4. How often do you go online?
-
-Probably a few times a week, although it depends on how busy I am. It saves me a lot of time, although I try not to rely on it for absolutely everything. That is why the internet has become a fairly normal part of my routine.
-
-### Q5. When did you start using the internet?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, the internet feels less like a task and more like a way to relax.
-
-## 104. Schools and workplaces
-- Tag: 事件
-
-### Q1. How do you go to work?
-
-For me, school life is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q2. How do you go to school?
-
-For me, school life is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. What do you think would be challenging when you start working in the future?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q4. What are the advantages of a company having a relaxation room?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q5. Is there a place in your company that makes you feel relaxed?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q6. Have you ever thought about changing jobs?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of school life, and it made the topic feel more real to me.
-
-### Q7. What do you think could be improved at your workplace?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q8. Do you currently have a good work environment?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q9. Do you like your job?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that school life feels natural and useful rather than just fashionable.
-
-### Q10. Which subject do you find challenging?
-
-I am studying subjects related to English and communication. I chose them because they are practical, and they also train me to express ideas more clearly in real situations.
-
-### Q11. How important is interest in study?
-
-For me, school life is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q12. What do you think could be improved in your school?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q13. What is the environment like at your school?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q14. Do you think your school is a good place to study?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q15. Do you like your school?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that school life feels natural and useful rather than just fashionable.
-
-### Q16. Where is your school?
-
-Usually somewhere convenient and not too crowded. If it is related to school life, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-## 105. Childhood memory
-- Tag: 事件
-
-### Q1. Do you think it is better for children to grow up in the city or in the countryside?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. What are your best childhood memories?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q3. Did you enjoy your childhood?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, childhood memory was connected with some ordinary but memorable moments in my life.
-
-### Q4. What did you enjoy doing as a child?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 106. asking for help
-- Tag: 事件
-
-### Q1. When was the last time you asked for help?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, asking for help feels less like a task and more like a way to relax.
-
-### Q2. What kinds of help do you often ask for?
-
-I usually prefer a simple and practical kind. When it comes to asking for help, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q3. Why are teachers always willing to help students?
-
-Mainly because asking for help feels useful or meaningful to me. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q4. Do you ask for help when you have a problem?
-
-It can be, depending on the situation. Personally, I do not find asking for help too difficult to deal with, but it require a bit of patience and flexibility sometimes.
-
-## 107. Classmate
-- Tag: 人物
-
-### Q1. Is it good for children to play with their classmates?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Can students choose their deskmates in your country?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 108. Staying at home
-- Tag: 地点
-
-### Q1. Would you like to stay at home a lot in the future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine my home still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q2. What did you often do at home as a child?
-
-I would say the first thing that comes to mind is my bedroom. It is not something extraordinary, but it suits my lifestyle quite well. It is not very large, but it is comfortable enough for relaxing and concentrating.
-
-### Q3. What is your favourite place at home?
-
-My favourite would probably be my bedroom. I like it because it feels natural to me, not forced. It is not very large, but it is comfortable enough for relaxing and concentrating.
-
-### Q4. What do you do when you stay at home?
-
-I would say the first thing that comes to mind is my bedroom. It is not something extraordinary, but it suits my lifestyle quite well. It is not very large, but it is comfortable enough for relaxing and concentrating.
-
-### Q5. Are you a person who likes to stay at home?
-
-Yes, I would say so. It is not very large, but it is comfortable enough for relaxing and concentrating. For me, the most important thing is that my home feels natural and useful rather than just fashionable.
-
-## 109. Stage of life
-- Tag: 事件
-
-### Q1. What’s your plan for you next stage of life?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. Which stage of your life do you think is the most important?
-
-I would probably choose something simple and practical. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
-
-### Q3. In which stage of your life were you the happiest?
-
-For me, stage of life is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q4. Are you enjoying your current stage in life?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that stage of life feels natural and useful rather than just fashionable.
-
-## 110. E-books and paper books
-- Tag: 事物
-
-### Q1. Which do you prefer, e-books or paper books?
-
-I would probably choose novels with realistic characters. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
-
-### Q2. When do you usually read online?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, books feels less like a task and more like a way to relax.
-
-### Q3. Will you read more online in the future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine books still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q4. Do you think paper books will disappear in the future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine books still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-## 111. Breakfast
-- Tag: 事物
-
-### Q1. Would you like to change your morning routine?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine breakfast still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q2. Are there any differences between the mornings of your childhood and now?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Do you think breakfast is important?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that breakfast feels natural and useful rather than just fashionable.
-
-### Q4. What do you usually eat for breakfast?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 112. The space and the stars
-- Tag: 事物
-
-### Q1. Do you want to go into outer space in the future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine this topic still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q2. Do you enjoy watching science-fiction films/movies set in space?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that this topic feels natural and useful rather than just fashionable.
-
-### Q3. Would you like to find out more about space and the stars?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine this topic still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q4. Have you ever learn anything about space and the stars when you were at school?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of this topic, and it made the topic feel more real to me.
-
-## 113. Art
-- Tag: 事件
-
-### Q1. Would you go to an art gallery if you had some free time?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine art still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q2. Do you think you would like to be an artist?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that art feels natural and useful rather than just fashionable.
-
-### Q3. Did you do much art when you were a child?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, art was connected with some ordinary but memorable moments in my life.
-
-### Q4. Do you prefer modern or traditional art?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 114. Celebrity
-- Tag: 人物
-
-### Q1. Who is your favourite celebrity in your country?
-
-Probably someone close to me, like a friend or a family member. I find it easier to talk about celebrity with people I trust, because the conversation feels more relaxed and honest.
-
-### Q2. What kind of famous people do you often see in the news?
-
-I usually prefer a simple and practical kind. When it comes to celebrity, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q3. Do you pay attention to famous people in the news?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Do you believe that the news about famous people in the media is true?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q5. Would you like to be a famous person in the news?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine celebrity still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-## 115. Money
-- Tag: 事物
-
-### Q1. Do you prefer to save money or spend money?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. How do you save money?
-
-For me, money is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. What do you think about payment apps or mobile payments?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q4. Do you use a credit card to buy things?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q5. Do you think cash will still be popular in the future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine money still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-## 116. Crowded place
-- Tag: 地点
+- Status: CURRENT
 
 ### Q1. Is the city where you live crowded?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Yeah, it can be quite crowded, especially in the city centre during rush hour. I live in Ho Chi Minh City, and the streets are packed with motorbikes and cars. Sometimes it takes me an extra 20 minutes just to get home from work because of the traffic jams.
 
 ### Q2. Is there a crowded place near where you live?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Yes, the main train station near my flat gets absolutely packed during rush hour. I walk past it every morning, and people are spilling out onto the pavement, rushing to catch their trains. It’s quite overwhelming, actually, so I try to avoid that area at peak times.
 
 ### Q3. Do most people like crowded places?
 
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that crowded place feels natural and useful rather than just fashionable.
+Not really, I'd say. Most people I know feel stressed in crowded places like shopping malls during sales or packed subway trains. They prefer quieter spots where they can move freely, grab a coffee without queuing, and actually hear themselves think.
 
 ### Q4. Do you like crowded places?
 
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that crowded place feels natural and useful rather than just fashionable.
+No, not really. I find them a bit overwhelming. For example, I went to a busy shopping mall last weekend and the noise and constant bumping into people made me feel quite stressed. I much prefer quieter spots like a park or a library.
 
 ### Q5. When was the last time you were in a crowded place?
 
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, crowded place feels less like a task and more like a way to relax.
+The last time I was in a crowded place was last Saturday, when I went to a popular night market in the city centre. I ended up squeezing past groups of people just to grab some fried noodles from a tiny stall, and honestly, the noise and bustle felt a bit overwhelming.
 
-## 117. Collecting things
-- Tag: 事件
-
-### Q1. Why do some people like to collect things?
-
-Mainly because collecting things feels useful or meaningful to me. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q2. Where do they collect things?
-
-Usually somewhere convenient and not too crowded. If it is related to collecting things, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-### Q3. Do you collect things?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q4. Are there any things you keep from childhood?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q5. Where do you usually keep things you need?
-
-Usually somewhere convenient and not too crowded. If it is related to collecting things, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-## 118. Video games
+## 50. Memory
 - Tag: 事物
-
-### Q1. Do you prefer playing alone or with others?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. What kind of video games do you like to play?
-
-I usually prefer a simple and practical kind. When it comes to video games, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q3. Would you watch others play video games?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine video games still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q4. Do you think people spend too much time playing video games?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q5. Do you play video games?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 119. Losing things
-- Tag: 事件
-
-### Q1. Do you often lose things?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. Why do some people tend to lose things more often than others?
-
-Mainly because losing things feels useful or meaningful to me. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q3. What can we do to avoid losing things?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q4. What will you do if you find something lost by others?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-## 120. Music
-- Tag: 事物
-
-### Q1. Do a lot of people like music?
-
-Yes, I would say so. It can change my mood quickly, especially when I am tired or travelling somewhere. For me, the most important thing is that music feels natural and useful rather than just fashionable.
-
-### Q2. What kind of music do you listen to?
-
-I usually prefer a simple and practical kind. When it comes to music, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q3. Is it easy to learn music?
-
-Yes, generally speaking. It can change my mood quickly, especially when I am tired or travelling somewhere. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Do you have music lessons at school?
-
-Yes, generally speaking. It can change my mood quickly, especially when I am tired or travelling somewhere. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 121. Memory
-- Tag: 事物
+- Status: CURRENT
 
 ### Q1. How do you remember important things?
 
-For me, memory is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
+I usually write important things down in my phone's notes app or on a sticky note stuck to my fridge. For example, I set a reminder for my friend's birthday a week in advance, so I never forget to send a message. It just works for me.
 
 ### Q2. Why do some people have good memory while others just don' t?
 
-Mainly because memory feels useful or meaningful to me. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
+Honestly, I think a lot comes down to how we train our brains. Some people actively use their memory every day—like learning phone numbers by heart or recalling recipes without notes—while others rely on phones and calendars for everything. It's like a muscle; you either use it or lose it, I suppose.
 
 ### Q3. Why do more people rely on cellphones to memorize things?
 
-Mainly because memory feels useful or meaningful to me. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
+I think it's because phones are just so convenient. I mean, instead of writing down a shopping list or remembering a birthday, I just tap it into my phone's notes app or set a reminder. It's faster, and I never lose the information because it's always in my pocket.
 
 ### Q4. Are you good at memorizing things?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Honestly, not really. I struggle with names in particular—I can meet someone and forget their name within seconds. But I’m surprisingly good at remembering song lyrics, even from years ago. It’s a bit frustrating, actually.
 
 ### Q5. Have you ever forgotten something that was important?
 
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of memory, and it made the topic feel more real to me.
+Oh, definitely. I once completely forgot about a job interview I’d scheduled—I only remembered when the recruiter called me an hour later. I felt so embarrassed, and I had to apologise profusely and reschedule. That experience taught me to always set multiple alarms.
 
 ### Q6. What do you need to remember in your daily life?
 
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
+I need to remember things like my work schedule, grocery lists, and appointments. For instance, I always note down my gym sessions and deadlines for projects. I also remind myself to call family or pay bills on time, otherwise I’d completely forget.
 
-## 122. Color
-- Tag: 事物
-
-### Q1. What color would you like to buy?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q2. Do you usually wear clothes in your favorite color?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q3. Are there any colors that have a special meaning in your country?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q4. Do you think different types of people like different colors?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that colours feels natural and useful rather than just fashionable.
-
-### Q5. What is your favorite color?
-
-My favourite would probably be something simple and practical. I like it because it feels natural to me, not forced. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-## 123. Cake
-- Tag: 事物
-
-### Q1. Do you like eating cakes or other sweet food?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that cake feels natural and useful rather than just fashionable.
-
-### Q2. Are there any traditional Chinese cake?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Did you like to eat cakes as a child?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, cake was connected with some ordinary but memorable moments in my life.
-
-### Q4. Can you make cakes?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q5. Do you like to have some desserts after meals/for dinner?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that cake feels natural and useful rather than just fashionable.
-
-## 124. sunglasses
-- Tag: 事物
-
-### Q1. Do you often wear sunglasses?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. Why do you wear sunglasses?
-
-Mainly because sunglasses feels useful or meaningful to me. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q3. Do you spend a lot of money on sunglasses?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q4. Do you give sunglasses as a gift?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q5. Have you ever lost your sunglasses?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of sunglasses, and it made the topic feel more real to me.
-
-## 125. Travelling
+## 51. Taking photos
 - Tag: 事件
-
-### Q1. How do you feel when you are travelling?
-
-For me, travelling is quite familiar and easy to relate to. It gives me a chance to see different places and get out of my normal routine. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q2. Where do you usually travel?
-
-Usually somewhere convenient and not too crowded. If it is related to travelling, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-### Q3. How often do you go travelling?
-
-Probably a few times a week, although it depends on how busy I am. It gives me a chance to see different places and get out of my normal routine. That is why travelling has become a fairly normal part of my routine.
-
-### Q4. Do you like travelling?
-
-Yes, I would say so. It gives me a chance to see different places and get out of my normal routine. For me, the most important thing is that travelling feels natural and useful rather than just fashionable.
-
-## 126. Transport
-- Tag: 事件
-
-### Q1. Do you think people will drive more in the future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine sport still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q2. How far is it from your home to work/school?
-
-For me, sport is quite familiar and easy to relate to. It helps me stay active, and it is also a good way to release stress. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. What's the most popular means of transportation in your hometown?
-
-I would say the first thing that comes to mind is badminton. It is not something extraordinary, but it suits my lifestyle quite well. It helps me stay active, and it is also a good way to release stress.
-
-### Q4. How do you go to work/school?
-
-For me, sport is quite familiar and easy to relate to. It helps me stay active, and it is also a good way to release stress. I think that is why I can talk about it naturally without exaggerating my answer.
-
-## 127. Musical instruments
-- Tag: 事物
-
-### Q1. Do you think music education is important to children?
-
-Yes, I would say so. It can change my mood quickly, especially when I am tired or travelling somewhere. For me, the most important thing is that music feels natural and useful rather than just fashionable.
-
-### Q2. Do you think children should learn to play an instrument at school?
-
-Yes, generally speaking. It can change my mood quickly, especially when I am tired or travelling somewhere. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. What musical instruments do you enjoy listening to the most?
-
-I would say the first thing that comes to mind is soft pop music. It is not something extraordinary, but it suits my lifestyle quite well. It can change my mood quickly, especially when I am tired or travelling somewhere.
-
-### Q4. Have you ever learned to play a musical instrument?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of music, and it made the topic feel more real to me.
-
-## 128. Chatting
-- Tag: 事件
-
-### Q1. Do you argue with friends?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Do you prefer to communicate face-to-face or via social media?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Do you prefer to chat with a group of people or with only one friend?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. What do you usually chat about with friends?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q5. Do you like chatting with friends?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that chatting feels natural and useful rather than just fashionable.
-
-## 129. Map
-- Tag: 事件
-
-### Q1. Do you have maps at home?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Do you use paper maps?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. How often do you use maps on your phone?
-
-Probably a few times a week, although it depends on how busy I am. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. That is why map has become a fairly normal part of my routine.
-
-### Q4. Do you often use maps?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 130. Noise
-- Tag: 事件
-
-### Q1. Do you want to move to a quieter place?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. What kinds of noises are there in the area where you live?
-
-I usually prefer a simple and practical kind. When it comes to noise, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q3. Is making noise one of people's rights?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Do you think there is too much noise in today's world?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q5. Do you like to stay in a place with a lot of noise?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that noise feels natural and useful rather than just fashionable.
-
-## 131. Tea and coffee
-- Tag: 事件
-
-### Q1. Do you usually buy your coffee in a coffee shop?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. When was the last time you had a cup of coffee?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, tea and coffee feels less like a task and more like a way to relax.
-
-### Q3. Do you prefer to use tea or coffee to serve your guests?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Do people like tea and coffee nowadays?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that tea and coffee feels natural and useful rather than just fashionable.
-
-## 132. Geography
-- Tag: 事物
-
-### Q1. Will you learn more about the geography of other countries?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine geography still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q2. Do you want to be a Geography teacher?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Have you ever learned Geography?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of geography, and it made the topic feel more real to me.
-
-### Q4. Do you think Geography is useful?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q5. How do you like Geography?
-
-For me, geography is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-## 133. Fishing
-- Tag: 事件
-
-### Q1. Is fishing popular in your country?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that fishing feels natural and useful rather than just fashionable.
-
-### Q2. Do you like eating fish?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that fishing feels natural and useful rather than just fashionable.
-
-### Q3. Do you like fishing?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that fishing feels natural and useful rather than just fashionable.
-
-### Q4. Did you ever go fishing when you were a child?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of fishing, and it made the topic feel more real to me.
-
-### Q5. Have you seen any movies with lots of fish?
-
-For me, fishing is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q6. Have you ever been to a place where there are lots of fish around you?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of fishing, and it made the topic feel more real to me.
-
-## 134. Helping others
-- Tag: 事件
-
-### Q1. What have you done to help the elderly?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q2. Did your parents help you a lot when you were young?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, helping others was connected with some ordinary but memorable moments in my life.
-
-### Q3. Do your parents teach you how to help others?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q4. How do you help people around you, such as neighbours, family and friends?
-
-For me, helping others is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q5. Do you usually help people around you?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 135. Robots
-- Tag: 事物
-
-### Q1. What can robots do for you at home?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q2. Should we let a robot drive for us for long journeys?
-
-For me, robots is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. Have you ever watched a movie about robots?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of robots, and it made the topic feel more real to me.
-
-### Q4. Would robots affect people's lives?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine robots still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q5. Are robots important?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that robots feels natural and useful rather than just fashionable.
-
-## 136. Running
-- Tag: 事件
-
-### Q1. What do you think of running as a sport?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. When was the last time you went running?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, running feels less like a task and more like a way to relax.
-
-### Q3. Where do you usually go running?
-
-Usually somewhere convenient and not too crowded. If it is related to running, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-### Q4. Do you go running a lot?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 137. Films&Cinemas
-- Tag: 事件
-
-### Q1. How often do you watch films?
-
-Probably a few times a week, although it depends on how busy I am. They are an easy way to relax and also learn about different people and cultures. That is why films has become a fairly normal part of my routine.
-
-### Q2. Do you prefer to watch films at home or in the cinema?
-
-Yes, generally speaking. They are an easy way to relax and also learn about different people and cultures. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q3. Do you think going to the cinema is a good way to spend time with friends?
-
-Yes, generally speaking. They are an easy way to relax and also learn about different people and cultures. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q4. Do you often go to the cinema with your friends?
-
-Yes, generally speaking. They are an easy way to relax and also learn about different people and cultures. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q5. Did you ever go to the cinema alone as a child?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of films, and it made the topic feel more real to me.
-
-### Q6. Did you often watch films when you were a child?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, films was connected with some ordinary but memorable moments in my life.
-
-### Q7. What films do you like?
-
-I would say the first thing that comes to mind is comedies or realistic dramas. It is not something extraordinary, but it suits my lifestyle quite well. They are an easy way to relax and also learn about different people and cultures.
-
-## 138. language
-- Tag: 事物
-
-### Q1. What kinds of difficulties would you have if you want to learn a new language?
-
-I usually prefer a simple and practical kind. When it comes to language, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q2. How are languages taught and learned in your school?
-
-For me, language is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. How do you learn a foreign language?
-
-For me, language is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q4. What languages would you like to learn in the future?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q5. What languages do you speak?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 139. Health
-- Tag: 事件
-
-### Q1. Is it easy for people to exercise in your country?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. What sports keep people healthy?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q3. Are there health classes in your school?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. What is your favorite sport?
-
-My favourite would probably be something simple and practical. I like it because it feels natural to me, not forced. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q5. How do you keep healthy?
-
-For me, health is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-## 140. wild animals
-- Tag: 人物
-
-### Q1. Are there TV programs about wild animals in your country?
-
-Yes, generally speaking. They make people feel calmer, and they are often easier to connect with than expected. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. What is the animal you would like to see in the wild?
-
-I would say the first thing that comes to mind is dogs. It is not something extraordinary, but it suits my lifestyle quite well. They make people feel calmer, and they are often easier to connect with than expected.
-
-### Q3. Have you ever been to a zoo or a safari park?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of animals, and it made the topic feel more real to me.
-
-### Q4. Are there wild animals in your country?
-
-Yes, generally speaking. They make people feel calmer, and they are often easier to connect with than expected. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 141. teachers
-- Tag: 人物
-
-### Q1. What were your primary school teachers like?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q2. Do you have a favorite teacher?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q3. Do you remember one of your teachers?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q4. Do you want to be a teacher in the future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine teachers still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-## 142. bags
-- Tag: 事物
-
-### Q1. What kind of bags do you use when travelling?
-
-I usually prefer a simple and practical kind. When it comes to bags, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q2. What kind of bags would you use when travelling?
-
-I usually prefer a simple and practical kind. When it comes to bags, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q3. Did you use a backpack when you were a child?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, bags was connected with some ordinary but memorable moments in my life.
-
-### Q4. Is a bag an ideal gift?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q5. Do you change your bags often?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q6. What kinds of bags do you like to carry?
-
-I usually prefer a simple and practical kind. When it comes to bags, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q7. Do you usually carry a bag?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 143. day off
-- Tag: 事件
-
-### Q1. Do you usually spend your days off with you parents or with your friends?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. What do you usually do when you have days off?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q3. When was the last time you had a few days off?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, day off feels less like a task and more like a way to relax.
-
-### Q4. What would you like to do if you had a day off tomorrow?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q5. Do you usually spend your days off with you parents or with your friends?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q6. Do you usually spend your days off with your parents or with your friends?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q7. What do you do on your day off?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 144. rain
-- Tag: 事件
-
-### Q1. Would you change your plan if it rained?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine rain still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q2. Would you like to live in a place that is dry or wet?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine rain still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q3. Does it rain much in your city?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Do you like rainy days?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that rain feels natural and useful rather than just fashionable.
-
-## 145. week
-- Tag: 事物
-
-### Q1. Are weekdays and weekends the same for you?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. What do you usually do on weekends?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q3. What is the busiest day of the week for you?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q4. What is your least favorite day?
-
-My favourite would probably be something simple and practical. I like it because it feels natural to me, not forced. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q5. What is your favorite day of the week?
-
-My favourite would probably be something simple and practical. I like it because it feels natural to me, not forced. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q6. Is there anything that you do every day?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q7. How do you usually spend your time?
-
-For me, week is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q8. Which day is your least favorite day?
-
-I would probably choose something simple and practical. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
-
-### Q9. Which day is your favorite day?
-
-I would probably choose something simple and practical. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
-
-## 146. fixing things
-- Tag: 事件
-
-### Q1. What do you do when a thing is broken and cannot be fixed?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q2. Do you think it is necessary for people to learn to fix things?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q3. Did anybody teach you to fix things when you were a child?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, fixing things was connected with some ordinary but memorable moments in my life.
-
-### Q4. Did you ask people to teach you to fix things when you were a child?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, fixing things was connected with some ordinary but memorable moments in my life.
-
-### Q5. How to fix things?
-
-For me, fixing things is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q6. What things can you fix?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q7. Can you fix things?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 147. concentration
-- Tag: 事件
-
-### Q1. Is it easy to stay focused in a noisy environment?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. How do you stay focused?
-
-For me, concentration is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. Are you a focused person?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Did you stay focused in class when you were a child?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, concentration was connected with some ordinary but memorable moments in my life.
-
-## 148. ice cream
-- Tag: 事物
-
-### Q1. Do you eat ice cream a lot?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Would you like to make your own ice cream?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine ice cream still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q3. Would you like to create your own ice cream?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine ice cream still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q4. Can you make ice cream yourself?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q5. Are there shops selling ice cream near the place where you live?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q6. Did you eat ice cream when you were a child?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, ice cream was connected with some ordinary but memorable moments in my life.
-
-### Q7. Do you like ice cream?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that ice cream feels natural and useful rather than just fashionable.
-
-## 149. Hair salon
-- Tag: 地点
-
-### Q1. Do you often go to the hair salon?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Would you like to have your hair dyed/coloured?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine hair salon still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-## 150. street food
-
-### Q1. Do you like to buy street food when you travel to a new place?
-
-Yes, I would say so. It is closely connected with comfort, culture, and daily routine. For me, the most important thing is that food feels natural and useful rather than just fashionable.
-
-### Q2. What kind of street food do you like?
-
-I usually prefer a simple and practical kind. When it comes to food, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q3. Do you like to buy/taste street food?
-
-Yes, I would say so. It is closely connected with comfort, culture, and daily routine. For me, the most important thing is that food feels natural and useful rather than just fashionable.
-
-## 151. Books（极低频，无需准备）
-
-### Q1. What kind of people like reading and what kind of people don't?
-
-I usually prefer a simple and practical kind. When it comes to books, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q2. Do Chinese people do enough reading?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q3. Do you have many books at home?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q4. How often do you read?
-
-Probably a few times a week, although it depends on how busy I am. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. That is why books has become a fairly normal part of my routine.
-
-## 152. Bargain（极低频，无需准备）
-
-### Q1. What do you think of bargain?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. Do Chinese people bargain?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. How do you bargain?
-
-For me, bargain is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q4. Where can you bargain? Why?
-
-Usually somewhere convenient and not too crowded. If it is related to bargain, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-## 153. New activities
-
-### Q1. Do you like trying new activities alone or with friends?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that new activities feels natural and useful rather than just fashionable.
-
-### Q2. What activities did you do when you were a child?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q3. What activities would you like to try?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q4. Do you like trying new activities? Why?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that new activities feels natural and useful rather than just fashionable.
-
-## 154. stages of life
-
-### Q1. What’s your plan for you next stage of life?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. Which stage of your life do you think is the most important?
-
-I would probably choose something simple and practical. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
-
-### Q3. In which stage of your life were you the happiest?
-
-For me, stages of life is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q4. Are you enjoying your current stage in life?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that stages of life feels natural and useful rather than just fashionable.
-
-## 155. List
-- Tag: 事件
-
-### Q1. Do you prefer to make a list on paper or your phone?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Why don’t some people like making lists?
-
-Mainly because list feels useful or meaningful to me. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q3. Do you make a list for your work?(Does it work?)
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Do you make a list when shopping?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 156. Furniture
-
-### Q1. What furniture do you like best in your home?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. What kind of furniture would you like to buy?
-
-I usually prefer a simple and practical kind. When it comes to furniture, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q3. Is there anyone who bought furniture for you?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Do you have a lot of furniture in your home?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 157. change
-
-### Q1. Have there been any changes in your hometown?
-
-For me, change is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q2. Do you like changes? Why?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that change feels natural and useful rather than just fashionable.
-
-### Q3. What do you plan to change next year?
-
-There have been a few noticeable changes recently. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think these changes make daily life a bit more convenient and pleasant.
-
-### Q4. Have you changed a lot since your childhood?
-
-For me, change is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-## 158. Recycling
-
-### Q1. What kind of things do you recycle?
-
-I usually prefer a simple and practical kind. When it comes to recycling, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q2. Will you recycle things in the future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine recycling still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q3. Did you recycle things when you were a child?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, recycling was connected with some ordinary but memorable moments in my life.
-
-### Q4. Do you recycle things? Why?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 159. Picnic
-
-### Q1. What are the differences between picnics and cooking at home
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. Where do you go to picnics?
-
-Usually somewhere convenient and not too crowded. If it is related to picnic, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-### Q3. How often do you go on a picnic now?
-
-Probably a few times a week, although it depends on how busy I am. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. That is why picnic has become a fairly normal part of my routine.
-
-### Q4. Did you go to picnics when you were a child?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, picnic was connected with some ordinary but memorable moments in my life.
-
-## 160. Text message
-- Tag: 事件
-
-### Q1. Are you a person who like text message?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that text message feels natural and useful rather than just fashionable.
-
-### Q2. Do you reply to messages as soon as you receive them?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Did you send more messages when you were younger?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, text message was connected with some ordinary but memorable moments in my life.
-
-### Q4. Is sending messages popular in your country?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that text message feels natural and useful rather than just fashionable.
-
-### Q5. How often do you send your text message?
-
-Probably a few times a week, although it depends on how busy I am. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. That is why text message has become a fairly normal part of my routine.
-
-### Q6. In what circumstances is making a phone call better than sending a text message?
-
-For me, text message is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q7. Have you ever received a confusing text message?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of text message, and it made the topic feel more real to me.
-
-### Q8. Do you prefer sending or receiving messages?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q9. Do you like texting?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that text message feels natural and useful rather than just fashionable.
-
-## 161. In a hurry
-
-### Q1. Do you like to be in a hurry?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that in a hurry feels natural and useful rather than just fashionable.
-
-### Q2. Do you usually go out in a hurry?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. What kind of things would you never do in a hurry?
-
-I usually prefer a simple and practical kind. When it comes to in a hurry, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q4. What do you always do in a hurry? Why?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 162. Cooking
-
-### Q1. Who does the cooking in your family?
-
-Probably someone close to me, like a friend or a family member. I find it easier to talk about cooking with people I trust, because the conversation feels more relaxed and honest.
-
-### Q2. Is it difficult to cook Chinese food for you?
-
-It can be, depending on the situation. Personally, I do not find cooking too difficult to deal with, but it require a bit of patience and flexibility sometimes.
-
-### Q3. Who taught you how to cook?
-
-Probably someone close to me, like a friend or a family member. I find it easier to talk about cooking with people I trust, because the conversation feels more relaxed and honest.
-
-### Q4. Have you ever cooked?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of cooking, and it made the topic feel more real to me.
-
-### Q5. Do you want to learn how to cook?
-
-Yes, generally speaking. It can be relaxing when I have enough time, but stressful when I am in a hurry. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q6. Do you like cooking?
-
-Yes, I would say so. It can be relaxing when I have enough time, but stressful when I am in a hurry. For me, the most important thing is that cooking feels natural and useful rather than just fashionable.
-
-## 163. Drink water
-
-### Q1. How often do you drink water?
-
-Probably a few times a week, although it depends on how busy I am. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. That is why drink water has become a fairly normal part of my routine.
-
-### Q2. What kind of water do you like to drink?
-
-I usually prefer a simple and practical kind. When it comes to drink water, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q3. Do you drink bottled water or water from water machines?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 164. Holiday
-
-### Q1. What kinds of places do you like to go on holiday?
-
-I usually prefer a simple and practical kind. When it comes to holidays, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q2. Who would you like to go on holidays with?
-
-Probably someone close to me, like a friend or a family member. I find it easier to talk about holidays with people I trust, because the conversation feels more relaxed and honest.
-
-### Q3. Where do you plan to go for holidays in the future?
-
-Usually somewhere convenient and not too crowded. If it is related to holidays, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-## 165. Cities
-
-### Q1. Do you like the city you are living in now?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that cities feels natural and useful rather than just fashionable.
-
-### Q2. Which city have you been to recently?
-
-I would probably choose something simple and practical. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
-
-### Q3. Do you prefer the city or the countryside?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q4. What kind of cities do you like?
-
-I usually prefer a simple and practical kind. When it comes to cities, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q5. Which city do you want to go to?
-
-I would probably choose something simple and practical. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
-
-## 166. Movies
-
-### Q1. Do you watch movies?
-
-Yes, generally speaking. They are an easy way to relax and also learn about different people and cultures. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. How often do you watch movies?
-
-Probably a few times a week, although it depends on how busy I am. They are an easy way to relax and also learn about different people and cultures. That is why films has become a fairly normal part of my routine.
-
-### Q3. What kind of movies do you like?
-
-I usually prefer a simple and practical kind. When it comes to films, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q4. Do you prefer to go to a movie alone or with others?
-
-Yes, generally speaking. They are an easy way to relax and also learn about different people and cultures. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q5. Do you prefer to watch movies at home or in a cinema?
-
-Yes, generally speaking. They are an easy way to relax and also learn about different people and cultures. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 167. Sunglasses
-
-### Q1. Do you like to wear sunglasses?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that sunglasses feels natural and useful rather than just fashionable.
-
-### Q2. Where can you buy sunglasses?
-
-Usually somewhere convenient and not too crowded. If it is related to sunglasses, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-### Q3. Do people in your country wear sunglasses?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 168. Paintings
-
-### Q1. What do you know about paintings?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q2. Have you learned painting or drawing?
-
-For me, paintings is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. Is it important to hang pictures at home?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that paintings feels natural and useful rather than just fashionable.
-
-### Q4. What kind of paintings do you like?
-
-I usually prefer a simple and practical kind. When it comes to paintings, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q5. If someone draws a picture of you, will you agree?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine paintings still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-## 169. Watch
-- Tag: 事物
-
-### Q1. Do people still wear watches in your country?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. How often do you wear a watch?
-
-Probably a few times a week, although it depends on how busy I am. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. That is why watch has become a fairly normal part of my routine.
-
-### Q3. What kinds of watches do you like to wear?
-
-I usually prefer a simple and practical kind. When it comes to watch, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q4. What was your first watch like?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 170. Exciting activities
-- Tag: 事物
-
-### Q1. What exciting activities do you know?
-
-I would say the first thing that comes to mind is hiking or trying a new outdoor activity. It is not something extraordinary, but it suits my lifestyle quite well. They can be a little scary at first, but that is also what makes them memorable.
-
-### Q2. Have you ever tried any exciting activities?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of exciting activities, and it made the topic feel more real to me.
-
-### Q3. Have you ever experienced anything exciting?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of exciting activities, and it made the topic feel more real to me.
-
-### Q4. Has anything exciting happened to you recently?
-
-Yes, something fairly exciting happened recently. I tried a new activity with friends, and even though it was not a huge event, it broke my routine and gave me something fresh to talk about.
-
-## 171. Memory
-- Tag: 事物
-
-### Q1. Have you ever forgotten something that was important?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of memory, and it made the topic feel more real to me.
-
-### Q2. Are you good at memorizing things?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Why do more people rely on cellphones to memorize things?
-
-Mainly because memory feels useful or meaningful to me. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q4. Why do some people have good memory while others just don't?
-
-Mainly because memory feels useful or meaningful to me. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-## 172. TV program (疑似淘汰)
-- Tag: 事物
-
-### Q1. What kinds of TV program do you think should be broadcast more?
-
-I usually prefer a simple and practical kind. When it comes to TV programmes, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q2. What are the impacts of watching TV programs on children?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q3. Do you think kid are watching too much television?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q4. What kinds of TV programs do you often watch?
-
-I usually prefer a simple and practical kind. When it comes to TV programmes, I care more about whether they fit my real needs than whether they look impressive.
-
-## 173. Cinemas
-- Tag: 地点
-
-### Q1. Do you prefer watching movies at home or at the cinema?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. Do you still like watching the movie which you liked when you were a kid
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that cinemas feels natural and useful rather than just fashionable.
-
-### Q3. Do you usually go to the cinema with your friends
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q4. Did you usually go to the cinema when you were a kid
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, cinemas was connected with some ordinary but memorable moments in my life.
-
-## 174. Taking photos
-- Tag: 事件
+- Status: CURRENT
 
 ### Q1. Do you like taking photos?
 
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that photos feels natural and useful rather than just fashionable.
+Yes, I really enjoy taking photos, especially when I’m travelling. I like capturing candid moments of street scenes or local food, not just posed portraits. For instance, last weekend I snapped a shot of a baker making fresh naan in a clay oven—it felt more alive than any staged picture.
 
 ### Q2. Do you like taking selfies?
 
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that photos feels natural and useful rather than just fashionable.
+Yeah, I do enjoy taking selfies from time to time. I usually snap one when the lighting's good or I'm somewhere scenic, like a park or a rooftop. It's just a quick way to capture a mood without needing someone else to take the photo.
 
 ### Q3. Where do you like to go to take photos?
 
-Usually somewhere convenient and not too crowded. If it is related to photos, I prefer a place where I can feel comfortable and take my time rather than rush through it.
+I really enjoy going to local parks or gardens to take photos, especially when the flowers are in bloom. There’s a botanical garden near my home where I love capturing the bright colours and different textures of petals. It’s peaceful there, and the natural light is usually perfect for shots.
 
 ### Q4. What is your favourite family photo?
 
-My favourite would probably be something simple and practical. I like it because it feels natural to me, not forced. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
+My favourite family photo is one from my cousin’s wedding last year. We’re all crowded together on a wooden staircase, laughing because my little nephew tried to steal the bride’s bouquet. My grandma is holding her side, tears in her eyes from laughing. It captures that messy, joyful moment perfectly.
 
 ### Q5. Do you like taking selfies?
 
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that photos feels natural and useful rather than just fashionable.
+Yeah, I do enjoy taking selfies from time to time. Mostly when I'm out with friends at a nice café or somewhere scenic, I'll snap a quick one to remember the moment. I'm not obsessive about it, though—just a few shots to capture a good vibe.
 
 ### Q6. What is your favorite family photo?
 
-My favourite would probably be something simple and practical. I like it because it feels natural to me, not forced. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
+My favourite family photo is one taken at my grandmother’s 80th birthday. We’re all crowded around her cake, and my little cousin has icing smeared across his nose. It captures everyone laughing, including my usually serious uncle. That picture always makes me smile when I see it on our hallway wall.
 
 ### Q7. Do you want to improve your picture taking skills?
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Yes, I’d definitely like to get better at taking photos. I mostly use my phone, but I struggle with lighting and composition, especially when I try to capture sunsets. I’d love to learn how to adjust settings properly rather than just relying on auto mode.
 
-## 175. Travel (space travel)
-
-### Q1. What would you do if you had that opportunity?
-
-I would say the first thing that comes to mind is short trips with friends. It is not something extraordinary, but it suits my lifestyle quite well. It gives me a chance to see different places and get out of my normal routine.
-
-### Q2. Do you want to travel in the outer space?
-
-Yes, generally speaking. It gives me a chance to see different places and get out of my normal routine. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Do you think it's necessary to see other planets?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine travelling still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q4. Do you like to travel by air?
-
-Yes, I would say so. It gives me a chance to see different places and get out of my normal routine. For me, the most important thing is that travelling feels natural and useful rather than just fashionable.
-
-### Q5. When was the last time you went travelling?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, travelling feels less like a task and more like a way to relax.
-
-## 176. Dictionary
-
-### Q1. How will dictionaries change in the future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine dictionary still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q2. What kinds of dictionaries have you used before?
-
-I usually prefer a simple and practical kind. When it comes to dictionary, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q3. Do you like paper dictionary or electronic dictionary?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that dictionary feels natural and useful rather than just fashionable.
-
-### Q4. How often do you use your dictionary?
-
-Probably a few times a week, although it depends on how busy I am. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. That is why dictionary has become a fairly normal part of my routine.
-
-## 177. Bus
-
-### Q1. How often do you take the bus
-
-Probably a few times a week, although it depends on how busy I am. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. That is why bus has become a fairly normal part of my routine.
-
-### Q2. When was the first time you took a bus?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, bus feels less like a task and more like a way to relax.
-
-### Q3. Is it convenient to take the bus in your city
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q4. Do people in your country take the bus?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 178. Cooperation（Spending time with others）（疑似淘汰）
-- Tag: 事件
-
-### Q1. Do you remember a time when you need to cooperate with others?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Would you prefer to study alone or with others?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine this topic still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q3. How do you like spending time with your friends?
-
-For me, this topic is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q4. Do you like talking with people?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that this topic feels natural and useful rather than just fashionable.
-
-### Q5. Do you remember a time when you needed to cooperate with others?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q6. Do you prefer to study alone or with others?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 179. New place
-
-### Q1. Could you read a map if you traveled to a new place?
-
-For me, new place is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q2. Do you feel nervous when you travel to new places?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 180. Getting lost（疑似淘汰）
-- Tag: 事件
-
-### Q1. Can you read a map when you get lost?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. How can you find your way when you are lost?
-
-For me, getting lost is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. Have you ever lost your way?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of getting lost, and it made the topic feel more real to me.
-
-### Q4. Have you ever helped someone who got lost?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of getting lost, and it made the topic feel more real to me.
-
-### Q5. Could you read a map if you got lost?
-
-For me, getting lost is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q6. How do you find your way when you are lost?
-
-For me, getting lost is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q7. Have you ever been lost?（Have you ever lost your way）
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of getting lost, and it made the topic feel more real to me.
-
-## 181. Clothes
-
-### Q1. Do you wear the same style of cloth on weekday and weekend?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. What kind of clothes do you never wear?
-
-I usually prefer a simple and practical kind. When it comes to clothes, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q3. What kind of clothes do you usually wear?
-
-I usually prefer a simple and practical kind. When it comes to clothes, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q4. What’s your favourite color of clothes?
-
-My favourite would probably be something simple and practical. I like it because it feels natural to me, not forced. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-## 182. Weekends
+## 52. Shoes
 - Tag: 事物
-
-### Q1. Do you do the same thing every weekend?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. Has your weekend routine changed?
-
-For me, weekends is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. Do you like weekends?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that weekends feels natural and useful rather than just fashionable.
-
-### Q4. What do you usually do on weekends?Do you study or work?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q5. What did you do last weekend?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q6. Do you make plans for your weekend?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine weekends still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q7. What do other people in your hometown usually do on weekends?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q8. What will you do next weekend?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q9. What do you usually do on weekends?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-## 183. Concentration
-
-### Q1. Is it difficult for you to stay focused on something?
-
-It can be, depending on the situation. Personally, I do not find concentration too difficult to deal with, but it require a bit of patience and flexibility sometimes.
-
-### Q2. What do you do to help you concentrate?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q3. What can distract you when you’re trying to stay focused?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q4. When do you need to be focused?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, concentration feels less like a task and more like a way to relax.
-
-## 184. Countryside
-
-### Q1. Do you enjoy living in the countryside?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that countryside feels natural and useful rather than just fashionable.
-
-### Q2. What do you usually do in the countryside?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q3. Have you ever lived in the countryside?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of countryside, and it made the topic feel more real to me.
-
-### Q4. Will you live in the countryside in the future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine countryside still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-## 185. Pets and animals（疑似淘汰）
-- Tag: 事物
-
-### Q1. Have you ever had a pet when you are young?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of animals, and it made the topic feel more real to me.
-
-### Q2. What's your favorite animals?Why?
-
-My favourite would probably be dogs. I like it because it feels natural to me, not forced. They make people feel calmer, and they are often easier to connect with than expected.
-
-### Q3. Do you like to see animals in the zoo?
-
-Yes, I would say so. They make people feel calmer, and they are often easier to connect with than expected. For me, the most important thing is that animals feels natural and useful rather than just fashionable.
-
-### Q4. Are there many people keeping pets in China?
-
-Yes, generally speaking. They make people feel calmer, and they are often easier to connect with than expected. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q5. What pet will you keep if you want?
-
-I would say the first thing that comes to mind is dogs. It is not something extraordinary, but it suits my lifestyle quite well. They make people feel calmer, and they are often easier to connect with than expected.
-
-### Q6. Where do you prefer to keep your pet, indoors or outdoors?
-
-Usually somewhere convenient and not too crowded. If it is related to animals, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-### Q7. What is the most popular animal in China?
-
-I would say the first thing that comes to mind is dogs. It is not something extraordinary, but it suits my lifestyle quite well. They make people feel calmer, and they are often easier to connect with than expected.
-
-### Q8. What's your favorite animal?Why?
-
-My favourite would probably be dogs. I like it because it feels natural to me, not forced. They make people feel calmer, and they are often easier to connect with than expected.
-
-### Q9. What pet would you like to have?
-
-I would say the first thing that comes to mind is dogs. It is not something extraordinary, but it suits my lifestyle quite well. They make people feel calmer, and they are often easier to connect with than expected.
-
-### Q10. Did you have a pet when you were younger?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, animals was connected with some ordinary but memorable moments in my life.
-
-### Q11. Do many people keep pets in China?
-
-Yes, generally speaking. They make people feel calmer, and they are often easier to connect with than expected. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 186. Shoes
-- Tag: 事物
-
-### Q1. Will you spend a lot of money on shoes?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine shoes still being relevant to me in the future, especially if my lifestyle becomes busier.
+- Status: CURRENT
 
 ### Q2. Do you like buying shoes? How often?
 
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that shoes feels natural and useful rather than just fashionable.
-
-### Q3. Which do you prefer, fashionable shoes or comfortable shoes?
-
-I would probably choose something simple and practical. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
+Oh, I do enjoy buying shoes, but I'm not obsessed with it. I'd say I buy a new pair maybe every three or four months, usually when my old trainers start wearing thin at the heel or a pair of boots finally gives up. I'm quite practical about it.
 
 ### Q4. Which do you prefer, expensive shoes or comfortable shoes?
 
-I would probably choose something simple and practical. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
+Oh, comfortable shoes, without a doubt. I walk a lot—probably five kilometres a day just getting to and from the tube station—so a pair of soft, well-cushioned trainers is a lifesaver. Expensive ones often hurt my feet anyway, so comfort wins every time for me.
 
 ### Q5. How much money do you usually spend on shoes?
 
-For me, shoes is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q6. Do you spend a lot of money on shoes?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q7. How often do you buy shoes?
-
-Probably a few times a week, although it depends on how busy I am. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. That is why shoes has become a fairly normal part of my routine.
+Honestly, not that much. I usually spend around forty to fifty pounds on a pair of trainers or boots. I'd rather have two decent pairs that last a couple of years than splash out on one designer label, so I look for sales or good quality high-street brands.
 
 ### Q8. Have you ever bought shoes online?
 
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of shoes, and it made the topic feel more real to me.
+Yes, I have. I ordered a pair of running shoes from an online sports store last year. I chose them because the price was much lower than in physical shops, and I checked the size guide carefully. They fit perfectly, so it was a good experience overall.
 
-### Q9. Do you know anyone who likes to buy a lot of shoes?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that shoes feels natural and useful rather than just fashionable.
-
-### Q10. What are your favorite type of shoes?
-
-My favourite would probably be something simple and practical. I like it because it feels natural to me, not forced. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-## 187. Colors
+## 53. Plants
 - Tag: 事物
-
-### Q1. What's your favorite color?
-
-My favourite would probably be something simple and practical. I like it because it feels natural to me, not forced. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q2. What's the color you dislike? Why?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q3. What colors do your friends like most?
-
-My favourite would probably be something simple and practical. I like it because it feels natural to me, not forced. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q4. What color makes you uncomfortable in your room?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q5. Have you ever bought something because of its color?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of colours, and it made the topic feel more real to me.
-
-### Q6. Do you like dark colors?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that colours feels natural and useful rather than just fashionable.
-
-### Q7. Are there any colors you dislike?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that colours feels natural and useful rather than just fashionable.
-
-### Q8. Do you usually wear clothes in your favourite colour?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 188. Plants
-- Tag: 事物
+- Status: CURRENT
 
 ### Q1. Do you know anything about growing plants?
 
-Yes, I probably would. I do not have a very fixed plan, but I can imagine plants still being relevant to me in the future, especially if my lifestyle becomes busier.
+To be honest, I know the basics—like you need good soil, sunlight, and regular watering. I’ve tried growing mint and basil on my kitchen windowsill before, and they did pretty well. But I wouldn’t call myself an expert; I just follow the instructions on the seed packet.
 
 ### Q2. Do Chinese people send plants as gifts?
 
-Yes, I probably would. I do not have a very fixed plan, but I can imagine plants still being relevant to me in the future, especially if my lifestyle becomes busier.
+Yes, absolutely. Sending plants as gifts is quite common in China, especially during housewarmings or the Lunar New Year. People often give lucky bamboo or money trees, as they symbolise good fortune. I remember my aunt received a beautiful orchid for her birthday last year, and she was genuinely delighted.
 
 ### Q3. Did you grow any plants when you were young?
 
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, plants was connected with some ordinary but memorable moments in my life.
+Yeah, I did. I remember helping my grandmother plant tomatoes and mint in her backyard. It was mostly just watering them and pulling out weeds, but I loved watching the tomatoes turn red. That little patch felt like my own tiny garden.
 
 ### Q4. Do you keep plants at home?
 
-Yes, I probably would. I do not have a very fixed plan, but I can imagine plants still being relevant to me in the future, especially if my lifestyle becomes busier.
+Yes, I do. I have a small peace lily on my kitchen windowsill and a couple of succulents on my desk. The lily needs watering about once a week, and I like how it brightens up the corner. Honestly, it’s low-maintenance, so it works for me.
 
-## 189. Celebrity
-
-### Q1. Would you want to be a celebrity in the future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine celebrity still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q2. Do you think, to be famous, a person needs to have some special talent (or ability)?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. What kinds of people become famous?
-
-I usually prefer a simple and practical kind. When it comes to celebrity, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q4. In general, how do people become famous?
-
-For me, celebrity is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q5. Who is your favorite celebrity in China?
-
-Probably someone close to me, like a friend or a family member. I find it easier to talk about celebrity with people I trust, because the conversation feels more relaxed and honest.
-
-## 190. App
-- Tag: 事物
-
-### Q1. What apps have you recently used?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q2. What kinds of apps are you usually interested in?
-
-I usually prefer a simple and practical kind. When it comes to mobile apps, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q3. How do you find out about different apps?
-
-For me, mobile apps is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q4. What kinds of apps would you like to use in future?
-
-I usually prefer a simple and practical kind. When it comes to mobile apps, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q5. What's the most popular app in your country?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q6. What kinds of apps are you generally interested in?
-
-I usually prefer a simple and practical kind. When it comes to mobile apps, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q7. Which apps have you used recently?
-
-I would probably choose something simple and practical. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
-
-### Q8. Do old people in your country like to use apps?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that mobile apps feels natural and useful rather than just fashionable.
-
-### Q9. What was the first app you used?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q10. What’s the most popular app in your country?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q11. What kinds of apps would you like to see in the future?
-
-I usually prefer a simple and practical kind. When it comes to mobile apps, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q12. What kinds of apps do you often use?
-
-I usually prefer a simple and practical kind. When it comes to mobile apps, I care more about whether they fit my real needs than whether they look impressive.
-
-## 191. Handwriting（疑似淘汰）
-- Tag: 事物
-
-### Q1. What's the differences between handwriting and typing?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. Which do you prefer, handwriting or typing?
-
-I would probably choose something simple and practical. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
-
-### Q3. Do you think handwriting is important?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that handwriting feels natural and useful rather than just fashionable.
-
-### Q4. What are the differences between handwriting and typing?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q5. Do you like handwriting?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that handwriting feels natural and useful rather than just fashionable.
-
-### Q6. How can children today improve (or practice) their handwriting?
-
-For me, handwriting is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q7. What impression does a person’s handwriting have on other people?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q8. Do you think handwriting is very important nowadays?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that handwriting feels natural and useful rather than just fashionable.
-
-### Q9. How did you learn to write?
-
-For me, handwriting is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q10. When do children begin to write in your country?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, handwriting feels less like a task and more like a way to relax.
-
-### Q11. Do you think computers might one day replace handwriting?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q12. How do most people write nowadays?
-
-For me, handwriting is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q13. Do you usually write by hand or by using a computer / typewriter / word-processor?（Which do you prefer, handwriting or typing?）
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 192. Sky and stars（可能淘汰）
-
-### Q1. Do you want to live on another planet?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine sky and stars still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q2. Do you like to see the stars at night?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that sky and stars feels natural and useful rather than just fashionable.
-
-### Q3. Is there a good place to look at the sky where you live?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q4. Do you prefer the sky in the morning or the sky at night?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q5. Can you see the moon and stars at night where you live?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q6. Do you like to look at the sky? Why?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that sky and stars feels natural and useful rather than just fashionable.
-
-## 193. Festival（可能淘汰）
-
-### Q1. What is your favorite festival?
-
-My favourite would probably be something simple and practical. I like it because it feels natural to me, not forced. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. How do you celebrate Spring Festival?
-
-For me, festival is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. What special food and activities do you have for these festivals?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q4. How do you celebrate festivals in your country?
-
-For me, festival is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-## 194. Holidays
+## 54. Spare time
 - Tag: 事件
-
-### Q1. Would you prefer an exciting holiday or a peaceful holiday?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine holidays still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q2. Do you prefer a leisurely or a busy holiday?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q3. Do you like to spend your day at home?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that holidays feels natural and useful rather than just fashionable.
-
-### Q4. What do you do on your holidays?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q5. Which public holiday do you like best?
-
-I would probably choose something simple and practical. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
-
-### Q6. Do you like holidays? Why?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that holidays feels natural and useful rather than just fashionable.
-
-### Q7. Where did you go on your last holiday?
-
-Usually somewhere convenient and not too crowded. If it is related to holidays, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-## 195. Wild animals（可能淘汰）
-
-### Q1. In which country do you think you can see many wild animals?
-
-For me, animals is quite familiar and easy to relate to. They make people feel calmer, and they are often easier to connect with than expected. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q2. Where can you see wild animals?
-
-Usually somewhere convenient and not too crowded. If it is related to animals, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-### Q3. Did you learn something about wild animals at school?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, animals was connected with some ordinary but memorable moments in my life.
-
-### Q4. Do you like to watch TV programs about wild animals?
-
-Yes, I would say so. They make people feel calmer, and they are often easier to connect with than expected. For me, the most important thing is that animals feels natural and useful rather than just fashionable.
-
-## 196. Wallet/purse（可能淘汰）
-
-### Q1. Do most of your friends use a wallet?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Have you ever sent a wallet to someone as a gift?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of wallet purse, and it made the topic feel more real to me.
-
-### Q3. Have you ever lost your wallet?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of wallet purse, and it made the topic feel more real to me.
-
-### Q4. Do you use a wallet?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 197. Primary school（可能淘汰）
-
-### Q1. What did you do in your leisure time in your primary school?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. How did you like your primary school?
-
-For me, school life is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. How did you travel to your primary school?
-
-For me, school life is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q4. What did you like to do the most when you were in primary school?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 198. Car trip（可能淘汰）
-
-### Q1. Do you like to sit in the front or back when travelling by car?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that car trip feels natural and useful rather than just fashionable.
-
-### Q2. Where is the furthest place you have travelled to by car?
-
-Usually somewhere convenient and not too crowded. If it is related to car trip, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-### Q3. When do you travel by car?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, car trip feels less like a task and more like a way to relax.
-
-### Q4. Do you like traveling by car?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that car trip feels natural and useful rather than just fashionable.
-
-## 199. Environmental protection（可能淘汰）
-
-### Q1. Is there any education about environmental protection at school?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Do you think you’ve done enough to protect the environment?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. How can we protect the environment?
-
-For me, environmental protection is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q4. Would you like to work for a company related to environmental protection?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine environmental protection still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-## 200. Relax
-- Tag: 事件
-
-### Q1. Do you think students need more relaxion time?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Do you think a vacation is a good time for you to relax?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Do you think doing sports is a good way to relax?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. What would you do to relax?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 201. Advertisement（可能淘汰）
-
-### Q1. Do you watch advertisements from the beginning to the end?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Have you ever bought something because of its advertisement?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of advertisement, and it made the topic feel more real to me.
-
-### Q3. Where can you see advertisements?
-
-Usually somewhere convenient and not too crowded. If it is related to advertisement, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-### Q4. What kinds of advertisements do you watch?
-
-I usually prefer a simple and practical kind. When it comes to advertisement, I care more about whether it fit my real needs than whether it look impressive.
-
-## 202. Flowers
-- Tag: 事物
-
-### Q1. Do people in your country often send flowers to others?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. Do you take photos of flowers in your daily life?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q3. Are there a lot of flowers where you live?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q4. Do you know anyone who loves flowers?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q5. Do you love flowers?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q6. Have you sent flowers to other people?
-
-For me, flowers is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q7. Have you planted any flowers?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine flowers still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q8. Are there any flowers that have special meanings in China?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q9. What kind of flowers do you know?
-
-I usually prefer a simple and practical kind. When it comes to flowers, I care more about whether they fit my real needs than whether they look impressive.
-
-## 203. Barbecue
-
-### Q1. Would you like to have a barbecue with your family or your friends?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine barbecue still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q2. Did you have barbecues when you were a child?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, barbecue was connected with some ordinary but memorable moments in my life.
-
-### Q3. What kind of food do you like to eat for a barbecue?
-
-I usually prefer a simple and practical kind. When it comes to barbecue, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q4. Do Chinese people like barbecues?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that barbecue feels natural and useful rather than just fashionable.
-
-## 204. Special costumes（可能淘汰）
-
-### Q1. Do you ever buy special costumes?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. When was your last time you wore a special costume?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, special costumes feels less like a task and more like a way to relax.
-
-### Q3. Did you try any special costumes when you were young?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, special costumes was connected with some ordinary but memorable moments in my life.
-
-### Q4. Do you like to wear special costumes?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that special costumes feels natural and useful rather than just fashionable.
-
-## 205. Name
-
-### Q1. Do you often forget people's names?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. How do you feel when people can't remember your name?
-
-For me, name is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. How do you remember people's names?
-
-For me, name is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q4. Is it easy for you to remember people's names?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 206. Window view（可能淘汰）
-
-### Q1. (4)How do you feel when you can't see any beautiful views from your window?
-
-For me, window view is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q2. Do you want to live in a house with beautiful window views?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Do you like to watch the scenery from your window?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that window view feels natural and useful rather than just fashionable.
-
-### Q4. What scenery can you see from the window of your home/dormitory?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 207. Home country（可能淘汰）
-
-### Q1. Will you stay in China in the future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine my home still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q2. Do you know the history of your country well?
-
-Yes, generally speaking. It is not very large, but it is comfortable enough for relaxing and concentrating. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. What makes you feel proud of your country?
-
-I would say the first thing that comes to mind is my bedroom. It is not something extraordinary, but it suits my lifestyle quite well. It is not very large, but it is comfortable enough for relaxing and concentrating.
-
-### Q4. Which part of your country do you want to live in?
-
-I would probably choose my bedroom. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
-
-## 208. Taking a rest（可能淘汰）
-
-### Q1. How do you feel after taking a nap?
-
-For me, taking a rest is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q2. Do you take a nap when you are taking your rest?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. What do you usually do when you are resting?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q4. How often do you take a rest?
-
-Probably a few times a week, although it depends on how busy I am. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. That is why taking a rest has become a fairly normal part of my routine.
-
-## 209. TV program（可能淘汰）
-
-### Q1. Do you talk with your friends about the programs you’ve watched?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. Do you like watching the same kind of programs all the time?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that TV programmes feels natural and useful rather than just fashionable.
-
-### Q3. What kind of TV programs do you like?
-
-I usually prefer a simple and practical kind. When it comes to TV programmes, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q4. Do you prefer to watch programs on the TV or on your cellphone?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 210. Decoration（可能淘汰）
-
-### Q1. What's your favorite color when decorating your home?
-
-My favourite would probably be something simple and practical. I like it because it feels natural to me, not forced. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. Do Chinese people like redecorating their homes?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that decoration feels natural and useful rather than just fashionable.
-
-### Q3. What kind of decorations do you prefer?
-
-I usually prefer a simple and practical kind. When it comes to decoration, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q4. What's the decoration like in your home?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 211. Maths（可能淘汰）
-
-### Q1. Do you learn maths now? Why/why not?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. What can people do with maths in their daily life?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q3. Do you think maths is difficult?
-
-It can be, depending on the situation. Personally, I do not find maths too difficult to deal with, but they require a bit of patience and flexibility sometimes.
-
-### Q4. Do students learn maths in secondary schools in China?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 212. Tree（可能淘汰）
-
-### Q1. Do you like planting trees? Why?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine tree still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q2. What kinds of trees do you plant?
-
-I usually prefer a simple and practical kind. When it comes to tree, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q3. Have you ever planted a tree?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of tree, and it made the topic feel more real to me.
-
-### Q4. What kind of trees do people usually plant in your country? How about your hometown?
-
-I usually prefer a simple and practical kind. When it comes to tree, I care more about whether it fit my real needs than whether it look impressive.
-
-## 213. Reading（可能淘汰）
-
-### Q1. Do you like to read by yourself or with other people?
-
-Yes, I would say so. It gives me a break from screens and lets me slow down a little. For me, the most important thing is that reading feels natural and useful rather than just fashionable.
-
-### Q2. In what places do you think it is difficult to read?
-
-For me, reading is quite familiar and easy to relate to. It gives me a break from screens and lets me slow down a little. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. Do you like to read at home or in other places?
-
-Yes, I would say so. It gives me a break from screens and lets me slow down a little. For me, the most important thing is that reading feels natural and useful rather than just fashionable.
-
-### Q4. Do you read electronic books?
-
-Yes, generally speaking. It gives me a break from screens and lets me slow down a little. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q5. Do you like reading?
-
-Yes, I would say so. It gives me a break from screens and lets me slow down a little. For me, the most important thing is that reading feels natural and useful rather than just fashionable.
-
-### Q6. What kind of books do you read?
-
-I usually prefer a simple and practical kind. When it comes to reading, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q7. Do you read books related to your profession?
-
-Yes, generally speaking. It gives me a break from screens and lets me slow down a little. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 214. Sports
-
-### Q1. Are you a fan of any sport teams? Why?
-
-Yes, generally speaking. It helps me stay active, and it is also a good way to release stress. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Do you watch sport matches? Why?
-
-Yes, generally speaking. It helps me stay active, and it is also a good way to release stress. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. What’s your favourite sport? Why?
-
-My favourite would probably be badminton. I like it because it feels natural to me, not forced. It helps me stay active, and it is also a good way to release stress.
-
-### Q4. What sports did you do when you were a kid?
-
-I would say the first thing that comes to mind is badminton. It is not something extraordinary, but it suits my lifestyle quite well. It helps me stay active, and it is also a good way to release stress.
-
-### Q5. What kinds of sports would you like to try in the future?
-
-I usually prefer a simple and practical kind. When it comes to sport, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q6. Do you like to watch sports on TV?
-
-Yes, I would say so. It helps me stay active, and it is also a good way to release stress. For me, the most important thing is that sport feels natural and useful rather than just fashionable.
-
-### Q7. Do you have a favorite sports star?
-
-Yes, generally speaking. It helps me stay active, and it is also a good way to release stress. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q8. Do you play any sports?
-
-Yes, generally speaking. It helps me stay active, and it is also a good way to release stress. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q9. What kinds of sports are popular in China?
-
-I usually prefer a simple and practical kind. When it comes to sport, I care more about whether it fit my real needs than whether it look impressive.
-
-## 215. Emails
-- Tag: 事物
-
-### Q1. Do you write many emails?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. How often do you write an email?
-
-Probably a few times a week, although it depends on how busy I am. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. That is why emails has become a fairly normal part of my routine.
-
-### Q3. What are the differences between emails and letters?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q4. What kind(s) of email do you think is (are) the hardest to write?
-
-I usually prefer a simple and practical kind. When it comes to emails, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q5. How do you feel when you receive emails?
-
-For me, emails is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q6. What kinds of emails do you receive that make you feel excited?
-
-I usually prefer a simple and practical kind. When it comes to emails, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q7. How do you communicate with others at work by email or is it more convenient?
-
-For me, emails is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-## 216. Punctuality
-
-### Q1. Do you think people these days are as punctual as they were in the past?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, punctuality was connected with some ordinary but memorable moments in my life.
-
-### Q2. How do you remind yourself to be on time?
-
-For me, punctuality is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. What will you do if you are waiting for someone?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q4. Why are some people always late?
-
-Mainly because punctuality feels useful or meaningful to me. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q5. Do you think it is important to be punctual?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that punctuality feels natural and useful rather than just fashionable.
-
-## 217. Letters
-
-### Q1. How do you feel when you receive a letter?
-
-For me, letters is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q2. Who do you usually write to?
-
-Probably someone close to me, like a friend or a family member. I find it easier to talk about letters with people I trust, because the conversation feels more relaxed and honest.
-
-### Q3. Do you think people will still write letters in the future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine letters still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q4. Is it hard to think of what to write?
-
-It can be, depending on the situation. Personally, I do not find letters too difficult to deal with, but they require a bit of patience and flexibility sometimes.
-
-### Q5. What do you usually write about?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q6. Do you write many letters?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q7. Do you prefer to write letters by hand or to use a computer?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 218. Study time
-
-### Q1. What's the best time for you to study?
-
-I would say the first thing that comes to mind is English-related subjects. It is not something extraordinary, but it suits my lifestyle quite well. They help me build practical skills, especially when I need to organise my ideas clearly.
-
-### Q2. What time do you like to study?
-
-I would say the first thing that comes to mind is English-related subjects. It is not something extraordinary, but it suits my lifestyle quite well. They help me build practical skills, especially when I need to organise my ideas clearly.
-
-### Q3. Who do you usually study with?
-
-Probably someone close to me, like a friend or a family member. I find it easier to talk about my studies with people I trust, because the conversation feels more relaxed and honest.
-
-### Q4. Do you like to study alone or with your friends?
-
-Yes, I would say so. They help me build practical skills, especially when I need to organise my ideas clearly. For me, the most important thing is that my studies feels natural and useful rather than just fashionable.
-
-## 219. Outdoor activities
-
-### Q1. How often do you do outdoor activities?
-
-Probably a few times a week, although it depends on how busy I am. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. That is why outdoor activities has become a fairly normal part of my routine.
-
-### Q2. How much time do you spend outdoors every week?
-
-For me, outdoor activities is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. What outdoor sports do you like? (why?)
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q4. How often do you do that?
-
-Probably a few times a week, although it depends on how busy I am. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. That is why outdoor activities has become a fairly normal part of my routine.
-
-### Q5. What outdoor activities do you like to do most?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q6. Do you like outdoor activities?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that outdoor activities feels natural and useful rather than just fashionable.
-
-### Q7. What do you do in your spare time?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-## 220. Internet
-
-### Q1. Do you use the internet (very much)?
-
-Yes, generally speaking. It saves me a lot of time, although I try not to rely on it for absolutely everything. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. When was the first time you used the internet?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, the internet feels less like a task and more like a way to relax.
-
-### Q3. Is the internet very important (or useful)to you?
-
-Yes, I would say so. It saves me a lot of time, although I try not to rely on it for absolutely everything. For me, the most important thing is that the internet feels natural and useful rather than just fashionable.
-
-### Q4. Do you think you could live without the internet?
-
-Life would be much less convenient without the internet. I would probably spend more time asking people for information or doing things offline, which might be healthier in some ways but definitely slower.
-
-## 221. Map
-
-### Q1. Do you prefer electronic map or paper maps?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Do you ever ask people for directions instead of using a map?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Who taught you how to use a map?
-
-Probably someone close to me, like a friend or a family member. I find it easier to talk about map with people I trust, because the conversation feels more relaxed and honest.
-
-### Q4. Do you often use maps?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 222. Animal
-
-### Q1. What is the most popular animal in China?
-
-I would say the first thing that comes to mind is dogs. It is not something extraordinary, but it suits my lifestyle quite well. They make people feel calmer, and they are often easier to connect with than expected.
-
-### Q2. Do you like to see animals in the zoo?
-
-Yes, I would say so. They make people feel calmer, and they are often easier to connect with than expected. For me, the most important thing is that animals feels natural and useful rather than just fashionable.
-
-### Q3. Have you ever had a pet before?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of animals, and it made the topic feel more real to me.
-
-### Q4. What kinds of animals do you like?
-
-I usually prefer a simple and practical kind. When it comes to animals, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q5. Why do some people keep pets at home?
-
-Mainly because animals feels useful or meaningful to me. They make people feel calmer, and they are often easier to connect with than expected. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-## 223. Magazine
-
-### Q1. Do you read magazines?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Do younger people or older people prefer to read magazines?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Have you ever read online magazines?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of magazine, and it made the topic feel more real to me.
-
-### Q4. Did you read magazines when you were young?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, magazine was connected with some ordinary but memorable moments in my life.
-
-### Q5. What kinds of magazine are popular in your country?
-
-I usually prefer a simple and practical kind. When it comes to magazine, I care more about whether it fit my real needs than whether it look impressive.
-
-## 224. Save money
-
-### Q1. Do you think parents should teach children to save money?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Have you ever given money to other children?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of save money, and it made the topic feel more real to me.
-
-### Q3. Do parents give children pocket money in China?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Did you save money when you were young?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, save money was connected with some ordinary but memorable moments in my life.
-
-## 225. Physical exercise
-
-### Q1. What kinds of exercises are popular in your country?
-
-I usually prefer a simple and practical kind. When it comes to physical exercise, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q2. Do you like extreme sports?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that physical exercise feels natural and useful rather than just fashionable.
-
-### Q3. What was your favorite sport when you were young?
-
-My favourite would probably be something simple and practical. I like it because it feels natural to me, not forced. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q4. Do you think children should play sports regularly?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q5. What kinds of exercises do you do?
-
-I usually prefer a simple and practical kind. When it comes to physical exercise, I care more about whether it fit my real needs than whether it look impressive.
-
-## 226. Foreign food
-
-### Q1. What kinds of new food have you tried recently?
-
-I usually prefer a simple and practical kind. When it comes to food, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q2. Do you like any food from the countries near China?
-
-Yes, I would say so. It is closely connected with comfort, culture, and daily routine. For me, the most important thing is that food feels natural and useful rather than just fashionable.
-
-### Q3. What kinds of foreign food are popular in your country?
-
-I usually prefer a simple and practical kind. When it comes to food, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q4. Have you ever tried foreign food?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of food, and it made the topic feel more real to me.
-
-### Q5. Do you like to try new food?
-
-Yes, I would say so. It is closely connected with comfort, culture, and daily routine. For me, the most important thing is that food feels natural and useful rather than just fashionable.
-
-## 227. Neighbour
-
-### Q1. Do you know your neighbours?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Do you like your neighbours?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that neighbour feels natural and useful rather than just fashionable.
-
-### Q3. What do you think of your neighbours?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q4. How often do you see (or talk to) your neighbours?
-
-Probably a few times a week, although it depends on how busy I am. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. That is why neighbour has become a fairly normal part of my routine.
-
-### Q5. When do you meet your neighbours?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, neighbour feels less like a task and more like a way to relax.
-
-## 228. Being bored
-
-### Q1. Do you think young people are more likely to get bored?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that being bored feels natural and useful rather than just fashionable.
-
-### Q2. When you were young, what would you do if you felt bored?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, being bored feels less like a task and more like a way to relax.
-
-### Q3. What will you do when you feel bored?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q4. What kinds of things are boring to you?
-
-I usually prefer a simple and practical kind. When it comes to being bored, I care more about whether it fit my real needs than whether it look impressive.
-
-## 229. Meal/Eat out
-
-### Q1. What is your favorite restaurant?
-
-My favourite would probably be something simple and practical. I like it because it feels natural to me, not forced. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. Do you like to eat at home or outside?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that meal eat out feels natural and useful rather than just fashionable.
-
-### Q3. Do you often eat out?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Who do you often have meals with?
-
-Probably someone close to me, like a friend or a family member. I find it easier to talk about meal eat out with people I trust, because the conversation feels more relaxed and honest.
-
-### Q5. When do you have meals?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, meal eat out feels less like a task and more like a way to relax.
-
-## 230. Pop star
-
-### Q1. Who is your favorite pop star?
-
-Probably someone close to me, like a friend or a family member. I find it easier to talk about pop star with people I trust, because the conversation feels more relaxed and honest.
-
-### Q2. Do you want to be a pop star?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Do you like to go to concerts?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that pop star feels natural and useful rather than just fashionable.
-
-### Q4. Do you prefer live music or recorded music?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 231. Spare time
-- Tag: 事件
+- Status: CURRENT
 
 ### Q1. Would you like to have more free time in the future?
 
-Yes, I probably would. I do not have a very fixed plan, but I can imagine spare time still being relevant to me in the future, especially if my lifestyle becomes busier.
+Honestly, I think I'd love a bit more free time, especially to spend on hobbies like sketching or going for long walks in the park. Right now, work keeps me quite busy, so having an extra hour or two each day would really help me relax and recharge.
 
 ### Q2. Which day do you have more free time on, Saturday or Sunday?
 
-I would probably choose something simple and practical. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
+I’d say Saturday, because I usually finish all my chores early. Then I can spend the afternoon reading a novel or going for a long bike ride along the canal. Sunday tends to be more about winding down and preparing for the week ahead, so it feels shorter.
 
 ### Q3. Do you often have free time?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Honestly, not as much as I'd like. I work full-time, so most of my free time is limited to evenings and weekends. Even then, there's usually housework or errands to catch up on. I do try to carve out at least an hour each evening just to relax, though.
 
 ### Q4. What do you and your family like to do in spare time?
 
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
+We really enjoy cooking together on weekends. My mum makes a mean biryani, and I help with chopping vegetables or setting the table. It’s a nice way to catch up and share a laugh while we’re at it.
 
 ### Q5. Do you think you will spend more time with your family?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Yeah, I think I will, especially as I get older. Right now, I’m quite busy with work, but I’ve already started setting aside Sunday afternoons to sit down for a proper lunch with my parents. It’s a small thing, but it feels good to make that time.
 
 ### Q6. Do you like to spend time with your family?
 
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that spare time feels natural and useful rather than just fashionable.
+Oh, absolutely. I really enjoy spending time with my family, especially on weekends when we all sit down for a big Sunday roast together. It’s a nice chance to catch up properly, and my mum always makes her famous apple crumble for dessert.
 
 ### Q7. What do you usually do when you are free?
 
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
+When I’m free, I usually head to a local park near my flat for a long walk or a light jog. There’s a small lake with ducks, so I often bring some bread and just unwind there for an hour. It helps me clear my head after a busy week.
 
-## 232. Park
-
-### Q1. Why do people who live in cities like public gardens?
-
-Mainly because parks feels useful or meaningful to me. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q2. What do you think are the benefits of having gardens in the city?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q3. Do you think there are enough public gardens in your hometown?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q4. Are there many public gardens in China?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q5. Are public gardens very important in China?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that parks feels natural and useful rather than just fashionable.
-
-## 233. Punctuality
-
-### Q1. How do you remind yourself to be on time?
-
-For me, punctuality is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q2. Why are some people always late?
-
-Mainly because punctuality feels useful or meaningful to me. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q3. Do you think it is important to be punctual?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that punctuality feels natural and useful rather than just fashionable.
-
-### Q4. What will you do if you are waiting for someone?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q5. Do you think people these days are as punctual as they were in the past?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, punctuality was connected with some ordinary but memorable moments in my life.
-
-## 234. Boat
-
-### Q1. Have you ever travelled by boat
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of boat, and it made the topic feel more real to me.
-
-### Q2. Do you like boats?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that boat feels natural and useful rather than just fashionable.
-
-### Q3. Would you like to have your own boat?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine boat still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q4. Is boat trip popular in your country
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that boat feels natural and useful rather than just fashionable.
-
-## 235. Friends
-
-### Q1. Do you remember your friends in primary school? Why?
-
-Yes, generally speaking. They make ordinary days more enjoyable, especially when I need someone to talk to. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. What do you do with friends?
-
-I would say the first thing that comes to mind is a close friend from school. It is not something extraordinary, but it suits my lifestyle quite well. They make ordinary days more enjoyable, especially when I need someone to talk to.
-
-### Q3. How do you make friends?
-
-For me, my friends is quite familiar and easy to relate to. They make ordinary days more enjoyable, especially when I need someone to talk to. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q4. Do you have many friends
-
-Yes, generally speaking. They make ordinary days more enjoyable, especially when I need someone to talk to. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q5. Do you like chatting with friends online?
-
-Yes, I would say so. They make ordinary days more enjoyable, especially when I need someone to talk to. For me, the most important thing is that my friends feels natural and useful rather than just fashionable.
-
-## 236. Family
-
-### Q1. How often do you meet with your family?
-
-Probably a few times a week, although it depends on how busy I am. They give me a lot of support, even through small everyday things. That is why my family has become a fairly normal part of my routine.
-
-### Q2. How do you spend the time with your family
-
-For me, my family is quite familiar and easy to relate to. They give me a lot of support, even through small everyday things. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. Do you want to live with your family in the future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine my family still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q4. Are you close to all of your family members?
-
-Yes, generally speaking. They give me a lot of support, even through small everyday things. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q5. How has your family influenced you?
-
-For me, my family is quite familiar and easy to relate to. They give me a lot of support, even through small everyday things. I think that is why I can talk about it naturally without exaggerating my answer.
-
-## 237. Dream job
-
-### Q1. Have you had full-time or part-time job before?
-
-For me, dream job is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q2. What kinds of jobs are popular in China?
-
-I usually prefer a simple and practical kind. When it comes to dream job, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q3. What do you plan to do in the future?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q4. Have you changed your mind on your dream job?
-
-For me, dream job is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q5. What was the dream job for you when you were young?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 238. High school
-
-### Q1. Do you like your high school?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that school life feels natural and useful rather than just fashionable.
-
-### Q2. Which subject you like most? And dislike?
-
-I am studying subjects related to English and communication. I chose them because they are practical, and they also train me to express ideas more clearly in real situations.
-
-### Q3. Do you still contact with your friends in high school?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. What is your high school like?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q5. What happened on your first day of high school?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 239. History
-
-### Q1. Do you like (to learn about) history?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that history feels natural and useful rather than just fashionable.
-
-### Q2. What historical event do you find most interesting?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q3. What historical event do you think was most important?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q4. Do you think history is important?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that history feels natural and useful rather than just fashionable.
-
-### Q5. Do you like to watch programs on TV about history?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that history feels natural and useful rather than just fashionable.
-
-### Q6. How do you get information about history?
-
-For me, history is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-## 240. Rainy days
-
-### Q1. Does it rain much in China?(Where?When)
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. Is there any part of China where it doesn’t rain much?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q3. When (in which month/season)does it rain most in your hometown?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, rainy days feels less like a task and more like a way to relax.
-
-### Q4. In which season does it rain most in other parts of China?
-
-For me, rainy days is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q5. Can you remember any time when it rained particularly heavily in your hometown?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 241. Teenagers
-
-### Q1. Do you like to spend time with teenagers
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that teenagers feels natural and useful rather than just fashionable.
-
-### Q2. Do you know anything about the kind of fashion that teenagers like?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that teenagers feels natural and useful rather than just fashionable.
-
-### Q3. What are the best things of being a teenager?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q4. How do teenagers entertain themselves?
-
-For me, teenagers is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-## 242. Housework
-
-### Q1. Do you do housework at home?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Do you like to do housework? Why?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that housework feels natural and useful rather than just fashionable.
-
-### Q3. What kinds of housework do you do?
-
-I usually prefer a simple and practical kind. When it comes to housework, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q4. What kinds of housework you dislike to do?
-
-I usually prefer a simple and practical kind. When it comes to housework, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q5. Did you help your parents to do housework when you were young?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, housework was connected with some ordinary but memorable moments in my life.
-
-### Q6. Do you think children should do housework?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q7. Do you think men and women should share housework?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 243. Advertisement
-
-### Q1. What do you think is the purpose of advertisements?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. Are there many advertisements in your country?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Why do you think there are so many advertisements now?
-
-Mainly because advertisement feels useful or meaningful to me. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q4. What are the various places where we see advertisements?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q5. How do you feel about advertisements?
-
-For me, advertisement is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q6. What kind of advertisement do you like the most?
-
-I usually prefer a simple and practical kind. When it comes to advertisement, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q7. Do advertisements (ever) influence your choice about what to buy?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q8. Where can we see advertisements?
-
-Usually somewhere convenient and not too crowded. If it is related to advertisement, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-### Q9. Do you like advertisements on TV?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that advertisement feels natural and useful rather than just fashionable.
-
-### Q10. Do you prefer advertisements on TV or those in magazines?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q11. Do you think advertising plays a very important role in today's world?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that advertisement feels natural and useful rather than just fashionable.
-
-### Q12. What sorts of advertisements leave the deepest impression on people?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q13. What do you think about the developments in advertising in China today?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q14. Why do you think companies advertise themselves (or, their products)?
-
-Mainly because advertisement feels useful or meaningful to me. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-## 244. Daily routine
-
-### Q1. What part of your day do you like best?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. What’s your daily routine?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q3. What is the busiest part of the day for you?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q4. What’s the difference of routine between you and your teenager’s times?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 245. Mirror
-
-### Q1. Do you have a mirror at home?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Do you use the mirror every day?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. How often do you look at yourself in the mirror every day?
-
-Probably a few times a week, although it depends on how busy I am. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. That is why mirror has become a fairly normal part of my routine.
-
-### Q4. Can mirrors be decorations at home?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q5. Have you ever bought clothes without looking in the mirror?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of mirror, and it made the topic feel more real to me.
-
-### Q6. Will you put many mirrors at home?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine mirror still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q7. Do you think mirror is necessary?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q8. Have you ever bought mirrors?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of mirror, and it made the topic feel more real to me.
-
-### Q9. Do you like to buy mirrors?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that mirror feels natural and useful rather than just fashionable.
-
-## 246. Politeness
-
-### Q1. Who teach you to be polite
-
-Probably someone close to me, like a friend or a family member. I find it easier to talk about politeness with people I trust, because the conversation feels more relaxed and honest.
-
-### Q2. How do Chinese people show politeness
-
-For me, politeness is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. What rules of politeness change in China?
-
-There have been a few noticeable changes recently. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think these changes make daily life a bit more convenient and pleasant.
-
-## 247. Sunshine
-
-### Q1. Do you like sunshine?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that sunshine feels natural and useful rather than just fashionable.
-
-### Q2. Do you like a place full of sunshine?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that sunshine feels natural and useful rather than just fashionable.
-
-### Q3. Are there any technologies with sun in nowadays? For example?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Do you like sunny days
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that sunshine feels natural and useful rather than just fashionable.
-
-### Q5. What do you like to do when it’s sunny days?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q6. Are there many sunny days in our hometown?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 248. Teachers
-
-### Q1. What kinds of teachers do you like best?
-
-I usually prefer a simple and practical kind. When it comes to teachers, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q2. Who was your favorite teacher when you were young?
-
-Probably someone close to me, like a friend or a family member. I find it easier to talk about teachers with people I trust, because the conversation feels more relaxed and honest.
-
-### Q3. Would you want to be a teacher in the future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine teachers still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q4. Have you ever had bad teachers before?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of teachers, and it made the topic feel more real to me.
-
-## 249. Time management
-
-### Q1. How do you organize you time?
-
-For me, time management is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q2. Do you think young people organize their time in the same way?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Are you ever late for anything?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. What excuses do you use when you late?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q5. Do you like it when others are late?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that time management feels natural and useful rather than just fashionable.
-
-## 250. Vegetables and fruits
-
-### Q1. Should schools teach students how to grow vegetable?
-
-For me, vegetables and fruits is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q2. Do you think it’s easy to grow vegetables?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q3. Do many people grow vegetables in your city?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q4. Is growing vegetables popular in your country?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that vegetables and fruits feels natural and useful rather than just fashionable.
-
-### Q5. Are you interested in growing vegetables and fruits?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that vegetables and fruits feels natural and useful rather than just fashionable.
-
-### Q6. What kind of fruit do you like?Why?
-
-I usually prefer a simple and practical kind. When it comes to vegetables and fruits, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q7. Did you like to eat fruit when you were a child?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, vegetables and fruits was connected with some ordinary but memorable moments in my life.
-
-### Q8. Is it important to eat fruit?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that vegetables and fruits feels natural and useful rather than just fashionable.
-
-## 251. Markets
-
-### Q1. What do street markets sell?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q2. What are the differences between street markets and supermarkets?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q3. (Version2)Do you often go to the supermarket?
-
-For me, markets is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q4. Do you often go to the supermarket?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q5. Are there many street markets in China?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 252. Advertisements（可能淘汰）
-- Tag: 事物
-
-### Q1. Are you interested in watching TV advertisements or internet advertisements?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that advertisements feels natural and useful rather than just fashionable.
-
-### Q2. Do you want to work in advertising in the future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine advertisements still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q3. Do you share advertisements with others?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q4. What kinds of advertisements do you dislike?
-
-I usually prefer a simple and practical kind. When it comes to advertisements, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q5. Are you more interested in watching TV adverts or internet adverts?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that advertisements feels natural and useful rather than just fashionable.
-
-## 253. Public holiday
-
-### Q1. How many public holidays do you have in China?
-
-For me, holidays is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q2. Do you think people need more public holidays?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q3. How do you usually spend your holidays?
-
-For me, holidays is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q4. Which holiday is your favorite?
-
-I would probably choose something simple and practical. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
-
-## 254. Meeting places（可能淘汰）
-- Tag: 地点
-
-### Q1. Are there any differences between your favorite meeting places in the present and in your childhood?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. Do you think there are some places more suitable for meeting with others?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q3. Why are some meeting places better than others?
-
-Mainly because meeting places feels useful or meaningful to me. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q4. Are there any differences between your favorite meeting places in the present and those from your childhood?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q5. Do you think there are some places that are more suitable for meeting with others?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q6. Where is your favorite places to meet with people?
-
-Usually somewhere convenient and not too crowded. If it is related to meeting places, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-## 255. Photos
-
-### Q1. How do you keep your photos?
-
-For me, photos is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q2. In what situations do you take photos?
-
-For me, photos is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. (3)Do you prefer to take photos yourself or have other people take them?
-
-For me, photos is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q4. Do you like taking photos?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that photos feels natural and useful rather than just fashionable.
-
-### Q5. How often do you take photos?
-
-Probably a few times a week, although it depends on how busy I am. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. That is why photos has become a fairly normal part of my routine.
-
-## 256. Plan/schedule
+## 55. Borrowing/lending
 - Tag: 事件
-
-### Q1. Why is it that some people don't make plans?
-
-Mainly because plan schedule feels useful or meaningful to me. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q2. What are the benefits of making plans?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q3. Do you use paper or your cellphone to make plans?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine plan schedule still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q4. Do you like making plans?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine plan schedule still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q5. Are you good at managing your time?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q6. Do you make plans every day?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine plan schedule still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q7. What is the latest plan you made?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q8. What is the hardest part about making plans?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 257. Travel
-
-### Q1. Which place left the deepest impression on you when travelling?
-
-I would probably choose short trips with friends. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
-
-### Q2. Which cities have you travelled to?
-
-I would probably choose short trips with friends. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
-
-### Q3. Do you like travelling?
-
-Yes, I would say so. It gives me a chance to see different places and get out of my normal routine. For me, the most important thing is that travelling feels natural and useful rather than just fashionable.
-
-### Q4. What kinds of cities do you like to travel to?
-
-I usually prefer a simple and practical kind. When it comes to travelling, I care more about whether it fit my real needs than whether it look impressive.
-
-## 258. Patience
-- Tag: 事件
-
-### Q1. Are you more patient now than when you were a child?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, patience was connected with some ordinary but memorable moments in my life.
-
-### Q2. Does your job require you to be patient?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. What is it that makes you feel impatient?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q4. Are you a patient person?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q5. Were you patient when you were young?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, patience was connected with some ordinary but memorable moments in my life.
-
-### Q6. How do you feel when other people are not patient?
-
-For me, patience is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q7. Are you less or more patient when you are angry?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 259. Tea/Coffee
-
-### Q1. Do you like to try new food?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that tea coffee feels natural and useful rather than just fashionable.
-
-### Q2. What kinds of new food have you tried recently?
-
-I usually prefer a simple and practical kind. When it comes to tea coffee, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q3. What kind of foreign foods are popular in your country?
-
-I usually prefer a simple and practical kind. When it comes to tea coffee, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q4. Do you prepare tea or coffee for guests at home?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q5. Do Chinese people like to drink tea or coffee?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that tea coffee feels natural and useful rather than just fashionable.
-
-### Q6. When was the last time you drank tea or coffee?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, tea coffee feels less like a task and more like a way to relax.
-
-## 260. Computers（可能淘汰）
-- Tag: 事物
-
-### Q1. ln what conditions would it be difficult for you to use a computer?
-
-For me, computers is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q2. In what conditions would you use a computer?
-
-For me, computers is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. In what conditions would it be difficult for you to use a computer?
-
-For me, computers is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q4. What would your life be like without computers?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q5. When was the first time you used a computer?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, computers feels less like a task and more like a way to relax.
-
-### Q6. When do you use a computer?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, computers feels less like a task and more like a way to relax.
-
-## 261. Break
-- Tag: 事件
-
-### Q1. How do you feel after taking a nap?
-
-For me, break is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q2. Do you take a nap when you are taking your rest?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. What do you usually do during a break?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q4. How often do you take a break?
-
-Probably a few times a week, although it depends on how busy I am. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. That is why break has become a fairly normal part of my routine.
-
-### Q5. Do you prefer a long break or several short breaks?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q6. Why do you need to take a break?
-
-Mainly because break feels useful or meaningful to me. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-## 262. Daily routines
-
-### Q1. What do you usually do on weekends?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. Has your daily routine changed? If so, how?
-
-For me, my daily routine is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. What are the differences between people’s daily routines in the past and those in the present?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q4. Will you change your daily routine in the near future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine my daily routine still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-## 263. Music
-
-### Q1. Has your preference in music changed over the years?
-
-For me, music is quite familiar and easy to relate to. It can change my mood quickly, especially when I am tired or travelling somewhere. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q2. Have you ever been to a concert before?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of music, and it made the topic feel more real to me.
-
-### Q3. What’s your favorite kind of music?
-
-My favourite would probably be soft pop music. I like it because it feels natural to me, not forced. It can change my mood quickly, especially when I am tired or travelling somewhere.
-
-### Q4. What kinds of music do you like to listen to?
-
-I usually prefer a simple and practical kind. When it comes to music, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q5. How much time do you spend listening to music every day?
-
-For me, music is quite familiar and easy to relate to. It can change my mood quickly, especially when I am tired or travelling somewhere. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q6. When do you listen to music?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, music feels less like a task and more like a way to relax.
-
-## 264. Sleep
-
-### Q1. Do you always have good sleep?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. What time do you usually go to bed?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q3. Do old people sleep a lot? Why?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Is it necessary to take a nap every day?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q5. How many hours do you sleep for each night?
-
-For me, sleep is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-## 265. Boring things（可能淘汰）
-- Tag: 事件
-
-### Q1. What will you do when you feel bored?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q2. Do you think school is boring?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q3. What was the most boring thing you did when you were young?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q4. What do you do when you feel bored?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q5. What kinds of things are boring to you?
-
-I usually prefer a simple and practical kind. When it comes to boring things, I care more about whether they fit my real needs than whether they look impressive.
-
-## 266. Famous people
-
-### Q1. Do you want to become famous?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. If you had the chance, which famous person would you like to meet?
-
-For me, famous people is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. What kind of famous people are you interested in?
-
-I usually prefer a simple and practical kind. When it comes to famous people, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q4. Have you ever met a famous person?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of famous people, and it made the topic feel more real to me.
-
-## 267. Park
-
-### Q1. Do you prefer natural parks or amusement parks?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. Do you think people like going to parks?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that parks feels natural and useful rather than just fashionable.
-
-### Q3. What activities can be done in a park?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q4. Do you often go to a park?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 268. Farming
-
-### Q1. Did you do any farm work when you were young?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, farming was connected with some ordinary but memorable moments in my life.
-
-### Q2. What kind of farms do you like?
-
-I usually prefer a simple and practical kind. When it comes to farming, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q3. Do you think farming is important?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that farming feels natural and useful rather than just fashionable.
-
-### Q4. Have you ever visited a farm?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of farming, and it made the topic feel more real to me.
-
-## 269. Laughing
-
-### Q1. Do you usually make your friends laugh?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Are you the kind of person who makes people laugh?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Do you like to watch movies or TV shows that make people laugh?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that laughing feels natural and useful rather than just fashionable.
-
-### Q4. Do you think it is important to laugh with friends?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that laughing feels natural and useful rather than just fashionable.
-
-## 270. Outdoors
-
-### Q1. Do you prefer to be indoors or outdoors?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. Did you like to go outside when you were young?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, outdoors was connected with some ordinary but memorable moments in my life.
-
-### Q3. Did you often go to your friends’ houses when you were young?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, outdoors was connected with some ordinary but memorable moments in my life.
-
-### Q4. Is it important for children to play outdoors?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that outdoors feels natural and useful rather than just fashionable.
-
-## 271. Borrowing/lending
-- Tag: 事件
+- Status: CURRENT
 
 ### Q1. Do you mind if others borrow money from you?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+No, I don't mind at all, as long as it's a small amount and for a genuine reason. Just last week, I lent my colleague fifty rupees for a bus ride home. I'd only feel uncomfortable if someone never paid me back.
 
 ### Q2. Have you ever borrowed books from others?
 
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of borrowing lending, and it made the topic feel more real to me.
+Yes, quite often actually. I borrowed a novel called *The Alchemist* from a close friend last summer because I wasn't sure if I'd enjoy it. It saved me buying a copy, and we ended up discussing it over coffee, which made the experience much more enjoyable.
 
 ### Q3. Have you ever borrowed money from others?
 
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of borrowing lending, and it made the topic feel more real to me.
+Yes, I have. When I was a university student, I borrowed a small amount from a close friend to cover my textbook costs for one semester. I paid it back within a couple of months, so it was no big deal, really.
 
 ### Q4. Do you like to lend things to others?
 
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that borrowing lending feels natural and useful rather than just fashionable.
+Honestly, it depends on the person. I'm happy to lend a book or a tool to a close friend, but I've had a few things not returned in the past, so now I'm more careful. For example, I lent my electric drill to a neighbour and didn't get it back for months.
 
 ### Q5. How do you feel when people don’t return things they borrowed from you?
 
-For me, borrowing lending is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
+Honestly, it does bother me a bit, especially if it's something I use often, like a book or a charger. I once lent a colleague a novel and never got it back, so now I tend to be more careful about who I lend things to.
 
-## 272. Maths
-- Tag: 事物
-
-### Q1. Do you think maths is important?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that maths feels natural and useful rather than just fashionable.
-
-### Q2. Do you think it’s difficult to learn maths well?
-
-It can be, depending on the situation. Personally, I do not find maths too difficult to deal with, but they require a bit of patience and flexibility sometimes.
-
-### Q3. Do you often use a calculator?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q4. Are girls generally good at maths?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 273. Crowded places
-
-### Q1. What places do you think are often crowded?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q2. When was the last time you were in a crowded place?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, crowded places feels less like a task and more like a way to relax.
-
-### Q3. How do you feel when you are in crowded places?
-
-For me, crowded places is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-## 274. Gift
-
-### Q1. What is the worst gift you have received?
-
-I would say the first thing that comes to mind is something practical but personal. It is not something extraordinary, but it suits my lifestyle quite well. They do not have to be expensive; what matters more is whether they feel thoughtful.
-
-### Q2. Have you received any gift recently that you like?
-
-For me, gifts is quite familiar and easy to relate to. They do not have to be expensive; what matters more is whether they feel thoughtful. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. How do you feel when you receive a gift?
-
-For me, gifts is quite familiar and easy to relate to. They do not have to be expensive; what matters more is whether they feel thoughtful. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q4. Have you received a gift you didn’t like?
-
-For me, gifts is quite familiar and easy to relate to. They do not have to be expensive; what matters more is whether they feel thoughtful. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q5. When was the last time you received a gift?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, gifts feels less like a task and more like a way to relax.
-
-### Q6. When do you send gifts?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, gifts feels less like a task and more like a way to relax.
-
-### Q7. Why do people send gifts?
-
-Mainly because gifts feels useful or meaningful to me. They do not have to be expensive; what matters more is whether they feel thoughtful. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q8. How often do you buy others gifts?
-
-Probably a few times a week, although it depends on how busy I am. They do not have to be expensive; what matters more is whether they feel thoughtful. That is why gifts has become a fairly normal part of my routine.
-
-### Q9. What kinds of gifts are popular in your country?
-
-I usually prefer a simple and practical kind. When it comes to gifts, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q10. What do you give others as gifts?
-
-I would say the first thing that comes to mind is something practical but personal. It is not something extraordinary, but it suits my lifestyle quite well. They do not have to be expensive; what matters more is whether they feel thoughtful.
-
-### Q11. Do you like to send expensive gifts?
-
-Yes, I would say so. They do not have to be expensive; what matters more is whether they feel thoughtful. For me, the most important thing is that gifts feels natural and useful rather than just fashionable.
-
-### Q12. What’s the best present or gift you have ever received?
-
-I would say the first thing that comes to mind is something practical but personal. It is not something extraordinary, but it suits my lifestyle quite well. They do not have to be expensive; what matters more is whether they feel thoughtful.
-
-## 275. Sports（可能淘汰）
-- Tag: 事物
-
-### Q1. Do you like to watch live sports games?
-
-Yes, I would say so. It helps me stay active, and it is also a good way to release stress. For me, the most important thing is that sport feels natural and useful rather than just fashionable.
-
-### Q2. Do you like watching sports programs on TV?
-
-Yes, I would say so. It helps me stay active, and it is also a good way to release stress. For me, the most important thing is that sport feels natural and useful rather than just fashionable.
-
-### Q3. Do you usually watching sports programs on TV?
-
-Yes, generally speaking. It helps me stay active, and it is also a good way to release stress. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Who do you like to watch sports games with?
-
-Probably someone close to me, like a friend or a family member. I find it easier to talk about sport with people I trust, because the conversation feels more relaxed and honest.
-
-### Q5. Do you watch live sports games?
-
-Yes, generally speaking. It helps me stay active, and it is also a good way to release stress. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q6. What kinds of games do you expect to watch in the future?
-
-I usually prefer a simple and practical kind. When it comes to sport, I care more about whether it fit my real needs than whether it look impressive.
-
-## 276. New Year
-
-### Q1. Why do people think New Year is a new beginning?
-
-Mainly because new year feels useful or meaningful to me. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q2. Do you have any ceremonies to celebrate the New Year in your country?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Do you remember a particular New Year that you celebrated?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. How do you celebrate New Year?
-
-For me, new year is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-## 277. Meeting new people
-
-### Q1. Can you tell if you like someone when you meet them for the first time? Why?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that meeting new people feels natural and useful rather than just fashionable.
-
-### Q2. Do you often meet new people?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Do you like meeting new people?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that meeting new people feels natural and useful rather than just fashionable.
-
-### Q4. How do you feel when new people welcome you?
-
-For me, meeting new people is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-## 278. Sleeping
-
-### Q1. How much sleep do you need every day?
-
-For me, sleeping is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q2. Do you like to read before bed?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that sleeping feels natural and useful rather than just fashionable.
-
-### Q3. Do you take naps at noon?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. How have your sleeping habits changed since you were young?
-
-For me, sleeping is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-## 279. Riding a bike
+## 56. Sharing
 - Tag: 事件
-
-### Q1. Do you ride a bike when you go out now?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Did you ride a bike to school?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, riding a bike was connected with some ordinary but memorable moments in my life.
-
-### Q3. Did you ride a bike when you were little?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, riding a bike was connected with some ordinary but memorable moments in my life.
-
-### Q4. Did you have a bike when you were young?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, riding a bike was connected with some ordinary but memorable moments in my life.
-
-## 280. Daily routine
-- Tag: 事物
-
-### Q1. What is your daily study routine?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. Have you ever changed your routine?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of my daily routine, and it made the topic feel more real to me.
-
-### Q3. Do you think it is important to have a daily routine for your study?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that my daily routine feels natural and useful rather than just fashionable.
-
-### Q4. What part of your day do you like best?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 281. Being happy
-
-### Q1. Is it important to be happy?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that mobile apps feels natural and useful rather than just fashionable.
-
-### Q2. Can you stay happy all the time?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q3. What do you do to stay happy?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q4. Is there anything that has made you feel happy recently?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 282. Art
-
-### Q1. Is there any artwork on the wall in your room?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Have you ever visited an art gallery?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of art, and it made the topic feel more real to me.
-
-### Q3. Have you ever had art classes?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of art, and it made the topic feel more real to me.
-
-### Q4. Do you like art?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that art feels natural and useful rather than just fashionable.
-
-## 283. Animals
-
-### Q1. How can we protect wild animals?
-
-For me, animals is quite familiar and easy to relate to. They make people feel calmer, and they are often easier to connect with than expected. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q2. What wild animals do you like most?
-
-My favourite would probably be dogs. I like it because it feels natural to me, not forced. They make people feel calmer, and they are often easier to connect with than expected.
-
-### Q3. Have you ever seen any wild animals before?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of animals, and it made the topic feel more real to me.
-
-### Q4. Do you like to go to the zoo?
-
-Yes, I would say so. They make people feel calmer, and they are often easier to connect with than expected. For me, the most important thing is that animals feels natural and useful rather than just fashionable.
-
-### Q5. Have you ever kept pets?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of animals, and it made the topic feel more real to me.
-
-## 284. Sharing
-- Tag: 事件
+- Status: CURRENT
 
 ### Q1. What kinds of news do you share with our friends?
 
-I usually prefer a simple and practical kind. When it comes to sharing, I care more about whether it fit my real needs than whether it look impressive.
+I usually share practical news with my friends, like job openings or new restaurants worth trying. For example, last week I sent a friend a link about a cycling event happening near us. It’s just easier to share things we can actually do together rather than general headlines.
 
 ### Q2. Who is the first person you like to share good news with?
 
-Probably someone close to me, like a friend or a family member. I find it easier to talk about sharing with people I trust, because the conversation feels more relaxed and honest.
+I usually share good news with my mum first. She’s always the one who gets genuinely excited with me, like when I got a promotion last year, I called her straight away. It just feels natural to tell her before anyone else.
 
 ### Q3. Did your parents teach you to share when you were a child?
 
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, sharing was connected with some ordinary but memorable moments in my life.
+Yes, they definitely did. I remember my mum always telling me to split my biscuits evenly with my younger sister. Once, I tried to hide a chocolate bar, and she made me give my sister half. It taught me that sharing keeps things fair.
 
 ### Q4. What kind of things do you like to share with others?
 
-I usually prefer a simple and practical kind. When it comes to sharing, I care more about whether it fit my real needs than whether it look impressive.
+Honestly, I love sharing food more than anything. If I’m eating something really tasty, like a slice of cake or some fresh fruit, I’ll always offer it to whoever’s around. It just makes the moment nicer when you’re enjoying it together.
 
 ### Q5. What kind of things are not suitable for sharing?
 
-I usually prefer a simple and practical kind. When it comes to sharing, I care more about whether it fit my real needs than whether it look impressive.
+I'd say personal hygiene items are definitely off-limits—things like toothbrushes, razors, or nail clippers. Nobody wants to risk infections or germs. Also, I think passwords and bank details should never be shared, even with close friends, because it's just not safe.
 
 ### Q6. Do you have anything to share with others recently?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 285. Science class
-
-### Q1. Do you like science class?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that science class feels natural and useful rather than just fashionable.
-
-### Q2. What kind of science did you do at school?
-
-I usually prefer a simple and practical kind. When it comes to science class, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q3. Did you have science class in primary or high school?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, science class was connected with some ordinary but memorable moments in my life.
-
-### Q4. Do you think science classes are important?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that science class feels natural and useful rather than just fashionable.
-
-## 286. Movies
-
-### Q1. Do you want to be a movie star?
-
-Yes, generally speaking. They are an easy way to relax and also learn about different people and cultures. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. What kinds of movies do you think young people like?
-
-I usually prefer a simple and practical kind. When it comes to films, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q3. Do your friends like this movie?
-
-Yes, I would say so. They are an easy way to relax and also learn about different people and cultures. For me, the most important thing is that films feels natural and useful rather than just fashionable.
-
-### Q4. What’s your favorite movie?
-
-My favourite would probably be comedies or realistic dramas. I like it because it feels natural to me, not forced. They are an easy way to relax and also learn about different people and cultures.
-
-## 287. Getting up early
-
-### Q1. Which morning do you like best in the week?
-
-I would probably choose something simple and practical. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
-
-### Q2. Do you get up early on weekends?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. What do you usually do when you get up early?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q4. Do you often get up early in the morning?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 288. Gift
-
-### Q1. What kinds of gifts are popular in your country?
-
-I usually prefer a simple and practical kind. When it comes to gifts, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q2. What do you give others as gifts?
-
-I would say the first thing that comes to mind is something practical but personal. It is not something extraordinary, but it suits my lifestyle quite well. They do not have to be expensive; what matters more is whether they feel thoughtful.
-
-### Q3. Do you like to send expensive gifts?
-
-Yes, I would say so. They do not have to be expensive; what matters more is whether they feel thoughtful. For me, the most important thing is that gifts feels natural and useful rather than just fashionable.
-
-### Q4. What’s the best present or gift you have ever received?
-
-I would say the first thing that comes to mind is something practical but personal. It is not something extraordinary, but it suits my lifestyle quite well. They do not have to be expensive; what matters more is whether they feel thoughtful.
-
-## 289. Running
-
-### Q1. How often do you go for a run?
-
-Probably a few times a week, although it depends on how busy I am. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. That is why running has become a fairly normal part of my routine.
-
-### Q2. Where do you usually go running?
-
-Usually somewhere convenient and not too crowded. If it is related to running, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-### Q3. Do you think running is a good way to stay healthy?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Do you like running?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that running feels natural and useful rather than just fashionable.
-
-## 290. Friends
-
-### Q1. Do you think you are a good friend to others?
-
-Yes, generally speaking. They make ordinary days more enjoyable, especially when I need someone to talk to. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. What kind of people do you like to make friends with?
-
-I usually prefer a simple and practical kind. When it comes to my friends, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q3. Do you keep in contact with friends from your childhood?
-
-Yes, generally speaking. They make ordinary days more enjoyable, especially when I need someone to talk to. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q4. What do you think makes a good friend?
-
-I would say the first thing that comes to mind is a close friend from school. It is not something extraordinary, but it suits my lifestyle quite well. They make ordinary days more enjoyable, especially when I need someone to talk to.
-
-## 291. Smiling
-
-### Q1. Do you like to smile?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that smiling feels natural and useful rather than just fashionable.
-
-### Q2. When do people smile at others?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, smiling feels less like a task and more like a way to relax.
-
-### Q3. Do you smile when people take pictures of you?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Can you recognize a fake smile?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 292. Handwriting
-
-### Q1. Do you like handwriting?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that handwriting feels natural and useful rather than just fashionable.
-
-### Q2. Do you like to receive cards with hand-written words?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that handwriting feels natural and useful rather than just fashionable.
-
-### Q3. Is your handwriting easy to read for other people?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Do you often write with a pen?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q5. Can we tell someone’s personality from his or her handwriting?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q6. What’s the differences of writing with a pen and typing on a computer?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 293. Tidiness
-
-### Q1. Are you tidier at work or at home?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Do you think people should be tidy all the time?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. How do you keep things tidy?
-
-For me, tidiness is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q4. Are you a tidy person?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 294. Cake
-
-### Q1. What desserts do Chinese people like?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. Have you ever made cakes?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of cake, and it made the topic feel more real to me.
-
-### Q3. Do you like eating cakes?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that cake feels natural and useful rather than just fashionable.
-
-### Q4. Do you like dessert?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that cake feels natural and useful rather than just fashionable.
-
-## 295. Languages
-
-### Q1. Will you learn other languages in the future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine languages still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q2. Do you think it’s difficult to learn a new language?
-
-It can be, depending on the situation. Personally, I do not find languages too difficult to deal with, but they require a bit of patience and flexibility sometimes.
-
-### Q3. What languages can you speak?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q4. Why do you learn English?
-
-Mainly because languages feels useful or meaningful to me. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-## 296. Visiting relatives
-
-### Q1. What do you do when visiting relatives?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q2. Why do people visit their relatives?
-
-Mainly because visiting relatives feels useful or meaningful to me. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q3. Do you often visit your relatives?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q4. When was the last time you visited a relative?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, visiting relatives feels less like a task and more like a way to relax.
-
-## 297. Email
-
-### Q1. How often do you write an email?
-
-Probably a few times a week, although it depends on how busy I am. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. That is why email has become a fairly normal part of my routine.
-
-### Q2. What kind of email do you receive that makes you happy?
-
-I usually prefer a simple and practical kind. When it comes to email, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q3. Who do you write to?
-
-Probably someone close to me, like a friend or a family member. I find it easier to talk about email with people I trust, because the conversation feels more relaxed and honest.
-
-### Q4. Do you think it’s important to reply emails quickly?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that email feels natural and useful rather than just fashionable.
-
-## 298. News
-
-### Q1. Which do you prefer, reading magazines or newspapers?
-
-I would probably choose something simple and practical. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
-
-### Q2. Do you prefer to read news online or on newspaper?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q3. Do you often read newspapers?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q4. Are you very interested in the news?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that news feels natural and useful rather than just fashionable.
-
-### Q5. Why do you want to know the latest news?
-
-Mainly because news feels useful or meaningful to me. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q6. How important is it to you to get the news every day?
-
-For me, news is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q7. What sort of news are you most interested in?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q8. What kinds of (types of) newspapers (or magazines) do you usually read?
-
-I usually prefer a simple and practical kind. When it comes to news, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q9. How old were you when you first started to read newspapers?
-
-For me, news is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q10. Why do you think people read newspapers?
-
-Mainly because news feels useful or meaningful to me. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q11. What different types of newspapers are there in China?
-
-I usually prefer a simple and practical kind. When it comes to news, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q12. Do you care about the news?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q13. Do you think it is important to read newspapers? (Why?/ Why not?)
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that news feels natural and useful rather than just fashionable.
-
-## 299. Jokes/Comedies
-
-### Q1. Have you ever watched a live show?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of jokes comedies, and it made the topic feel more real to me.
-
-### Q2. Do you like to watch comedies?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that jokes comedies feels natural and useful rather than just fashionable.
-
-### Q3. Do your friends like to tell jokes?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that jokes comedies feels natural and useful rather than just fashionable.
-
-### Q4. Are you good at telling jokes?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 300. Age
-
-### Q1. What do you think is the best age to learn driving?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. How do you feel about getting older?
-
-For me, age is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. Should we treat people of different ages in the same way?
-
-For me, age is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-## 301. Water sports
-
-### Q1. What kind of water sports do you want to try?
-
-I usually prefer a simple and practical kind. When it comes to sport, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q2. Have you ever done any water sports?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of sport, and it made the topic feel more real to me.
-
-### Q3. What water sports do you like doing?
-
-I would say the first thing that comes to mind is badminton. It is not something extraordinary, but it suits my lifestyle quite well. It helps me stay active, and it is also a good way to release stress.
-
-### Q4. Are water sports popular in China?
-
-Yes, I would say so. It helps me stay active, and it is also a good way to release stress. For me, the most important thing is that sport feels natural and useful rather than just fashionable.
-
-## 302. Walking
-
-### Q1. Where do you usually go for a walk?
-
-Usually somewhere convenient and not too crowded. If it is related to walking, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-### Q2. Do you think people will walk more or not in the future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine walking still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q3. Do you walk more often now than in the past?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, walking was connected with some ordinary but memorable moments in my life.
-
-### Q4. Do you walk a lot?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 303. Stars
-
-### Q1. Do you want to be a superstar?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. Are international superstars popular in your country?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that stars feels natural and useful rather than just fashionable.
-
-### Q3. Who is your favourite movie star?
-
-Probably someone close to me, like a friend or a family member. I find it easier to talk about stars with people I trust, because the conversation feels more relaxed and honest.
-
-### Q4. Have you ever met a celebrity/superstar in real life?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of stars, and it made the topic feel more real to me.
-
-## 304. Museum
+Yeah, actually I just shared a bunch of my old novels with a colleague at work. She mentioned she was looking for something light to read, so I handed her my copy of *The Alchemist* and a few thrillers. It felt nice to declutter my shelf and help her out at the same time.
+
+## 57. Museum
+- Tag: 
+- Status: CURRENT
 
 ### Q1. When was the last time you visited a museum?
 
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, museums feels less like a task and more like a way to relax.
+The last time I visited a museum was about three months ago, when I went to the Natural History Museum in London. I was particularly keen to see the dinosaur skeleton exhibit, and I ended up spending nearly two hours just wandering through the geology section. It was a really enjoyable afternoon.
 
 ### Q2. Do you often visit museums?
 
-Yes, generally speaking. They are quiet but interesting places where I can learn something without pressure. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Not really, I only go to museums maybe once or twice a year. I visited the Natural History Museum last summer to see the dinosaur skeletons, and I found it fascinating. But normally, I just don't have the time or think to plan a visit.
 
 ### Q3. Do you think museums are important?
 
-Yes, I would say so. They are quiet but interesting places where I can learn something without pressure. For me, the most important thing is that museums feels natural and useful rather than just fashionable.
-
-### Q4. Do you think there should be more museums in your hometown?
-
-Yes, generally speaking. They are quiet but interesting places where I can learn something without pressure. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Absolutely. Museums are crucial because they preserve our shared history. Last month, I saw a 2,000-year-old Roman coin in the British Museum—it made me feel connected to people from centuries ago. Without museums, we’d lose that tangible link to the past. They’re not just buildings; they’re time capsules.
 
 ### Q5. Are there any museums in your hometown?
 
-Yes, generally speaking. They are quiet but interesting places where I can learn something without pressure. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Yes, there are a few. The most well-known is the National Museum of History, which has artefacts like ancient pottery and traditional costumes. I remember visiting it on a school trip—it was fascinating to see how people lived centuries ago. It’s a popular spot for both locals and tourists.
 
-### Q6. How often do you visit museums?（or Do you often visit a museum）
-
-Probably a few times a week, although it depends on how busy I am. They are quiet but interesting places where I can learn something without pressure. That is why museums has become a fairly normal part of my routine.
-
-### Q7. Do you like visiting museums? Why?
-
-Yes, I would say so. They are quiet but interesting places where I can learn something without pressure. For me, the most important thing is that museums feels natural and useful rather than just fashionable.
-
-## 305. Newspaper&Magazine
-
-### Q1. Do you prefer to read news online or in a newspaper?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Which do you prefer, reading magazines or newspapers?
-
-I would probably choose something simple and practical. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
-
-### Q3. How old were you when you first started to read newspapers?
-
-For me, newspaper magazine is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q4. Do you think it is important to read newspapers? (Why?/ Why not?)
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that newspaper magazine feels natural and useful rather than just fashionable.
-
-### Q5. Why do you think people read newspapers?
-
-Mainly because newspaper magazine feels useful or meaningful to me. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q6. Do you prefer to read newspapers or magazines?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q7. What are the differences between newspapers and magazines?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q8. What do you think of newspapers?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 306. Insects
-
-### Q1. Do you like insects?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that insects feels natural and useful rather than just fashionable.
-
-### Q2. Are there many different insects where you live?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q3. Do you think insects are useful?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 307. Scenery
+## 58. Scenery
 - Tag: 事件
+- Status: CURRENT
 
 ### Q1. What are the most beautiful sights you have seen while travelling?
 
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
+The most stunning sight I’ve seen was the Northern Lights in Norway. I stood on a frozen fjord near Tromsø, watching green and purple ribbons ripple across the pitch-black sky. It felt almost unreal, like a painting come to life. That memory still gives me chills.
 
 ### Q2. Do you like to take scenery pictures?
 
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that scenery feels natural and useful rather than just fashionable.
+Yeah, I really enjoy taking scenery pictures. Whenever I go hiking in the hills near my city, I always stop to snap photos of the mist rolling over the valleys or the sun setting behind the pine trees. It’s a nice way to hold onto those peaceful moments.
 
 ### Q3. Do you prefer the mountains or the sea?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Definitely the sea. There's something about the rhythm of the waves that I find incredibly calming. I love walking along the shoreline, feeling the cool water on my feet, and watching the sun set over the horizon. It just feels more open and free to me.
 
 ### Q4. Do you look out the window at the scenery when travelling by bus or car?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+Oh, absolutely. I find it hard to look away, especially when we're driving through the countryside. I remember once on a bus through the Lake District, I just stared at the rolling green hills and the little stone cottages—it made the journey feel so much shorter and more enjoyable.
 
-### Q5. Is there good scenery in cities?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q6. Do you like to take pictures of good scenery with your smart phone? Why?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that scenery feels natural and useful rather than just fashionable.
-
-### Q7. Is there good scenery in your hometown?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q8. When you travel, do you like to live in hotels with scenic views?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, scenery feels less like a task and more like a way to relax.
-
-## 308. Concentration（疑似淘汰）
-- Tag: 事件
-
-### Q1. Is it difficult for you to stay focused on something?
-
-It can be, depending on the situation. Personally, I do not find concentration too difficult to deal with, but it require a bit of patience and flexibility sometimes.
-
-### Q2. What do you do to help you concentrate?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q3. What may distract you when you are trying to stay focused?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q4. When do you need to be focused?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, concentration feels less like a task and more like a way to relax.
-
-## 309. Discussion
-
-### Q1. Do you prefer to talk or to listen?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Do you change your opinions frequently?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Have your discussion topics changed since you were a child?
-
-For me, discussion is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q4. What do you like to talk about?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 310. Spending time by yourself
-- Tag: 事件
-
-### Q1. What did you do last time you were by yourself?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. Do you usually spend time by yourself?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Do you like spending time by yourself?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that this topic feels natural and useful rather than just fashionable.
-
-### Q4. How do you usually spend your time by yourself?
-
-For me, this topic is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-## 311. Voice
-
-### Q1. Does your voice sound similar to your parents?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Do you enjoy recording your voice and listening to it?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that voice feels natural and useful rather than just fashionable.
-
-### Q3. Has your voice ever changed?
-
-For me, voice is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q4. Do you like your own voice?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that voice feels natural and useful rather than just fashionable.
-
-## 312. Social network
-
-### Q1. How often do you use social networking apps?
-
-Probably a few times a week, although it depends on how busy I am. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. That is why social network has become a fairly normal part of my routine.
-
-### Q2. Why do you use social networking apps?
-
-Mainly because social network feels useful or meaningful to me. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q3. What are the disadvantages of social networking apps?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q4. Do you think it is good to make friends online?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 313. Morning time
+## 59. Morning time
 - Tag: 事物
+- Status: CURRENT
 
 ### Q1. Do you like getting up early in the morning?
 
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that morning time feels natural and useful rather than just fashionable.
+Honestly, not really. I'm more of a night owl, so getting up early feels like a struggle. On weekdays, I drag myself out of bed around 7 to grab a quick coffee before work, but at weekends I'll happily sleep until 9 or 10.
 
 ### Q2. What do you usually do in the morning?
 
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
+I usually start my morning by making a cup of strong black coffee and checking my phone for any urgent messages. Then I’ll do a quick 10-minute stretch on my yoga mat before hopping in the shower. It’s a simple routine that helps me feel awake and ready for the day.
 
 ### Q3. What did you do in the morning when you were little? Why?
 
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
+When I was little, I’d usually wake up and watch cartoons while having a bowl of cereal. My favourite was Corn Flakes because my mum would let me eat them in front of the TV. It felt like a treat before heading off to school.
 
 ### Q4. Are there any differences between what you do in the morning now and what you did in the past?
 
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, morning time was connected with some ordinary but memorable moments in my life.
+Yeah, definitely. Back when I was a student, I’d snooze my alarm until the last minute and rush out the door with just a piece of toast. Now, I actually wake up earlier to squeeze in a short jog and a proper breakfast—porridge with fruit. It feels more intentional.
 
 ### Q5. Do you spend your mornings doing the same things on both weekends and weekdays? Why or why not?
 
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+No, not at all. On weekdays, I'm up at six, grab a quick coffee, and head straight to work. But at weekends, I take it slow—I'll lie in until eight or nine, then have a proper breakfast with eggs and toast, and often read the news for an hour. The difference comes down to having a schedule to keep versus having free time to enjoy.
 
-## 314. Housework and cooking
+## 60. Happy things
 - Tag: 事件
-
-### Q1. Do you do some cooking/help your family cook at home now?
-
-Yes, generally speaking. It can be relaxing when I have enough time, but stressful when I am in a hurry. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Did you do some house cleaning when you were young?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, cooking was connected with some ordinary but memorable moments in my life.
-
-### Q3. Do you have breakfast at home every day?
-
-Yes, generally speaking. It can be relaxing when I have enough time, but stressful when I am in a hurry. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Do you want to learn how to cook well?
-
-Yes, generally speaking. It can be relaxing when I have enough time, but stressful when I am in a hurry. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q5. Do you think your home is clean and tidy?
-
-Yes, generally speaking. It can be relaxing when I have enough time, but stressful when I am in a hurry. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q6. What housework do you like or dislike doing?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It can be relaxing when I have enough time, but stressful when I am in a hurry.
-
-### Q7. Did you do any household chores when you were young?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, cooking was connected with some ordinary but memorable moments in my life.
-
-### Q8. Do you have breakfast at home everyday?
-
-Yes, generally speaking. It can be relaxing when I have enough time, but stressful when I am in a hurry. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 315. Technology/Electronic devices
-- Tag: 事物
-
-### Q1. What technology do you often use, computers or cellphones?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q2. What electronic devices have you bought lately?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q3. Is there any technology you want to buy?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q4. Is technology important in your life?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that technology electronic devices feels natural and useful rather than just fashionable.
-
-### Q5. Is there any technology you don't like?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that technology electronic devices feels natural and useful rather than just fashionable.
-
-### Q6. What do you think are the trends in technology today compared to when you were young?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-## 316. Puzzles
-- Tag: 事物
-
-### Q1. Did you do puzzles in your childhood?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, puzzles was connected with some ordinary but memorable moments in my life.
-
-### Q2. When do you do puzzles, during a trip or when you feel bored?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, puzzles feels less like a task and more like a way to relax.
-
-### Q3. Do you like doing word puzzles or number puzzles? Which is more difficult for you?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that puzzles feels natural and useful rather than just fashionable.
-
-### Q4. Who do you usually do puzzles with?
-
-Probably someone close to me, like a friend or a family member. I find it easier to talk about puzzles with people I trust, because the conversation feels more relaxed and honest.
-
-### Q5. Do you think it is good for old people to do puzzles?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 317. Social media（疑似淘汰）
-- Tag: 事物
-
-### Q1. Do you or your friends like using social media?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that social media feels natural and useful rather than just fashionable.
-
-### Q2. Do you like using social media?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that social media feels natural and useful rather than just fashionable.
-
-### Q3. Do you think you or your friends use too much social media?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Do you want to work in social media? Why or why not?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q5. What's the most popular social media platform in China? Why?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 318. Geography（疑似淘汰）
-- Tag: 事物
-
-### Q1. Do you like geography?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that geography feels natural and useful rather than just fashionable.
-
-### Q2. Have you ever studied geography at school?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of geography, and it made the topic feel more real to me.
-
-### Q3. Are you good at reading a map?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Would you visit a country because of its geographical location?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine geography still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-## 319. Snacks
-- Tag: 事物
-
-### Q1. What snack did you eat when you were young?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q2. What snacks do you like to eat?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q3. Did you often eat snacks when you were young?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, snacks was connected with some ordinary but memorable moments in my life.
-
-### Q4. When do you usually eat snacks now?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, snacks feels less like a task and more like a way to relax.
-
-### Q5. Do you think it is healthy for you to eat snacks?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 320. Writing
-- Tag: 事物
-
-### Q1. What other methods do you use to record your life?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. How often do you keep diaries?
-
-Probably a few times a week, although it depends on how busy I am. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. That is why writing has become a fairly normal part of my routine.
-
-### Q3. Do you write a lot?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. What do you like to write? Why?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q5. Do you think the things you write would change?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q6. Do you prefer typing or handwriting when you are writing?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 321. Fish
-
-### Q1. Why do people go fishing?
-
-Mainly because fish feels useful or meaningful to me. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q2. Do you like eating fish?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that fish feels natural and useful rather than just fashionable.
-
-### Q3. Where can you see fish?
-
-Usually somewhere convenient and not too crowded. If it is related to fish, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-### Q4. Where do you buy fish?
-
-Usually somewhere convenient and not too crowded. If it is related to fish, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-## 322. Pen/Pencil
-- Tag: 事物
-
-### Q1. What do you think if someone gives you a pen or pencil as a present?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. When was the last time you bought a pen or pencil?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, pen pencil feels less like a task and more like a way to relax.
-
-### Q3. Which do you use more often? Pen or pencil?
-
-I would probably choose something simple and practical. It is the option that fits my personality best, and I think it is more practical for my everyday life than some flashier alternatives.
-
-### Q4. Do you usually use pen or pencil?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 323. Jeans
-
-### Q1. Do you spend a lot on jeans?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. Why do you think jeans are popular?
-
-Mainly because jeans feels useful or meaningful to me. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q3. Do you like wearing jeans, why?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that jeans feels natural and useful rather than just fashionable.
-
-### Q4. How often do you wear jeans?
-
-Probably a few times a week, although it depends on how busy I am. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. That is why jeans has become a fairly normal part of my routine.
-
-### Q5. Do you wear jeans?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 324. Perfume
-
-### Q1. What kind of perfume do you like?
-
-I usually prefer a simple and practical kind. When it comes to perfume, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q2. Do you wear perfume?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Do you give perfume as a gift?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. What does perfume mean to you?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-## 325. Names
-- Tag: 事物
-
-### Q1. Does your name have any special meaning?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. Do you like your name?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that names feels natural and useful rather than just fashionable.
-
-### Q3. How would you choose names for your next generation?
-
-For me, names is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q4. Are there any differences between how the Chinese name their children now and in the past?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, names was connected with some ordinary but memorable moments in my life.
-
-### Q5. What kinds of names are popular in China?
-
-I usually prefer a simple and practical kind. When it comes to names, I care more about whether they fit my real needs than whether they look impressive.
-
-### Q6. Does anyone in your family have the same name as you?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q7. Are there many Chinese people who have the same name as you?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q8. Are there any names that are more popular than others in China?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that names feels natural and useful rather than just fashionable.
-
-### Q9. Is there any tradition about naming babies?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 326. Birthdays
-- Tag: 事件
-
-### Q1. What do you usually do on your birthday?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q2. Do people in China celebrate birthdays/have birthday parties?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q3. What did you do on your birthday when you were young?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q4. How do they/children celebrate birthdays?
-
-For me, birthdays is quite familiar and easy to relate to. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q5. Do you think it is important for you to celebrate your birthday?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that birthdays feels natural and useful rather than just fashionable.
-
-### Q6. Are people’s birthdays very important in China?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that birthdays feels natural and useful rather than just fashionable.
-
-### Q7. Whose birthday do you think is the most important to celebrate in China?
-
-Probably someone close to me, like a friend or a family member. I find it easier to talk about birthdays with people I trust, because the conversation feels more relaxed and honest.
-
-### Q8. Do you think it’s important for people to celebrate birthdays?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that birthdays feels natural and useful rather than just fashionable.
-
-### Q9. Are birthdays more important for children or for adults?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that birthdays feels natural and useful rather than just fashionable.
-
-### Q10. Do people in China do anything special to celebrate birthdays?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 327. Public Transportation
-- Tag: 事物
-
-### Q1. What kind of public transportation do you usually take?
-
-I usually prefer a simple and practical kind. When it comes to sport, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q2. Do you take public transportation when you travel?
-
-Yes, generally speaking. It helps me stay active, and it is also a good way to release stress. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Do people usually use public transportation in your country?
-
-Yes, generally speaking. It helps me stay active, and it is also a good way to release stress. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. When do you usually take public transportation, in your everyday life or when you are travelling?
-
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, sport feels less like a task and more like a way to relax.
-
-### Q5. What kind of public transport do people in your country use the most? Why?
-
-I usually prefer a simple and practical kind. When it comes to sport, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q6. Do most people prefer public transportation in your country?
-
-Yes, generally speaking. It helps me stay active, and it is also a good way to release stress. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q7. What do you want to change about the public transport?
-
-There have been a few noticeable changes recently. It helps me stay active, and it is also a good way to release stress. I think these changes make daily life a bit more convenient and pleasant.
-
-### Q8. Did you take transportation when you were a kid?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, sport was connected with some ordinary but memorable moments in my life.
-
-### Q9. Will you ride public transportation in the future? Why?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine sport still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q10. Will there be more people taking public transportation in the future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine sport still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q11. What's the most popular means of transportation in your hometown?
-
-I would say the first thing that comes to mind is badminton. It is not something extraordinary, but it suits my lifestyle quite well. It helps me stay active, and it is also a good way to release stress.
-
-### Q12. Why did you choose that form of transport?
-
-Mainly because sport feels useful or meaningful to me. It helps me stay active, and it is also a good way to release stress. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q13. What form of transport do you usually use?
-
-I would say the first thing that comes to mind is badminton. It is not something extraordinary, but it suits my lifestyle quite well. It helps me stay active, and it is also a good way to release stress.
-
-### Q14. What vehicles (or what means of transport) do people in China most often choose to use?
-
-I would say the first thing that comes to mind is badminton. It is not something extraordinary, but it suits my lifestyle quite well. It helps me stay active, and it is also a good way to release stress.
-
-### Q15. What do you think of the transport situation in your hometown?
-
-I would say the first thing that comes to mind is badminton. It is not something extraordinary, but it suits my lifestyle quite well. It helps me stay active, and it is also a good way to release stress.
-
-### Q16. How often do you take buses?
-
-Probably a few times a week, although it depends on how busy I am. It helps me stay active, and it is also a good way to release stress. That is why sport has become a fairly normal part of my routine.
-
-### Q17. Would you say transport costs are high in your hometown?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine sport still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q18. How has the transport system in your hometown changed in the past few decades?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, sport was connected with some ordinary but memorable moments in my life.
-
-### Q19. Can you compare the advantages of planes and trains?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine sport still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q20. Is driving to work popular in your country?
-
-Yes, I would say so. It helps me stay active, and it is also a good way to release stress. For me, the most important thing is that sport feels natural and useful rather than just fashionable.
-
-### Q21. Do you think people will drive more in the future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine sport still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q22. Would you ride bikes to work in the future?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine sport still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q23. What will become the most popular means of transportation in China?
-
-I would say the first thing that comes to mind is badminton. It is not something extraordinary, but it suits my lifestyle quite well. It helps me stay active, and it is also a good way to release stress.
-
-### Q24. Do you prefer public transportation or private transportation?
-
-Yes, generally speaking. It helps me stay active, and it is also a good way to release stress. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 328. library
-- Tag: 地点
-
-### Q1. Do Chinese kids often go to library?
-
-Yes, generally speaking. It gives me a quiet atmosphere, so I can focus much better than I usually do at home. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Did you go to library when you were a kid?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, the library was connected with some ordinary but memorable moments in my life.
-
-### Q3. Do you often go to library?
-
-Yes, generally speaking. It gives me a quiet atmosphere, so I can focus much better than I usually do at home. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. What do you usually do in the library?
-
-I would say the first thing that comes to mind is the reading area near the window. It is not something extraordinary, but it suits my lifestyle quite well. It gives me a quiet atmosphere, so I can focus much better than I usually do at home.
-
-### Q5. Do Chinese kids often go to the library?
-
-Yes, generally speaking. It gives me a quiet atmosphere, so I can focus much better than I usually do at home. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q6. Did you go to a library when you were a kid?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, the library was connected with some ordinary but memorable moments in my life.
-
-### Q7. Do you often go to the library?
-
-Yes, generally speaking. It gives me a quiet atmosphere, so I can focus much better than I usually do at home. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 329. Happy things
-- Tag: 事件
+- Status: CURRENT
 
 ### Q1. Do you think people are happy when buying new things?
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Not always. I think there's a short burst of excitement, like when you unbox a new phone or wear fresh sneakers, but that feeling fades fast. I've seen friends regret big purchases after a week because the novelty wears off.
 
 ### Q2. Do you feel happy when buying new things?
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Yeah, I do feel a genuine sense of happiness when I buy something new, especially if it’s something I’ve been saving up for, like a new pair of running shoes. There’s a real buzz when I first unbox them and try them on. But the feeling fades pretty quickly after a day or two.
 
 ### Q3. When do you feel happy at work? Why?
 
-Mostly when I have a bit of free time, especially in the evening or at weekends. During those moments, mobile apps feels less like a task and more like a way to relax.
+I feel happiest at work when I finish a tricky task ahead of schedule, like completing a detailed report before the deadline. There’s a real sense of relief and satisfaction. Also, when a colleague thanks me for helping them solve a problem, that simple appreciation makes my day.
 
 ### Q4. Is there anything that has made you feel happy lately?
 
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
+Yeah, actually I got a surprise package from a close friend last week—she sent me a hand-drawn card and my favourite dark chocolate. It wasn't anything expensive, but the effort she put into it really touched me. Little gestures like that always brighten my day.
 
 ### Q5. What do you think will make you feel happy in the future?
 
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
+I think achieving a good work-life balance will make me really happy in the future. Specifically, I'd love to have a stable job that allows me to save up for a small seaside flat, where I could spend weekends reading or cooking with friends. That quiet, personal space sounds perfect.
 
 ### Q6. What made you happy when you were little?
 
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-## 330. T-shirts
-- Tag: 事物
-
-### Q1. Did you often wear T-shirt when you were a child?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, t shirts was connected with some ordinary but memorable moments in my life.
-
-### Q2. Would you buy T-shirts as souvenirs on vacation?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine t shirts still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q3. How often do you wear T-shirts?
-
-Probably a few times a week, although it depends on how busy I am. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. That is why t shirts has become a fairly normal part of my routine.
-
-### Q4. Do you think older people who wear T-shirts are fashionable?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q5. Do you like T-shirts with pictures or prints?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that t shirts feels natural and useful rather than just fashionable.
-
-### Q6. Do you like wearing T-shirts?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that t shirts feels natural and useful rather than just fashionable.
-
-## 331. keys
-- Tag: 事物
-
-### Q1. Do you think it's a good idea to leave your keys with a neighbor?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. Do you often forget the keys and lock yourself out?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q3. Have you ever lost your keys?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of keys, and it made the topic feel more real to me.
-
-### Q4. Do you always bring a lot of keys with you?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 332. weekends
-- Tag: 事件
-
-### Q1. Do you make plans for your weekends?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine weekends still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q2. What do you usually do on weekends? Do you study or work?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q3. What did you do last weekend?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways.
-
-### Q4. Do you like weekends?
-
-Yes, I would say so. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. For me, the most important thing is that weekends feels natural and useful rather than just fashionable.
-
-## 333. chocolate
-- Tag: 事物
-
-### Q1. Do you think it is good to use chocolate as gifts to others?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Why do you think chocolate is popular around the world?
-
-Mainly because chocolate feels useful or meaningful to me. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q3. Did you often eat chocolate when you were a kid?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, chocolate was connected with some ordinary but memorable moments in my life.
-
-### Q4. How often do you eat chocolate?
-
-Probably a few times a week, although it depends on how busy I am. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. That is why chocolate has become a fairly normal part of my routine.
-
-### Q5. What's your favorite flavor?
-
-My favourite would probably be something simple and practical. I like it because it feels natural to me, not forced. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q6. Do you like eating chocolate? Why/why not?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that chocolate feels natural and useful rather than just fashionable.
-
-## 334. schools change
-- Tag: 地点
-
-### Q1. Do you like your current learning atmosphere
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that school life feels natural and useful rather than just fashionable.
-
-### Q2. Is there anything you want to change about your school?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. What are the difference between your school and other schools?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q4. Where do you go to school?
-
-Usually somewhere convenient and not too crowded. If it is related to school life, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-### Q5. What changes would you like to see in your school?
-
-There have been a few noticeable changes recently. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think these changes make daily life a bit more convenient and pleasant.
-
-### Q6. Do you go to a good school?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 335. small businesses
-- Tag: 事件
-
-### Q1. Do you know many small businesses where you live?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q2. Have you ever thought about starting your own business?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of small businesses, and it made the topic feel more real to me.
-
-### Q3. Have you ever worked in small businesses?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of small businesses, and it made the topic feel more real to me.
-
-### Q4. Do you prefer buying things in big companies or small businesses?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-### Q5. Do you know many small businesses?
-
-Yes, generally speaking. They are not the biggest part of my life, but they can still affect my mood, habits, or choices in small ways. I would not say they are the biggest part of my life, but they still influence my routine in small ways.
-
-## 336. Doing sports
-- Tag: 事件
-
-### Q1. What exercise did you do as a child that you don't do anymore?
-
-I would say the first thing that comes to mind is badminton. It is not something extraordinary, but it suits my lifestyle quite well. It helps me stay active, and it is also a good way to release stress.
-
-### Q2. Should schools encourage young students to do more physical exercise?
-
-For me, sport is quite familiar and easy to relate to. It helps me stay active, and it is also a good way to release stress. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q3. Do you think it is important for people to exercise?
-
-Yes, I would say so. It helps me stay active, and it is also a good way to release stress. For me, the most important thing is that sport feels natural and useful rather than just fashionable.
-
-### Q4. Do you know any people who are good at sports?
-
-Yes, generally speaking. It helps me stay active, and it is also a good way to release stress. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q5. Do you think students need more exercise?
-
-Yes, generally speaking. It helps me stay active, and it is also a good way to release stress. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q6. Did you do some sports when you were young?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, sport was connected with some ordinary but memorable moments in my life.
-
-### Q7. Where did you learn how to do it?
-
-Usually somewhere convenient and not too crowded. If it is related to sport, I prefer a place where I can feel comfortable and take my time rather than rush through it.
-
-### Q8. What sports do you like?
-
-I would say the first thing that comes to mind is badminton. It is not something extraordinary, but it suits my lifestyle quite well. It helps me stay active, and it is also a good way to release stress.
-
-## 337. Staying up late
-- Tag: 事件
-
-### Q1. What do you do when you stay up late?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. What does it feel like the next morning if you stay up late?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q3. Did you stay up late when you were a kid?
-
-Yes, especially when I was younger. At that time I did not think about it deeply, but looking back, staying up late was connected with some ordinary but memorable moments in my life.
-
-### Q4. What do you usually do when you stay up late?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q5. Do you often stay up late?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 338. Public Transportation(x)
-
-### Q1. Do people usually use public transportation in your country?
-
-Yes, generally speaking. It helps me stay active, and it is also a good way to release stress. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. What kind of public transport do people in your country use the most? Why?
-
-I usually prefer a simple and practical kind. When it comes to sport, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q3. What do you want to change about public transport?
-
-There have been a few noticeable changes recently. It helps me stay active, and it is also a good way to release stress. I think these changes make daily life a bit more convenient and pleasant.
-
-### Q4. Will you ride public transportation in the future? Why?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine sport still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q5. Would you say transport costs are high in your hometown?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine sport still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-## 339. Number
-- Tag: 事物
-
-### Q1. What is your favorite number? Why?
-
-My favourite would probably be something simple and practical. I like it because it feels natural to me, not forced. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. Do you usually use numbers?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q3. Are you good at math?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Are you good at remembering phone numbers?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 340. Haircut
-
-### Q1. What’s your last haircut?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. Do you like having your hair cut?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that haircut feels natural and useful rather than just fashionable.
-
-### Q3. How often do you have a haircut?
-
-Probably a few times a week, although it depends on how busy I am. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. That is why haircut has become a fairly normal part of my routine.
-
-### Q4. How long have you had your current haircut?
-
-For me, haircut is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q5. Have you ever had an unhappy haircut experience?
-
-Yes, I have, although it was not a very dramatic experience. I remember it because it gave me a clearer idea of haircut, and it made the topic feel more real to me.
-
-## 341. Garbage
-
-### Q1. What do you do with garbage when you are on the street?
-
-I would say the first thing that comes to mind is something simple and practical. It is not something extraordinary, but it suits my lifestyle quite well. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways.
-
-### Q2. Why do some people throw garbage on the street?
-
-Mainly because garbage feels useful or meaningful to me. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q3. How do you feel when you see people throwing garbage on the street?
-
-For me, garbage is quite familiar and easy to relate to. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I think that is why I can talk about it naturally without exaggerating my answer.
-
-### Q4. Do you think your city is clean ?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 342. Sky
-
-### Q1. Do you want to live on another planet?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine sky still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q2. Do you like to see the stars at night?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that sky feels natural and useful rather than just fashionable.
-
-### Q3. Do you like to look at the sky? Why?
-
-Yes, I would say so. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. For me, the most important thing is that sky feels natural and useful rather than just fashionable.
-
-### Q4. How often do you look at the sky?
-
-Probably a few times a week, although it depends on how busy I am. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. That is why sky has become a fairly normal part of my routine.
-
-### Q5. Do you prefer the sky in the morning or the sky at night?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q6. Can you see the moon and stars at night where you live?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q7. Is there a good place to look at the sky where you live?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-## 343. Weather
-- Tag: 事物
-
-### Q1. What's the weather like where you live?
-
-I would say the first thing that comes to mind is cool and sunny weather. It is not something extraordinary, but it suits my lifestyle quite well. It affects my mood and plans more than I expect, especially on busy days.
-
-### Q2. Do you like the weather in your hometown?
-
-Yes, I would say so. It affects my mood and plans more than I expect, especially on busy days. For me, the most important thing is that the weather feels natural and useful rather than just fashionable.
-
-### Q3. Do you prefer cold or hot weather?
-
-Yes, generally speaking. It affects my mood and plans more than I expect, especially on busy days. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q4. Do you prefer dry or wet weather?
-
-Yes, generally speaking. It affects my mood and plans more than I expect, especially on busy days. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q5. Are you in the habit of checking the weather forecast? When/How often?
-
-Yes, generally speaking. It affects my mood and plans more than I expect, especially on busy days. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q6. What do you think are the effects of climate change in recent years?
-
-There have been a few noticeable changes recently. It affects my mood and plans more than I expect, especially on busy days. I think these changes make daily life a bit more convenient and pleasant.
-
-### Q7. Would you like to visit other cities/countries that have different climates from where you live?
-
-Yes, I probably would. I do not have a very fixed plan, but I can imagine the weather still being relevant to me in the future, especially if my lifestyle becomes busier.
-
-### Q8. What kind of weather do you like most?
-
-My favourite would probably be cool and sunny weather. I like it because it feels natural to me, not forced. It affects my mood and plans more than I expect, especially on busy days.
-
-### Q9. What kind of weather is typical in your hometown?
-
-I usually prefer a simple and practical kind. When it comes to the weather, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q10. What’s your favourite season?
-
-My favourite would probably be cool and sunny weather. I like it because it feels natural to me, not forced. It affects my mood and plans more than I expect, especially on busy days.
-
-## 344. Jewelry
-- Tag: 事件
-
-### Q1. Do you usually buy jewelry?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
-
-### Q2. Why do you think some people wear a piece of jewelry for a long time?
-
-Mainly because jewelry feels useful or meaningful to me. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. Also, I like things that fit naturally into my life rather than things I have to force myself to do.
-
-### Q3. What type of jewelry do you like to buy?
-
-I usually prefer a simple and practical kind. When it comes to jewelry, I care more about whether it fit my real needs than whether it look impressive.
-
-### Q4. Do you often wear jewelry?
-
-Yes, generally speaking. It is not the biggest part of my life, but it can still affect my mood, habits, or choices in small ways. I would not say it is the biggest part of my life, but it still influence my routine in small ways.
+When I was little, my granddad’s old bicycle made me incredibly happy. I’d race it down the lane near our house, feeling the wind in my hair and the rumble of gravel under the tyres. That simple freedom, just pedalling without a care, was pure joy.

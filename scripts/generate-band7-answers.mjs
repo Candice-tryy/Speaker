@@ -138,6 +138,18 @@ function maxTokensFor(part) {
   return 420;
 }
 
+function invalidAnswerReason(answer) {
+  if (!cleanText(answer)) return "empty answer";
+  if (/as an ai|i cannot|i'm unable/i.test(answer)) return "model refusal";
+  if (/\b(here\s+is|here[’']s)\s+(a\s+)?(sample|flexible|band\s*7|ielts|part\s*[123])\s+answer\b/i.test(answer)) {
+    return "meta sample-answer framing";
+  }
+  if (/\b(sample answer|fits the (?:cue card|prompt|topics)|topics you mentioned|below is)\b/i.test(answer)) {
+    return "meta explanation";
+  }
+  return "";
+}
+
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -167,8 +179,8 @@ async function callLlm(apiKey, topic, question) {
       if (!res.ok) throw new Error(`LLM ${res.status}: ${text.slice(0, 500)}`);
       const data = JSON.parse(text);
       const answer = cleanText(data?.choices?.[0]?.message?.content || "").replace(/^["']|["']$/g, "");
-      if (!answer) throw new Error("LLM returned an empty answer");
-      if (/as an ai|i cannot|i'm unable/i.test(answer)) throw new Error(`Invalid answer: ${answer}`);
+      const invalidReason = invalidAnswerReason(answer);
+      if (invalidReason) throw new Error(`Invalid answer (${invalidReason}): ${answer}`);
       return answer;
     } catch (error) {
       if (attempt === MAX_RETRIES) throw error;
@@ -205,7 +217,8 @@ async function generateAnswers(tasks, cache, apiKey) {
       cursor += 1;
       const { topic, question } = tasks[index];
       const key = cacheKey(topic, question);
-      if (cache.answers[key]?.answer) {
+      const cached = cache.answers[key]?.answer;
+      if (cached && !invalidAnswerReason(cached)) {
         reused += 1;
         continue;
       }
