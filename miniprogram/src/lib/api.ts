@@ -1,15 +1,26 @@
 import Taro from "@tarojs/taro";
 
 // Point this at the Next.js backend (the repo root app/api/*).
-// Dev: your computer's LAN IP while `npm run dev` runs at the repo root.
+// Dev: your computer's LAN IP while `npm run dev` runs at the repo root —
+// works from both the devtools simulator and a real phone on the same Wi-Fi.
+// (IP changes when you switch networks: re-check with `ipconfig`.)
 // Prod: your ICP-filed HTTPS domain (must be in 服务器域名 whitelist).
-export const BASE_URL = "http://localhost:3000";
+export const BASE_URL = "http://172.20.10.3:3000";
 
 export interface Question {
   id: string;
   part: number;
   content: string;
+  is_show?: number;
   answer?: string;
+}
+
+// A question massaged for the practice card: cue cards are split into a short
+// title (qtext) + bullet lines, and the reference answer always has a fallback.
+export interface PracticeQuestion extends Question {
+  qtext: string;
+  bullets: string[];
+  answer: string;
 }
 export interface Topic {
   id: string;
@@ -97,10 +108,12 @@ export const FALLBACK_PARTS: Part[] = [
         boss: "Combo Boss",
         done: 0,
         cards: [
-          makeTopic("combo-friend", "发小", 2, ["Describe a childhood friend.", "How did you meet?", "What did you do together?"]),
-          makeTopic("combo-trip", "旅行", 2, ["Describe a trip you planned.", "Where did you go?", "What happened?"]),
-          makeTopic("combo-study", "学习", 2, ["Describe something useful you learned.", "How did you learn it?", "How do you use it?"]),
-          makeTopic("combo-gift", "礼物", 2, ["Describe a meaningful gift.", "Who gave it to you?", "Why was it special?"]),
+          // part 4 = combo questions, matching the real bank's numbering so
+          // toPracticeQuestions' part filter keeps them.
+          makeTopic("combo-friend", "发小", 4, ["Describe a childhood friend.", "How did you meet?", "What did you do together?"]),
+          makeTopic("combo-trip", "旅行", 4, ["Describe a trip you planned.", "Where did you go?", "What happened?"]),
+          makeTopic("combo-study", "学习", 4, ["Describe something useful you learned.", "How did you learn it?", "How do you use it?"]),
+          makeTopic("combo-gift", "礼物", 4, ["Describe a meaningful gift.", "Who gave it to you?", "Why was it special?"]),
         ],
       },
     ],
@@ -123,6 +136,55 @@ function makeTopic(id: string, title: string, part: number, prompts: string[]): 
   };
 }
 
+export function partQuestionNo(partName: string): number {
+  if (partName === "Part 1") return 1;
+  if (partName === "Part 3") return 3;
+  if (partName === "Part 2串题" || partName.includes("串题")) return 4;
+  return 2;
+}
+
+export function splitCueCard(text: string): { title: string; bullets: string[] } {
+  const clean = String(text ?? "").replace(/\s+/g, " ").trim();
+  const marker = clean.match(/\bYou should say:?\s*/i);
+  if (!marker) return { title: clean, bullets: [] };
+  const title = clean.slice(0, marker.index).trim();
+  const rest = clean.slice((marker.index || 0) + marker[0].length).trim();
+  const bullets = rest
+    .split(/\s+(?=(?:Who|What|When|Where|Why|How|And explain)\b)/i)
+    .map((item) => item.trim())
+    .filter(Boolean);
+  return { title, bullets };
+}
+
+export function fallbackAnswer(question: Question | undefined, topic: Topic | undefined): string {
+  if (question?.answer) return question.answer;
+  return `I would like to talk about ${
+    topic?.title || "this topic"
+  }. In my opinion, the most important point is balance. I would answer it with a clear example, then explain one reason and one personal feeling, so the response sounds natural and complete.`;
+}
+
+export function toPracticeQuestions(topic: Topic, partName: string): PracticeQuestion[] {
+  const partNo = partQuestionNo(partName);
+  return topic.questions
+    .filter((q) => q.is_show !== 0)
+    .filter((q) => (partName === "Part 2&3" ? q.part === 2 || q.part === 3 : q.part === partNo))
+    .map((q) => {
+      if (q.part === 4) {
+        return { ...q, qtext: topic.title, bullets: [q.content], answer: fallbackAnswer(q, topic) };
+      }
+      if (q.part === 2) {
+        const cue = splitCueCard(q.content);
+        return {
+          ...q,
+          qtext: cue.title || q.content,
+          bullets: cue.bullets.length ? cue.bullets : [topic.title],
+          answer: fallbackAnswer(q, topic),
+        };
+      }
+      return { ...q, qtext: q.content, bullets: [topic.title], answer: fallbackAnswer(q, topic) };
+    });
+}
+
 export async function getBank(): Promise<{ parts: Part[]; loaded: boolean }> {
   try {
     const res = await Taro.request({
@@ -141,6 +203,7 @@ export async function getBank(): Promise<{ parts: Part[]; loaded: boolean }> {
 export async function scoreAudio(params: {
   refText: string;
   audioBase64: string;
+  mode?: "follow" | "mock";
   recited?: boolean;
 }): Promise<ScoreResult> {
   try {
@@ -150,7 +213,7 @@ export async function scoreAudio(params: {
       timeout: 60000,
       header: { "content-type": "application/json" },
       data: {
-        mode: "follow",
+        mode: params.mode || "follow",
         recited: params.recited ?? true,
         refText: params.refText,
         audio: params.audioBase64,

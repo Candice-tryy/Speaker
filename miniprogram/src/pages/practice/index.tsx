@@ -1,13 +1,74 @@
-import { useEffect, useMemo, useRef, useState } from "react";
-import { View, Text, ScrollView } from "@tarojs/components";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { Image, View, Text, ScrollView } from "@tarojs/components";
 import Taro, { useRouter } from "@tarojs/taro";
-import { getBank, scoreAudio, type Question, type ScoreResult, type Topic } from "../../lib/api";
+import { getBank, scoreAudio, toPracticeQuestions, type PracticeQuestion, type ScoreResult, type Topic } from "../../lib/api";
+import { ICONS } from "../../lib/icons.gen";
 import { ensureRecordPermission, startRecording, type RecordingController } from "../../lib/recorder";
-import { getSettings, markNodeDone, needForPart, nodeKey } from "../../lib/store";
+import { getSettings, getTopicPassed, lightMapNode, needForPart, setTopicPassed } from "../../lib/store";
+import { capsuleCenteredTop, chromeInsets } from "../../lib/ui";
 import "./index.scss";
 
-type Phase = "loading" | "ready" | "recording" | "scoring" | "done" | "error";
+type Phase = "loading" | "ready" | "recording" | "scoring" | "error";
 type Mode = "follow" | "mock";
+
+interface WordInfo {
+  word: string;
+  ipa: string;
+  def: string;
+  colloc: string;
+}
+
+// Lightweight placeholder highlight word list (same as the web version).
+// Later this is replaced by AI-picked / preprocessed key collocations.
+const DEFS: Array<[string, string, string]> = [
+  ["in my opinion", "表达观点", "In my opinion, ..."],
+  ["the key point", "关键点", "the key point is balance"],
+  ["for example", "举例", "For example, ..."],
+  ["as a result", "结果", "As a result, ..."],
+  ["on the other hand", "另一方面", "On the other hand, ..."],
+];
+
+function escapeReg(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+interface Match {
+  start: number;
+  end: number;
+  text: string;
+  def: string;
+  colloc: string;
+}
+
+function highlightAnswer(answer: string, onWord: (info: WordInfo) => void): ReactNode[] {
+  const matches: Match[] = [];
+  for (const [word, def, colloc] of DEFS) {
+    const re = new RegExp(`\\b${escapeReg(word)}\\b`, "i");
+    const m = re.exec(answer);
+    if (m) matches.push({ start: m.index, end: m.index + m[0].length, text: m[0], def, colloc });
+  }
+  matches.sort((a, b) => a.start - b.start);
+
+  const nodes: ReactNode[] = [];
+  let cursor = 0;
+  for (let i = 0; i < matches.length; i++) {
+    const mt = matches[i];
+    if (mt.start < cursor) continue; // skip overlaps
+    if (mt.start > cursor) nodes.push(<Text key={`t-${i}`}>{answer.slice(cursor, mt.start)}</Text>);
+    nodes.push(
+      <Text
+        key={`w-${i}`}
+        className="w"
+        onClick={() => onWord({ word: mt.text, ipa: "", def: mt.def, colloc: mt.colloc })}
+      >
+        {mt.text}
+      </Text>
+    );
+    cursor = mt.end;
+  }
+  if (cursor < answer.length) nodes.push(<Text key="t-end">{answer.slice(cursor)}</Text>);
+  return nodes;
+}
 
 function decode(value = "") {
   try {
@@ -30,18 +91,25 @@ export default function Practice() {
   const [mode, setMode] = useState<Mode>("follow");
   const [topic, setTopic] = useState<Topic | null>(null);
   const [qIdx, setQIdx] = useState(0);
-  const [passed, setPassed] = useState<Record<number, boolean>>({});
+  const [passedQuestionIds, setPassedQuestionIds] = useState<string[]>([]);
   const [result, setResult] = useState<ScoreResult | null>(null);
+  const [fbOpen, setFbOpen] = useState(false);
   const [errMsg, setErrMsg] = useState("");
-  const [rec, setRec] = useState<RecordingController | null>(null);
   const [answerOpen, setAnswerOpen] = useState(true);
   const [showList, setShowList] = useState(false);
-  const [elapsed, setElapsed] = useState(0);
+  const [word, setWord] = useState<WordInfo | null>(null);
   const [toast, setToast] = useState("");
+  const [toastVisible, setToastVisible] = useState(false);
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const touchX = useRef<number | null>(null);
+  const toastClearTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const touchStart = useRef<{ x: number; y: number } | null>(null);
+  const holdingRef = useRef(false);
+  const recRef = useRef<RecordingController | null>(null);
+  const recitedRef = useRef(false);
 
   const target = getSettings().targetBand;
+  const passMark = (target - 0.5).toFixed(1);
+  const insets = useMemo(() => chromeInsets(), []);
 
   useEffect(() => {
     getBank()
@@ -54,6 +122,7 @@ export default function Practice() {
         }
         if (!card) card = part?.peaks[peakIdx]?.cards[nodeIdx] || part?.peaks[0]?.cards[0] || null;
         setTopic(card);
+        if (card?.id) setPassedQuestionIds(getTopicPassed(partName, card.id));
         setPhase(card ? "ready" : "error");
         if (!card) setErrMsg("题库为空");
       })
@@ -64,222 +133,309 @@ export default function Practice() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useEffect(() => {
-    if (phase !== "recording") return;
-    setElapsed(0);
-    const timer = setInterval(() => setElapsed((s) => s + 1), 1000);
-    return () => clearInterval(timer);
-  }, [phase]);
-
   function showToast(message: string) {
     setToast(message);
+    setToastVisible(false);
     if (toastTimer.current) clearTimeout(toastTimer.current);
-    toastTimer.current = setTimeout(() => setToast(""), 1600);
+    if (toastClearTimer.current) clearTimeout(toastClearTimer.current);
+    setTimeout(() => setToastVisible(true), 30);
+    toastTimer.current = setTimeout(() => setToastVisible(false), 1450);
+    toastClearTimer.current = setTimeout(() => setToast(""), 1800);
   }
 
-  const questions: Question[] = topic?.questions || [];
+  const questions: PracticeQuestion[] = useMemo(
+    () => (topic ? toPracticeQuestions(topic, partName) : []),
+    [topic, partName]
+  );
   const need = Math.min(needForPart(partName), questions.length || 1);
-  const passedCount = Object.values(passed).filter(Boolean).length;
+  const requiredQuestionIds = useMemo(() => new Set(questions.slice(0, need).map((q) => q.id)), [questions, need]);
+  const passedCount = passedQuestionIds.filter((id) => requiredQuestionIds.has(id)).length;
   const current = questions[qIdx];
   const refText = useMemo(() => current?.answer || current?.content || "", [current]);
-  const passedThis = !!result && !result.rejected && result.band >= target - 0.5;
+  const passed = !!result && !result.rejected && result.band >= target - 0.5;
+  const showScore = !!result && !result.rejected;
+  const scoring = phase === "scoring";
+  const recording = phase === "recording";
+  const navStepCount = Math.max(1, Math.min(5, questions.length || 5));
+  const navWindowCenterOffset = Math.floor(navStepCount / 2);
+  const navWindowStart = Math.min(Math.max(qIdx - navWindowCenterOffset, 0), Math.max(questions.length - navStepCount, 0));
+  const navStepIndex = qIdx - navWindowStart;
+  const passedQuestionSet = useMemo(() => new Set(passedQuestionIds), [passedQuestionIds]);
 
-  async function onStart() {
+  // Long-press recording, ported from the web version: press starts the take,
+  // release anywhere ends it and submits.
+  async function onRecStart() {
+    if (holdingRef.current || scoring) return;
+    holdingRef.current = true;
+    setPhase("recording");
     const ok = await ensureRecordPermission();
     if (!ok) {
+      holdingRef.current = false;
+      setPhase("ready");
       showToast("需要麦克风权限才能跟读");
       return;
     }
+    if (!holdingRef.current) return; // released during the permission prompt
     try {
       const controller = await startRecording();
-      setRec(controller);
-      setPhase("recording");
+      if (!holdingRef.current) {
+        controller.cancel();
+        return;
+      }
+      recRef.current = controller;
     } catch {
-      setErrMsg("麦克风启动失败，请在设置里允许录音");
-      setPhase("error");
+      // No mic: the take still submits (server falls back to mock).
     }
   }
 
-  async function onStop() {
-    if (!rec) return;
+  async function onRecEnd() {
+    if (!holdingRef.current) return;
+    holdingRef.current = false;
+    const controller = recRef.current;
+    recRef.current = null;
     setPhase("scoring");
-    try {
-      const audioBase64 = await rec.stop();
-      const r = await scoreAudio({ refText, audioBase64, recited: true });
-      setResult(r);
-      setPhase("done");
-      if (!r.rejected) {
-        const nextPassed = { ...passed, [qIdx]: true };
-        setPassed(nextPassed);
-        const count = Object.values(nextPassed).filter(Boolean).length;
-        if (count >= need) markNodeDone(nodeKey(partIdx, peakIdx, nodeIdx));
+    let audio = "";
+    if (controller) {
+      try {
+        audio = await controller.stop();
+      } catch {
+        audio = "";
       }
-    } catch (error) {
-      setErrMsg(String((error as any)?.errMsg || error));
-      setPhase("error");
-    } finally {
-      setRec(null);
     }
+    try {
+      const score = await scoreAudio({ refText, audioBase64: audio, mode, recited: recitedRef.current });
+      setResult(score);
+      setFbOpen(true);
+      recitedRef.current = true;
+    } catch {
+      showToast("评分服务暂时不可用，请重试");
+    } finally {
+      setPhase("ready");
+    }
+  }
+
+  function changeMode(next: Mode) {
+    setMode(next);
+    if (next === "mock") setAnswerOpen(false);
   }
 
   function goTo(index: number) {
     const bounded = Math.max(0, Math.min(index, questions.length - 1));
     setQIdx(bounded);
     setResult(null);
-    setPhase("ready");
+    setFbOpen(false);
     setShowList(false);
     setAnswerOpen(true);
+    recitedRef.current = false;
   }
 
-  function nextAfterPass() {
-    if (qIdx < questions.length - 1) {
-      goTo(qIdx + 1);
+  function handleSwipeEnd(x: number, y: number) {
+    if (!touchStart.current) return;
+    const dx = x - touchStart.current.x;
+    const dy = y - touchStart.current.y;
+    touchStart.current = null;
+    if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy) * 1.25) return;
+    goTo(qIdx + (dx < 0 ? 1 : -1));
+  }
+
+  function finishPassedQuestion() {
+    if (!topic || !current?.id) {
+      Taro.navigateBack();
       return;
     }
-    Taro.navigateBack();
+    const nextPassed = passedQuestionIds.includes(current.id) ? passedQuestionIds : [...passedQuestionIds, current.id];
+    setPassedQuestionIds(nextPassed);
+    setTopicPassed(partName, topic.id, nextPassed);
+    const count = nextPassed.filter((id) => requiredQuestionIds.has(id)).length;
+    if (count >= need) lightMapNode(partIdx, peakIdx, nodeIdx);
+    showToast(`已完成 ${count}/${need}，继续练下一题`);
+    setFbOpen(false);
+    if (qIdx < questions.length - 1) goTo(qIdx + 1);
+    else Taro.navigateBack();
   }
 
-  function backMap() {
-    Taro.navigateBack();
+  function genPersonal() {
+    const persona = (getSettings().name || "").trim();
+    showToast(persona ? `✍️ 按你的人设生成中…「${persona.slice(0, 12)}…」` : "先去「我的」填写个性化人设");
   }
 
-  function openProfile() {
-    Taro.navigateTo({ url: "/pages/profile/index?returnTo=practice" });
-  }
+  // Share the capsule's row: center on it vertically (the 34px back button +
+  // border is taller than the capsule, so top-alignment reads as "too low"),
+  // and reserve the capsule's width on the right so the list/target/gear
+  // cluster never slides underneath it.
+  const topStyle = `padding-top:${capsuleCenteredTop(36)}px;padding-right:${Math.max(20, insets.right + 8)}px`;
 
   if (phase === "loading") {
-    return <View className="practice-loading">加载题库中...</View>;
+    return <View className="practice-phone center"><Text className="state-text">加载题库中...</Text></View>;
   }
 
   if (phase === "error") {
     return (
-      <View className="practice-error">
-        <Text>出错了：{errMsg}</Text>
+      <View className="practice-phone center">
+        <Text className="state-text error">出错了：{errMsg}</Text>
         <View className="error-btn" onClick={() => Taro.navigateBack()}>返回地图</View>
       </View>
     );
   }
 
   return (
-    <View className="practice-shell">
-      <View className="practice-phone">
-        <View className="practice-top">
-          <View className="icon-btn" onClick={backMap}>‹</View>
-          <View className="crumb">
-            <Text>{partName} · {topic?.title || topic?.tag || "Practice"}</Text>
-          </View>
-          <View className="top-actions">
-            <View className="icon-btn" onClick={() => setShowList(true)}>☰</View>
-            <View className="target-pill">🎯 {target.toFixed(1)}</View>
-            <View className="icon-btn" onClick={openProfile}>⚙</View>
+    <View className="practice-phone">
+        <View className="top" style={topStyle}>
+          <View className="toprow">
+            <View className="back" onClick={() => Taro.navigateBack()}><Image className="icon" src={ICONS.back} /></View>
+            <View className="crumb">
+              <Text className="crumb-b">{partName}</Text>
+            </View>
+            <View className="top-actions">
+              <View className="settings" onClick={() => setShowList(true)}><Image className="icon" src={ICONS.list} /></View>
+              <View className="pill"><Image className="icon" src={ICONS.flag} /><Text>{target.toFixed(1)}</Text></View>
+              <View className="settings" onClick={() => Taro.navigateTo({ url: "/pages/profile/index?returnTo=practice" })}>
+                <Image className="icon" src={ICONS.gearBlue} />
+              </View>
+            </View>
           </View>
         </View>
 
-        <View
-          className="practice-main"
-          onTouchStart={(event) => {
-            touchX.current = (event as any).touches?.[0]?.clientX ?? null;
-          }}
-          onTouchEnd={(event) => {
-            if (touchX.current === null) return;
-            const dx = ((event as any).changedTouches?.[0]?.clientX ?? touchX.current) - touchX.current;
-            touchX.current = null;
-            if (Math.abs(dx) > 46) goTo(qIdx + (dx < 0 ? 1 : -1));
-          }}
-        >
-          <View className="question-card">
-            <Text className="kind">Current card · Part {current?.part || ""}</Text>
-            <Text className="question-text">{current?.content || "暂无题目"}</Text>
-            <Text className="question-meta">Q{qIdx + 1}/{questions.length} · 已过 {passedCount}/{need}</Text>
-          </View>
+        <ScrollView scrollY className="scroll">
+          <View
+            className="main"
+            onTouchStart={(event) => {
+              const touch = (event as any).touches?.[0];
+              touchStart.current = touch ? { x: touch.clientX, y: touch.clientY } : null;
+            }}
+            onTouchEnd={(event) => {
+              const touch = (event as any).changedTouches?.[0];
+              if (touch) handleSwipeEnd(touch.clientX, touch.clientY);
+            }}
+          >
+            <View
+              className="qcard"
+            >
+              <Text className="qtext">{current?.qtext || current?.content || "暂无题目"}</Text>
+              <Text className="q-meta">Q{qIdx + 1} / {questions.length} · 已过 {passedCount}/{need}</Text>
+              <View className="sub">
+                {(current?.bullets?.length ? current.bullets : [topic?.title || ""]).map((b, i) => (
+                  <Text key={i}>{b}</Text>
+                ))}
+              </View>
+              <View className="dots card-dots">
+                {Array.from({ length: navStepCount }).map((_, index) => (
+                  (() => {
+                    const questionIndex = navWindowStart + index;
+                    const question = questions[questionIndex];
+                    return (
+                      <View
+                        key={questionIndex}
+                        className={`dot ${index === navStepIndex ? "cur" : questionIndex < qIdx && passedQuestionSet.has(question?.id || "") ? "done" : ""}`}
+                      />
+                    );
+                  })()
+                ))}
+              </View>
+            </View>
 
-          <View className={`answer-box ${answerOpen ? "open" : ""}`}>
-            <View className="answer-toggle" onClick={() => setAnswerOpen((v) => !v)}>⌃</View>
-            {answerOpen && (
-              <View className="answer-panel">
-                <Text>{refText || "这个题目还没有范文，先用自己的话试着回答。"}</Text>
-                <View className="answer-tools">
-                  <View onClick={() => showToast("示范朗读稍后接入")}>示范朗读</View>
-                  <View onClick={() => showToast("个性化生成稍后接入")}>个性化</View>
+            <View className={`reveal ${answerOpen ? "open" : ""}`}>
+              <View
+                className="toggle"
+                onClick={() => setAnswerOpen((open) => !open)}
+              >
+                <Image className="icon" src={ICONS.chevronDown} />
+              </View>
+              <View className="panel">
+                <View className="ans">
+                  {refText ? highlightAnswer(refText, setWord) : <Text>这个题目还没有范文，先用自己的话试着回答。</Text>}
+                </View>
+                <View className="anstools">
+                  <View onClick={() => showToast("🔊 示范朗读中…")}><Image className="icon" src={ICONS.speaker} /><Text>示范朗读</Text></View>
+                  <View onClick={genPersonal}><Image className="icon" src={ICONS.pencil} /><Text>个性化</Text></View>
                 </View>
               </View>
-            )}
-          </View>
-        </View>
-
-        <View className="practice-dock">
-          <View className="mode-seg">
-            <Text className={mode === "follow" ? "active" : ""} onClick={() => setMode("follow")}>跟读练习</Text>
-            <Text className={mode === "mock" ? "active" : ""} onClick={() => setMode("mock")}>模拟作答</Text>
-          </View>
-          <Text className="goal-line">
-            {mode === "follow" ? `跟读到 ${(target - 0.5).toFixed(1)} 即可通关` : "隐藏范文，用自己的话完整回答"}
-          </Text>
-
-          {phase === "ready" && (
-            <View className="rec-button" onClick={onStart}>
-              <Text>🎙</Text>
             </View>
-          )}
-          {phase === "recording" && (
-            <View className="rec-button recording" onClick={onStop}>
-              <View className="ring" />
-              <Text>{elapsed}s</Text>
-            </View>
-          )}
-          {phase === "scoring" && <View className="scoring">正在听你的发音...</View>}
-          <Text className="rec-tip">{phase === "recording" ? "点击结束并提交" : "点击录音 · 再点提交"}</Text>
-        </View>
+          </View>
 
-        {phase === "done" && result && (
-          <View className="sheet-mask" onClick={() => setPhase("ready")}>
-            <View className="feedback-sheet" onClick={(event) => event.stopPropagation()}>
-              <View className="grab" />
-              {result.rejected ? (
-                <Text className="reject">没听清，请再读一遍</Text>
+          <View className="dock">
+            <View className="seg">
+              <Text className={mode === "follow" ? "active" : ""} onClick={() => changeMode("follow")}>跟读练习</Text>
+              <Text className={mode === "mock" ? "active" : ""} onClick={() => changeMode("mock")}>模拟作答</Text>
+            </View>
+            <View className="goal">
+              {mode === "mock" ? (
+                <Text>隐藏范本，用自己的话说 · <Text className="goal-b">意思大致完整</Text>即可</Text>
               ) : (
-                <>
-                  <View className="score-row">
-                    <Text className="score">{result.band.toFixed(1)}</Text>
-                    <View className="dims">
-                      <View><Text>Pronunciation</Text><Text>{result.pronunciation.toFixed(1)}</Text></View>
-                      <View><Text>Fluency</Text><Text>{result.fluency.toFixed(1)}</Text></View>
-                    </View>
-                  </View>
-                  <Text className="advice">{result.advice}</Text>
-                </>
+                <Text>跟读到 <Text className="goal-b">{passMark}</Text> 即可通关 · 只看发音和流利度</Text>
               )}
-              <View className="feedback-actions">
-                <View className="retry-btn" onClick={() => setPhase("ready")}>再练一次</View>
-                {passedThis && <View className="pass-btn" onClick={nextAfterPass}>点亮这一关</View>}
+            </View>
+            <View className="recwrap">
+              <View
+                className={`rec ${recording ? "recording" : ""}`}
+                onTouchStart={onRecStart}
+                onTouchEnd={onRecEnd}
+              >
+                <View className="ring" />
+                <Image className="icon" src={ICONS.mic} />
+              </View>
+            </View>
+            <Text className="rectip">
+              {scoring ? "正在听你的发音…" : recording ? "录音中… 松手提交" : "长按录音 · 松手提交"}
+            </Text>
+          </View>
+        </ScrollView>
+
+        {toast ? <View className={`toast ${toastVisible ? "show" : ""}`}>{toast}</View> : null}
+
+        {/* feedback sheet */}
+        <View className={`fbmask ${fbOpen ? "show" : ""}`} onClick={() => setFbOpen(false)} />
+        <View className={`fb ${fbOpen ? "show" : ""}`}>
+          <View className="grab" />
+          <View className="band">
+            <Text className="score">{showScore ? result!.band.toFixed(1) : "—"}</Text>
+            <View className="dims">
+              <View className="dim">
+                <Text className="dl">Pronunciation</Text>
+                <Text className="dv">{showScore ? result!.pronunciation.toFixed(1) : "—"}</Text>
+              </View>
+              <View className="dim">
+                <Text className="dl">Fluency</Text>
+                <Text className="dv">{showScore ? result!.fluency.toFixed(1) : "—"}</Text>
               </View>
             </View>
           </View>
-        )}
-
-        {showList && (
-          <View className="sheet-mask" onClick={() => setShowList(false)}>
-            <View className="question-sheet" onClick={(event) => event.stopPropagation()}>
-              <View className="grab" />
-              <Text className="sheet-title">{topic?.title || "题目列表"}</Text>
-              <ScrollView scrollY className="question-list">
-                {questions.map((q, index) => (
-                  <View
-                    key={q.id}
-                    className={`question-row ${index === qIdx ? "active" : ""}`}
-                    onClick={() => goTo(index)}
-                  >
-                    <Text>Q{index + 1}</Text>
-                    <Text>{q.content}</Text>
-                  </View>
-                ))}
-              </ScrollView>
-            </View>
+          <View className="advice">
+            <Image className="icon" src={ICONS.bulb} />
+            <Text>{result?.advice}</Text>
           </View>
-        )}
+          <View className="fbcta">
+            <View className="retry" style={passed ? "" : "flex:1"} onClick={() => setFbOpen(false)}>再练一次</View>
+            {passed ? <View className="pass" onClick={finishPassedQuestion}>点亮这一关 ✦</View> : null}
+          </View>
+        </View>
 
-        {toast ? <View className="practice-toast">{toast}</View> : null}
-      </View>
+        {/* question picker sheet */}
+        <View className={`mask ${showList ? "show" : ""}`} onClick={() => setShowList(false)} />
+        <View className={`sheet ${showList ? "show" : ""}`}>
+          <View className="grab" />
+          <Text className="picker-title">{topic?.title || "题目列表"}</Text>
+          <ScrollView scrollY className="question-list">
+            {questions.map((q, index) => (
+              <View key={q.id} className={`question-row ${index === qIdx ? "active" : ""}`} onClick={() => goTo(index)}>
+                <Text className="qno">Q{index + 1}</Text>
+                <Text className="qcontent">{q.content}</Text>
+              </View>
+            ))}
+          </ScrollView>
+        </View>
+
+        {/* word sheet */}
+        <View className={`mask ${word ? "show" : ""}`} onClick={() => setWord(null)} />
+        <View className={`sheet ${word ? "show" : ""}`}>
+          <View className="grab" />
+          <Text className="word">{word?.word}</Text>
+          {word?.ipa ? <Text className="ipa">{word.ipa}</Text> : null}
+          <View className="play" onClick={() => showToast("🔊 播放发音")}><Image className="icon" src={ICONS.play} /><Text>播放发音</Text></View>
+          <Text className="def">{word?.def}</Text>
+          <Text className="colloc">常见搭配：{word?.colloc}</Text>
+          <View className="add" onClick={() => showToast("⭐ 已加入生词本")}>＋ 加入生词本</View>
+        </View>
     </View>
   );
 }

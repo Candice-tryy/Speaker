@@ -142,9 +142,7 @@
   <div class="hud">
     <div class="hud-main">
       <div class="parts">
-        <button class="part" data-part="0">Part 1</button>
-        <button class="part active" data-part="1">Part 2</button>
-        <button class="part" data-part="2">Part 3</button>
+        <button class="part active" data-part="0">Part 1</button>
       </div>
       <div class="metrics">
         <div class="metric">
@@ -172,7 +170,7 @@
   </div>
 
   <div class="hint" id="hint">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
   </div>
 
   <div class="bottom">
@@ -210,9 +208,18 @@ const NODE_POS = [
   {x:116, y:412},
   {x:260, y:302}
 ];
+const TOPIC_NODE_POS = [
+  {x:278, y:606},
+  {x:146, y:568},
+  {x:254, y:526},
+  {x:78, y:486},
+  {x:206, y:432},
+  {x:52, y:382},
+  {x:114, y:286}
+];
 let PARTS = [];
 
-let partIdx = 1, peakIdx = 0;
+let partIdx = 0, peakIdx = 0;
 
 const PKEY = 'speaker_progress';
 function loadProg(){ try{ return JSON.parse(localStorage.getItem(PKEY))||{}; }catch(e){ return {}; } }
@@ -253,6 +260,32 @@ function pathD(){
        + `C174 354 260 382 ${n[3].x} ${n[3].y}`;
 }
 
+function isTopicSet(partName){
+  return partName === 'Part 1' || partName === 'Part 2&3' || partName === 'Part 2串题';
+}
+
+function nodePositions(peak, partName){
+  if(!isTopicSet(partName)) return NODE_POS;
+  const count = Math.max(1, peak.cards.length);
+  const source = partName === 'Part 2串题' ? NODE_POS : TOPIC_NODE_POS;
+  if(count >= source.length) return source;
+  return Array.from({length:count}, (_, index)=>{
+    const routePoint = count <= 1 ? source.length - 1 : Math.round((index * (source.length - 1)) / (count - 1));
+    return source[routePoint];
+  });
+}
+
+function routePath(points){
+  const all = [FOOT, ...points];
+  return all.map((point,index)=>{
+    if(index===0) return `M${point.x} ${point.y}`;
+    const prev = all[index-1];
+    const midY = (prev.y + point.y) / 2;
+    const bend = index % 2 === 0 ? 36 : -36;
+    return `C${prev.x + bend} ${midY} ${point.x - bend} ${midY} ${point.x} ${point.y}`;
+  }).join(' ');
+}
+
 function nextPathD(){
   const p = NODE_POS[3];
   return `M${p.x} ${p.y} C300 286 306 248 346 226 C364 216 378 208 396 196`;
@@ -263,9 +296,12 @@ function entryPathD(){
   return `M-42 668 C-8 656 4 630 ${f.x} ${f.y}`;
 }
 
-function buildScene(peak, pdone, ki, total){
-  const nodes = NODE_POS.map((p,i)=>{
-    const isBoss = i===3, done = i<pdone, current = i===pdone;
+function buildScene(peak, pdone, ki, total, partName){
+  const topicSet = isTopicSet(partName);
+  const positions = nodePositions(peak, partName);
+  const mainPath = topicSet ? routePath(positions) : pathD();
+  const nodes = positions.map((p,i)=>{
+    const isBoss = !topicSet && i===3, done = i<pdone, current = i===pdone;
     const label = String(isBoss ? peak.boss : peak.topics[i] || 'Practice');
     let inner = "";
     if(done){
@@ -303,8 +339,8 @@ function buildScene(peak, pdone, ki, total){
 
   let dots = "";
   for(let d=0; d<total; d++){
-    const cy = 180 - d*15;
-    dots += `<circle cx="324" cy="${cy}" r="${d===ki?4.5:3}" fill="${d===ki?'#fff':'rgba(255,255,255,.5)'}"/>`;
+    const cy = 126 + (total - 1 - d) * 14;
+    dots += `<circle cx="18" cy="${cy}" r="${d===ki?4.5:3}" fill="${d===ki?'#fff':'rgba(255,255,255,.5)'}"/>`;
   }
   const entryTrail = ki > 0 ? `
     <path d="${entryPathD()}" fill="none" stroke="rgba(74,48,24,.16)" stroke-width="17" stroke-linecap="round"/>
@@ -382,9 +418,9 @@ function buildScene(peak, pdone, ki, total){
     </g>
 
     ${entryTrail}
-    <path d="${pathD()}" fill="none" stroke="rgba(74,48,24,.22)" stroke-width="19" stroke-linecap="round"/>
-    <path d="${pathD()}" fill="none" stroke="url(#pathGrad)" stroke-width="12" stroke-linecap="round"/>
-    <path d="${pathD()}" fill="none" stroke="#D8B071" stroke-width="3" stroke-linecap="round" stroke-dasharray="1.5 11"/>
+    <path d="${mainPath}" fill="none" stroke="rgba(74,48,24,.22)" stroke-width="19" stroke-linecap="round"/>
+    <path d="${mainPath}" fill="none" stroke="url(#pathGrad)" stroke-width="12" stroke-linecap="round"/>
+    <path d="${mainPath}" fill="none" stroke="#D8B071" stroke-width="3" stroke-linecap="round" stroke-dasharray="1.5 11"/>
     ${nextTrail}
 
     <g><circle cx="${FOOT.x}" cy="${FOOT.y}" r="10" fill="var(--green)"/><path d="M${FOOT.x-5} ${FOOT.y} l4 4 l7 -8" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></g>
@@ -415,7 +451,7 @@ function render(){
   const peak = PARTS[partIdx].peaks[peakIdx];
   const total = PARTS[partIdx].peaks.length;
   applyAccent();
-  scene.innerHTML = buildScene(peak, getDone(partIdx, peakIdx), peakIdx, total);
+  scene.innerHTML = buildScene(peak, getDone(partIdx, peakIdx), peakIdx, total, PARTS[partIdx].name);
   document.getElementById('hint').style.display = peakIdx < total-1 ? 'flex' : 'none';
   phoneEl.style.background = SKIES[Math.min(peakIdx, SKIES.length-1)];
   animateAlt(ALT[Math.min(peakIdx, ALT.length-1)]);
@@ -428,10 +464,11 @@ function bindNodes(){
       const st = n.dataset.state, i = +n.dataset.i;
       const peak = PARTS[partIdx].peaks[peakIdx];
       const partName = PARTS[partIdx].name;
-      const partNo = partName === 'Part 1' ? 1 : partName === 'Part 3' ? 3 : 2;
-      const card = i===3 ? peak.cards[0] : peak.cards[i];
+      const partNo = QuestionBank.partQuestionNo(partName);
+      const topicSet = isTopicSet(partName);
+      const card = topicSet ? peak.cards[i] : (i===3 ? peak.cards[0] : peak.cards[i]);
       const question = card?.questions?.find(q => q.part === partNo) || card?.questions?.[0];
-      const label = i===3 ? peak.boss : peak.topics[i];
+      const label = !topicSet && i===3 ? peak.boss : peak.topics[i];
       const go = ()=>{
         const qs = `?p=${partIdx}&pk=${peakIdx}&n=${i}`
           + `&part=${encodeURIComponent(partName)}`
@@ -439,7 +476,7 @@ function bindNodes(){
           + `&topic=${encodeURIComponent(label)}`
           + (card ? `&topicId=${encodeURIComponent(card.id)}` : '')
           + (question ? `&questionId=${encodeURIComponent(question.id)}` : '');
-        location.href = (i===3 ? 'examiner.html' : 'card-practice.html') + qs;
+        location.href = (!topicSet && i===3 ? 'examiner.html' : 'card-practice.html') + qs;
       };
       if(st==='lock'){
         n.classList.add('shake'); setTimeout(()=>n.classList.remove('shake'),450);
@@ -449,35 +486,53 @@ function bindNodes(){
   });
 }
 
-document.querySelectorAll('.part').forEach(b=>{
-  b.addEventListener('click', ()=>{
-    document.querySelectorAll('.part').forEach(x=>x.classList.remove('active'));
-    b.classList.add('active');
-    partIdx = +b.dataset.part; peakIdx = 0; render();
+function renderPartTabs(){
+  const tabs = document.querySelector('.parts');
+  tabs.innerHTML = PARTS.map((part, index)=>
+    `<button class="part ${index === partIdx ? 'active' : ''}" data-part="${index}">${part.name}</button>`
+  ).join('');
+  tabs.querySelectorAll('.part').forEach(b=>{
+    b.addEventListener('click', ()=>{
+      partIdx = +b.dataset.part;
+      peakIdx = 0;
+      renderPartTabs();
+      render();
+    });
   });
-});
+}
+
+function switchPart(dir){
+  const next = partIdx + dir;
+  if(next < 0 || next >= PARTS.length){ showToast(dir>0 ? '已经是最后一个 Part' : '已经是第一个 Part'); return; }
+  partIdx = next;
+  peakIdx = 0;
+  renderPartTabs();
+  render();
+}
 
 function switchPeak(dir){
   const peaks = PARTS[partIdx].peaks, next = peakIdx + dir;
   if(next < 0 || next >= peaks.length){ showToast(dir>0 ? '已是最高峰 ⛰' : '已在山脚'); return; }
   const mist = document.getElementById('mist');
-  mist.classList.remove('up','down'); void mist.offsetWidth; mist.classList.add(dir>0?'up':'down');
-  scene.classList.add(dir>0?'exit-up':'enter-down');
+  mist.classList.remove('up','down'); void mist.offsetWidth; mist.classList.add(dir>0?'down':'up');
+  scene.classList.add(dir>0?'enter-down':'exit-up');
   setTimeout(()=>{
     peakIdx = next; render();
-    scene.classList.add(dir>0?'enter-down':'exit-up');
+    scene.classList.add(dir>0?'exit-up':'enter-down');
     requestAnimationFrame(()=>requestAnimationFrame(()=>scene.classList.remove('exit-up','enter-down')));
   }, 300);
 }
 
-let startY = null;
+let startX = null, startY = null;
 const stage = document.getElementById('stage');
-stage.addEventListener('touchstart', e=>{ startY = e.touches[0].clientY; }, {passive:true});
+stage.addEventListener('touchstart', e=>{ startX = e.touches[0].clientX; startY = e.touches[0].clientY; }, {passive:true});
 stage.addEventListener('touchend', e=>{
   if(startY===null) return;
+  const dx = e.changedTouches[0].clientX - startX;
   const dy = e.changedTouches[0].clientY - startY;
-  if(Math.abs(dy) > 55) switchPeak(dy<0 ? +1 : -1);
-  startY = null;
+  if(Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy)) switchPart(dx<0 ? +1 : -1);
+  else if(Math.abs(dy) > 55) switchPeak(dy>0 ? +1 : -1);
+  startX = null; startY = null;
 });
 let wheelLock=false;
 stage.addEventListener('wheel', e=>{
@@ -494,7 +549,7 @@ function handleReturn(){
   const u = new URLSearchParams(location.search);
   if(u.has('p')) partIdx = Math.min(+u.get('p'), PARTS.length-1);
   if(u.has('pk')) peakIdx = Math.min(+u.get('pk'), PARTS[partIdx].peaks.length-1);
-  document.querySelectorAll('.part').forEach(x=>x.classList.toggle('active', +x.dataset.part===partIdx));
+  renderPartTabs();
   if(u.get('done')==='1'){
     const n = +u.get('n'), cur = getDone(partIdx, peakIdx);
     if(n === cur) setDone(partIdx, peakIdx, cur+1);

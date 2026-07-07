@@ -186,7 +186,25 @@ function displayPartName(value: string): string {
   return value.replace(/^Part\s*/g, "");
 }
 
-function buildScene(peak: Peak, pdone: number, ki: number, total: number, partName: string): string {
+function partNumber(partName: string): number {
+  return partName === "Part 1" ? 1 : partName === "Part 3" ? 3 : partName === "Part 2涓查" ? 4 : 2;
+}
+
+function practiceHref(peak: Peak, partIdx: number, peakIdx: number, nodeIdx: number, partName: string): string {
+  const card = peak.cards[nodeIdx];
+  const partNo = partNumber(partName);
+  const question = card?.questions?.find((q) => q.part === partNo) || card?.questions?.[0];
+  const label = peak.topics[nodeIdx] || "Practice";
+  return (
+    `/practice?p=${partIdx}&pk=${peakIdx}&n=${nodeIdx}` +
+    `&part=${encodeURIComponent(partName)}` +
+    `&topic=${encodeURIComponent(label)}` +
+    (card ? `&topicId=${encodeURIComponent(card.id)}` : "") +
+    (question ? `&questionId=${encodeURIComponent(question.id)}` : "")
+  );
+}
+
+function buildScene(peak: Peak, pdone: number, ki: number, total: number, partName: string, partIdx: number): string {
   const isTopicSet = partName === "Part 1" || partName === "Part 2&3" || partName === "Part 2串题";
   const isCombo = partName === "Part 2串题";
   const nodePos = isCombo ? comboRoutePositions(peak.cards.length, ki) : isTopicSet ? part1RoutePositions(peak.cards.length, ki) : STANDARD_NODE_POS;
@@ -237,14 +255,17 @@ function buildScene(peak: Peak, pdone: number, ki: number, total: number, partNa
     const ly = p.y - (isBoss ? 27 : 25);
     const lc = current ? "var(--yellow-deep)" : "var(--muted)";
     const lw = current ? "600" : "500";
+    const state = done ? "done" : current ? "current" : "lock";
     const lbl = `<rect x="${labelX - w / 2}" y="${ly - 12}" width="${w}" height="17" rx="8.5" fill="#fff" opacity="${current ? 1 : 0.94}"/>
                  <text x="${labelX}" y="${ly}" text-anchor="middle" font-size="10.5" fill="${lc}" font-weight="${lw}">${label}</text>`;
-    return `<g class="node" data-i="${i}" data-state="${done ? "done" : current ? "current" : "lock"}">${lbl}${inner}</g>`;
+    const node = `<g class="node" data-i="${i}" data-state="${state}">${lbl}${inner}</g>`;
+    if (state === "lock" || (isBoss && !isTopicSet)) return node;
+    return `<a href="${escapeXml(practiceHref(peak, partIdx, ki, i, partName))}" class="node-link">${node}</a>`;
   }).join("");
 
   let dots = "";
   for (let d = 0; d < total; d++) {
-    const cy = 126 + d * 14;
+    const cy = 126 + (total - 1 - d) * 14;
     dots += `<circle cx="18" cy="${cy}" r="${d === ki ? 4.5 : 3}" fill="${d === ki ? "#fff" : "rgba(255,255,255,.5)"}"/>`;
   }
   const entryTrail =
@@ -308,11 +329,27 @@ function buildScene(peak: Peak, pdone: number, ki: number, total: number, partNa
   </svg>`;
 }
 
-export default function ClimbingMap({ parts, loaded }: { parts: Part[]; loaded: boolean }) {
+export default function ClimbingMap({
+  parts,
+  loaded,
+  initialPart = "",
+  initialPeak = "",
+}: {
+  parts: Part[];
+  loaded: boolean;
+  initialPart?: string;
+  initialPeak?: string;
+}) {
   const router = useRouter();
 
-  const [partIdx, setPartIdx] = useState(1);
-  const [peakIdx, setPeakIdx] = useState(0);
+  const initialPartIdx = Number(initialPart);
+  const initialPeakIdx = Number(initialPeak);
+  const [partIdx, setPartIdx] = useState(Number.isFinite(initialPartIdx) ? Math.max(0, Math.min(initialPartIdx, parts.length - 1)) : 1);
+  const [peakIdx, setPeakIdx] = useState(
+    Number.isFinite(initialPeakIdx)
+      ? Math.max(0, Math.min(initialPeakIdx, (parts[Number.isFinite(initialPartIdx) ? Math.max(0, Math.min(initialPartIdx, parts.length - 1)) : 1]?.peaks.length ?? 1) - 1))
+      : 0
+  );
   const [prog, setProg] = useState<Record<string, number>>({});
   const [target, setTarget] = useState("6.5");
 
@@ -328,6 +365,8 @@ export default function ClimbingMap({ parts, loaded }: { parts: Part[]; loaded: 
   const toastClearTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const toastShowFrame = useRef<number | null>(null);
   const stageRef = useRef<HTMLDivElement>(null);
+  const dragStart = useRef<{ x: number; y: number } | null>(null);
+  const wheelLockRef = useRef(false);
 
   const showToast = useCallback((msg: string) => {
     if (toastShowFrame.current) cancelAnimationFrame(toastShowFrame.current);
@@ -348,6 +387,10 @@ export default function ClimbingMap({ parts, loaded }: { parts: Part[]; loaded: 
       if (toastHideTimer.current) clearTimeout(toastHideTimer.current);
       if (toastClearTimer.current) clearTimeout(toastClearTimer.current);
     };
+  }, []);
+
+  useEffect(() => {
+    if (stageRef.current) stageRef.current.dataset.reactReady = "1";
   }, []);
 
   const getDone = useCallback(
@@ -406,7 +449,7 @@ export default function ClimbingMap({ parts, loaded }: { parts: Part[]; loaded: 
 
   const sceneHtml = useMemo(() => {
     if (!peak) return "";
-    return buildScene(peak, getDone(partIdx, peakIdx), peakIdx, total, parts[partIdx]?.name || "");
+    return buildScene(peak, getDone(partIdx, peakIdx), peakIdx, total, parts[partIdx]?.name || "", partIdx);
   }, [peak, partIdx, peakIdx, total, getDone, parts]);
 
   const switchPeak = useCallback(
@@ -418,11 +461,11 @@ export default function ClimbingMap({ parts, loaded }: { parts: Part[]; loaded: 
         return;
       }
       animatingRef.current = true;
-      setMist({ key: Date.now(), dir: dir > 0 ? "up" : "down" });
-      setSceneAnim(dir > 0 ? "exitUp" : "enterDown");
+      setMist({ key: Date.now(), dir: dir > 0 ? "down" : "up" });
+      setSceneAnim(dir > 0 ? "enterDown" : "exitUp");
       setTimeout(() => {
         setPeakIdx(next);
-        setSceneAnim(dir > 0 ? "enterDown" : "exitUp");
+        setSceneAnim(dir > 0 ? "exitUp" : "enterDown");
         requestAnimationFrame(() =>
           requestAnimationFrame(() => {
             setSceneAnim("");
@@ -434,37 +477,47 @@ export default function ClimbingMap({ parts, loaded }: { parts: Part[]; loaded: 
     [peakIdx, total, showToast]
   );
 
-  // swipe / wheel to switch peaks
-  useEffect(() => {
-    const el = stageRef.current;
-    if (!el) return;
-    let startY: number | null = null;
-    let wheelLock = false;
-    const onTouchStart = (e: TouchEvent) => {
-      startY = e.touches[0].clientY;
-    };
-    const onTouchEnd = (e: TouchEvent) => {
-      if (startY === null) return;
-      const dy = e.changedTouches[0].clientY - startY;
-      if (Math.abs(dy) > 55) switchPeak(dy < 0 ? +1 : -1);
-      startY = null;
-    };
-    const onWheel = (e: WheelEvent) => {
+  const handleWheel = useCallback(
+    (e: React.WheelEvent<HTMLDivElement>) => {
       e.preventDefault();
-      if (wheelLock || Math.abs(e.deltaY) < 12) return;
-      wheelLock = true;
+      if (wheelLockRef.current || Math.abs(e.deltaY) < 12) return;
+      wheelLockRef.current = true;
       switchPeak(e.deltaY < 0 ? +1 : -1);
-      setTimeout(() => (wheelLock = false), 650);
-    };
-    el.addEventListener("touchstart", onTouchStart, { passive: true });
-    el.addEventListener("touchend", onTouchEnd);
-    el.addEventListener("wheel", onWheel, { passive: false });
-    return () => {
-      el.removeEventListener("touchstart", onTouchStart);
-      el.removeEventListener("touchend", onTouchEnd);
-      el.removeEventListener("wheel", onWheel);
-    };
-  }, [switchPeak]);
+      setTimeout(() => {
+        wheelLockRef.current = false;
+      }, 650);
+    },
+    [switchPeak]
+  );
+
+  const switchPart = useCallback(
+    (dir: number) => {
+      const next = partIdx + dir;
+      if (next < 0 || next >= parts.length) {
+        showToast(dir > 0 ? "已经是最后一个 Part" : "已经是第一个 Part");
+        return;
+      }
+      setPartIdx(next);
+      setPeakIdx(0);
+    },
+    [partIdx, parts.length, showToast]
+  );
+
+  const handleDragStart = useCallback((clientX: number, clientY: number) => {
+    dragStart.current = { x: clientX, y: clientY };
+  }, []);
+
+  const handleDragEnd = useCallback(
+    (clientX: number, clientY: number) => {
+      if (dragStart.current === null) return;
+      const dx = clientX - dragStart.current.x;
+      const dy = clientY - dragStart.current.y;
+      dragStart.current = null;
+      if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy)) switchPart(dx < 0 ? +1 : -1);
+      else if (Math.abs(dy) > 55) switchPeak(dy > 0 ? +1 : -1);
+    },
+    [switchPart, switchPeak]
+  );
 
   const onSceneClick = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
@@ -508,7 +561,26 @@ export default function ClimbingMap({ parts, loaded }: { parts: Part[]; loaded: 
   return (
     <div className={styles.frame}>
       <div className={styles.phone} style={{ background: SKIES[Math.min(peakIdx, SKIES.length - 1)] }}>
-        <div className={styles.stage} ref={stageRef}>
+        <div
+          className={styles.stage}
+          ref={stageRef}
+          data-map-stage="true"
+          data-part-idx={partIdx}
+          data-part-count={parts.length}
+          data-peak-idx={peakIdx}
+          data-total-peaks={total}
+          onWheel={handleWheel}
+          onMouseDown={(e) => handleDragStart(e.clientX, e.clientY)}
+          onMouseUp={(e) => handleDragEnd(e.clientX, e.clientY)}
+          onMouseLeave={() => {
+            dragStart.current = null;
+          }}
+          onTouchStart={(e) => handleDragStart(e.touches[0].clientX, e.touches[0].clientY)}
+          onTouchEnd={(e) => handleDragEnd(e.changedTouches[0].clientX, e.changedTouches[0].clientY)}
+          onTouchCancel={() => {
+            dragStart.current = null;
+          }}
+        >
           <div
             className={`${styles.scene} ${sceneAnim ? styles[sceneAnim] : ""}`}
             onClick={onSceneClick}
@@ -531,17 +603,14 @@ export default function ClimbingMap({ parts, loaded }: { parts: Part[]; loaded: 
           <div className={styles.hudMain}>
             <div className={styles.parts}>
               {parts.map((p, idx) => (
-                <button
+                <a
                   key={p.name}
+                  href={`/map?p=${idx}&pk=0`}
                   className={`${styles.part} ${idx === partIdx ? styles.active : ""}`}
-                  onClick={() => {
-                    setPartIdx(idx);
-                    setPeakIdx(0);
-                  }}
                 >
                   <span className={styles.partPrefix}>P</span>
                   <span>{displayPartName(p.name)}</span>
-                </button>
+                </a>
               ))}
             </div>
             <div className={styles.metrics}>
@@ -571,19 +640,19 @@ export default function ClimbingMap({ parts, loaded }: { parts: Part[]; loaded: 
               </svg>
               <span>7</span>
             </div>
-            <button className={styles.settings} aria-label="设置" onClick={() => router.push("/profile")}>
+            <a className={styles.settings} aria-label="设置" href="/profile">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 15.5A3.5 3.5 0 1 0 12 8a3.5 3.5 0 0 0 0 7.5Z" />
                 <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.04.04a2 2 0 0 1-2.83 2.83l-.04-.04A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 .6V20a2 2 0 0 1-4 0v-.06a1.7 1.7 0 0 0-1-.54 1.7 1.7 0 0 0-1.88.34l-.04.04a2 2 0 0 1-2.83-2.83l.04-.04A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-.6-1H4a2 2 0 0 1 0-4h.06a1.7 1.7 0 0 0 .54-1 1.7 1.7 0 0 0-.34-1.88l-.04-.04a2 2 0 1 1 2.83-2.83l.04.04A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-.6V4a2 2 0 0 1 4 0v.06a1.7 1.7 0 0 0 1 .54 1.7 1.7 0 0 0 1.88-.34l.04-.04a2 2 0 1 1 2.83 2.83l-.04.04A1.7 1.7 0 0 0 19.4 9c.2.36.4.68.6 1H20a2 2 0 0 1 0 4h-.06a1.7 1.7 0 0 0-.54 1Z" />
               </svg>
-            </button>
+            </a>
           </div>
         </div>
 
         {peakIdx < total - 1 ? (
           <div className={styles.hint}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M18 15l-6-6-6 6" />
+              <path d="M6 9l6 6 6-6" />
             </svg>
           </div>
         ) : null}
@@ -601,7 +670,7 @@ export default function ClimbingMap({ parts, loaded }: { parts: Part[]; loaded: 
 
         {toast ? <div className={`${styles.toast} ${toastVisible ? styles.show : ""}`}>{toast}</div> : null}
 
-        <div className={`${styles.onboard} ${onboard ? styles.show : ""}`}>
+        {onboard ? <div className={`${styles.onboard} ${styles.show}`}>
           <div className={styles.obCard}>
             <div className={styles.em}>👋</div>
             <h2>先告诉我你是谁</h2>
@@ -618,7 +687,7 @@ export default function ClimbingMap({ parts, loaded }: { parts: Part[]; loaded: 
               先跳过，稍后再填
             </button>
           </div>
-        </div>
+        </div> : null}
       </div>
     </div>
   );

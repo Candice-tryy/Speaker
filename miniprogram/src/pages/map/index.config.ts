@@ -1,6 +1,6 @@
 export default definePageConfig({
+  navigationStyle: "custom",
   navigationBarTitleText: "登山",
-  navigationBarBackgroundColor: "#8FD3EF",
   navigationBarTextStyle: "white",
   enablePullDownRefresh: false,
 });

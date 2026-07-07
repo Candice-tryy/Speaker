@@ -5,12 +5,13 @@ import type { Bank, Part, Peak, Question, Topic } from "./types";
 const RESOURCE = path.join(process.cwd(), "Resource");
 const PATHS = {
   part1: path.join(RESOURCE, "PART1\u9898\u5e93", "papaen_part1_archive.json"),
+  part1Answers: path.join(RESOURCE, "PART1\u9898\u5e93", "part1_band7_sample_answers.md"),
   part23: path.join(RESOURCE, "PART2&3\u9898\u5e93", "papaen_part23_current.json"),
   part23Answers: path.join(RESOURCE, "PART2&3\u9898\u5e93", "part23_band7_sample_answers.json"),
   part2Combo: path.join(RESOURCE, "PART2\u4e32\u9898\u9898\u5e93", "papaen_part2_combo_current.json"),
 };
 
-const PART2_COMBO = "Part 2\u4e32\u9898";
+export const PART2_COMBO = "Part 2\u4e32\u9898";
 
 const FALLBACK_TOPICS: Topic[] = [
   {
@@ -61,11 +62,37 @@ async function loadJSON(file: string): Promise<unknown> {
   return JSON.parse(text.replace(/^\uFEFF/, ""));
 }
 
+async function loadText(file: string): Promise<string> {
+  return fs.readFile(file, "utf8");
+}
+
 function cleanText(text: unknown): string {
   return String(text ?? "").replace(/\s+/g, " ").trim();
 }
 
-function normalizeTopic(topic: any, partHint: number): Topic {
+function answerKey(text: unknown): string {
+  return cleanText(text).toLowerCase();
+}
+
+function parsePart1MarkdownAnswers(markdown: string): Map<string, string> {
+  const out = new Map<string, string>();
+  const text = markdown.replace(/^\uFEFF/, "").replace(/\r\n/g, "\n");
+  const heading = /^###\s+Q\d+\.\s+(.+?)\s*$/gm;
+  const matches = Array.from(text.matchAll(heading));
+
+  matches.forEach((match, index) => {
+    const question = cleanText(match[1]);
+    const bodyStart = (match.index || 0) + match[0].length;
+    const bodyEnd = matches[index + 1]?.index ?? text.indexOf("\n## ", bodyStart);
+    const rawAnswer = text.slice(bodyStart, bodyEnd === -1 ? undefined : bodyEnd).trim();
+    const answer = cleanText(rawAnswer);
+    if (question && answer) out.set(answerKey(question), answer);
+  });
+
+  return out;
+}
+
+function normalizeTopic(topic: any, partHint: number, answerByContent = new Map<string, string>()): Topic {
   const questions: Question[] = (topic.questions || [])
     .map((q: any) => ({
       id: String(q.id),
@@ -73,7 +100,7 @@ function normalizeTopic(topic: any, partHint: number): Topic {
       part: q.part || partHint,
       content: cleanText(q.content),
       is_show: q.is_show,
-      answer: cleanText(q.answers?.[0]?.content),
+      answer: answerByContent.get(answerKey(q.content)) || cleanText(q.answers?.[0]?.content),
     }))
     .filter((q: Question) => q.content);
 
@@ -90,10 +117,12 @@ function normalizeTopic(topic: any, partHint: number): Topic {
   };
 }
 
-function normalizeAnswers(data: any): Map<string, string> {
+function normalizeAnswers(data: any, options: { includeParts?: number[] } = {}): Map<string, string> {
+  const includeParts = options.includeParts ? new Set(options.includeParts) : null;
   const out = new Map<string, string>();
   (data?.topics || []).forEach((topic: any) => {
     (topic.answers || []).forEach((item: any) => {
+      if (includeParts && !includeParts.has(Number(item.part))) return;
       out.set(String(item.question_id), cleanText(item.answer));
     });
   });
@@ -140,7 +169,7 @@ function shortLabel(text: string, max = 24): string {
   return clean.length > max ? `${clean.slice(0, max - 1)}...` : clean;
 }
 
-function isTopicNodePart(partName: string): boolean {
+export function isTopicNodePart(partName: string): boolean {
   return partName === "Part 1" || partName === "Part 2&3" || partName === PART2_COMBO;
 }
 
@@ -148,7 +177,7 @@ function nodesPerPeak(partName: string): number {
   return partName === PART2_COMBO ? 4 : isTopicNodePart(partName) ? 7 : 3;
 }
 
-function partQuestionNo(partName: string): number {
+export function partQuestionNo(partName: string): number {
   if (partName === "Part 1") return 1;
   if (partName === "Part 3") return 3;
   if (partName === PART2_COMBO) return 4;
@@ -200,14 +229,20 @@ function indexBank(parts: Part[]): Pick<Bank, "topics" | "questions"> {
 export async function load(): Promise<Bank> {
   if (cache) return cache;
   try {
-    const [part1Data, part23Data, comboData, answerData] = await Promise.all([
+    const [part1Data, part1AnswerText, part23Data, comboData, answerData] = await Promise.all([
       loadJSON(PATHS.part1),
+      loadText(PATHS.part1Answers).catch(() => ""),
       loadJSON(PATHS.part23),
       loadJSON(PATHS.part2Combo),
       loadJSON(PATHS.part23Answers).catch(() => ({ topics: [] })),
     ]);
-    const answerMap = normalizeAnswers(answerData);
-    const part1Topics = ((part1Data as any).topics || []).map((t: any) => normalizeTopic(t, 1));
+    // The external Part 2 sample-answer file currently contains many semantic
+    // mismatches (for example, a traffic-jam prompt answered as an object
+    // story). Keep the reliable Part 3 discussion answers, but do not attach
+    // those generated Part 2 samples as if they were canonical cue-card answers.
+    const answerMap = normalizeAnswers(answerData, { includeParts: [3] });
+    const part1AnswerMap = parsePart1MarkdownAnswers(part1AnswerText);
+    const part1Topics = ((part1Data as any).topics || []).map((t: any) => normalizeTopic(t, 1, part1AnswerMap));
     const part23Topics = withAnswers(
       ((part23Data as any).topics || []).map((t: any) => normalizeTopic(t, 2)),
       answerMap
@@ -261,4 +296,44 @@ export function fallbackAnswer(question: Question | undefined, topic: Topic | un
   return `I would like to talk about ${
     topic?.title || "this topic"
   }. In my opinion, the most important point is balance. I would answer it with a clear example, then explain one reason and one personal feeling, so the response sounds natural and complete.`;
+}
+
+export interface PracticeQuestion extends Question {
+  qtext: string;
+  bullets: string[];
+  answer: string;
+}
+
+export function toPracticeQuestion(question: Question, topic: Topic): PracticeQuestion {
+  if (question.part === 4) {
+    return {
+      ...question,
+      qtext: topic.title,
+      bullets: [question.content],
+      answer: fallbackAnswer(question, topic),
+    };
+  }
+  if (question.part === 2) {
+    const cue = splitCueCard(question.content);
+    return {
+      ...question,
+      qtext: cue.title || question.content,
+      bullets: cue.bullets.length ? cue.bullets : [topic.title],
+      answer: fallbackAnswer(question, topic),
+    };
+  }
+  return {
+    ...question,
+    qtext: question.content,
+    bullets: [topic.title],
+    answer: fallbackAnswer(question, topic),
+  };
+}
+
+export function toPracticeQuestions(topic: Topic, partName: string): PracticeQuestion[] {
+  const partNo = partQuestionNo(partName);
+  return topic.questions
+    .filter((q) => q.is_show !== 0)
+    .filter((q) => (partName === "Part 2&3" ? q.part === 2 || q.part === 3 : q.part === partNo))
+    .map((q) => toPracticeQuestion(q, topic));
 }

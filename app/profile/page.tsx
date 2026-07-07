@@ -1,7 +1,7 @@
 "use client";
 
 import { Suspense, useEffect, useMemo, useRef, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import styles from "./profile.module.css";
 
 const TARGET_KEY = "speaker_target";
@@ -20,7 +20,6 @@ function readProgress(): Record<string, number> {
 }
 
 function ProfileContent() {
-  const router = useRouter();
   const searchParams = useSearchParams();
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -70,20 +69,20 @@ function ProfileContent() {
     <div className={styles.frame}>
       <div className={styles.phone}>
         {returnToPractice ? (
-          <button className={styles.practiceBack} aria-label="返回练习" onClick={() => router.push(returnToPractice)}>
+          <a className={styles.practiceBack} aria-label="返回练习" href={returnToPractice}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round">
               <rect x="5" y="4" width="14" height="16" rx="2" />
               <path d="M9 8h6" />
               <path d="M9 12h6" />
               <path d="M9 16h3" />
             </svg>
-          </button>
+          </a>
         ) : null}
-        <button className={styles.mapBack} aria-label="返回登山" onClick={() => router.push("/map")}>
+        <a className={styles.mapBack} aria-label="返回登山" href="/map">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round">
             <path d="M3 21l6-12 5 7 3-4 4 9z" />
           </svg>
-        </button>
+        </a>
 
         <main className={styles.body}>
           <section className={styles.head}>

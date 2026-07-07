@@ -104,12 +104,13 @@ export default function CardPractice({ card }: { card: CardData }) {
 
   const [toast, setToast] = useState("");
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const touchStartX = useRef<number | null>(null);
+  const touchStart = useRef<{ x: number; y: number } | null>(null);
 
   const holdingRef = useRef(false);
   const recitedRef = useRef(false);
   const modeRef = useRef<Mode>("follow");
   const recorderRef = useRef<PcmRecorder | null>(null);
+  const dragStart = useRef<{ x: number; y: number } | null>(null);
   const isTopicFlow = (card.part === "Part 1" || card.part === "Part 2&3" || card.part === "Part 2串题") && card.questions.length > 0;
   const requiredPassCount = card.part === "Part 2串题" ? 1 : Math.min(3, card.questions.length);
   const activeQuestion = useMemo(
@@ -123,14 +124,23 @@ export default function CardPractice({ card }: { card: CardData }) {
   const currentText = activeQuestion?.qtext || activeQuestion?.content || card.qtext;
   const currentBullets = isTopicFlow ? activeQuestion?.bullets || [card.crumb] : card.bullets;
   const progressKey = `speaker_topic_flow_${card.part}_${card.topicId}`;
+  const firstPassQuestions = card.questions.slice(0, requiredPassCount);
   const [part1DoneCount, setPart1DoneCount] = useState(() => {
     if (typeof window === "undefined" || (card.part !== "Part 1" && card.part !== "Part 2&3" && card.part !== "Part 2串题")) return 0;
     try {
       const done = JSON.parse(localStorage.getItem(`speaker_topic_flow_${card.part}_${card.topicId}`) || "[]") as string[];
-      const firstThree = new Set(card.questions.slice(0, requiredPassCount).map((q) => q.id));
+      const firstThree = new Set(firstPassQuestions.map((q) => q.id));
       return done.filter((id) => firstThree.has(id)).length;
     } catch {
       return 0;
+    }
+  });
+  const [passedQuestionIds, setPassedQuestionIds] = useState<string[]>(() => {
+    if (typeof window === "undefined" || (card.part !== "Part 1" && card.part !== "Part 2&3" && card.part !== "Part 2串题")) return [];
+    try {
+      return JSON.parse(localStorage.getItem(`speaker_topic_flow_${card.part}_${card.topicId}`) || "[]") as string[];
+    } catch {
+      return [];
     }
   });
 
@@ -239,11 +249,31 @@ export default function CardPractice({ card }: { card: CardData }) {
     if (!isTopicFlow) return;
     const bounded = Math.max(0, Math.min(next, card.questions.length - 1));
     setQIndex(bounded);
+    window.history.replaceState(null, "", questionHref(bounded));
     setPickerOpen(false);
     setRevealOpen(true);
     setFb(null);
     setFbOpen(false);
     recitedRef.current = false;
+  }
+
+  function toggleReveal() {
+    setRevealOpen((open) => !open);
+  }
+
+  function questionHref(next: number): string {
+    const bounded = Math.max(0, Math.min(next, card.questions.length - 1));
+    const question = card.questions[bounded];
+    const params = new URLSearchParams({
+      p: card.p || "1",
+      pk: card.pk || "0",
+      n: card.n || "0",
+      part: card.part,
+      topic: card.crumb,
+      topicId: card.topicId,
+      questionId: question?.id || card.questionId,
+    });
+    return `/practice?${params.toString()}`;
   }
 
   function markTopicQuestionPassed(): { count: number; complete: boolean } {
@@ -260,6 +290,7 @@ export default function CardPractice({ card }: { card: CardData }) {
       localStorage.setItem(progressKey, JSON.stringify(done));
     }
     const count = done.filter((id) => firstThree.has(id)).length;
+    setPassedQuestionIds(done);
     setPart1DoneCount(count);
     return { count, complete: count >= requiredPassCount };
   }
@@ -286,6 +317,8 @@ export default function CardPractice({ card }: { card: CardData }) {
     const result = markTopicQuestionPassed();
     if (result.complete) {
       lightTopicMapNode();
+      goMap(true);
+      return;
     }
     const next = Math.min(qIndex + 1, card.questions.length - 1);
     showToast(`已完成 ${result.count}/${requiredPassCount}，继续练下一题`);
@@ -293,12 +326,15 @@ export default function CardPractice({ card }: { card: CardData }) {
     changeQuestion(next);
   }
 
-  function handleTouchEnd(e: React.TouchEvent<HTMLDivElement>) {
-    if (!isTopicFlow || touchStartX.current === null) return;
-    const dx = e.changedTouches[0].clientX - touchStartX.current;
-    touchStartX.current = null;
-    if (Math.abs(dx) < 46) return;
-    changeQuestion(qIndex + (dx < 0 ? -1 : 1));
+  function handleSwipeEnd(clientX: number, clientY: number) {
+    const start = dragStart.current ?? touchStart.current;
+    dragStart.current = null;
+    touchStart.current = null;
+    if (!isTopicFlow || !start) return;
+    const dx = clientX - start.x;
+    const dy = clientY - start.y;
+    if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy) * 1.25) return;
+    changeQuestion(qIndex + (dx < 0 ? 1 : -1));
   }
 
   function genPersonal() {
@@ -308,6 +344,12 @@ export default function CardPractice({ card }: { card: CardData }) {
 
   const passed = !!fb && !fb.rejected && fb.band >= target - 0.5;
   const showScore = !!fb && !fb.rejected;
+  const passCtaText = isTopicFlow && part1DoneCount < requiredPassCount - 1 ? "继续下一题" : "点亮此关 ✦";
+  const navStepCount = isTopicFlow ? Math.max(1, Math.min(5, card.questions.length)) : 5;
+  const navWindowCenterOffset = Math.floor(navStepCount / 2);
+  const navWindowStart = isTopicFlow ? Math.min(Math.max(qIndex - navWindowCenterOffset, 0), Math.max(card.questions.length - navStepCount, 0)) : 0;
+  const navStepIndex = isTopicFlow ? qIndex - navWindowStart : 1;
+  const passedQuestionSet = new Set(passedQuestionIds);
 
   function goMap(done: boolean) {
     const base = `?p=${card.p || "1"}&pk=${card.pk || "0"}`;
@@ -316,6 +358,13 @@ export default function CardPractice({ card }: { card: CardData }) {
       : base;
     router.push(`/map${qs}`);
   }
+
+  function mapHref(done: boolean): string {
+    const base = `?p=${card.p || "1"}&pk=${card.pk || "0"}`;
+    return done ? `/map${base}&n=${card.n}&done=1&topic=${encodeURIComponent(card.crumb)}` : `/map${base}`;
+  }
+
+  const settingsHref = `/profile?returnTo=${encodeURIComponent(questionHref(qIndex))}`;
 
   const goalText =
     mode === "mock" ? (
@@ -333,15 +382,17 @@ export default function CardPractice({ card }: { card: CardData }) {
       <div className={styles.phone}>
         <div className={styles.top}>
           <div className={styles.toprow}>
-            <button className={styles.back} aria-label="返回地图" onClick={() => goMap(false)}>
+            <a
+              className={styles.back}
+              aria-label="返回地图"
+              href={mapHref(false)}
+            >
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M15 18l-6-6 6-6" />
               </svg>
-            </button>
+            </a>
             <div className={styles.crumb}>
-              <b>
-                {card.part} · {card.crumb}
-              </b>
+              <b>{card.part}</b>
             </div>
             <div className={styles.topActions}>
               {isTopicFlow ? (
@@ -362,30 +413,38 @@ export default function CardPractice({ card }: { card: CardData }) {
                 </svg>
                 <span>{target.toFixed(1)}</span>
               </div>
-              <button
+              <a
                 className={styles.settings}
                 aria-label="设置"
-                onClick={() => router.push(`/profile?returnTo=${encodeURIComponent(window.location.pathname + window.location.search)}`)}
+                href={settingsHref}
               >
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 15.5A3.5 3.5 0 1 0 12 8a3.5 3.5 0 0 0 0 7.5Z" />
                   <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.04.04a2 2 0 0 1-2.83 2.83l-.04-.04A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 .6V20a2 2 0 0 1-4 0v-.06a1.7 1.7 0 0 0-1-.54 1.7 1.7 0 0 0-1.88.34l-.04.04a2 2 0 0 1-2.83-2.83l.04-.04A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-.6-1H4a2 2 0 0 1 0-4h.06a1.7 1.7 0 0 0 .54-1 1.7 1.7 0 0 0-.34-1.88l-.04-.04a2 2 0 1 1 2.83-2.83l.04.04A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-.6V4a2 2 0 0 1 4 0v.06a1.7 1.7 0 0 0 1 .54 1.7 1.7 0 0 0 1.88-.34l.04-.04a2 2 0 1 1 2.83 2.83l-.04.04A1.7 1.7 0 0 0 19.4 9c.2.36.4.68.6 1H20a2 2 0 0 1 0 4h-.06a1.7 1.7 0 0 0-.54 1Z" />
                 </svg>
-              </button>
+              </a>
             </div>
           </div>
         </div>
 
         <div className={styles.scroll}>
-        <div className={styles.main}>
+        <div
+          className={styles.main}
+          onMouseDown={(e) => {
+            dragStart.current = { x: e.clientX, y: e.clientY };
+          }}
+          onMouseUp={(e) => handleSwipeEnd(e.clientX, e.clientY)}
+          onMouseLeave={() => {
+            dragStart.current = null;
+          }}
+          onTouchStart={(e) => {
+            touchStart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+          }}
+          onTouchEnd={(e) => handleSwipeEnd(e.changedTouches[0].clientX, e.changedTouches[0].clientY)}
+        >
           <div
             className={styles.qcard}
-            onTouchStart={(e) => {
-              touchStartX.current = e.touches[0].clientX;
-            }}
-            onTouchEnd={handleTouchEnd}
           >
-            <div className={styles.kind}>Current card · {card.part}</div>
             <div className={styles.qtext}>{currentText}</div>
             {isTopicFlow ? (
               <div className={styles.qMeta}>
@@ -400,25 +459,64 @@ export default function CardPractice({ card }: { card: CardData }) {
                 </span>
               ))}
             </div>
+            <div className={`${styles.dots} ${styles.cardDots}`} aria-label="题目进度">
+              {Array.from({ length: navStepCount }).map((_, index) => (
+                (() => {
+                  const questionIndex = navWindowStart + index;
+                  const question = card.questions[questionIndex];
+                  return (
+                    <span
+                      key={questionIndex}
+                      className={index === navStepIndex ? styles.cur : questionIndex < qIndex && passedQuestionSet.has(question?.id || "") ? styles.done : ""}
+                    />
+                  );
+                })()
+              ))}
+            </div>
           </div>
           {isTopicFlow ? (
             <div className={styles.cardNav}>
-              <button onClick={() => changeQuestion(qIndex - 1)} disabled={qIndex === 0}>
+              <a
+                href={questionHref(qIndex - 1)}
+                aria-disabled={qIndex === 0}
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (qIndex > 0) changeQuestion(qIndex - 1);
+                }}
+              >
                 上一题
-              </button>
-              <button onClick={() => changeQuestion(qIndex + 1)} disabled={qIndex >= card.questions.length - 1}>
+              </a>
+              <a
+                href={questionHref(qIndex + 1)}
+                aria-disabled={qIndex >= card.questions.length - 1}
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (qIndex < card.questions.length - 1) changeQuestion(qIndex + 1);
+                }}
+              >
                 下一题
-              </button>
+              </a>
             </div>
           ) : null}
 
           <div className={`${styles.reveal} ${revealOpen ? styles.open : ""}`}>
-            <button className={styles.toggle} onClick={() => setRevealOpen((v) => !v)}>
-              看 AI 范本回答
+            <div
+              className={styles.toggle}
+              role="button"
+              tabIndex={0}
+              aria-label={revealOpen ? "Collapse sample answer" : "Expand sample answer"}
+              aria-expanded={revealOpen}
+              onClick={toggleReveal}
+              onKeyDown={(e) => {
+                if (e.key !== "Enter" && e.key !== " ") return;
+                e.preventDefault();
+                toggleReveal();
+              }}
+            >
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M6 9l6 6 6-6" />
               </svg>
-            </button>
+            </div>
             <div className={styles.panel}>
               <div className={styles.ans}>{highlightAnswer(currentAnswer, openWord)}</div>
               <div className={styles.anstools}>
@@ -507,7 +605,7 @@ export default function CardPractice({ card }: { card: CardData }) {
             </button>
             {passed ? (
               <button className={styles.pass} onClick={finishPassedCard}>
-                点亮这一关 ✦
+                {passCtaText}
               </button>
             ) : null}
           </div>

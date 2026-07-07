@@ -28,12 +28,12 @@
 
   /* top */
   .top{padding:18px 20px 0;}
-  .toprow{display:flex; align-items:center; justify-content:space-between;}
+  .toprow{display:flex; align-items:center; justify-content:space-between;gap:12px;}
   .back{width:34px;height:34px;border-radius:12px;background:#fff;border:1px solid var(--line);
         display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--green-deep);}
   .back svg{width:18px;height:18px;}
-  .crumb{font-size:12px;color:var(--muted);}
-  .crumb b{color:#5C7B72;font-weight:600;}
+  .crumb{flex:1;min-width:0;text-align:left;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--blue-deep);}
+  .crumb b{color:var(--blue-deep);font-weight:700;}
   .pill{display:flex;align-items:center;gap:4px;background:var(--blue-soft);padding:5px 11px;border-radius:20px;
         box-shadow:0 3px 8px rgba(53,133,194,.14);font-size:12px;font-weight:600;color:var(--blue-deep);}
   .pill svg{width:13px;height:13px;}
@@ -41,24 +41,26 @@
   .dots i{width:7px;height:7px;border-radius:50%;background:var(--mint-2);}
   .dots i.done{background:var(--green);}
   .dots i.cur{background:var(--yellow);width:20px;border-radius:4px;}
+  .card-dots{margin-top:22px;}
 
   /* main */
-  .main{flex:1;display:flex;flex-direction:column;justify-content:center;padding:0 22px;}
+  .main{flex:0 0 auto;display:flex;flex-direction:column;justify-content:flex-start;padding:28px 22px 0;cursor:grab;user-select:none;touch-action:pan-y;}
+  .main:active{cursor:grabbing;}
 
   /* question card — the hero, just the question */
   .qcard{background:#fff;border-radius:26px;border:1px solid var(--line);
     box-shadow:0 12px 30px rgba(40,90,72,.08);padding:30px 24px;text-align:center;}
-  .qcard .kind{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
-    color:var(--blue-deep);margin-bottom:16px;}
   .qcard .qtext{font-size:21px;line-height:1.5;font-weight:500;color:#2E4D44;}
   .qcard .sub{margin-top:14px;font-size:13px;line-height:1.6;color:var(--muted);}
 
   /* reveal model answer (collapsed by default) */
   .reveal{margin-top:14px;}
-  .reveal .toggle{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;
-    background:none;border:none;font-family:inherit;font-size:13px;font-weight:600;color:var(--green-deep);
-    cursor:pointer;padding:8px;}
-  .reveal .toggle svg{width:15px;height:15px;transition:transform .25s;}
+  .reveal .toggle{display:flex;align-items:center;justify-content:center;width:100%;height:34px;margin:0 auto;
+    background:none;border:none;border-radius:12px;font-family:inherit;color:var(--green-deep);
+    cursor:pointer;padding:0;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
+  .reveal .toggle:focus{outline:none;}
+  .reveal .toggle:active{transform:translateY(1px);}
+  .reveal .toggle svg{width:18px;height:18px;transition:transform .25s;}
   .reveal.open .toggle svg{transform:rotate(180deg);}
   .panel{max-height:0;overflow:hidden;transition:max-height .4s ease,opacity .3s;opacity:0;}
   .reveal.open .panel{max-height:320px;opacity:1;}
@@ -151,27 +153,25 @@
       <button class="back" aria-label="返回地图" onclick="goMap(false)">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
       </button>
-      <div class="crumb"><b id="crumb">Part 2 · Hometown</b></div>
+      <div class="crumb"><b id="crumb">PART 2</b></div>
       <div class="pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="#FF9466" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V5a1 1 0 0 1 1-1h11l-2 4 2 4H6"/></svg>
         <span id="targetVal">6.5</span>
       </div>
     </div>
-    <div class="dots"><i class="done"></i><i class="cur"></i><i></i></div>
   </div>
 
   <div class="main">
     <div class="qcard">
-      <div class="kind" id="kind">Current card · Part 2</div>
       <div class="qtext" id="qtext">Describe your daily routine.</div>
       <div class="sub" id="qsub">早上 / 下午 / 晚上分别做什么，<br>以及你最喜欢一天里的哪个时段。</div>
+      <div class="dots card-dots"><i class="cur"></i><i></i><i></i><i></i><i></i></div>
     </div>
 
     <div class="reveal open" id="reveal">
-      <button class="toggle" onclick="toggleReveal()">
-        看 AI 范本回答
+      <div class="toggle" role="button" tabindex="0" aria-label="Toggle sample answer" aria-expanded="true" onclick="toggleReveal(this)" onkeydown="handleRevealKey(event,this)">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
+      </div>
       <div class="panel">
         <div class="ans" id="ans">
           I usually <span class="w" data-w="get up" data-ipa="/ɡet ʌp/" data-def="起床；醒来后离开床" data-c="get up <b>early / at dawn</b>">get up</span> at around seven. On <span class="w" data-w="weekdays" data-ipa="/ˈwiːkdeɪz/" data-def="工作日（周一到周五）" data-c="on <b>weekdays / weekends</b>">weekdays</span> I head straight to work, but I always try to <span class="w" data-w="squeeze in" data-ipa="/skwiːz ɪn/" data-def="挤出时间做某事" data-c="squeeze in <b>a workout</b>">squeeze in</span> a short walk at lunch. In the evening I like to <span class="w" data-w="wind down" data-ipa="/waɪnd daʊn/" data-def="放松；让自己平静下来" data-c="wind down <b>after a long day</b>">wind down</span> with a book.
@@ -240,6 +240,7 @@
 <script>
 const $ = s => document.querySelector(s);
 let recited=false, mode='follow';
+let bankData=null, currentTopic=null, questions=[], qIndex=0, swipeStart=null;
 
 const U = new URLSearchParams(location.search);
 const ctx = {
@@ -282,8 +283,7 @@ function renderAnswer(answer){
 }
 
 function renderQuestion(topic, question){
-  $('#crumb').textContent = `${ctx.part} · ${topic?.title || ctx.peak}`;
-  $('#kind').textContent = `Current card · ${ctx.part}`;
+  $('#crumb').textContent = ctx.part;
   if(question?.part === 2){
     const cue = QuestionBank.splitCueCard(question.content);
     $('#qtext').textContent = cue.title || question.content;
@@ -296,6 +296,58 @@ function renderQuestion(topic, question){
   }
 }
 
+function updateQuestionUrl(question){
+  if(!question) return;
+  const params = new URLSearchParams({
+    p: ctx.p,
+    pk: ctx.pk,
+    n: ctx.n,
+    part: ctx.part,
+    topic: ctx.topic,
+    topicId: currentTopic?.id || ctx.topicId,
+    questionId: question.id
+  });
+  history.replaceState(null, '', `card-practice.html?${params.toString()}`);
+}
+
+function renderCardDots(){
+  const count = Math.max(1, Math.min(5, questions.length || 5));
+  const centerOffset = Math.floor(count / 2);
+  const windowStart = Math.min(Math.max(qIndex - centerOffset, 0), Math.max(questions.length - count, 0));
+  const active = qIndex - windowStart;
+  const done = (() => {
+    try {
+      return JSON.parse(localStorage.getItem(`speaker_topic_flow_${ctx.part}_${currentTopic?.id || ctx.topicId}`) || '[]');
+    } catch {
+      return [];
+    }
+  })();
+  $('.card-dots').innerHTML = Array.from({length:count}).map((_,index)=>{
+    const questionIndex = windowStart + index;
+    const passed = questionIndex < qIndex && done.includes(questions[questionIndex]?.id);
+    return `<i class="${index === active ? 'cur' : passed ? 'done' : ''}"></i>`;
+  }).join('');
+}
+
+function showQuestion(index, syncUrl=true){
+  if(!questions.length) return;
+  qIndex = Math.max(0, Math.min(index, questions.length - 1));
+  const question = questions[qIndex];
+  renderQuestion(currentTopic, question);
+  renderAnswer(QuestionBank.fallbackAnswer(question, currentTopic));
+  renderCardDots();
+  if(syncUrl) updateQuestionUrl(question);
+}
+
+function handleSwipeEnd(x,y){
+  if(!swipeStart || questions.length < 2) return;
+  const dx = x - swipeStart.x;
+  const dy = y - swipeStart.y;
+  swipeStart = null;
+  if(Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy) * 1.25) return;
+  showQuestion(qIndex + (dx < 0 ? 1 : -1));
+}
+
 (async function initCtx(){
   const acc = ACCENTS[Math.min(parseInt(ctx.pk)||0, ACCENTS.length-1)];
   document.documentElement.style.setProperty('--acc', acc.a);
@@ -304,9 +356,12 @@ function renderQuestion(topic, question){
   $('#targetVal').textContent = target.toFixed(1);
   $('#goal').innerHTML = followGoal;
   const bank = await QuestionBank.load();
+  bankData = bank;
   const item = QuestionBank.getQuestion(bank, ctx.topicId, ctx.questionId, ctx.part);
-  renderQuestion(item?.topic, item?.question);
-  renderAnswer(QuestionBank.fallbackAnswer(item?.question, item?.topic));
+  currentTopic = item?.topic || null;
+  questions = currentTopic ? QuestionBank.toPracticeQuestions(currentTopic, ctx.part) : [];
+  qIndex = Math.max(0, questions.findIndex(q => q.id === item?.question?.id));
+  showQuestion(qIndex, false);
 })();
 
 function genPersonal(){
@@ -323,7 +378,15 @@ function goMap(done){
 let tT;
 function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(tT);tT=setTimeout(()=>t.classList.remove('show'),1600);}
 
-function toggleReveal(){$('#reveal').classList.toggle('open');}
+function toggleReveal(btn){
+  const open = $('#reveal').classList.toggle('open');
+  if(btn) btn.setAttribute('aria-expanded', String(open));
+}
+function handleRevealKey(event,btn){
+  if(event.key !== 'Enter' && event.key !== ' ') return;
+  event.preventDefault();
+  toggleReveal(btn);
+}
 
 $('#seg').querySelectorAll('button').forEach(b=>{
   b.addEventListener('click',()=>{
@@ -334,6 +397,21 @@ $('#seg').querySelectorAll('button').forEach(b=>{
       : followGoal;
     if(mode==='mock') $('#reveal').classList.remove('open');
   });
+});
+
+const main=$('.main');
+main.addEventListener('mousedown',event=>{
+  swipeStart={x:event.clientX,y:event.clientY};
+});
+main.addEventListener('mouseup',event=>handleSwipeEnd(event.clientX,event.clientY));
+main.addEventListener('mouseleave',()=>{swipeStart=null;});
+main.addEventListener('touchstart',event=>{
+  const touch=event.touches[0];
+  swipeStart=touch ? {x:touch.clientX,y:touch.clientY} : null;
+},{passive:true});
+main.addEventListener('touchend',event=>{
+  const touch=event.changedTouches[0];
+  if(touch) handleSwipeEnd(touch.clientX,touch.clientY);
 });
 
 function bindWordTags(){

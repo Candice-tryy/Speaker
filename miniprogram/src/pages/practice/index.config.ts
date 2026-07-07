@@ -1,5 +1,5 @@
 export default definePageConfig({
+  navigationStyle: "custom",
   navigationBarTitleText: "跟读练习",
-  navigationBarBackgroundColor: "#F4FBF8",
   navigationBarTextStyle: "black",
 });

@@ -1,235 +1,262 @@
-import { useEffect, useState } from "react";
-import { View, Text, Textarea } from "@tarojs/components";
-import Taro from "@tarojs/taro";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { Image, View, Text, Textarea } from "@tarojs/components";
+import Taro, { useDidShow } from "@tarojs/taro";
 import { FALLBACK_PARTS, getBank, type Part } from "../../lib/api";
-import { getSettings, isNodeDone, needForPart, nodeKey, setSettings, touchStreak } from "../../lib/store";
+import { ICONS, MIST } from "../../lib/icons.gen";
+import { buildScene, svgToDataUrl, type SceneNode } from "../../lib/scene";
+import { getProgress, getSettings, setSettings, touchStreak } from "../../lib/store";
+import { capsuleCenteredTop, chromeInsets } from "../../lib/ui";
 import "./index.scss";
 
-const ROUTES = [
-  [
-    { x: 138, y: 874 },
-    { x: 474, y: 760 },
-    { x: 246, y: 628 },
-    { x: 540, y: 474 },
-    { x: 332, y: 332 },
-  ],
-  [
-    { x: 188, y: 884 },
-    { x: 506, y: 756 },
-    { x: 280, y: 626 },
-    { x: 526, y: 486 },
-    { x: 430, y: 326 },
-  ],
-  [
-    { x: 116, y: 870 },
-    { x: 304, y: 760 },
-    { x: 550, y: 632 },
-    { x: 296, y: 494 },
-    { x: 514, y: 332 },
-  ],
-];
+const ALT = [1200, 2480, 3760];
 const SKIES = ["sky-a", "sky-b", "sky-c"];
-const BANDS = [5.5, 6.0, 6.5, 7.0, 7.5];
 
-function shortLabel(value = "Practice") {
-  return value.length > 10 ? `${value.slice(0, 9)}...` : value;
+function isTopicSet(name: string) {
+  return name === "Part 1" || name === "Part 2&3" || name === "Part 2串题";
 }
 
-function partLabel(name: string) {
-  if (name === "Part 1") return "P1";
-  if (name === "Part 2&3") return "P2&3";
-  if (name.includes("串题") || name.includes("涓查")) return "P2串题";
-  return name.replace("Part ", "P");
+function displayPartName(value: string): string {
+  return value.replace(/^Part\s*/g, "");
 }
 
-function routeFor(count: number, peakIdx: number) {
-  const base = ROUTES[peakIdx % ROUTES.length];
-  return count <= base.length ? base.slice(0, count) : base;
+type TouchLike = { clientX: number; clientY: number };
+
+function touchPoint(event: unknown, listName: "touches" | "changedTouches"): TouchLike | null {
+  const record = event as Partial<Record<"touches" | "changedTouches", ArrayLike<TouchLike>>>;
+  const touch = record[listName]?.[0];
+  return touch ? { clientX: touch.clientX, clientY: touch.clientY } : null;
 }
 
 export default function Map() {
   const [parts, setParts] = useState<Part[]>(FALLBACK_PARTS);
   const [partIdx, setPartIdx] = useState(1);
   const [peakIdx, setPeakIdx] = useState(0);
+  const [prog, setProg] = useState<Record<string, number>>(getProgress());
   const [settings, setLocal] = useState(getSettings());
-  const [draftBand, setDraftBand] = useState(getSettings().targetBand);
   const [persona, setPersona] = useState("");
   const [toast, setToast] = useState("");
-  const [loadErr, setLoadErr] = useState(false);
+  const [toastVisible, setToastVisible] = useState(false);
+  const [sceneAnim, setSceneAnim] = useState<"" | "exitUp" | "enterDown">("");
+  const [mist, setMist] = useState<{ key: number; dir: "up" | "down" } | null>(null);
+  const touchStart = useRef<{ x: number; y: number } | null>(null);
+  const animatingRef = useRef(false);
+  const toastHideTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const toastClearTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const insets = useMemo(() => chromeInsets(), []);
 
   useEffect(() => {
     setLocal(getSettings().onboarded ? touchStreak() : getSettings());
     loadBank();
   }, []);
 
-  function showToast(message: string) {
-    setToast(message);
-    setTimeout(() => setToast(""), 1600);
-  }
-
-  function loadBank() {
-    setLoadErr(false);
-    getBank()
-      .then((bank) => {
-        setParts(bank.parts.length > 0 ? bank.parts : FALLBACK_PARTS);
-        setPartIdx(Math.min(1, Math.max(0, (bank.parts.length || FALLBACK_PARTS.length) - 1)));
-        setPeakIdx(0);
-      })
-      .catch(() => setLoadErr(true));
-  }
-
-  function finishOnboarding() {
-    setLocal(setSettings({ onboarded: true, targetBand: draftBand, name: persona.trim() || settings.name }));
-  }
-
-  function switchPeak(dir: number) {
-    const total = parts[partIdx]?.peaks.length || 0;
-    const next = peakIdx + dir;
-    if (next < 0 || next >= total) {
-      showToast(dir > 0 ? "已经是最高峰" : "已经在山脚");
-      return;
+  // Returning from practice/profile: refresh progress + settings, and celebrate
+  // a freshly lit node (the web version does this via the ?done=1 round-trip).
+  useDidShow(() => {
+    const latest = getProgress();
+    const key = `${partIdx}-${peakIdx}`;
+    const prev = Math.max(0, Number(prog[key] || 0));
+    const next = Math.max(0, Number(latest[key] || 0));
+    if (next > prev) {
+      const label = parts[partIdx]?.peaks[peakIdx]?.topics[next - 1] || "关卡";
+      setTimeout(() => showToast(`🎉 ${label} 点亮成功！+20 经验`), 350);
     }
-    setPeakIdx(next);
-  }
-
-  function openNode(nodeIdx: number, topicId: string) {
-    const partName = parts[partIdx]?.name || "Part 2&3";
-    Taro.navigateTo({
-      url:
-        `/pages/practice/index?part=${encodeURIComponent(partName)}` +
-        `&pi=${partIdx}&peak=${peakIdx}&node=${nodeIdx}&topicId=${encodeURIComponent(topicId)}`,
-    });
-  }
+    setProg(latest);
+    setLocal(getSettings());
+  });
 
   const part = parts[partIdx];
   const peak = part?.peaks[peakIdx];
-  const need = part ? needForPart(part.name) : 1;
-  const nodes = routeFor(peak?.cards.length || 0, peakIdx);
+  const total = part?.peaks.length || 0;
+  const peakDone = Math.max(0, Number(prog[`${partIdx}-${peakIdx}`] ?? peak?.done ?? 0));
+
+  // The scene renders as a local SVG data URL — no network dependency, and
+  // verified to render on real devices. (/api/scene serves the same scene as
+  // PNG if an SVG-incompatible client ever shows up.)
+  const scene = useMemo(
+    () => (peak ? buildScene(peak, peakDone, peakIdx, total, part?.name || "") : null),
+    [peak, peakDone, peakIdx, total, part?.name]
+  );
+  const sceneSrc = useMemo(() => (scene ? svgToDataUrl(scene.svg) : ""), [scene]);
+
+  function showToast(message: string) {
+    if (toastHideTimer.current) clearTimeout(toastHideTimer.current);
+    if (toastClearTimer.current) clearTimeout(toastClearTimer.current);
+    setToast(message);
+    setToastVisible(false);
+    setTimeout(() => setToastVisible(true), 30);
+    toastHideTimer.current = setTimeout(() => setToastVisible(false), 1450);
+    toastClearTimer.current = setTimeout(() => setToast(""), 1800);
+  }
+
+  function loadBank() {
+    getBank()
+      .then((bank) => {
+        const nextParts = bank.parts.length > 0 ? bank.parts : FALLBACK_PARTS;
+        setParts(nextParts);
+        setPartIdx(Math.min(1, Math.max(0, nextParts.length - 1)));
+        setPeakIdx(0);
+        if (!bank.loaded) showToast("题库读取失败，已使用内置备用题");
+      })
+      .catch(() => {
+        setParts(FALLBACK_PARTS);
+        showToast("题库读取失败，已使用内置备用题");
+      });
+  }
+
+  function finishOnboarding() {
+    setLocal(setSettings({ onboarded: true, name: persona.trim() || settings.name }));
+  }
+
+  function switchPeak(dir: number) {
+    if (animatingRef.current) return;
+    const next = peakIdx + dir;
+    if (next < 0 || next >= total) {
+      showToast(dir > 0 ? "山顶风景已收集完啦" : "已在山脚");
+      return;
+    }
+    animatingRef.current = true;
+    setMist({ key: Date.now(), dir: dir > 0 ? "down" : "up" });
+    setSceneAnim(dir > 0 ? "enterDown" : "exitUp");
+    setTimeout(() => {
+      setPeakIdx(next);
+      setSceneAnim(dir > 0 ? "exitUp" : "enterDown");
+      setTimeout(() => {
+        setSceneAnim("");
+        animatingRef.current = false;
+      }, 32);
+    }, 300);
+  }
+
+  function switchPart(dir: number) {
+    const next = partIdx + dir;
+    if (next < 0 || next >= parts.length) {
+      showToast(dir > 0 ? "已经是最后一个 Part" : "已经是第一个 Part");
+      return;
+    }
+    setPartIdx(next);
+    setPeakIdx(0);
+  }
+
+  function onNodeTap(node: SceneNode) {
+    if (!peak) return;
+    if (node.state === "lock") {
+      showToast(node.isBoss ? "🔒 先清完本峰 3 关再战 Boss" : "🔒 先过前面的关卡");
+      return;
+    }
+    if (!isTopicSet(part?.name || "") && node.i === 3) {
+      showToast("😺 考官 Boss 即将上线");
+      return;
+    }
+    const card = peak.cards[node.i];
+    const partName = part?.name || "Part 2&3";
+    Taro.navigateTo({
+      url:
+        `/pages/practice/index?part=${encodeURIComponent(partName)}` +
+        `&pi=${partIdx}&peak=${peakIdx}&node=${node.i}&topicId=${encodeURIComponent(card?.id || "")}`,
+    });
+  }
 
   return (
-    <View className={`map-shell ${SKIES[peakIdx % SKIES.length]}`}>
-      <View className="map-stage">
-        <View className="sun" />
-        <View className="cloud cloud-one" />
-        <View className="cloud cloud-two" />
-        <View className="bird bird-one">⌁</View>
-        <View className="bird bird-two">⌁</View>
-
-        <View className="mountain mountain-back" />
-        <View className="mountain mountain-mid" />
-        <View className="mountain mountain-front" />
-        <View className="snow snow-one" />
-        <View className="snow snow-two" />
-        <View className="flower flower-a" />
-        <View className="flower flower-b" />
-        <View className="flower flower-c" />
-
-        <View className="route-line route-shadow" />
-        <View className="route-line" />
-
-        {peak?.cards.slice(0, nodes.length).map((topic, nodeIdx) => {
-          const p = nodes[nodeIdx];
-          const key = nodeKey(partIdx, peakIdx, nodeIdx);
-          const done = isNodeDone(key, need);
-          const current = !done && peak.cards.slice(0, nodeIdx).every((_, i) => isNodeDone(nodeKey(partIdx, peakIdx, i), need));
-          return (
-            <View
-              key={topic.id}
-              className={`map-node ${done ? "done" : current ? "current" : "locked"}`}
-              style={`left:${p.x}rpx;top:${p.y}rpx`}
-              onClick={() => {
-                if (!done && !current) {
-                  showToast("先过前面的关卡");
-                  return;
-                }
-                openNode(nodeIdx, topic.id);
-              }}
-            >
-              <Text className="node-label">{shortLabel(peak.topics[nodeIdx] || topic.title)}</Text>
-              <View className="node-dot">{done ? "✓" : current ? "人" : nodeIdx + 1}</View>
-            </View>
-          );
-        })}
-
-        <View className="map-hud">
-          <View className="part-tabs">
-            {parts.map((item, idx) => (
-              <Text
-                key={item.name}
-                className={`part-tab ${idx === partIdx ? "active" : ""}`}
-                onClick={() => {
-                  setPartIdx(idx);
-                  setPeakIdx(0);
-                }}
-              >
-                {partLabel(item.name)}
-              </Text>
+    <View className={`map-phone ${SKIES[Math.min(peakIdx, SKIES.length - 1)]}`}>
+        <View
+          className="map-stage"
+          onTouchStart={(event) => {
+            const touch = touchPoint(event, "touches");
+            touchStart.current = touch ? { x: touch.clientX, y: touch.clientY } : null;
+          }}
+          onTouchEnd={(event) => {
+            if (touchStart.current === null) return;
+            const touch = touchPoint(event, "changedTouches");
+            const dx = (touch?.clientX ?? touchStart.current.x) - touchStart.current.x;
+            const dy = (touch?.clientY ?? touchStart.current.y) - touchStart.current.y;
+            touchStart.current = null;
+            if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy)) switchPart(dx < 0 ? 1 : -1);
+            else if (Math.abs(dy) > 55) switchPeak(dy > 0 ? 1 : -1);
+          }}
+        >
+          <View className={`scene ${sceneAnim}`}>
+            {sceneSrc ? <Image className="scene-img" src={sceneSrc} mode="scaleToFill" /> : null}
+            {scene?.nodes.map((node) => (
+              <View
+                key={node.i}
+                className="node-hit"
+                style={`left:${(node.x / 340) * 100}vw;top:${(node.y / 720) * 100}vh`}
+                onClick={() => onNodeTap(node)}
+              />
             ))}
           </View>
-          <View className="hud-metrics">
-            <Text>Target {settings.targetBand.toFixed(1)}</Text>
-            <Text>{1200 + peakIdx * 1280}m</Text>
-          </View>
+          {mist ? (
+            <Image key={mist.key} className={`mist ${mist.dir === "up" ? "up" : "down"}`} src={MIST} mode="scaleToFill" />
+          ) : null}
         </View>
 
-        <View className="hud-actions">
-          <View className="streak-pill">
-            <Text className="flame">🔥</Text>
-            <Text>{settings.streak || 1}</Text>
-          </View>
-          <View className="round-btn" onClick={() => Taro.navigateTo({ url: "/pages/profile/index" })}>⚙</View>
-        </View>
-
-        <View className="peak-title">
-          <Text>{peak?.name || (loadErr ? "题库加载失败" : "加载中...")}</Text>
-        </View>
-        <View className="swipe-hint" onClick={() => switchPeak(1)}>⌃</View>
-
-        <View className="review-card" onClick={() => showToast("今日复习补给 +20 经验")}>
-          <View className="review-icon">★</View>
-          <View className="review-copy">
-            <Text className="review-title">Daily review</Text>
-            <Text className="review-sub">点亮 +20 经验 · 1 关</Text>
-          </View>
-          <Text className="review-arrow">›</Text>
-        </View>
-
-        {loadErr && (
-          <View className="retry" onClick={loadBank}>
-            <Text>题库加载失败，点此重试</Text>
-          </View>
-        )}
-        {toast ? <View className="toast">{toast}</View> : null}
-      </View>
-
-      {!settings.onboarded && (
-        <View className="onboard-mask">
-          <View className="onboard-card">
-            <Text className="onboard-emoji">👋</Text>
-            <Text className="onboard-title">先告诉我你是谁</Text>
-            <Text className="onboard-sub">写一句身份和爱好，后面生成范文时会更像你自己的表达。</Text>
-            <Textarea
-              className="persona-input"
-              value={persona}
-              onInput={(event) => setPersona(String(event.detail.value || ""))}
-              placeholder="例如：我是一名爱爬山和摄影的大三学生。"
-            />
-            <View className="band-row">
-              {BANDS.map((band) => (
+        {/* Left column rises to the capsule row (nothing occupies the top-left),
+            while the actions stay below the capsule to avoid colliding with it. */}
+        <View className="hud" style={`padding-top:${insets.top}px`}>
+          <View className="hud-main">
+            <View className="parts">
+              {parts.map((item, idx) => (
                 <Text
-                  key={band}
-                  className={`band-chip ${draftBand === band ? "active" : ""}`}
-                  onClick={() => setDraftBand(band)}
+                  key={item.name}
+                  className={`part ${idx === partIdx ? "active" : ""}`}
+                  onClick={() => {
+                    setPartIdx(idx);
+                    setPeakIdx(0);
+                  }}
                 >
-                  {band.toFixed(1)}
+                  <Text className="part-prefix">P</Text>
+                  {displayPartName(item.name)}
                 </Text>
               ))}
             </View>
-            <View className="onboard-go" onClick={finishOnboarding}>开始攀登</View>
-            <Text className="onboard-skip" onClick={finishOnboarding}>先跳过，稍后再填</Text>
+            <View className="metrics">
+              <View className="metric"><Image className="icon" src={ICONS.targetWhite} /><Text>Target <Text className="strong">{settings.targetBand.toFixed(1)}</Text></Text></View>
+              <View className="metric"><Image className="icon" src={ICONS.altWhite} /><Text><Text className="strong">{ALT[Math.min(peakIdx, ALT.length - 1)].toLocaleString()}</Text>m</Text></View>
+            </View>
+          </View>
+          <View className="hud-actions" style={`margin-top:${Math.max(0, insets.bottom + 6 - insets.top)}px`}>
+            <View className="spark"><Image className="icon" src={ICONS.spark} /><Text>{settings.streak || 1}</Text></View>
+            <View className="settings" onClick={() => Taro.navigateTo({ url: "/pages/profile/index" })}>
+              <Image className="icon" src={ICONS.gearBlue} />
+            </View>
           </View>
         </View>
-      )}
+
+        {peakIdx < total - 1 ? (
+          <View className="hint"><Image className="icon" src={ICONS.chevronDownWhite} /></View>
+        ) : null}
+
+        <View className="bottom">
+          <View className="review" onClick={() => showToast("🎁 今日复习补给 · +20 经验")}>
+            <View className="ic">🎁</View>
+            <View className="review-copy">
+              <View className="t1">Daily review</View>
+              <View className="t2">点亮 +20 经验 · 1 关</View>
+            </View>
+            <Text className="arr">›</Text>
+          </View>
+        </View>
+
+        {toast ? <View className={`toast ${toastVisible ? "show" : ""}`}>{toast}</View> : null}
+
+        {!settings.onboarded && (
+          <View className="onboard">
+            <View className="ob-card">
+              <Text className="em">👋</Text>
+              <Text className="ob-title">先告诉我你是谁</Text>
+              <Text className="ob-sub">写一句你的身份和爱好，AI 会据此生成更像「你」的口语范本。之后随时能在「我的」里修改。</Text>
+              <Textarea
+                className="ob-input"
+                value={persona}
+                onInput={(event) => setPersona(String(event.detail.value || ""))}
+                placeholder="例：我是一名爱爬山和摄影的大三学生，养了只猫，周末喜欢逛独立咖啡馆。"
+              />
+              <View className="ob-go" onClick={finishOnboarding}>开始攀登</View>
+              <Text className="ob-skip" onClick={finishOnboarding}>先跳过，稍后再填</Text>
+            </View>
+          </View>
+        )}
     </View>
   );
 }

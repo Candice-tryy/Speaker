@@ -1,9 +1,13 @@
 const QuestionBank = (() => {
   const PATHS = {
     part1: '../Resource/PART1%E9%A2%98%E5%BA%93/papaen_part1_archive.json',
+    part1Answers: '../Resource/PART1%E9%A2%98%E5%BA%93/part1_band7_sample_answers.md',
     part23: '../Resource/PART2%263%E9%A2%98%E5%BA%93/papaen_part23_current.json',
-    part23Answers: '../Resource/PART2%263%E9%A2%98%E5%BA%93/part23_band7_sample_answers.json'
+    part23Answers: '../Resource/PART2%263%E9%A2%98%E5%BA%93/part23_band7_sample_answers.json',
+    part2Combo: '../Resource/PART2%E4%B8%B2%E9%A2%98%E9%A2%98%E5%BA%93/papaen_part2_combo_current.json'
   };
+
+  const PART2_COMBO = 'Part 2串题';
 
   const FALLBACK_TOPICS = [
     { id: 'fallback-p1', title: 'The area you live in', part: 1, questions: [
@@ -27,17 +31,44 @@ const QuestionBank = (() => {
     return JSON.parse(text.replace(/^\uFEFF/, ''));
   }
 
+  async function loadText(url) {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`Failed to load ${url}: ${response.status}`);
+    return response.text();
+  }
+
   function cleanText(text) {
     return String(text || '').replace(/\s+/g, ' ').trim();
   }
 
-  function normalizeTopic(topic, partHint) {
+  function answerKey(text) {
+    return cleanText(text).toLowerCase();
+  }
+
+  function parsePart1MarkdownAnswers(markdown) {
+    const out = new Map();
+    const text = String(markdown || '').replace(/^\uFEFF/, '').replace(/\r\n/g, '\n');
+    const heading = /^###\s+Q\d+\.\s+(.+?)\s*$/gm;
+    const matches = Array.from(text.matchAll(heading));
+    matches.forEach((match, index) => {
+      const question = cleanText(match[1]);
+      const bodyStart = (match.index || 0) + match[0].length;
+      const bodyEnd = matches[index + 1]?.index ?? text.indexOf('\n## ', bodyStart);
+      const rawAnswer = text.slice(bodyStart, bodyEnd === -1 ? undefined : bodyEnd).trim();
+      const answer = cleanText(rawAnswer);
+      if (question && answer) out.set(answerKey(question), answer);
+    });
+    return out;
+  }
+
+  function normalizeTopic(topic, partHint, answerByContent = new Map()) {
     const questions = (topic.questions || []).map(q => ({
       id: String(q.id),
       index: q.index,
       part: q.part || partHint,
       content: cleanText(q.content),
-      is_show: q.is_show
+      is_show: q.is_show,
+      answer: answerByContent.get(answerKey(q.content)) || cleanText(q.answers?.[0]?.content)
     })).filter(q => q.content);
 
     return {
@@ -53,10 +84,12 @@ const QuestionBank = (() => {
     };
   }
 
-  function normalizeAnswers(data) {
+  function normalizeAnswers(data, includeParts) {
+    const include = includeParts ? new Set(includeParts) : null;
     const out = new Map();
     (data?.topics || []).forEach(topic => {
       (topic.answers || []).forEach(item => {
+        if (include && !include.has(Number(item.part))) return;
         out.set(String(item.question_id), cleanText(item.answer));
       });
     });
@@ -73,9 +106,9 @@ const QuestionBank = (() => {
     }));
   }
 
-  function currentTopics(topics, max = 9) {
+  function shownTopics(topics) {
     const shown = topics.filter(t => t.isShow && t.questions.length);
-    return (shown.length ? shown : topics).slice(0, max);
+    return shown.length ? shown : topics.filter(t => t.questions.length);
   }
 
   function chunk(items, size) {
@@ -103,12 +136,24 @@ const QuestionBank = (() => {
     return clean.length > max ? `${clean.slice(0, max - 1)}...` : clean;
   }
 
+  function isTopicNodePart(partName) {
+    return partName === 'Part 1' || partName === 'Part 2&3' || partName === PART2_COMBO;
+  }
+
+  function nodesPerPeak(partName) {
+    return partName === PART2_COMBO ? 4 : isTopicNodePart(partName) ? 7 : 3;
+  }
+
   function makePeak(topics, partName, index) {
-    const cards = topics.slice(0, 3);
-    const topicLabels = cards.map(t => partName === 'Part 1' ? shortLabel(t.title, 20) : topicQuestionLabel(t, partName === 'Part 3' ? 3 : 2));
-    while (topicLabels.length < 3) topicLabels.push('Practice card');
+    const cards = topics.slice(0, nodesPerPeak(partName));
+    const topicLabels = cards.map(t =>
+      isTopicNodePart(partName) ? shortLabel(t.title, 18) : topicQuestionLabel(t, partName === 'Part 3' ? 3 : 2)
+    );
+    if (!isTopicNodePart(partName)) {
+      while (topicLabels.length < 3) topicLabels.push('Practice card');
+    }
     return {
-      name: cards[0]?.tag || cards[0]?.title || `${partName} Set ${index + 1}`,
+      name: isTopicNodePart(partName) ? `Set ${index + 1}` : cards[0]?.tag || cards[0]?.title || `${partName} Set ${index + 1}`,
       topics: topicLabels,
       cards,
       boss: 'Examiner',
@@ -116,13 +161,14 @@ const QuestionBank = (() => {
     };
   }
 
-  function makeParts(part1Topics, part23Topics) {
-    const p1 = currentTopics(part1Topics, 9);
-    const p23 = currentTopics(part23Topics, 9);
+  function makeParts(part1Topics, part23Topics, comboTopics = []) {
+    const p1 = shownTopics(part1Topics);
+    const p23 = shownTopics(part23Topics);
+    const combo = shownTopics(comboTopics);
     return [
-      { name: 'Part 1', peaks: chunk(p1, 3).map((topics, i) => makePeak(topics, 'Part 1', i)) },
-      { name: 'Part 2', peaks: chunk(p23, 3).map((topics, i) => makePeak(topics, 'Part 2', i)) },
-      { name: 'Part 3', peaks: chunk(p23, 3).map((topics, i) => makePeak(topics, 'Part 3', i)) }
+      { name: 'Part 1', peaks: chunk(p1, 7).map((topics, i) => makePeak(topics, 'Part 1', i)) },
+      { name: 'Part 2&3', peaks: chunk(p23, 7).map((topics, i) => makePeak(topics, 'Part 2&3', i)) },
+      { name: PART2_COMBO, peaks: chunk(combo, 4).map((topics, i) => makePeak(topics, PART2_COMBO, i)) }
     ];
   }
 
@@ -139,15 +185,19 @@ const QuestionBank = (() => {
   async function load() {
     if (cache) return cache;
     try {
-      const [part1Data, part23Data, answerData] = await Promise.all([
+      const [part1Data, part1AnswerText, part23Data, comboData, answerData] = await Promise.all([
         loadJSON(PATHS.part1),
+        loadText(PATHS.part1Answers).catch(() => ''),
         loadJSON(PATHS.part23),
+        loadJSON(PATHS.part2Combo),
         loadJSON(PATHS.part23Answers).catch(() => ({ topics: [] }))
       ]);
-      const answerMap = normalizeAnswers(answerData);
-      const part1Topics = (part1Data.topics || []).map(t => normalizeTopic(t, 1));
+      const answerMap = normalizeAnswers(answerData, [3]);
+      const part1AnswerMap = parsePart1MarkdownAnswers(part1AnswerText);
+      const part1Topics = (part1Data.topics || []).map(t => normalizeTopic(t, 1, part1AnswerMap));
       const part23Topics = withAnswers((part23Data.topics || []).map(t => normalizeTopic(t, 2)), answerMap);
-      const parts = makeParts(part1Topics, part23Topics);
+      const comboTopics = (comboData.topics || []).map(t => normalizeTopic(t, 4));
+      const parts = makeParts(part1Topics, part23Topics, comboTopics);
       cache = { parts, ...indexBank(parts), loaded: true };
     } catch (error) {
       console.warn('Question bank fallback:', error);
@@ -164,7 +214,7 @@ const QuestionBank = (() => {
     if (questionId && bank.questions.has(String(questionId))) return bank.questions.get(String(questionId));
     const topic = topicId ? bank.topics.get(String(topicId)) : null;
     if (!topic) return null;
-    const partNo = partName === 'Part 1' ? 1 : partName === 'Part 3' ? 3 : 2;
+    const partNo = partName === 'Part 1' ? 1 : partName === 'Part 3' ? 3 : partName === PART2_COMBO ? 4 : 2;
     const question = topic.questions.find(q => q.part === partNo) || topic.questions[0];
     return question ? { topic, question } : null;
   }
@@ -202,5 +252,27 @@ const QuestionBank = (() => {
     return `I would like to talk about ${topic?.title || 'this topic'}. In my opinion, the most important point is balance. I would answer it with a clear example, then explain one reason and one personal feeling, so the response sounds natural and complete.`;
   }
 
-  return { load, getQuestion, getExaminerScript, splitCueCard, fallbackAnswer, cueTitle };
+  function partQuestionNo(partName) {
+    if (partName === 'Part 1') return 1;
+    if (partName === 'Part 3') return 3;
+    if (partName === PART2_COMBO) return 4;
+    return 2;
+  }
+
+  function toPracticeQuestions(topic, partName) {
+    const partNo = partQuestionNo(partName);
+    return (topic?.questions || [])
+      .filter(q => q.is_show !== 0)
+      .filter(q => partName === 'Part 2&3' ? q.part === 2 || q.part === 3 : q.part === partNo)
+      .map(q => {
+        if (q.part === 4) return { ...q, qtext: topic.title, bullets: [q.content], answer: fallbackAnswer(q, topic) };
+        if (q.part === 2) {
+          const cue = splitCueCard(q.content);
+          return { ...q, qtext: cue.title || q.content, bullets: cue.bullets.length ? cue.bullets : [topic.title], answer: fallbackAnswer(q, topic) };
+        }
+        return { ...q, qtext: q.content, bullets: [topic.title], answer: fallbackAnswer(q, topic) };
+      });
+  }
+
+  return { load, getQuestion, getExaminerScript, splitCueCard, fallbackAnswer, cueTitle, partQuestionNo, toPracticeQuestions, PART2_COMBO };
 })();
