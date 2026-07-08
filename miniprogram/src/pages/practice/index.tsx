@@ -3,6 +3,7 @@ import { Image, View, Text, ScrollView } from "@tarojs/components";
 import Taro, { useRouter } from "@tarojs/taro";
 import { getBank, scoreAudio, scoreSpeaking, toPracticeQuestions, type PracticeQuestion, type ScoreResult, type Topic } from "../../lib/api";
 import { ICONS } from "../../lib/icons.gen";
+import { LOADING_CLOUD_BIG, LOADING_CLOUD_SMALL, LOADING_SUN_FACE, LOADING_SUN_RAYS } from "../../lib/loading-art";
 import { ensureRecordPermission, startRecording, type RecordingController } from "../../lib/recorder";
 import { getSettings, getTopicPassed, lightMapNode, needForPart, setTopicPassed } from "../../lib/store";
 import { capsuleCenteredTop, chromeInsets } from "../../lib/ui";
@@ -303,7 +304,39 @@ export default function Practice() {
   const topStyle = `padding-top:${capsuleCenteredTop(36)}px;padding-right:${Math.max(20, insets.right + 8)}px`;
 
   if (phase === "loading") {
-    return <View className="practice-phone center"><Text className="state-text">加载题库中...</Text></View>;
+    return (
+      <View className="practice-phone loading-bg">
+        <Image className="loader-cloud cloud-one" src={LOADING_CLOUD_BIG} mode="scaleToFill" />
+        <Image className="loader-cloud cloud-two" src={LOADING_CLOUD_SMALL} mode="scaleToFill" />
+        <Image className="loader-cloud cloud-three" src={LOADING_CLOUD_BIG} mode="scaleToFill" />
+
+        <View className="loader-center">
+          <View className="sun-bob">
+            <View className="sun-breathe">
+              <View className="sun-loader-mark">
+                <Image className="sun-rays-img" src={LOADING_SUN_RAYS} mode="scaleToFill" />
+                <Image className="sun-face-img" src={LOADING_SUN_FACE} mode="scaleToFill" />
+              </View>
+            </View>
+          </View>
+
+          <View className="loading-word">
+            <View className="loading-letters">
+              {"loading".split("").map((letter, index) => (
+                <Text key={`${letter}-${index}`} className={`loading-letter letter-${index + 1}`}>
+                  {letter}
+                </Text>
+              ))}
+            </View>
+            <View className="loading-dots">
+              <View className="loading-dot dot-1" />
+              <View className="loading-dot dot-2" />
+              <View className="loading-dot dot-3" />
+            </View>
+          </View>
+        </View>
+      </View>
+    );
   }
 
   if (phase === "error") {

@@ -38,6 +38,200 @@
   font-size: 13px;
 }
 
+/* Loading screen, ported 1:1 from preview/loading-sun.html. Art comes from
+   lib/loading-art.ts as SVG data URLs; positions/sizes below are the
+   prototype's 340×720 design coordinates (= Taro design px). */
+.loading-bg {
+  background: linear-gradient(180deg, #eaf7f0 0%, #dff2ea 45%, #d3eee1 100%);
+}
+
+.loader-cloud {
+  position: absolute;
+  animation: loading-drift 16s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.cloud-one {
+  left: 34px;
+  top: 94px;
+  width: 100px;
+  height: 39px;
+}
+
+.cloud-two {
+  left: 211px;
+  top: 158px;
+  width: 73px;
+  height: 30px;
+  animation-duration: 23s;
+  animation-delay: -6s;
+}
+
+/* The prototype's translate(-22 296) on this cloud is overridden by the drift
+   animation's transform, so it actually renders on top of cloud one with a
+   phase-shifted drift — replicate the rendered result, not the attribute. */
+.cloud-three {
+  left: 34px;
+  top: 94px;
+  width: 100px;
+  height: 39px;
+  opacity: 0.82;
+  animation-duration: 19s;
+  animation-delay: -11s;
+}
+
+.loader-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 21px;
+}
+
+.sun-bob {
+  animation: loading-sun-bob 2.4s ease-in-out infinite;
+}
+
+.sun-breathe {
+  animation: loading-sun-breathe 2.4s ease-in-out infinite;
+}
+
+.sun-loader-mark {
+  position: relative;
+  width: 144px;
+  height: 144px;
+}
+
+.sun-rays-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 144px;
+  height: 144px;
+  animation: loading-sun-spin 10s linear infinite;
+}
+
+.sun-face-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 144px;
+  height: 144px;
+  transform: scale(0.833);
+}
+
+.loading-word {
+  margin-top: -33px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 6px;
+  color: #2e9c97;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.loading-letters {
+  display: flex;
+  align-items: flex-end;
+}
+
+.loading-letter {
+  display: inline-block;
+  animation: loading-dot-jump 2.4s ease-in-out infinite;
+}
+
+.loading-dots {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  padding-bottom: 5px;
+}
+
+.loading-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #2e9c97;
+  animation: loading-dot-jump 2.4s ease-in-out infinite;
+}
+
+.letter-1 {
+  animation-delay: 0s;
+}
+.letter-2 {
+  animation-delay: 0.08s;
+}
+.letter-3 {
+  animation-delay: 0.16s;
+}
+.letter-4 {
+  animation-delay: 0.24s;
+}
+.letter-5 {
+  animation-delay: 0.32s;
+}
+.letter-6 {
+  animation-delay: 0.4s;
+}
+.letter-7 {
+  animation-delay: 0.48s;
+}
+.dot-1 {
+  animation-delay: 0.56s;
+}
+.dot-2 {
+  animation-delay: 0.64s;
+}
+.dot-3 {
+  animation-delay: 0.72s;
+}
+
+@keyframes loading-drift {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+}
+
+@keyframes loading-sun-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loading-sun-bob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes loading-sun-breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes loading-dot-jump {
+  0%, 70%, 100% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(-8px);
+  }
+}
+
 /* top */
 .top {
   z-index: 10;

@@ -19,6 +19,192 @@
   flex-direction: column;
 }
 
+/* Prototype loading screen (preview/loading-sun.html) uses a green-tinted sky,
+   not the practice page's warm gradient — the white clouds need it to read. */
+.loadingPhone {
+  background: linear-gradient(180deg, #eaf7f0 0%, #dff2ea 45%, #d3eee1 100%);
+}
+
+.loadingCloudLayer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.loadingCloud {
+  animation: loadingDrift 16s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.loadingCloudTwo {
+  animation-duration: 23s;
+  animation-delay: -6s;
+}
+
+.loadingCloudThree {
+  animation-duration: 19s;
+  animation-delay: -11s;
+  opacity: 0.82;
+}
+
+.loadingLoader {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 21px;
+}
+
+.loadingSunBob {
+  animation: loadingSunBob 2.4s ease-in-out infinite;
+}
+
+.loadingSunBreathe {
+  animation: loadingSunBreathe 2.4s ease-in-out infinite;
+}
+
+.loadingSunSvg {
+  width: 144px;
+  height: 144px;
+  display: block;
+}
+
+.loadingSunRays {
+  transform-origin: 100px 100px;
+  animation: loadingSunSpin 10s linear infinite;
+}
+
+.loadingSunFace {
+  transform-origin: 100px 100px;
+  transform: scale(0.833);
+}
+
+.loadingWord {
+  margin-top: -33px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 6px;
+  color: var(--green-deep);
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.loadingLetters {
+  display: inline-flex;
+  align-items: flex-end;
+}
+
+.loadingLetters span {
+  display: inline-block;
+  animation: loadingDotJump 2.4s ease-in-out infinite;
+}
+
+.loadingDots {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 5px;
+  padding-bottom: 5px;
+}
+
+.loadingDots span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--green-deep);
+  animation: loadingDotJump 2.4s ease-in-out infinite;
+}
+
+.loadingLetters span:nth-child(1) {
+  animation-delay: 0s;
+}
+.loadingLetters span:nth-child(2) {
+  animation-delay: 0.08s;
+}
+.loadingLetters span:nth-child(3) {
+  animation-delay: 0.16s;
+}
+.loadingLetters span:nth-child(4) {
+  animation-delay: 0.24s;
+}
+.loadingLetters span:nth-child(5) {
+  animation-delay: 0.32s;
+}
+.loadingLetters span:nth-child(6) {
+  animation-delay: 0.4s;
+}
+.loadingLetters span:nth-child(7) {
+  animation-delay: 0.48s;
+}
+.loadingDots span:nth-child(1) {
+  animation-delay: 0.56s;
+}
+.loadingDots span:nth-child(2) {
+  animation-delay: 0.64s;
+}
+.loadingDots span:nth-child(3) {
+  animation-delay: 0.72s;
+}
+
+@keyframes loadingDrift {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+}
+
+@keyframes loadingSunSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loadingSunBob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes loadingSunBreathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes loadingDotJump {
+  0%, 70%, 100% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loadingCloud,
+  .loadingSunBob,
+  .loadingSunBreathe,
+  .loadingSunRays,
+  .loadingLetters span,
+  .loadingDots span {
+    animation: none;
+  }
+}
+
 /* top */
 .top {
   z-index: 10;
