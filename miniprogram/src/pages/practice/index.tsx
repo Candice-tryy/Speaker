@@ -104,6 +104,7 @@ export default function Practice() {
   const [answerOpen, setAnswerOpen] = useState(true);
   const [showList, setShowList] = useState(false);
   const [word, setWord] = useState<WordInfo | null>(null);
+  const [voiceLevel, setVoiceLevel] = useState(0);
   const [toast, setToast] = useState("");
   const [toastVisible, setToastVisible] = useState(false);
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -176,17 +177,19 @@ export default function Practice() {
     if (holdingRef.current || scoring) return;
     holdingRef.current = true;
     recStartAtRef.current = Date.now();
+    setVoiceLevel(0);
     setPhase("recording");
     const ok = await ensureRecordPermission();
     if (!ok) {
       holdingRef.current = false;
+      setVoiceLevel(0);
       setPhase("ready");
       showToast("需要麦克风权限才能跟读");
       return;
     }
     if (!holdingRef.current) return; // released during the permission prompt
     try {
-      const controller = await startRecording();
+      const controller = await startRecording(setVoiceLevel);
       if (!holdingRef.current) {
         controller.cancel();
         return;
@@ -200,6 +203,7 @@ export default function Practice() {
   async function onRecEnd() {
     if (!holdingRef.current) return;
     holdingRef.current = false;
+    setVoiceLevel(0);
     const controller = recRef.current;
     recRef.current = null;
     setPhase("scoring");
@@ -225,6 +229,14 @@ export default function Practice() {
     } finally {
       setPhase("ready");
     }
+  }
+
+  function onRecTap() {
+    if (recording) {
+      void onRecEnd();
+      return;
+    }
+    void onRecStart();
   }
 
   function changeMode(next: Mode) {
@@ -355,9 +367,9 @@ export default function Practice() {
                 <Image className="icon" src={ICONS.chevronDown} />
               </View>
               <View className="panel">
-                <View className="ans">
+                <ScrollView scrollY className="ans">
                   {sampleAnswer ? highlightAnswer(sampleAnswer, setWord) : <Text>这个题目还没有范文，先用自己的话试着回答。</Text>}
-                </View>
+                </ScrollView>
                 <View className="anstools">
                   <View onClick={() => showToast("🔊 示范朗读中…")}><Image className="icon" src={ICONS.speaker} /><Text>示范朗读</Text></View>
                   <View onClick={genPersonal}><Image className="icon" src={ICONS.pencil} /><Text>个性化</Text></View>
@@ -366,7 +378,7 @@ export default function Practice() {
             </View>
           </View>
 
-          <View className="dock">
+          <View className={`dock ${recording ? "is-recording" : ""} ${scoring ? "is-scoring" : ""}`}>
             <View className="seg">
               <Text className={mode === "follow" ? "active" : ""} onClick={() => changeMode("follow")}>跟读练习</Text>
               <Text className={mode === "mock" ? "active" : ""} onClick={() => changeMode("mock")}>模拟作答</Text>
@@ -381,10 +393,20 @@ export default function Practice() {
             <View className="recwrap">
               <View
                 className={`rec ${recording ? "recording" : ""}`}
-                onTouchStart={onRecStart}
-                onTouchEnd={onRecEnd}
+                onClick={onRecTap}
               >
                 <View className="ring" />
+                {recording ? (
+                  <View className="wave">
+                    {Array.from({ length: 5 }).map((_, index) => (
+                      <View
+                        key={index}
+                        className="wave-bar"
+                        style={{ transform: `scaleY(${0.32 + Math.min(1, voiceLevel * (1.15 + index * 0.18))})` }}
+                      />
+                    ))}
+                  </View>
+                ) : null}
                 <Image className="icon" src={ICONS.mic} />
               </View>
             </View>

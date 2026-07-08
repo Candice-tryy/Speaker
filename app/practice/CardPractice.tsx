@@ -95,6 +95,7 @@ export default function CardPractice({ card }: { card: CardData }) {
   const [pickerOpen, setPickerOpen] = useState(false);
   const [recording, setRecording] = useState(false);
   const [scoring, setScoring] = useState(false);
+  const [voiceLevel, setVoiceLevel] = useState(0);
 
   const [fb, setFb] = useState<ScoreResult | null>(null);
   const [fbOpen, setFbOpen] = useState(false);
@@ -215,42 +216,23 @@ export default function CardPractice({ card }: { card: CardData }) {
     [activeQuestion, card.part, currentText, showToast, scoreRefText]
   );
 
-  // Long-press recording: release anywhere ends the take, finalizes the PCM, submits.
+  // Clean up the mic if the user navigates away mid-recording.
   useEffect(() => {
-    async function endRec() {
-      if (!holdingRef.current) return;
-      holdingRef.current = false;
-      setRecording(false);
-      let audio = "";
-      const recorder = recorderRef.current;
-      recorderRef.current = null;
-      if (recorder) {
-        try {
-          audio = await recorder.stop();
-        } catch {
-          audio = "";
-        }
-      }
-      void submitScore(audio);
-    }
-    window.addEventListener("mouseup", endRec);
-    window.addEventListener("touchend", endRec);
     return () => {
-      window.removeEventListener("mouseup", endRec);
-      window.removeEventListener("touchend", endRec);
+      recorderRef.current?.cancel();
     };
-  }, [submitScore]);
+  }, []);
 
-  async function startRec(e: React.SyntheticEvent) {
-    e.preventDefault();
+  async function startRec() {
     if (holdingRef.current || scoring) return;
     holdingRef.current = true;
     recStartAtRef.current = Date.now();
     setRecording(true);
+    setVoiceLevel(0);
     const recorder = new PcmRecorder();
     try {
-      await recorder.start();
-      // If the user already released during the permission prompt, drop it.
+      await recorder.start(setVoiceLevel);
+      // If the user stopped during the permission prompt, drop it.
       if (!holdingRef.current) {
         recorder.cancel();
         return;
@@ -258,9 +240,39 @@ export default function CardPractice({ card }: { card: CardData }) {
       recorderRef.current = recorder;
     } catch {
       recorder.cancel();
+      holdingRef.current = false;
+      setRecording(false);
+      setVoiceLevel(0);
       // No mic / permission denied: recording is unavailable, but the take still
       // submits (server falls back to mock when no audio).
+      void submitScore("");
     }
+  }
+
+  async function stopRec() {
+    if (!holdingRef.current || scoring) return;
+    holdingRef.current = false;
+    setRecording(false);
+    setVoiceLevel(0);
+    let audio = "";
+    const recorder = recorderRef.current;
+    recorderRef.current = null;
+    if (recorder) {
+      try {
+        audio = await recorder.stop();
+      } catch {
+        audio = "";
+      }
+    }
+    void submitScore(audio);
+  }
+
+  function toggleRecording() {
+    if (recording) {
+      void stopRec();
+      return;
+    }
+    void startRec();
   }
 
   function changeMode(next: Mode) {
@@ -570,7 +582,7 @@ export default function CardPractice({ card }: { card: CardData }) {
           </div>
         </div>
 
-        <div className={styles.dock}>
+        <div className={`${styles.dock} ${recording ? styles.isRecording : ""} ${scoring ? styles.isScoring : ""}`}>
           <div className={styles.seg}>
             <button className={mode === "follow" ? styles.active : ""} onClick={() => changeMode("follow")}>
               跟读练习
@@ -583,10 +595,21 @@ export default function CardPractice({ card }: { card: CardData }) {
           <div className={styles.recwrap}>
             <button
               className={`${styles.rec} ${recording ? styles.recording : ""}`}
-              onMouseDown={startRec}
-              onTouchStart={startRec}
+              onClick={toggleRecording}
+              disabled={scoring}
+              aria-label={recording ? "Stop recording" : "Start recording"}
             >
               <span className={styles.ring} />
+              {recording ? (
+                <span className={styles.wave} aria-hidden="true">
+                  {Array.from({ length: 5 }).map((_, index) => (
+                    <span
+                      key={index}
+                      style={{ transform: `scaleY(${0.32 + Math.min(1, voiceLevel * (1.15 + index * 0.18))})` }}
+                    />
+                  ))}
+                </span>
+              ) : null}
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="9" y="2" width="6" height="12" rx="3" />
                 <path d="M5 10a7 7 0 0 0 14 0" />

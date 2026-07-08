@@ -255,9 +255,20 @@
   background: var(--mint-1);
   border-radius: 18px;
   padding: 15px 16px;
+  max-height: min(34vh, 280px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   font-size: 14.5px;
   line-height: 1.9;
   color: #37524b;
+}
+.ans::-webkit-scrollbar {
+  width: 4px;
+}
+.ans::-webkit-scrollbar-thumb {
+  background: rgba(46, 156, 151, 0.24);
+  border-radius: 999px;
 }
 .anstools {
   display: flex;
@@ -359,12 +370,19 @@
 .rec:active {
   transform: scale(0.94);
 }
+.rec:disabled {
+  cursor: wait;
+  opacity: 0.78;
+}
 .rec svg {
   width: 30px;
   height: 30px;
 }
 .rec.recording {
   background: linear-gradient(180deg, #ffd85f 0%, #e9a91d 100%);
+}
+.rec.recording svg {
+  display: none;
 }
 .ring {
   position: absolute;
@@ -375,6 +393,23 @@
 }
 .rec.recording .ring {
   animation: ring 1.3s ease-out infinite;
+}
+.wave {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  z-index: 1;
+}
+.wave span {
+  width: 4px;
+  height: 26px;
+  border-radius: 999px;
+  background: #7a5200;
+  transform-origin: center;
+  transition: transform 0.08s linear;
 }
 @keyframes ring {
   0% {
@@ -388,9 +423,19 @@
 }
 .rectip {
   text-align: center;
-  font-size: 11px;
+  font-size: 0;
   color: var(--faint);
   margin-top: 8px;
+}
+.rectip::after {
+  content: "\0070B9\004E00\004E0B\005F00\0059CB\005F55\0097F3";
+  font-size: 11px;
+}
+.isRecording .rectip::after {
+  content: "\005F55\0097F3\004E2D... \0053EF\004EE5\006ED1\0052A8\00770B\005B8C\006574\008303\006587 \0000B7 \00518D\0070B9\007ED3\00675F";
+}
+.isScoring .rectip::after {
+  content: "\006B63\005728\00542C\004F60\007684\0053D1\0097F3...";
 }
 
 /* feedback sheet */

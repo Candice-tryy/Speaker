@@ -251,6 +251,9 @@
   background: #eaf7f1;
   border-radius: 18px;
   padding: 15px 16px;
+  max-height: 280px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   font-size: 14.5px;
   line-height: 1.9;
   color: #37524b;
@@ -370,6 +373,10 @@
   background: linear-gradient(180deg, #ffd85f 0%, #e9a91d 100%);
 }
 
+.rec.recording .icon {
+  display: none;
+}
+
 .ring {
   position: absolute;
   inset: -10px;
@@ -380,6 +387,25 @@
 
 .rec.recording .ring {
   animation: ring 1.3s ease-out infinite;
+}
+
+.wave {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  z-index: 1;
+}
+
+.wave-bar {
+  width: 4px;
+  height: 26px;
+  border-radius: 999px;
+  background: #7a5200;
+  transform-origin: center;
+  transition: transform 0.08s linear;
 }
 
 @keyframes ring {
@@ -396,9 +422,22 @@
 .rectip {
   display: block;
   text-align: center;
-  font-size: 11px;
+  font-size: 0;
   color: #a6c0b7;
   margin-top: 8px;
+}
+
+.rectip::after {
+  content: "\0070B9\004E00\004E0B\005F00\0059CB\005F55\0097F3";
+  font-size: 11px;
+}
+
+.is-recording .rectip::after {
+  content: "\005F55\0097F3\004E2D... \0053EF\004EE5\006ED1\0052A8\00770B\005B8C\006574\008303\006587 \0000B7 \00518D\0070B9\007ED3\00675F";
+}
+
+.is-scoring .rectip::after {
+  content: "\006B63\005728\00542C\004F60\007684\0053D1\0097F3...";
 }
 
 /* toast */

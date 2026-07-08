@@ -23,6 +23,18 @@ export interface RecordingController {
   cancel: () => void;
 }
 
+function pcmFrameLevel(frame: ArrayBuffer): number {
+  const view = new DataView(frame);
+  const sampleCount = Math.floor(frame.byteLength / 2);
+  if (!sampleCount) return 0;
+  let sum = 0;
+  for (let i = 0; i < sampleCount; i++) {
+    const sample = view.getInt16(i * 2, true) / 32768;
+    sum += sample * sample;
+  }
+  return Math.min(1, Math.sqrt(sum / sampleCount) * 6);
+}
+
 // Make sure 录音 permission is granted before we start. If the user denied it
 // earlier, RecorderManager.start would silently fail, so we route them to the
 // settings panel to re-enable. Returns true when recording may proceed.
@@ -49,7 +61,7 @@ export async function ensureRecordPermission(): Promise<boolean> {
   }
 }
 
-export function startRecording(): Promise<RecordingController> {
+export function startRecording(onLevel?: (level: number) => void): Promise<RecordingController> {
   return new Promise((resolve, reject) => {
     const manager = Taro.getRecorderManager();
     const frames: ArrayBuffer[] = [];
@@ -57,7 +69,10 @@ export function startRecording(): Promise<RecordingController> {
     let cancelled = false;
 
     manager.onFrameRecorded((res) => {
-      if (res.frameBuffer) frames.push(res.frameBuffer);
+      if (res.frameBuffer) {
+        frames.push(res.frameBuffer);
+        onLevel?.(pcmFrameLevel(res.frameBuffer));
+      }
     });
 
     manager.onStop(() => {
@@ -79,10 +94,12 @@ export function startRecording(): Promise<RecordingController> {
         stop: () =>
           new Promise<string>((res) => {
             stopResolve = res;
+            onLevel?.(0);
             manager.stop();
           }),
         cancel: () => {
           cancelled = true;
+          onLevel?.(0);
           manager.stop();
         },
       });
