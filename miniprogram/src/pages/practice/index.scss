@@ -482,12 +482,13 @@
 
 .dims {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   flex: 1;
 }
 
 .dim {
-  flex: 1;
+  flex: 1 1 96px;
   background: #d7eaf9;
   border-radius: 12px;
   padding: 8px 10px;
@@ -528,6 +529,26 @@
   font-size: 13px;
   line-height: 1.5;
   color: #c75a2c;
+}
+
+.transcript,
+.evidence {
+  margin-top: 10px;
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.transcript text,
+.evidence text {
+  display: block;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #7c9a8d;
+}
+
+.evidence text {
+  color: #2e9c97;
 }
 
 .fbcta {

@@ -45,7 +45,27 @@ export interface ScoreResult {
   pronunciation: number;
   fluency: number;
   advice: string;
-  source?: "iflytek" | "mock";
+  source?: "iflytek" | "mock" | "deepseek";
+  rejected?: boolean;
+  transcript?: string;
+  lexicalResource?: number;
+  grammar?: number;
+  evidence?: string[];
+}
+
+export interface SpeakingScoreResult {
+  transcript: string;
+  overall: number;
+  fluencyCoherence: number;
+  lexicalResource: number;
+  grammar: number;
+  pronunciation: number;
+  advice: string;
+  evidence: string[];
+  source?: {
+    asr: "iflytek" | "mock";
+    scorer: "deepseek" | "mock";
+  };
   rejected?: boolean;
 }
 

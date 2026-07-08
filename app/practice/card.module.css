@@ -442,11 +442,12 @@
 }
 .dims {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   flex: 1;
 }
 .dim {
-  flex: 1;
+  flex: 1 1 96px;
   background: var(--blue-soft);
   border-radius: 12px;
   padding: 8px 10px;
@@ -477,6 +478,19 @@
   height: 16px;
   flex: none;
   margin-top: 1px;
+}
+.transcript,
+.evidence {
+  margin-top: 10px;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.68);
+}
+.evidence {
+  color: var(--green-deep);
 }
 .fbcta {
   margin-top: 16px;

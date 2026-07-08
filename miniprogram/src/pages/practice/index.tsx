@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { Image, View, Text, ScrollView } from "@tarojs/components";
 import Taro, { useRouter } from "@tarojs/taro";
-import { getBank, scoreAudio, toPracticeQuestions, type PracticeQuestion, type ScoreResult, type Topic } from "../../lib/api";
+import { getBank, scoreAudio, scoreSpeaking, toPracticeQuestions, type PracticeQuestion, type ScoreResult, type Topic } from "../../lib/api";
 import { ICONS } from "../../lib/icons.gen";
 import { ensureRecordPermission, startRecording, type RecordingController } from "../../lib/recorder";
 import { getSettings, getTopicPassed, lightMapNode, needForPart, setTopicPassed } from "../../lib/store";
@@ -112,6 +112,7 @@ export default function Practice() {
   const holdingRef = useRef(false);
   const recRef = useRef<RecordingController | null>(null);
   const recitedRef = useRef(false);
+  const recStartAtRef = useRef(0);
 
   const target = getSettings().targetBand;
   const passMark = (target - 0.5).toFixed(1);
@@ -174,6 +175,7 @@ export default function Practice() {
   async function onRecStart() {
     if (holdingRef.current || scoring) return;
     holdingRef.current = true;
+    recStartAtRef.current = Date.now();
     setPhase("recording");
     const ok = await ensureRecordPermission();
     if (!ok) {
@@ -210,7 +212,11 @@ export default function Practice() {
       }
     }
     try {
-      const score = await scoreAudio({ refText, audioBase64: audio, mode, recited: recitedRef.current });
+      const durationMs = recStartAtRef.current ? Date.now() - recStartAtRef.current : undefined;
+      const score =
+        mode === "mock"
+          ? await scoreSpeaking({ part: partName, question: current?.content || current?.qtext || "", audioBase64: audio, durationMs })
+          : await scoreAudio({ refText, audioBase64: audio, mode, recited: recitedRef.current });
       setResult(score);
       setFbOpen(true);
       recitedRef.current = true;
@@ -396,21 +402,54 @@ export default function Practice() {
           <View className="grab" />
           <View className="band">
             <Text className="score">{showScore ? result!.band.toFixed(1) : "—"}</Text>
-            <View className="dims">
-              <View className="dim">
-                <Text className="dl">Pronunciation</Text>
-                <Text className="dv">{showScore ? result!.pronunciation.toFixed(1) : "—"}</Text>
+            {mode === "mock" ? (
+              <View className="dims">
+                <View className="dim">
+                  <Text className="dl">Fluency & Coherence</Text>
+                  <Text className="dv">{showScore ? result!.fluency.toFixed(1) : "—"}</Text>
+                </View>
+                <View className="dim">
+                  <Text className="dl">Lexical</Text>
+                  <Text className="dv">{showScore && result!.lexicalResource != null ? result!.lexicalResource.toFixed(1) : "—"}</Text>
+                </View>
+                <View className="dim">
+                  <Text className="dl">Grammar</Text>
+                  <Text className="dv">{showScore && result!.grammar != null ? result!.grammar.toFixed(1) : "—"}</Text>
+                </View>
+                <View className="dim">
+                  <Text className="dl">Pronunciation</Text>
+                  <Text className="dv">{showScore ? result!.pronunciation.toFixed(1) : "—"}</Text>
+                </View>
               </View>
-              <View className="dim">
-                <Text className="dl">Fluency</Text>
-                <Text className="dv">{showScore ? result!.fluency.toFixed(1) : "—"}</Text>
+            ) : (
+              <View className="dims">
+                <View className="dim">
+                  <Text className="dl">Pronunciation</Text>
+                  <Text className="dv">{showScore ? result!.pronunciation.toFixed(1) : "—"}</Text>
+                </View>
+                <View className="dim">
+                  <Text className="dl">Fluency</Text>
+                  <Text className="dv">{showScore ? result!.fluency.toFixed(1) : "—"}</Text>
+                </View>
               </View>
-            </View>
+            )}
           </View>
           <View className="advice">
             <Image className="icon" src={ICONS.bulb} />
             <Text>{result?.advice}</Text>
           </View>
+          {result?.transcript ? (
+            <View className="transcript">
+              <Text>转写：{result.transcript}</Text>
+            </View>
+          ) : null}
+          {result?.evidence?.length ? (
+            <View className="evidence">
+              {result.evidence.map((item) => (
+                <Text key={item}>• {item}</Text>
+              ))}
+            </View>
+          ) : null}
           <View className="fbcta">
             <View className="retry" style={passed ? "" : "flex:1"} onClick={() => setFbOpen(false)}>再练一次</View>
             {passed ? <View className="pass" onClick={finishPassedQuestion}>点亮这一关 ✦</View> : null}

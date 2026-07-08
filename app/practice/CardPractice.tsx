@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { useRouter } from "next/navigation";
-import type { ScoreResult } from "@/lib/types";
+import type { ScoreResult, SpeakingScoreResult } from "@/lib/types";
 import { PcmRecorder } from "@/lib/recorder";
 import styles from "./card.module.css";
 
@@ -110,6 +110,7 @@ export default function CardPractice({ card }: { card: CardData }) {
   const recitedRef = useRef(false);
   const modeRef = useRef<Mode>("follow");
   const recorderRef = useRef<PcmRecorder | null>(null);
+  const recStartAtRef = useRef(0);
   const dragStart = useRef<{ x: number; y: number } | null>(null);
   const isTopicFlow = (card.part === "Part 1" || card.part === "Part 2&3" || card.part === "Part 2串题") && card.questions.length > 0;
   const requiredPassCount = card.part === "Part 2串题" ? 1 : Math.min(3, card.questions.length);
@@ -165,18 +166,44 @@ export default function CardPractice({ card }: { card: CardData }) {
     async (audio: string) => {
       setScoring(true);
       try {
-        const res = await fetch("/api/score", {
+        const isMockAnswer = modeRef.current === "mock";
+        const res = await fetch(isMockAnswer ? "/api/speaking-score" : "/api/score", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            mode: modeRef.current,
-            recited: recitedRef.current,
-            refText: scoreRefText,
-            audio,
-          }),
+          body: JSON.stringify(
+            isMockAnswer
+              ? {
+                  part: card.part,
+                  question: activeQuestion?.content || currentText,
+                  audio,
+                  durationMs: recStartAtRef.current ? Date.now() - recStartAtRef.current : undefined,
+                }
+              : {
+                  mode: modeRef.current,
+                  recited: recitedRef.current,
+                  refText: scoreRefText,
+                  audio,
+                }
+          ),
         });
-        const data: ScoreResult = await res.json();
-        setFb(data);
+        if (isMockAnswer) {
+          const data: SpeakingScoreResult = await res.json();
+          setFb({
+            band: data.overall,
+            pronunciation: data.pronunciation,
+            fluency: data.fluencyCoherence,
+            advice: data.advice,
+            source: data.source?.scorer === "deepseek" ? "deepseek" : "mock",
+            rejected: data.rejected,
+            transcript: data.transcript,
+            lexicalResource: data.lexicalResource,
+            grammar: data.grammar,
+            evidence: data.evidence,
+          });
+        } else {
+          const data: ScoreResult = await res.json();
+          setFb(data);
+        }
         setFbOpen(true);
         recitedRef.current = true;
       } catch {
@@ -185,7 +212,7 @@ export default function CardPractice({ card }: { card: CardData }) {
         setScoring(false);
       }
     },
-    [showToast, scoreRefText]
+    [activeQuestion, card.part, currentText, showToast, scoreRefText]
   );
 
   // Long-press recording: release anywhere ends the take, finalizes the PCM, submits.
@@ -218,6 +245,7 @@ export default function CardPractice({ card }: { card: CardData }) {
     e.preventDefault();
     if (holdingRef.current || scoring) return;
     holdingRef.current = true;
+    recStartAtRef.current = Date.now();
     setRecording(true);
     const recorder = new PcmRecorder();
     try {
@@ -581,16 +609,37 @@ export default function CardPractice({ card }: { card: CardData }) {
           <div className={styles.grab} />
           <div className={styles.band}>
             <div className={styles.score}>{showScore ? fb!.band.toFixed(1) : "—"}</div>
-            <div className={styles.dims}>
-              <div className={styles.dim}>
-                <div className={styles.dl}>Pronunciation</div>
-                <div className={styles.dv}>{showScore ? fb!.pronunciation.toFixed(1) : "—"}</div>
+            {mode === "mock" ? (
+              <div className={styles.dims}>
+                <div className={styles.dim}>
+                  <div className={styles.dl}>Fluency & Coherence</div>
+                  <div className={styles.dv}>{showScore ? fb!.fluency.toFixed(1) : "—"}</div>
+                </div>
+                <div className={styles.dim}>
+                  <div className={styles.dl}>Lexical</div>
+                  <div className={styles.dv}>{showScore && fb!.lexicalResource != null ? fb!.lexicalResource.toFixed(1) : "—"}</div>
+                </div>
+                <div className={styles.dim}>
+                  <div className={styles.dl}>Grammar</div>
+                  <div className={styles.dv}>{showScore && fb!.grammar != null ? fb!.grammar.toFixed(1) : "—"}</div>
+                </div>
+                <div className={styles.dim}>
+                  <div className={styles.dl}>Pronunciation</div>
+                  <div className={styles.dv}>{showScore ? fb!.pronunciation.toFixed(1) : "—"}</div>
+                </div>
               </div>
-              <div className={styles.dim}>
-                <div className={styles.dl}>Fluency</div>
-                <div className={styles.dv}>{showScore ? fb!.fluency.toFixed(1) : "—"}</div>
+            ) : (
+              <div className={styles.dims}>
+                <div className={styles.dim}>
+                  <div className={styles.dl}>Pronunciation</div>
+                  <div className={styles.dv}>{showScore ? fb!.pronunciation.toFixed(1) : "—"}</div>
+                </div>
+                <div className={styles.dim}>
+                  <div className={styles.dl}>Fluency</div>
+                  <div className={styles.dv}>{showScore ? fb!.fluency.toFixed(1) : "—"}</div>
+                </div>
               </div>
-            </div>
+            )}
           </div>
           <div className={styles.advice}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -598,6 +647,14 @@ export default function CardPractice({ card }: { card: CardData }) {
             </svg>
             <span>{fb?.advice}</span>
           </div>
+          {fb?.transcript ? <div className={styles.transcript}>转写：{fb.transcript}</div> : null}
+          {fb?.evidence?.length ? (
+            <div className={styles.evidence}>
+              {fb.evidence.map((item) => (
+                <div key={item}>• {item}</div>
+              ))}
+            </div>
+          ) : null}
           <div className={styles.fbcta}>
             <button
               className={styles.retry}

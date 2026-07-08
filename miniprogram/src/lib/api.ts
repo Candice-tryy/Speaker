@@ -48,8 +48,12 @@ export interface ScoreResult {
   pronunciation: number;
   fluency: number;
   advice: string;
-  source?: "iflytek" | "mock";
+  source?: "iflytek" | "mock" | "deepseek";
   rejected?: boolean;
+  transcript?: string;
+  lexicalResource?: number;
+  grammar?: number;
+  evidence?: string[];
 }
 
 const BANK_CACHE_KEY = "speaker_current_bank_cache_v1";
@@ -243,6 +247,60 @@ export async function scoreAudio(params: {
       fluency: 6.5,
       advice: "The scoring API is not available, so this is a demo score. Keep your pace steady and make the final sentence clearer.",
       source: "mock",
+    };
+  }
+}
+
+export async function scoreSpeaking(params: {
+  part: string;
+  question: string;
+  audioBase64: string;
+  durationMs?: number;
+}): Promise<ScoreResult> {
+  try {
+    const res = await Taro.request({
+      url: `${BASE_URL}/api/speaking-score`,
+      method: "POST",
+      timeout: 60000,
+      header: { "content-type": "application/json" },
+      data: {
+        part: params.part,
+        question: params.question,
+        audio: params.audioBase64,
+        durationMs: params.durationMs,
+      },
+    });
+    const data = res.data as {
+      transcript?: string;
+      overall?: number;
+      fluencyCoherence?: number;
+      lexicalResource?: number;
+      grammar?: number;
+      pronunciation?: number;
+      advice?: string;
+      evidence?: string[];
+      rejected?: boolean;
+    };
+    return {
+      band: data.overall ?? 0,
+      pronunciation: data.pronunciation ?? 0,
+      fluency: data.fluencyCoherence ?? 0,
+      advice: data.advice || "评分暂时不可用，请重试。",
+      source: "deepseek",
+      rejected: data.rejected,
+      transcript: data.transcript,
+      lexicalResource: data.lexicalResource,
+      grammar: data.grammar,
+      evidence: data.evidence,
+    };
+  } catch {
+    return {
+      band: 0,
+      pronunciation: 0,
+      fluency: 0,
+      advice: "模拟评分服务暂时不可用，请重试。",
+      source: "deepseek",
+      rejected: true,
     };
   }
 }
