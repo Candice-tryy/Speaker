@@ -169,7 +169,10 @@ export function startRecording(onLevel?: (level: number) => void): Promise<Recor
 
     try {
       manager.start({
-        duration: 60000,
+        // IELTS Part 2 answers run to ~2 minutes; the backend splits long
+        // audio into ≤55s segments for 讯飞 IAT, so the cap is UX headroom,
+        // not an ASR limit. WeChat allows up to 600000.
+        duration: 150000,
         sampleRate: 16000,
         numberOfChannels: 1,
         encodeBitRate: 96000,

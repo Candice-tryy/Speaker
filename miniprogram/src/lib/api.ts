@@ -286,7 +286,9 @@ export async function scoreSpeaking(params: {
     const res = await Taro.request({
       url: `${BASE_URL}/api/speaking-score`,
       method: "POST",
-      timeout: 60000,
+      // A 2.5-minute take uploads ~6MB of base64 and transcribes as three
+      // sequential IAT segments server-side; 60s was not enough headroom.
+      timeout: 180000,
       header: { "content-type": "application/json" },
       data: {
         part: params.part,

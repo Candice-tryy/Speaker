@@ -47,7 +47,24 @@ function resultText(result: NonNullable<NonNullable<IatMessage["data"]>["result"
     .trim();
 }
 
-export function transcribeSpeech({ creds, pcm, language = "en_us" }: TranscribeArgs): Promise<string> {
+const BYTES_PER_SECOND = 16000 * 2; // 16kHz, 16-bit mono PCM
+// 讯飞语音听写(IAT)单次会话最多接收 60s 音频。按 55s 切段留出余量;
+// 段长是偶数字节,所以 16-bit 样本永远不会被切到一半。
+const SEGMENT_BYTES = BYTES_PER_SECOND * 55;
+
+// Long recordings (IELTS Part 2 runs to ~2 minutes) are transcribed as
+// sequential IAT sessions and joined. Segments are sent one at a time —
+// parallel sessions on one appid risk the concurrency cap.
+export async function transcribeSpeech({ creds, pcm, language = "en_us" }: TranscribeArgs): Promise<string> {
+  const texts: string[] = [];
+  for (let start = 0; start < pcm.length; start += SEGMENT_BYTES) {
+    const segment = pcm.subarray(start, Math.min(start + SEGMENT_BYTES, pcm.length));
+    texts.push(await transcribeSegment({ creds, pcm: segment, language }));
+  }
+  return texts.filter(Boolean).join(" ").replace(/\s+/g, " ").trim();
+}
+
+function transcribeSegment({ creds, pcm, language = "en_us" }: TranscribeArgs): Promise<string> {
   const url = buildAuthUrl(creds);
 
   return new Promise<string>((resolve, reject) => {
@@ -56,6 +73,10 @@ export function transcribeSpeech({ creds, pcm, language = "en_us" }: TranscribeA
     const pieces: string[] = [];
     let settled = false;
 
+    // Streaming runs at 5x real time (8ms per 40ms frame), so budget the
+    // timeout from the audio length instead of a flat 30s — a flat cap made
+    // every answer longer than ~28s "time out" even though nothing was wrong.
+    const streamMs = Math.ceil(pcm.length / 1280) * 8;
     const timeout = setTimeout(() => {
       if (settled) return;
       settled = true;
@@ -63,7 +84,7 @@ export function transcribeSpeech({ creds, pcm, language = "en_us" }: TranscribeA
         ws.close();
       } catch {}
       reject(new Error("ASR timeout"));
-    }, 30000);
+    }, streamMs + 20000);
 
     const finish = (fn: () => void) => {
       if (settled) return;
@@ -98,8 +119,14 @@ export function transcribeSpeech({ creds, pcm, language = "en_us" }: TranscribeA
                       language,
                       domain: "iat",
                       accent: language === "zh_cn" ? "mandarin" : undefined,
-                      dwa: "wpgs",
+                      // No dwa:"wpgs" — dynamic correction frames replace by
+                      // result sequence number, not array position, and this
+                      // batch path only needs the final text. Without it every
+                      // result frame is final and simple concatenation is right.
                       ptt: 1,
+                      // Default vad_eos (2s) ends the session at the first
+                      // thinking pause — fatal for IELTS answers. 10s is the max.
+                      vad_eos: 10000,
                     },
                   }
                 : {}),
@@ -116,7 +143,7 @@ export function transcribeSpeech({ creds, pcm, language = "en_us" }: TranscribeA
           return;
         }
 
-        if (!isLast) setTimeout(sendNext, 40);
+        if (!isLast) setTimeout(sendNext, 8);
       };
 
       if (total === 0) {
@@ -144,13 +171,7 @@ export function transcribeSpeech({ creds, pcm, language = "en_us" }: TranscribeA
       const result = msg.data?.result;
       if (result) {
         const text = resultText(result, language);
-        if (text) {
-          if (result.pgs === "rpl" && result.rg) {
-            pieces.splice(result.rg[0] - 1, result.rg[1] - result.rg[0] + 1, text);
-          } else {
-            pieces.push(text);
-          }
-        }
+        if (text) pieces.push(text);
       }
 
       if (msg.data?.status === 2) {
