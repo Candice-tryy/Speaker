@@ -2,8 +2,9 @@
 
 // Used by scoring and explicit local bank debugging. The question bank itself
 // is cloud-first and only falls back to this URL when USE_LOCAL_BANK_API=1.
-// For production scoring, replace this with a whitelisted HTTPS API domain.
-export const BASE_URL = "http://172.20.10.3:3000";
+// For production scoring, build with API_BASE_URL set to a whitelisted HTTPS
+// domain; the LAN default is only for local device debugging.
+export const BASE_URL = __API_BASE_URL__ || "http://172.20.10.3:3000";
 
 export interface Question {
   id: string;
@@ -43,6 +44,8 @@ export interface Part {
   name: string;
   peaks: Peak[];
 }
+// Mirror of ScoreResult in lib/types.ts (repo root) — the backend response shape.
+// Keep in sync when /api/score or /api/speaking-score changes.
 export interface ScoreResult {
   band: number;
   pronunciation: number;
@@ -54,6 +57,26 @@ export interface ScoreResult {
   lexicalResource?: number;
   grammar?: number;
   evidence?: string[];
+}
+
+function assertOk<T extends string | ArrayBuffer | TaroGeneral.IAnyObject>(
+  res: Taro.request.SuccessCallbackResult<T>,
+  fallback: string
+): T {
+  if (res.statusCode >= 200 && res.statusCode < 300) return res.data;
+  const data = res.data as { advice?: string; error?: string; message?: string } | undefined;
+  throw new Error(data?.advice || data?.error || data?.message || `${fallback} (HTTP ${res.statusCode})`);
+}
+
+// Taro.request failures reject with {errMsg: "request:fail ..."} rather than an
+// Error. Surface that text in the advice so a failed score on a real device
+// (no console) still says what actually broke: domain check, timeout, refused…
+function errDetail(err: unknown): string {
+  const msg =
+    (err as { errMsg?: string })?.errMsg ||
+    (err instanceof Error ? err.message : "") ||
+    String(err ?? "");
+  return msg ? `（${msg.slice(0, 120)}）` : "";
 }
 
 const BANK_CACHE_KEY = "speaker_current_bank_cache_v1";
@@ -206,7 +229,7 @@ export async function getBank(): Promise<{ parts: Part[]; loaded: boolean }> {
         method: "GET",
         timeout: 8000,
       });
-      const data = res.data as { parts?: Part[]; loaded?: boolean };
+      const data = assertOk(res, "Failed to load question bank") as { parts?: Part[]; loaded?: boolean };
       if (Array.isArray(data.parts) && data.parts.length > 0) {
         const parts = sanitizeParts(data.parts);
         if (parts.length) return { parts, loaded: data.loaded !== false };
@@ -239,14 +262,16 @@ export async function scoreAudio(params: {
         audio: params.audioBase64,
       },
     });
-    return res.data as ScoreResult;
-  } catch {
+    return assertOk(res, "Scoring failed") as ScoreResult;
+  } catch (err) {
+    console.error("scoreAudio failed", err);
     return {
-      band: 6.5,
-      pronunciation: 6.5,
-      fluency: 6.5,
-      advice: "The scoring API is not available, so this is a demo score. Keep your pace steady and make the final sentence clearer.",
+      band: 0,
+      pronunciation: 0,
+      fluency: 0,
+      advice: `评分后端连接失败，请确认本机已启动 npm run dev，并且小程序能访问 ${BASE_URL}。${errDetail(err)}`,
       source: "mock",
+      rejected: true,
     };
   }
 }
@@ -270,7 +295,7 @@ export async function scoreSpeaking(params: {
         durationMs: params.durationMs,
       },
     });
-    const data = res.data as {
+    const data = assertOk(res, "Speaking score failed") as {
       transcript?: string;
       overall?: number;
       fluencyCoherence?: number;
@@ -293,12 +318,13 @@ export async function scoreSpeaking(params: {
       grammar: data.grammar,
       evidence: data.evidence,
     };
-  } catch {
+  } catch (err) {
+    console.error("scoreSpeaking failed", err);
     return {
       band: 0,
       pronunciation: 0,
       fluency: 0,
-      advice: "模拟评分服务暂时不可用，请重试。",
+      advice: `模拟评分服务暂时不可用，请重试。${errDetail(err)}`,
       source: "deepseek",
       rejected: true,
     };

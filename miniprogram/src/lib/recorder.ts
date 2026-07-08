@@ -3,6 +3,8 @@ import Taro from "@tarojs/taro";
 // 16k mono PCM recorder for the mini program. The backend /api/score feeds
 // this straight into 讯飞 ISE (deterministic pronunciation scoring), so the
 // format must match the web client: 16000 Hz, single channel, raw PCM.
+// Sibling: lib/recorder.ts (repo root) is the web implementation of the same
+// contract — keep the output format in sync when changing either.
 //
 // We accumulate frames via onFrameRecorded so we end up with raw PCM bytes
 // (RecorderManager's onStop temp file would be a wrapped format).
@@ -21,6 +23,10 @@ function concatBuffers(buffers: ArrayBuffer[]): ArrayBuffer {
 export interface RecordingController {
   stop: () => Promise<string>; // resolves to base64 PCM
   cancel: () => void;
+}
+
+interface RecorderStopResult {
+  tempFilePath?: string;
 }
 
 function pcmFrameLevel(frame: ArrayBuffer): number {
@@ -66,7 +72,36 @@ export function startRecording(onLevel?: (level: number) => void): Promise<Recor
     const manager = Taro.getRecorderManager();
     const frames: ArrayBuffer[] = [];
     let stopResolve: ((b64: string) => void) | null = null;
+    let stopReject: ((err: unknown) => void) | null = null;
+    let startSettled = false;
     let cancelled = false;
+    let stopped = false;
+
+    const cleanup = () => {
+      const rec = manager as unknown as {
+        offFrameRecorded?: () => void;
+        offStop?: () => void;
+        offError?: () => void;
+        offStart?: () => void;
+      };
+      rec.offFrameRecorded?.();
+      rec.offStop?.();
+      rec.offError?.();
+      rec.offStart?.();
+    };
+
+    const readTempFile = (tempFilePath?: string): Promise<ArrayBuffer | null> => {
+      if (!tempFilePath) return Promise.resolve(null);
+      const fs = Taro.getFileSystemManager?.();
+      if (!fs) return Promise.resolve(null);
+      return new Promise((res) => {
+        fs.readFile({
+          filePath: tempFilePath,
+          success: (file) => res(file.data as ArrayBuffer),
+          fail: () => res(null),
+        });
+      });
+    };
 
     manager.onFrameRecorded((res) => {
       if (res.frameBuffer) {
@@ -75,32 +110,59 @@ export function startRecording(onLevel?: (level: number) => void): Promise<Recor
       }
     });
 
-    manager.onStop(() => {
-      if (cancelled || !stopResolve) return;
-      const pcm = concatBuffers(frames);
-      stopResolve(Taro.arrayBufferToBase64(pcm));
-      stopResolve = null;
+    manager.onStop(async (result: RecorderStopResult) => {
+      if (cancelled || !stopResolve) {
+        cleanup();
+        return;
+      }
+      try {
+        const pcm = frames.length ? concatBuffers(frames) : await readTempFile(result?.tempFilePath);
+        if (!pcm || pcm.byteLength === 0) throw new Error("empty recording");
+        stopResolve(Taro.arrayBufferToBase64(pcm));
+      } catch (err) {
+        stopReject?.(err);
+      } finally {
+        stopResolve = null;
+        stopReject = null;
+        cleanup();
+      }
     });
 
     manager.onError((err) => {
-      if (stopResolve) {
-        // surface as empty so the caller can decide; or reject the start.
-      }
       console.error("recorder error", err);
+      if (!startSettled) {
+        startSettled = true;
+        cleanup();
+        reject(err);
+        return;
+      }
+      stopReject?.(err);
+      stopResolve = null;
+      stopReject = null;
+      cleanup();
     });
 
     manager.onStart(() => {
+      startSettled = true;
       resolve({
         stop: () =>
-          new Promise<string>((res) => {
+          new Promise<string>((res, rej) => {
+            if (stopped) {
+              rej(new Error("recording already stopped"));
+              return;
+            }
+            stopped = true;
             stopResolve = res;
+            stopReject = rej;
             onLevel?.(0);
             manager.stop();
           }),
         cancel: () => {
           cancelled = true;
+          stopped = true;
           onLevel?.(0);
           manager.stop();
+          cleanup();
         },
       });
     });

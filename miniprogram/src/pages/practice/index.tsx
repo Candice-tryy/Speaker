@@ -112,6 +112,7 @@ export default function Practice() {
   const touchStart = useRef<{ x: number; y: number } | null>(null);
   const holdingRef = useRef(false);
   const recRef = useRef<RecordingController | null>(null);
+  const recStartingRef = useRef<Promise<RecordingController> | null>(null);
   const recitedRef = useRef(false);
   const recStartAtRef = useRef(0);
 
@@ -189,14 +190,15 @@ export default function Practice() {
     }
     if (!holdingRef.current) return; // released during the permission prompt
     try {
-      const controller = await startRecording(setVoiceLevel);
-      if (!holdingRef.current) {
-        controller.cancel();
-        return;
-      }
+      const pending = startRecording(setVoiceLevel);
+      recStartingRef.current = pending;
+      const controller = await pending;
+      if (recStartingRef.current === pending) recStartingRef.current = null;
+      if (!holdingRef.current) return;
       recRef.current = controller;
     } catch {
       // No mic: the take still submits (server falls back to mock).
+      recStartingRef.current = null;
     }
   }
 
@@ -204,10 +206,20 @@ export default function Practice() {
     if (!holdingRef.current) return;
     holdingRef.current = false;
     setVoiceLevel(0);
-    const controller = recRef.current;
+    let controller = recRef.current;
     recRef.current = null;
     setPhase("scoring");
     let audio = "";
+    if (!controller && recStartingRef.current) {
+      try {
+        controller = await recStartingRef.current;
+      } catch {
+        controller = null;
+      } finally {
+        recStartingRef.current = null;
+      }
+      if (recRef.current === controller) recRef.current = null;
+    }
     if (controller) {
       try {
         audio = await controller.stop();
@@ -411,7 +423,7 @@ export default function Practice() {
               </View>
             </View>
             <Text className="rectip">
-              {scoring ? "正在听你的发音…" : recording ? "录音中… 松手提交" : "长按录音 · 松手提交"}
+              {scoring ? "正在听你的发音..." : recording ? "录音中... 再点一下提交" : "点一下开始录音 · 再点一下提交"}
             </Text>
           </View>
         </ScrollView>

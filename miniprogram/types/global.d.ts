@@ -17,3 +17,4 @@ declare const process: {
 
 declare const __CLOUD_ENV_ID__: string;
 declare const __USE_LOCAL_BANK_API__: boolean;
+declare const __API_BASE_URL__: string;

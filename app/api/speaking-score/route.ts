@@ -36,7 +36,7 @@ export async function POST(request: Request): Promise<NextResponse<SpeakingScore
   console.log(`[speaking-score] part=${part} haveASR=${haveAsr} audioBytes=${audioBytes} qLen=${question.length}`);
 
   if (!haveAsr) return rejected("还没有配置讯飞 ASR Key，暂时无法进行真实模拟评分。");
-  if (!audioB64) return rejected("没有录到声音，请按住麦克风完整回答后再松手。");
+  if (!audioB64) return rejected("没有录到声音，请点一下开始录音，完整回答后再点一下提交。");
 
   let transcript = "";
   try {

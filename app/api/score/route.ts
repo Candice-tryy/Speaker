@@ -48,7 +48,7 @@ export async function POST(request: Request): Promise<NextResponse<ScoreResult>>
     // ISE is configured: never fake a mock score here, or trust is destroyed.
     if (!audioB64) {
       console.log("[score] no audio -> retry");
-      return retry("没录到声音，请按住按钮、读完整段后再松手。");
+      return retry("没录到声音，请点一下开始录音，读完整段后再点一下提交。");
     }
     try {
       const pcm = Buffer.from(audioB64, "base64");
@@ -59,7 +59,7 @@ export async function POST(request: Request): Promise<NextResponse<ScoreResult>>
       });
       console.log("[score] ISE scores:", JSON.stringify(scores));
       if (scores.rejected || scores.total == null) {
-        return retry("没听清你的发音，请靠近麦克风、读完整段后再松手。");
+        return retry("没听清你的发音，请靠近麦克风，读完整段后再点一下提交。");
       }
       const mapped = mapIseToBand(scores);
       const advice = await generateAdvice(refText, scores);

@@ -22,6 +22,7 @@ export default defineConfig(async (merge) => {
         process.env.CLOUD_ENV_ID === "none" ? "" : process.env.CLOUD_ENV_ID || "cloud1-d9g4ihxcx7878af8c"
       ),
       __USE_LOCAL_BANK_API__: JSON.stringify(process.env.USE_LOCAL_BANK_API === "1"),
+      __API_BASE_URL__: JSON.stringify(process.env.API_BASE_URL || ""),
     },
     copy: {
       patterns: [
