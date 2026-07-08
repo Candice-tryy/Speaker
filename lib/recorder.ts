@@ -3,6 +3,10 @@
 // then decodes and resamples to 16k with OfflineAudioContext (proper anti-aliased
 // resampling + automatic downmix to mono). An earlier ScriptProcessorNode + naive
 // decimation version dropped audio and aliased, which made ISE mark words as 漏读.
+//
+// Sibling: miniprogram/src/lib/recorder.ts implements the same contract (16k/16-bit/
+// mono PCM base64) on Taro RecorderManager. If the output format changes here, change
+// it there too — the /api/score backend feeds both straight into ISE.
 
 function floatToInt16(input: Float32Array): Int16Array {
   const out = new Int16Array(input.length);

@@ -40,6 +40,9 @@ export interface Bank {
   error?: unknown;
 }
 
+// Duplicated in miniprogram/src/lib/api.ts (ScoreResult) — the mini program can't
+// import from outside its own package. Keep the two shapes in sync when changing
+// what /api/score or /api/speaking-score returns.
 export interface ScoreResult {
   band: number;
   pronunciation: number;
