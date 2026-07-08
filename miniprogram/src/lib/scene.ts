@@ -1,7 +1,7 @@
 // 1:1 port of the web climbing-map scene (app/map/ClimbingMap.tsx buildScene).
-// CSS variables from app/globals.css are inlined as literal colors; scene
-// animations (clouds, birds, halo) are static. This module is dependency-free
-// on purpose: the mini program uses it for node hit-zone geometry, and the
+// CSS variables from app/globals.css are inlined as literal colors. This module
+// is dependency-free on purpose: the mini program uses it for node hit-zone
+// geometry, and the
 // Next.js backend imports it in /api/scene to rasterize the SVG to PNG
 // (real-device <image> does not reliably render SVG data URLs).
 
@@ -213,6 +213,27 @@ export interface Scene {
   nodes: SceneNode[];
 }
 
+const SVG_ANIMATION_STYLE = `
+  .cloud { animation: drift 16s ease-in-out infinite; }
+  .cloud.c2 { animation-duration: 23s; animation-delay: -6s; }
+  .cloud.c3 { animation-duration: 21s; animation-delay: -3s; opacity: 0.96; }
+  @keyframes drift { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(20px); } }
+  .bird1 { animation: fly1 17s linear infinite; }
+  .bird2 { animation: fly2 23s linear infinite; animation-delay: -7s; }
+  .bird3 { animation: fly3 20s linear infinite; animation-delay: -13s; }
+  @keyframes fly1 { 0% { transform: translate(-50px, 140px); } 100% { transform: translate(400px, 64px); } }
+  @keyframes fly2 { 0% { transform: translate(-80px, 82px); } 100% { transform: translate(400px, 150px); } }
+  @keyframes fly3 { 0% { transform: translate(-60px, 205px); } 100% { transform: translate(400px, 118px); } }
+  .wing { animation: flap 0.45s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+  @keyframes flap { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(0.5); } }
+  .sun-glow { transform-origin: center; transform-box: fill-box; animation: breathe 5s ease-in-out infinite; }
+  @keyframes breathe { 0%, 100% { opacity: 0.32; transform: scale(1); } 50% { opacity: 0.52; transform: scale(1.12); } }
+  .climber { animation: bob 2.6s ease-in-out infinite; }
+  @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+  .halo { transform-origin: center; transform-box: fill-box; animation: pulse 2.2s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 0.5; transform: scale(1); } 50% { opacity: 0.9; transform: scale(1.2); } }
+`;
+
 export function buildScene(peak: ScenePeak, pdone: number, ki: number, total: number, partName: string): Scene {
   const isTopicSet = partName === "Part 1" || partName === "Part 2&3" || partName === "Part 2串题";
   const isCombo = partName === "Part 2串题";
@@ -226,7 +247,9 @@ export function buildScene(peak: ScenePeak, pdone: number, ki: number, total: nu
     const isBoss = !isTopicSet && i === 3,
       done = i < pdone,
       current = i === pdone;
-    nodeData.push({ i, x: p.x, y: p.y, state: done ? "done" : current ? "current" : "lock", isBoss });
+    const nodeState = done ? "done" : current ? "current" : "lock";
+    const nodeDatum = { i, x: p.x, y: p.y, state: nodeState as NodeState, isBoss };
+    nodeData.push(nodeDatum);
     const rawLabel = fitNodeLabel(String(isBoss ? peak.boss : peak.topics[i] || "Practice"));
     const label = escapeXml(rawLabel);
     let inner = "";
@@ -235,7 +258,7 @@ export function buildScene(peak: ScenePeak, pdone: number, ki: number, total: nu
                <circle cx="${p.x}" cy="${p.y}" r="${isBoss ? 13 : 9}" fill="none" stroke="#fff" stroke-width="2" opacity=".5"/>
                <path d="M${p.x - 5} ${p.y} l4 4 l7 -8" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>`;
     } else if (current) {
-      const halo = `<ellipse cx="${p.x}" cy="${p.y + 12}" rx="25" ry="11" fill="${YELLOW_SOFT}" opacity=".9"/>`;
+      const halo = `<ellipse class="halo" cx="${p.x}" cy="${p.y + 12}" rx="25" ry="11" fill="${YELLOW_SOFT}" opacity=".9"/>`;
       if (isBoss) {
         inner =
           halo +
@@ -247,11 +270,11 @@ export function buildScene(peak: ScenePeak, pdone: number, ki: number, total: nu
         inner =
           halo +
           `<circle cx="${p.x}" cy="${p.y}" r="14" fill="#fff"/><circle cx="${p.x}" cy="${p.y}" r="10.2" fill="${YELLOW}"/>
-          <g transform="translate(${p.x},${p.y - 13})">
+          <g class="climber"><g transform="translate(${p.x},${p.y - 13})">
             <circle cx="0" cy="-3" r="3.6" fill="#fff"/>
             <path d="M-3.3 1 q3.3 -4 6.6 0 l-1 6.5 h-4.6 Z" fill="#fff"/>
             <path d="M-3.6 -5 a3.8 2.1 0 0 1 7.2 0 Z" fill="${YELLOW_DEEP}"/>
-          </g>`;
+          </g></g>`;
       }
     } else {
       inner = `<circle cx="${p.x}" cy="${p.y}" r="${isBoss ? 9 : 7.5}" fill="#fff"/>
@@ -291,6 +314,7 @@ export function buildScene(peak: ScenePeak, pdone: number, ki: number, total: nu
 
   const svg = `
   <svg xmlns="http://www.w3.org/2000/svg" width="340" height="720" viewBox="0 0 340 720" preserveAspectRatio="xMidYMid slice">
+    <style><![CDATA[${SVG_ANIMATION_STYLE}]]></style>
     <defs>
       <linearGradient id="mtMain" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#81D7B8"/><stop offset="1" stop-color="#4FBD93"/></linearGradient>
       <linearGradient id="mtFore" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5FC79C"/><stop offset="1" stop-color="#43B083"/></linearGradient>
@@ -298,15 +322,16 @@ export function buildScene(peak: ScenePeak, pdone: number, ki: number, total: nu
       <radialGradient id="dawnGlow" cx="50%" cy="45%" r="55%"><stop offset="0" stop-color="#FFECA8" stop-opacity=".75"/><stop offset=".48" stop-color="#FFD77A" stop-opacity=".28"/><stop offset="1" stop-color="#FFD77A" stop-opacity="0"/></radialGradient>
     </defs>
 
-    <ellipse cx="286" cy="92" rx="82" ry="56" fill="url(#dawnGlow)"/>
+    <ellipse class="sun-glow" cx="286" cy="92" rx="82" ry="56" fill="url(#dawnGlow)"/>
     <path d="M234 116 Q282 84 334 112" fill="none" stroke="#FFE6A1" stroke-width="2.5" stroke-linecap="round" opacity=".42"/>
 
-    <g><ellipse cx="74" cy="118" rx="34" ry="15" fill="#fff"/><ellipse cx="96" cy="108" rx="22" ry="14" fill="#fff"/><ellipse cx="52" cy="112" rx="18" ry="11" fill="#fff"/><ellipse cx="118" cy="119" rx="16" ry="9" fill="#D7EAF9" opacity=".55"/></g>
-    <g><ellipse cx="250" cy="176" rx="26" ry="12" fill="#fff" opacity=".92"/><ellipse cx="267" cy="168" rx="17" ry="10" fill="#fff" opacity=".92"/><ellipse cx="228" cy="178" rx="17" ry="8" fill="#D7EAF9" opacity=".52"/></g>
+    <g class="cloud"><ellipse cx="74" cy="118" rx="34" ry="15" fill="#fff"/><ellipse cx="96" cy="108" rx="22" ry="14" fill="#fff"/><ellipse cx="52" cy="112" rx="18" ry="11" fill="#fff"/><ellipse cx="118" cy="119" rx="16" ry="9" fill="#D7EAF9" opacity=".55"/></g>
+    <g class="cloud c2"><ellipse cx="250" cy="176" rx="26" ry="12" fill="#fff" opacity=".92"/><ellipse cx="267" cy="168" rx="17" ry="10" fill="#fff" opacity=".92"/><ellipse cx="228" cy="178" rx="17" ry="8" fill="#D7EAF9" opacity=".52"/></g>
+    <g class="cloud c3"><ellipse cx="111" cy="218" rx="44" ry="17" fill="#fff" opacity=".96"/><ellipse cx="141" cy="207" rx="28" ry="15" fill="#fff" opacity=".96"/><ellipse cx="79" cy="211" rx="24" ry="12" fill="#fff" opacity=".92"/><ellipse cx="169" cy="220" rx="21" ry="10" fill="#D7EAF9" opacity=".58"/></g>
 
-    <g transform="translate(96,206)"><path d="M0 0 Q5 -5 10 0 Q15 -5 20 0" fill="none" stroke="#6E8E9E" stroke-width="2" stroke-linecap="round"/></g>
-    <g transform="translate(216,150)"><path d="M0 0 Q4 -4 8 0 Q12 -4 16 0" fill="none" stroke="#7C99A6" stroke-width="1.8" stroke-linecap="round"/></g>
-    <g transform="translate(160,178)"><path d="M0 0 Q4.5 -4.5 9 0 Q13.5 -4.5 18 0" fill="none" stroke="#88A2AE" stroke-width="1.8" stroke-linecap="round"/></g>
+    <g class="bird1"><g class="wing"><path d="M0 0 Q5 -5 10 0 Q15 -5 20 0" fill="none" stroke="#6E8E9E" stroke-width="2" stroke-linecap="round"/></g></g>
+    <g class="bird2"><g class="wing"><path d="M0 0 Q4 -4 8 0 Q12 -4 16 0" fill="none" stroke="#7C99A6" stroke-width="1.8" stroke-linecap="round"/></g></g>
+    <g class="bird3"><g class="wing"><path d="M0 0 Q4.5 -4.5 9 0 Q13.5 -4.5 18 0" fill="none" stroke="#88A2AE" stroke-width="1.8" stroke-linecap="round"/></g></g>
 
     <path d="M-34 720 L-28 414 C20 360 72 386 114 340 C160 290 202 306 246 262 C292 216 338 218 398 256 L398 720 Z" fill="#BFE0D6"/>
     <path d="M-26 720 L-18 552 C8 444 54 392 98 346 C136 306 168 326 204 284 C248 234 284 240 322 198 C348 170 370 154 394 142 L394 720 Z" fill="url(#mtMain)"/>

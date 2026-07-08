@@ -10,6 +10,7 @@ import "./index.scss";
 
 const ALT = [1200, 2480, 3760];
 const SKIES = ["sky-a", "sky-b", "sky-c"];
+const ENABLE_DAILY_REVIEW = false;
 
 function isTopicSet(name: string) {
   return name === "Part 1" || name === "Part 2&3" || name === "Part 2串题";
@@ -224,10 +225,11 @@ export default function Map() {
         </View>
 
         {peakIdx < total - 1 ? (
-          <View className="hint"><Image className="icon" src={ICONS.chevronDownWhite} /></View>
+          <View className="hint"><Image className="icon" src={ICONS.chevronUpWhite} /></View>
         ) : null}
 
-        <View className="bottom">
+        {ENABLE_DAILY_REVIEW ? (
+          <View className="bottom">
           <View className="review" onClick={() => showToast("🎁 今日复习补给 · +20 经验")}>
             <View className="ic">🎁</View>
             <View className="review-copy">
@@ -236,7 +238,8 @@ export default function Map() {
             </View>
             <Text className="arr">›</Text>
           </View>
-        </View>
+          </View>
+        ) : null}
 
         {toast ? <View className={`toast ${toastVisible ? "show" : ""}`}>{toast}</View> : null}
 
