@@ -1,10 +1,9 @@
 ﻿import Taro from "@tarojs/taro";
 
-// Used by scoring and explicit local bank debugging. The question bank itself
-// is cloud-first and only falls back to this URL when USE_LOCAL_BANK_API=1.
-// For production scoring, build with API_BASE_URL set to a whitelisted HTTPS
-// domain; the LAN default is only for local device debugging.
+// Used by explicit local backend debugging. Production scoring uses the
+// score-service cloud function in the same CloudBase env as the question bank.
 export const BASE_URL = __API_BASE_URL__ || "http://172.20.10.3:3000";
+const SCORE_FUNCTION_NAME = "score-service";
 
 export interface Question {
   id: string;
@@ -77,6 +76,57 @@ function errDetail(err: unknown): string {
     (err instanceof Error ? err.message : "") ||
     String(err ?? "");
   return msg ? `（${msg.slice(0, 120)}）` : "";
+}
+
+function getCloud() {
+  const cloud = (Taro as any).cloud;
+  if (!__CLOUD_ENV_ID__ || !cloud) return null;
+  if (!cloud.__speakerInited) {
+    cloud.init({ env: __CLOUD_ENV_ID__, traceUser: true });
+    cloud.__speakerInited = true;
+  }
+  return cloud;
+}
+
+function useCloudScore(): boolean {
+  return Boolean(__CLOUD_ENV_ID__ && !__API_BASE_URL__);
+}
+
+function callScoreFunction<T extends TaroGeneral.IAnyObject>(data: TaroGeneral.IAnyObject): Promise<T> {
+  const cloud = getCloud();
+  if (!cloud) throw new Error("CloudBase is not initialized");
+  return cloud
+    .callFunction({ name: SCORE_FUNCTION_NAME, data })
+    .then((res: { result?: T }) => res.result || ({} as T));
+}
+
+async function uploadTempAudio(audioBase64: string): Promise<string> {
+  if (!audioBase64) return "";
+  const cloud = getCloud();
+  const fs = Taro.getFileSystemManager?.();
+  const userPath = (Taro as any).env?.USER_DATA_PATH;
+  if (!cloud || !fs || !userPath) throw new Error("Cloud upload is unavailable");
+  const localPath = `${userPath}/speaker-score-${Date.now()}-${Math.random().toString(36).slice(2)}.pcm`;
+  const audio = Taro.base64ToArrayBuffer(audioBase64);
+  await new Promise<void>((resolve, reject) => {
+    fs.writeFile({
+      filePath: localPath,
+      data: audio,
+      success: () => resolve(),
+      fail: reject,
+    });
+  });
+  try {
+    const res = await cloud.uploadFile({
+      cloudPath: `score-audio/${Date.now()}-${Math.random().toString(36).slice(2)}.pcm`,
+      filePath: localPath,
+    });
+    return res.fileID || "";
+  } finally {
+    try {
+      fs.unlinkSync(localPath);
+    } catch {}
+  }
 }
 
 const BANK_CACHE_KEY = "speaker_current_bank_cache_v1";
@@ -250,6 +300,16 @@ export async function scoreAudio(params: {
   recited?: boolean;
 }): Promise<ScoreResult> {
   try {
+    if (useCloudScore()) {
+      const audioFileID = await uploadTempAudio(params.audioBase64);
+      return await callScoreFunction<ScoreResult>({
+        action: "score-audio",
+        mode: params.mode || "follow",
+        recited: params.recited ?? true,
+        refText: params.refText,
+        audioFileID,
+      });
+    }
     const res = await Taro.request({
       url: `${BASE_URL}/api/score`,
       method: "POST",
@@ -269,7 +329,9 @@ export async function scoreAudio(params: {
       band: 0,
       pronunciation: 0,
       fluency: 0,
-      advice: `评分后端连接失败，请确认本机已启动 npm run dev，并且小程序能访问 ${BASE_URL}。${errDetail(err)}`,
+      advice: useCloudScore()
+        ? `评分云函数连接失败，请确认 score-service 已上传并配置密钥。${errDetail(err)}`
+        : `评分后端连接失败，请确认本机已启动 npm run dev，并且小程序能访问 ${BASE_URL}。${errDetail(err)}`,
       source: "mock",
       rejected: true,
     };
@@ -283,6 +345,38 @@ export async function scoreSpeaking(params: {
   durationMs?: number;
 }): Promise<ScoreResult> {
   try {
+    if (useCloudScore()) {
+      const audioFileID = await uploadTempAudio(params.audioBase64);
+      const data = await callScoreFunction<{
+        transcript?: string;
+        overall?: number;
+        fluencyCoherence?: number;
+        lexicalResource?: number;
+        grammar?: number;
+        pronunciation?: number;
+        advice?: string;
+        evidence?: string[];
+        rejected?: boolean;
+      }>({
+        action: "score-speaking",
+        part: params.part,
+        question: params.question,
+        audioFileID,
+        durationMs: params.durationMs,
+      });
+      return {
+        band: data.overall ?? 0,
+        pronunciation: data.pronunciation ?? 0,
+        fluency: data.fluencyCoherence ?? 0,
+        advice: data.advice || "评分暂时不可用，请重试。",
+        source: "deepseek",
+        rejected: data.rejected,
+        transcript: data.transcript,
+        lexicalResource: data.lexicalResource,
+        grammar: data.grammar,
+        evidence: data.evidence,
+      };
+    }
     const res = await Taro.request({
       url: `${BASE_URL}/api/speaking-score`,
       method: "POST",
@@ -326,7 +420,9 @@ export async function scoreSpeaking(params: {
       band: 0,
       pronunciation: 0,
       fluency: 0,
-      advice: `模拟评分服务暂时不可用，请重试。${errDetail(err)}`,
+      advice: useCloudScore()
+        ? `模拟评分云函数暂时不可用，请确认 score-service 已上传并配置密钥。${errDetail(err)}`
+        : `模拟评分服务暂时不可用，请重试。${errDetail(err)}`,
       source: "deepseek",
       rejected: true,
     };

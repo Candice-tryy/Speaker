@@ -23,3 +23,6 @@ miniprogram/.temp/
 miniprogram/.rn_temp/
 miniprogram/project.private.config.json
 miniprogram/src/lib/question-bank.generated.ts
+
+.vercel
+.env*

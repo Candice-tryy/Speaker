@@ -92,6 +92,7 @@ Main files:
 - `miniprogram/src/lib/api.ts`
 - `miniprogram/src/assets/question-bank.generated.json`
 - `miniprogram/src/lib/question-bank.generated.ts`
+- `miniprogram/cloudfunctions/score-service/`
 - `miniprogram/src/pages/map/index.tsx`
 - `miniprogram/src/pages/practice/index.tsx`
 - `miniprogram/config/index.ts`
@@ -105,6 +106,8 @@ WeChat Cloud Database current bank
 ```
 
 The mini program no longer depends on the developer computer being on the same network. Local `/api/bank` is only used when `USE_LOCAL_BANK_API=1` is set during build.
+
+Production scoring also runs inside the same WeChat CloudBase environment through the `score-service` cloud function. The client uploads the PCM take to temporary cloud storage, calls the cloud function with the file ID, and the function deletes the temporary file after scoring.
 
 The bundled fallback JSON is `miniprogram/src/assets/question-bank.generated.json`. It keeps current questions only and intentionally strips long answers so it stays small. Full sample answers come from the cloud database or cache.
 
@@ -177,6 +180,41 @@ TENCENTCLOUD_SECRETKEY=your-tencent-cloud-secret-key
 ```
 
 Put those values in `.env.local`. That file is gitignored.
+
+## Cloud Scoring Workflow
+
+Cloud function:
+
+- `miniprogram/cloudfunctions/score-service`
+
+It serves both scoring actions:
+
+- `score-audio`: read-aloud pronunciation scoring via XFYUN ISE.
+- `score-speaking`: open IELTS answer scoring via XFYUN ASR + DeepSeek-compatible LLM.
+
+Set these environment variables on the cloud function, not in the mini-program package:
+
+```text
+XFYUN_APP_ID
+XFYUN_API_KEY
+XFYUN_API_SECRET
+XFYUN_ASR_APP_ID
+XFYUN_ASR_API_KEY
+XFYUN_ASR_API_SECRET
+DEEPSEEK_API_KEY
+```
+
+`XFYUN_ASR_*` can be omitted if the same XFYUN app supports both ASR and ISE; the function falls back to `XFYUN_*`.
+
+Upload/deploy from WeChat Developer Tools:
+
+```text
+Import miniprogram/
+Right click cloudfunctions/score-service
+Upload and deploy: cloud install dependencies
+```
+
+Mini-program production builds should leave `API_BASE_URL` empty so scoring uses CloudBase. Set `API_BASE_URL` only for local or temporary HTTPS backend debugging.
 
 ## Generated Files
 
