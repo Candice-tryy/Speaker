@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Image, View, Text, Textarea } from "@tarojs/components";
+import { Image, View, Text } from "@tarojs/components";
 import Taro, { useDidShow } from "@tarojs/taro";
 import { getBank, type Part } from "../../lib/api";
 import { ICONS, MIST } from "../../lib/icons.gen";
@@ -34,7 +34,6 @@ export default function Map() {
   const [peakIdx, setPeakIdx] = useState(0);
   const [prog, setProg] = useState<Record<string, number>>(getProgress());
   const [settings, setLocal] = useState(getSettings());
-  const [persona, setPersona] = useState("");
   const [toast, setToast] = useState("");
   const [toastVisible, setToastVisible] = useState(false);
   const [sceneAnim, setSceneAnim] = useState<"" | "exitUp" | "enterDown">("");
@@ -47,7 +46,6 @@ export default function Map() {
   const insets = useMemo(() => chromeInsets(), []);
 
   useEffect(() => {
-    setLocal(getSettings().onboarded ? touchStreak() : getSettings());
     loadBank();
   }, []);
 
@@ -63,7 +61,7 @@ export default function Map() {
       setTimeout(() => showToast(`🎉 ${label} 点亮成功！+20 经验`), 350);
     }
     setProg(latest);
-    setLocal(getSettings());
+    setLocal(getSettings().onboarded ? touchStreak() : getSettings());
   });
 
   const part = parts[partIdx];
@@ -106,7 +104,8 @@ export default function Map() {
   }
 
   function finishOnboarding() {
-    setLocal(setSettings({ onboarded: true, name: persona.trim() || settings.name }));
+    setSettings({ onboarded: true });
+    setLocal(touchStreak());
   }
 
   function switchPeak(dir: number) {
@@ -217,7 +216,7 @@ export default function Map() {
             </View>
           </View>
           <View className="hud-actions" style={`margin-top:${Math.max(0, insets.bottom + 6 - insets.top)}px`}>
-            <View className="spark"><Image className="icon" src={ICONS.spark} /><Text>{settings.streak || 1}</Text></View>
+            <View className="spark"><Image className="icon" src={ICONS.spark} /><Text>{settings.streak || 0}</Text></View>
             <View className="settings" onClick={() => Taro.navigateTo({ url: "/pages/profile/index" })}>
               <Image className="icon" src={ICONS.gearBlue} />
             </View>
@@ -247,16 +246,9 @@ export default function Map() {
           <View className="onboard">
             <View className="ob-card">
               <Text className="em">👋</Text>
-              <Text className="ob-title">先告诉我你是谁</Text>
-              <Text className="ob-sub">写一句你的身份和爱好，AI 会据此生成更像「你」的口语范本。之后随时能在「我的」里修改。</Text>
-              <Textarea
-                className="ob-input"
-                value={persona}
-                onInput={(event) => setPersona(String(event.detail.value || ""))}
-                placeholder="例：我是一名爱爬山和摄影的大三学生，养了只猫，周末喜欢逛独立咖啡馆。"
-              />
+              <Text className="ob-title">从一道题开始练口语</Text>
+              <Text className="ob-sub">选一个亮起的话题，读范文或用自己的话回答。录音后会收到一条改进建议，完成练习即可点亮关卡。</Text>
               <View className="ob-go" onClick={finishOnboarding}>开始攀登</View>
-              <Text className="ob-skip" onClick={finishOnboarding}>先跳过，稍后再填</Text>
             </View>
           </View>
         )}

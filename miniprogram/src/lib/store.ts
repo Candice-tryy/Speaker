@@ -11,7 +11,7 @@ export interface Settings {
   lastActive?: string;
 }
 
-const DEFAULT_SETTINGS: Settings = { targetBand: 6.5, streak: 1, onboarded: false };
+const DEFAULT_SETTINGS: Settings = { targetBand: 6.5, streak: 0, onboarded: false };
 
 function ymd(d = new Date()): string {
   return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;

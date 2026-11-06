@@ -28,23 +28,13 @@ function rejectedScore(advice, transcript = "") {
     pronunciation: 0,
     advice,
     evidence: [],
-    source: { asr: "iflytek", scorer: "mock" },
+    source: { asr: "iflytek", scorer: "unavailable" },
     rejected: true,
   };
 }
 
 function scoreRetry(advice) {
   return { band: 0, pronunciation: 0, fluency: 0, advice, source: "iflytek", rejected: true };
-}
-
-function mockResult(mode, recited) {
-  const band = recited ? 6.5 : 6.0;
-  const advice = recited
-    ? "稳了！语速和连读都不错，保持这个节奏。"
-    : mode === "mock"
-      ? "意思到位，再多用一个高级搭配会更亮眼。"
-      : '如果只改一件事：把句尾的 /t/ 收清楚，比如 "straight"。';
-  return { band, pronunciation: band, fluency: band, advice, source: "mock" };
 }
 
 function buildAuthUrl(host, path, creds) {
@@ -74,14 +64,15 @@ function parseIseScores(xml) {
 }
 
 function toBand(score) {
-  if (score == null || Number.isNaN(score)) return undefined;
+  if (!Number.isFinite(score)) return undefined;
   return Math.max(0, Math.min(9, Math.round((score / 5) * 9 * 2) / 2));
 }
 
 function mapIseToBand(scores) {
-  const pronunciation = toBand(scores.standard) ?? toBand(scores.accuracy) ?? toBand(scores.total) ?? 6;
-  const fluency = toBand(scores.fluency) ?? toBand(scores.total) ?? 6;
-  const band = toBand(scores.total) ?? Math.round(((pronunciation + fluency) / 2) * 2) / 2;
+  const pronunciation = toBand(scores.standard) ?? toBand(scores.accuracy);
+  const fluency = toBand(scores.fluency);
+  const band = toBand(scores.total);
+  if (pronunciation == null || fluency == null || band == null) return null;
   return { band, pronunciation, fluency };
 }
 
@@ -275,10 +266,11 @@ function httpsJson(url, payload, headers) {
   });
 }
 
-function clampBand(value, fallback = 6) {
+function requiredBand(value) {
+  if (value == null || value === "") throw new Error("Missing rubric score");
   const n = typeof value === "number" ? value : Number(value);
-  if (!Number.isFinite(n)) return fallback;
-  return Math.max(0, Math.min(9, Math.round(n * 2) / 2));
+  if (!Number.isFinite(n) || n < 0 || n > 9) throw new Error("Invalid rubric score");
+  return Math.round(n * 2) / 2;
 }
 
 function extractJson(text) {
@@ -333,8 +325,8 @@ async function scoreSpeakingWithRubric(args) {
   const durationSec = args.durationMs ? Math.max(1, Math.round(args.durationMs / 1000)) : "unknown";
   const prompt =
     `Part: ${args.part}\nQuestion: ${args.question}\nAnswer transcript: ${args.transcript}\nAnswer duration seconds: ${durationSec}\n\n` +
-    "Score this IELTS Speaking answer. Return strict JSON only with keys: overall, fluencyCoherence, lexicalResource, grammar, pronunciation, evidence, advice. " +
-    "Scores must be IELTS bands from 0 to 9 in 0.5 steps. evidence must be 2-4 short Chinese strings. advice must be one warm Chinese sentence starting with 如果只改一件事：";
+    "Give practice feedback based only on this ASR transcript. Return strict JSON only with keys: fluencyCoherence, lexicalResource, grammar, evidence, advice. " +
+    "Do not score pronunciation from a transcript. Scores must be from 0 to 9 in 0.5 steps. evidence must be 2-4 short Chinese strings. advice must be one warm Chinese sentence starting with 如果只改一件事：";
   try {
     const data = await httpsJson(`${LLM_BASE_URL}/chat/completions`, {
       model: LLM_MODEL,
@@ -344,20 +336,23 @@ async function scoreSpeakingWithRubric(args) {
       messages: [
         {
           role: "system",
-          content: "You are a strict IELTS Speaking examiner. Use the public IELTS speaking rubric. You are scoring from ASR transcript, so do not overclaim exact pronunciation. Use Chinese for evidence and advice. Return JSON only.",
+          content: "You are a speaking practice coach. Use the public IELTS speaking rubric as a reference, but score only what can be assessed from an ASR transcript. Never claim an official IELTS score or assess pronunciation. Use Chinese for evidence and advice. Return JSON only.",
         },
         { role: "user", content: prompt },
       ],
     }, { Authorization: `Bearer ${key}` });
     const parsed = extractJson(data?.choices?.[0]?.message?.content || "{}");
     const evidence = Array.isArray(parsed.evidence) ? parsed.evidence.map(String).slice(0, 4) : [];
+    const fluencyCoherence = requiredBand(parsed.fluencyCoherence);
+    const lexicalResource = requiredBand(parsed.lexicalResource);
+    const grammar = requiredBand(parsed.grammar);
     return {
       transcript: args.transcript,
-      overall: clampBand(parsed.overall),
-      fluencyCoherence: clampBand(parsed.fluencyCoherence),
-      lexicalResource: clampBand(parsed.lexicalResource),
-      grammar: clampBand(parsed.grammar),
-      pronunciation: clampBand(parsed.pronunciation),
+      overall: Math.round(((fluencyCoherence + lexicalResource + grammar) / 3) * 2) / 2,
+      fluencyCoherence,
+      lexicalResource,
+      grammar,
+      pronunciation: null,
       advice: typeof parsed.advice === "string" && parsed.advice.trim() ? parsed.advice.trim() : "如果只改一件事：回答再展开一个具体例子，让观点更有支撑。",
       evidence,
       source: { asr: "iflytek", scorer: "deepseek" },
@@ -388,25 +383,27 @@ async function cleanupAudioFile(event) {
 
 async function handleScoreAudio(event) {
   const mode = event.mode === "mock" ? "mock" : "follow";
-  const recited = Boolean(event.recited);
   const refText = typeof event.refText === "string" ? event.refText : "";
   const appId = env("XFYUN_APP_ID");
   const apiKey = env("XFYUN_API_KEY");
   const apiSecret = env("XFYUN_API_SECRET");
   const haveISE = Boolean(appId && apiKey && apiSecret);
-  const pcm = await getAudioBuffer(event);
   try {
-    if (mode === "follow" && haveISE && refText) {
-      if (!pcm.length) return scoreRetry("没录到声音，请点一下开始录音，读完整段后再提交。");
-      const scores = await assessReading({ creds: { appId, apiKey, apiSecret }, refText, pcm });
-      if (scores.rejected || scores.total == null) {
-        return scoreRetry("没听清你的发音，请靠近麦克风，读完整段后再提交。");
-      }
-      const mapped = mapIseToBand(scores);
-      const advice = await generateAdvice(refText, scores);
-      return { ...mapped, advice, source: "iflytek" };
+    const pcm = await getAudioBuffer(event);
+    if (mode !== "follow") {
+      return scoreRetry("当前请求不是跟读评分，请更新小程序后重试。");
     }
-    return mockResult(mode, recited);
+    if (!haveISE) return scoreRetry("跟读评分服务尚未配置完成，请联系管理员。");
+    if (!refText) return scoreRetry("当前题目缺少跟读文本，请换一道题后重试。");
+    if (!pcm.length) return scoreRetry("没录到声音，请点一下开始录音，读完整段后再提交。");
+    const scores = await assessReading({ creds: { appId, apiKey, apiSecret }, refText, pcm });
+    if (scores.rejected || scores.total == null) {
+      return scoreRetry("没听清你的发音，请靠近麦克风，读完整段后再提交。");
+    }
+    const mapped = mapIseToBand(scores);
+    if (!mapped) return scoreRetry("评分服务没有返回完整结果，请再试一次。");
+    const advice = await generateAdvice(refText, scores);
+    return { ...mapped, advice, source: "iflytek" };
   } catch (err) {
     console.error("score-audio failed:", err);
     return scoreRetry("评分服务暂时异常，请重试一次。");
@@ -423,8 +420,8 @@ async function handleScoreSpeaking(event) {
   const apiKey = env("XFYUN_ASR_API_KEY", "XFYUN_API_KEY");
   const apiSecret = env("XFYUN_ASR_API_SECRET", "XFYUN_API_SECRET");
   const haveAsr = Boolean(appId && apiKey && apiSecret);
-  const pcm = await getAudioBuffer(event);
   try {
+    const pcm = await getAudioBuffer(event);
     if (!haveAsr) return rejectedScore("还没有配置讯飞 ASR Key，暂时无法进行真实模拟评分。");
     if (!pcm.length) return rejectedScore("没有录到声音，请点一下开始录音，完整回答后再提交。");
     const transcript = await transcribeSpeech({ creds: { appId, apiKey, apiSecret }, pcm });

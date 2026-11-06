@@ -14,7 +14,6 @@ type Mode = "follow" | "mock";
 
 interface WordInfo {
   word: string;
-  ipa: string;
   def: string;
   colloc: string;
 }
@@ -60,7 +59,7 @@ function highlightAnswer(answer: string, onWord: (info: WordInfo) => void): Reac
       <Text
         key={`w-${i}`}
         className="w"
-        onClick={() => onWord({ word: mt.text, ipa: "", def: mt.def, colloc: mt.colloc })}
+        onClick={() => onWord({ word: mt.text, def: mt.def, colloc: mt.colloc })}
       >
         {mt.text}
       </Text>
@@ -83,6 +82,14 @@ function decode(value = "") {
 // All labels render at the same font size, matching the "PART1" reference.
 function shortPartLabel(name: string): string {
   return name === "Part 1" ? "PART1" : name.replace(/^Part\s*/i, "P");
+}
+
+type TouchLike = { clientX: number; clientY: number };
+
+function touchPoint(event: unknown, listName: "touches" | "changedTouches"): TouchLike | null {
+  const record = event as Partial<Record<"touches" | "changedTouches", ArrayLike<TouchLike>>>;
+  const touch = record[listName]?.[0];
+  return touch ? { clientX: touch.clientX, clientY: touch.clientY } : null;
 }
 
 export default function Practice() {
@@ -132,7 +139,18 @@ export default function Practice() {
         }
         if (!card) card = part?.peaks[peakIdx]?.cards[nodeIdx] || part?.peaks[0]?.cards[0] || null;
         setTopic(card);
-        if (card?.id) setPassedQuestionIds(getTopicPassed(partName, card.id));
+        if (card?.id) {
+          const passedIds = getTopicPassed(partName, card.id);
+          const practiceQuestions = toPracticeQuestions(card, partName);
+          const required = practiceQuestions.slice(0, needForPart(partName));
+          const firstPending = required.findIndex((question) => !passedIds.includes(question.id));
+          setPassedQuestionIds(passedIds);
+          setQIdx(firstPending >= 0 ? firstPending : 0);
+          if (!practiceQuestions[firstPending >= 0 ? firstPending : 0]?.answer) {
+            setMode("mock");
+            setAnswerOpen(false);
+          }
+        }
         setPhase(card ? "ready" : "error");
         if (!card) setErrMsg("题库为空");
       })
@@ -162,7 +180,7 @@ export default function Practice() {
   const passedCount = passedQuestionIds.filter((id) => requiredQuestionIds.has(id)).length;
   const current = questions[qIdx];
   const sampleAnswer = current?.answer || "";
-  const refText = useMemo(() => current?.answer || current?.content || "", [current]);
+  const refText = sampleAnswer;
   const passed = !!result && !result.rejected && result.band >= target - 0.5;
   const showScore = !!result && !result.rejected;
   const scoring = phase === "scoring";
@@ -173,10 +191,13 @@ export default function Practice() {
   const navStepIndex = qIdx - navWindowStart;
   const passedQuestionSet = useMemo(() => new Set(passedQuestionIds), [passedQuestionIds]);
 
-  // Long-press recording, ported from the web version: press starts the take,
-  // release anywhere ends it and submits.
+  // Tap once to record, then tap again to submit.
   async function onRecStart() {
     if (holdingRef.current || scoring) return;
+    if (mode === "follow" && !sampleAnswer) {
+      showToast("范文暂不可用，请切换到模拟作答");
+      return;
+    }
     holdingRef.current = true;
     recStartAtRef.current = Date.now();
     setVoiceLevel(0);
@@ -186,7 +207,7 @@ export default function Practice() {
       holdingRef.current = false;
       setVoiceLevel(0);
       setPhase("ready");
-      showToast("需要麦克风权限才能跟读");
+      showToast("需要麦克风权限才能录音");
       return;
     }
     if (!holdingRef.current) return; // released during the permission prompt
@@ -198,8 +219,11 @@ export default function Practice() {
       if (!holdingRef.current) return;
       recRef.current = controller;
     } catch {
-      // No mic: the take still submits (server falls back to mock).
       recStartingRef.current = null;
+      holdingRef.current = false;
+      setVoiceLevel(0);
+      setPhase("ready");
+      showToast("录音启动失败，请检查麦克风权限后重试");
     }
   }
 
@@ -228,6 +252,11 @@ export default function Practice() {
         audio = "";
       }
     }
+    if (!audio) {
+      setPhase("ready");
+      showToast("没有录到声音，请检查麦克风权限后重试");
+      return;
+    }
     try {
       const durationMs = recStartAtRef.current ? Date.now() - recStartAtRef.current : undefined;
       const score =
@@ -236,7 +265,7 @@ export default function Practice() {
           : await scoreAudio({ refText, audioBase64: audio, mode, recited: recitedRef.current });
       setResult(score);
       setFbOpen(true);
-      recitedRef.current = true;
+      if (!score.rejected) recitedRef.current = true;
     } catch {
       showToast("评分服务暂时不可用，请重试");
     } finally {
@@ -253,17 +282,27 @@ export default function Practice() {
   }
 
   function changeMode(next: Mode) {
+    if (recording || scoring) return;
+    if (next === "follow" && !sampleAnswer) {
+      showToast("范文暂不可用，请先用自己的话模拟作答");
+      return;
+    }
     setMode(next);
+    setResult(null);
+    setFbOpen(false);
     if (next === "mock") setAnswerOpen(false);
   }
 
   function goTo(index: number) {
+    if (recording || scoring) return;
     const bounded = Math.max(0, Math.min(index, questions.length - 1));
     setQIdx(bounded);
     setResult(null);
     setFbOpen(false);
     setShowList(false);
-    setAnswerOpen(true);
+    const hasAnswer = Boolean(questions[bounded]?.answer);
+    setMode(hasAnswer ? "follow" : "mock");
+    setAnswerOpen(hasAnswer);
     recitedRef.current = false;
   }
 
@@ -285,16 +324,15 @@ export default function Practice() {
     setPassedQuestionIds(nextPassed);
     setTopicPassed(partName, topic.id, nextPassed);
     const count = nextPassed.filter((id) => requiredQuestionIds.has(id)).length;
-    if (count >= need) lightMapNode(partIdx, peakIdx, nodeIdx);
-    showToast(`已完成 ${count}/${need}，继续练下一题`);
     setFbOpen(false);
-    if (qIdx < questions.length - 1) goTo(qIdx + 1);
-    else Taro.navigateBack();
-  }
-
-  function genPersonal() {
-    const persona = (getSettings().name || "").trim();
-    showToast(persona ? `✍️ 按你的人设生成中…「${persona.slice(0, 12)}…」` : "先去「我的」填写个性化人设");
+    if (count >= need) {
+      lightMapNode(partIdx, peakIdx, nodeIdx);
+      Taro.navigateBack();
+      return;
+    }
+    const nextRequired = questions.slice(0, need).findIndex((question) => !nextPassed.includes(question.id));
+    if (nextRequired >= 0) goTo(nextRequired);
+    showToast(`已完成 ${count}/${need}，继续练下一题`);
   }
 
   // Share the capsule's row: center on it vertically (the 34px back button +
@@ -370,11 +408,11 @@ export default function Practice() {
           <View
             className="main"
             onTouchStart={(event) => {
-              const touch = (event as any).touches?.[0];
+              const touch = touchPoint(event, "touches");
               touchStart.current = touch ? { x: touch.clientX, y: touch.clientY } : null;
             }}
             onTouchEnd={(event) => {
-              const touch = (event as any).changedTouches?.[0];
+              const touch = touchPoint(event, "changedTouches");
               if (touch) handleSwipeEnd(touch.clientX, touch.clientY);
             }}
           >
@@ -415,10 +453,6 @@ export default function Practice() {
                 <ScrollView scrollY className="ans">
                   {sampleAnswer ? highlightAnswer(sampleAnswer, setWord) : <Text>这个题目还没有范文，先用自己的话试着回答。</Text>}
                 </ScrollView>
-                <View className="anstools">
-                  <View onClick={() => showToast("🔊 示范朗读中…")}><Image className="icon" src={ICONS.speaker} /><Text>示范朗读</Text></View>
-                  <View onClick={genPersonal}><Image className="icon" src={ICONS.pencil} /><Text>个性化</Text></View>
-                </View>
               </View>
             </View>
           </View>
@@ -430,7 +464,7 @@ export default function Practice() {
             </View>
             <View className="goal">
               {mode === "mock" ? (
-                <Text>隐藏范本，用自己的话说 · <Text className="goal-b">意思大致完整</Text>即可</Text>
+                <Text>用自己的话回答 · 基于转写给出<Text className="goal-b">表达建议</Text></Text>
               ) : (
                 <Text>跟读到 <Text className="goal-b">{passMark}</Text> 即可通关 · 只看发音和流利度</Text>
               )}
@@ -468,7 +502,10 @@ export default function Practice() {
         <View className={`fb ${fbOpen ? "show" : ""}`}>
           <View className="grab" />
           <View className="band">
-            <Text className="score">{showScore ? result!.band.toFixed(1) : "—"}</Text>
+            <View className="score-summary">
+              <Text className="score">{showScore ? result!.band.toFixed(1) : "—"}</Text>
+              <Text className="score-kind">{mode === "mock" ? "表达参考分" : "跟读参考分"}</Text>
+            </View>
             {mode === "mock" ? (
               <View className="dims">
                 <View className="dim">
@@ -482,10 +519,6 @@ export default function Practice() {
                 <View className="dim">
                   <Text className="dl">Grammar</Text>
                   <Text className="dv">{showScore && result!.grammar != null ? result!.grammar.toFixed(1) : "—"}</Text>
-                </View>
-                <View className="dim">
-                  <Text className="dl">Pronunciation</Text>
-                  <Text className="dv">{showScore ? result!.pronunciation.toFixed(1) : "—"}</Text>
                 </View>
               </View>
             ) : (
@@ -505,6 +538,7 @@ export default function Practice() {
             <Image className="icon" src={ICONS.bulb} />
             <Text>{result?.advice}</Text>
           </View>
+          <Text className="score-disclaimer">{mode === "mock" ? "基于转写，不能评估发音 · AI 练习参考，非 IELTS 官方成绩" : "AI 练习参考，非 IELTS 官方成绩"}</Text>
           {result?.transcript ? (
             <View className="transcript">
               <Text>转写：{result.transcript}</Text>
@@ -519,7 +553,7 @@ export default function Practice() {
           ) : null}
           <View className="fbcta">
             <View className="retry" style={passed ? "" : "flex:1"} onClick={() => setFbOpen(false)}>再练一次</View>
-            {passed ? <View className="pass" onClick={finishPassedQuestion}>点亮这一关 ✦</View> : null}
+            {passed ? <View className="pass" onClick={finishPassedQuestion}>{passedCount + (current?.id && !passedQuestionSet.has(current.id) && requiredQuestionIds.has(current.id) ? 1 : 0) >= need ? "点亮这一关 ✦" : "完成本题，继续"}</View> : null}
           </View>
         </View>
 
@@ -543,11 +577,8 @@ export default function Practice() {
         <View className={`sheet ${word ? "show" : ""}`}>
           <View className="grab" />
           <Text className="word">{word?.word}</Text>
-          {word?.ipa ? <Text className="ipa">{word.ipa}</Text> : null}
-          <View className="play" onClick={() => showToast("🔊 播放发音")}><Image className="icon" src={ICONS.play} /><Text>播放发音</Text></View>
           <Text className="def">{word?.def}</Text>
           <Text className="colloc">常见搭配：{word?.colloc}</Text>
-          <View className="add" onClick={() => showToast("⭐ 已加入生词本")}>＋ 加入生词本</View>
         </View>
     </View>
   );

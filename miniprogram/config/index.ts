@@ -1,4 +1,7 @@
-import { defineConfig } from "@tarojs/cli";
+// Import the config helper directly. The package root eagerly loads Taro's
+// native project-creation binding, which is unnecessary for builds and can be
+// blocked by Windows Application Control on managed machines.
+import { defineConfig } from "@tarojs/cli/dist/util/defineConfig";
 
 export default defineConfig(async (merge) => {
   const baseConfig = {

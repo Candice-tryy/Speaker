@@ -2,6 +2,9 @@
 
 Taro + React + TypeScript 微信小程序。
 
+准备体验版、隐私配置、真机验收和正式提审时，请按
+[小程序上线清单](../docs/miniprogram-launch-checklist.md) 逐项检查。
+
 ## 题库读取规则
 
 小程序正式运行时不依赖开发电脑、本地 IP 或同一局域网。当前题库读取顺序是：
