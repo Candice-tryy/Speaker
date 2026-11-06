@@ -4,7 +4,7 @@ import Taro, { useDidShow } from "@tarojs/taro";
 import { getBank, type Part } from "../../lib/api";
 import { ICONS, MIST } from "../../lib/icons.gen";
 import { buildScene, svgToDataUrl, type SceneNode } from "../../lib/scene";
-import { getProgress, getSettings, setSettings, touchStreak } from "../../lib/store";
+import { getLitTopics, getSettings, migrateLegacyProgress, peakDoneCount, setSettings, touchStreak, type LitTopics } from "../../lib/store";
 import { capsuleCenteredTop, chromeInsets } from "../../lib/ui";
 import "./index.scss";
 
@@ -32,7 +32,7 @@ export default function Map() {
   const [parts, setParts] = useState<Part[]>([]);
   const [partIdx, setPartIdx] = useState(1);
   const [peakIdx, setPeakIdx] = useState(0);
-  const [prog, setProg] = useState<Record<string, number>>(getProgress());
+  const [lit, setLit] = useState<LitTopics>(getLitTopics());
   const [settings, setLocal] = useState(getSettings());
   const [toast, setToast] = useState("");
   const [toastVisible, setToastVisible] = useState(false);
@@ -52,22 +52,23 @@ export default function Map() {
   // Returning from practice/profile: refresh progress + settings, and celebrate
   // a freshly lit node (the web version does this via the ?done=1 round-trip).
   useDidShow(() => {
-    const latest = getProgress();
-    const key = `${partIdx}-${peakIdx}`;
-    const prev = Math.max(0, Number(prog[key] || 0));
-    const next = Math.max(0, Number(latest[key] || 0));
+    const latest = getLitTopics();
+    const currentPart = parts[partIdx];
+    const currentPeak = currentPart?.peaks[peakIdx];
+    const prev = peakDoneCount(lit, currentPart?.name || "", currentPeak);
+    const next = peakDoneCount(latest, currentPart?.name || "", currentPeak);
     if (next > prev) {
-      const label = parts[partIdx]?.peaks[peakIdx]?.topics[next - 1] || "关卡";
+      const label = currentPeak?.topics[next - 1] || "关卡";
       setTimeout(() => showToast(`🎉 ${label} 点亮成功！+20 经验`), 350);
     }
-    setProg(latest);
+    setLit(latest);
     setLocal(getSettings().onboarded ? touchStreak() : getSettings());
   });
 
   const part = parts[partIdx];
   const peak = part?.peaks[peakIdx];
   const total = part?.peaks.length || 0;
-  const peakDone = Math.max(0, Number(prog[`${partIdx}-${peakIdx}`] ?? peak?.done ?? 0));
+  const peakDone = peakDoneCount(lit, part?.name || "", peak);
 
   // The scene renders as a local SVG data URL — no network dependency, and
   // verified to render on real devices. (/api/scene serves the same scene as
@@ -92,6 +93,8 @@ export default function Map() {
     getBank()
       .then((bank) => {
         const nextParts = bank.parts;
+        migrateLegacyProgress(nextParts);
+        setLit(getLitTopics());
         setParts(nextParts);
         setPartIdx(Math.min(1, Math.max(0, nextParts.length - 1)));
         setPeakIdx(0);

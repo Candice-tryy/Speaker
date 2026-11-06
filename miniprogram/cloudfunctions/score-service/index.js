@@ -381,6 +381,59 @@ async function cleanupAudioFile(event) {
   }
 }
 
+// Per-user daily cap on paid scoring calls (XFYUN ISE/ASR + LLM). Set
+// SCORE_DAILY_LIMIT on the cloud function to change it; 0 disables the cap.
+const DAILY_SCORE_LIMIT = Number.parseInt(process.env.SCORE_DAILY_LIMIT || "60", 10);
+const USAGE_COLLECTION = "score_usage";
+
+function chinaDay(now = Date.now()) {
+  return new Date(now + 8 * 3600 * 1000).toISOString().slice(0, 10);
+}
+
+function isMissingCollection(err) {
+  const text = String(err?.errCode ?? "") + " " + String(err?.errMsg || err?.message || err);
+  return /-502005|collection not exist/i.test(text);
+}
+
+function quotaMessage() {
+  return `今天的评分次数已用完（每天 ${DAILY_SCORE_LIMIT} 次），明天再来练吧。`;
+}
+
+// Returns false only when this user has already used today's quota. Storage
+// errors fail open (logged) so a database hiccup never blocks practice.
+async function consumeDailyQuota(retried = false) {
+  if (!(DAILY_SCORE_LIMIT > 0)) return true;
+  const { OPENID } = cloud.getWXContext();
+  // No OPENID means a console/admin test call, not a mini program user.
+  if (!OPENID) return true;
+  const db = cloud.database();
+  const day = chinaDay();
+  const id = `${OPENID}_${day}`;
+  const collection = db.collection(USAGE_COLLECTION);
+  try {
+    const { data } = await collection.where({ _id: id }).limit(1).get();
+    const count = Number(data?.[0]?.count) || 0;
+    if (count >= DAILY_SCORE_LIMIT) return false;
+    if (count === 0) {
+      await collection.doc(id).set({ data: { openid: OPENID, day, count: 1, updatedAt: db.serverDate() } });
+    } else {
+      await collection.doc(id).update({ data: { count: db.command.inc(1), updatedAt: db.serverDate() } });
+    }
+    return true;
+  } catch (err) {
+    if (!retried && isMissingCollection(err)) {
+      try {
+        await db.createCollection(USAGE_COLLECTION);
+      } catch (createErr) {
+        console.warn("create score_usage failed:", createErr);
+      }
+      return consumeDailyQuota(true);
+    }
+    console.error("score quota check failed, allowing request:", err);
+    return true;
+  }
+}
+
 async function handleScoreAudio(event) {
   const mode = event.mode === "mock" ? "mock" : "follow";
   const refText = typeof event.refText === "string" ? event.refText : "";
@@ -396,6 +449,7 @@ async function handleScoreAudio(event) {
     if (!haveISE) return scoreRetry("跟读评分服务尚未配置完成，请联系管理员。");
     if (!refText) return scoreRetry("当前题目缺少跟读文本，请换一道题后重试。");
     if (!pcm.length) return scoreRetry("没录到声音，请点一下开始录音，读完整段后再提交。");
+    if (!(await consumeDailyQuota())) return scoreRetry(quotaMessage());
     const scores = await assessReading({ creds: { appId, apiKey, apiSecret }, refText, pcm });
     if (scores.rejected || scores.total == null) {
       return scoreRetry("没听清你的发音，请靠近麦克风，读完整段后再提交。");
@@ -424,6 +478,7 @@ async function handleScoreSpeaking(event) {
     const pcm = await getAudioBuffer(event);
     if (!haveAsr) return rejectedScore("还没有配置讯飞 ASR Key，暂时无法进行真实模拟评分。");
     if (!pcm.length) return rejectedScore("没有录到声音，请点一下开始录音，完整回答后再提交。");
+    if (!(await consumeDailyQuota())) return rejectedScore(quotaMessage());
     const transcript = await transcribeSpeech({ creds: { appId, apiKey, apiSecret }, pcm });
     if (!transcript) return rejectedScore("没有听清你的回答，请重新录一遍。");
     if (transcript.split(/\s+/).filter(Boolean).length < 3) {

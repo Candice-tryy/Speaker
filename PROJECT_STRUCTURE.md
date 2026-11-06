@@ -206,6 +206,14 @@ DEEPSEEK_API_KEY
 
 `XFYUN_ASR_*` can be omitted if the same XFYUN app supports both ASR and ISE; the function falls back to `XFYUN_*`.
 
+Optional:
+
+```text
+SCORE_DAILY_LIMIT   # paid scoring calls per user per day (China time), default 60, 0 disables the cap
+```
+
+The daily cap is stored in the `score_usage` collection (`_id = <openid>_<YYYY-MM-DD>`, field `count`). The function creates the collection on first use; set its permissions so clients can neither read nor write it. Empty or missing recordings are rejected before the cap is counted, and storage errors fail open (logged) instead of blocking practice.
+
 Upload/deploy from WeChat Developer Tools:
 
 ```text

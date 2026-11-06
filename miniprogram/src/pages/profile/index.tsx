@@ -3,7 +3,7 @@ import { Image, View, Text } from "@tarojs/components";
 import Taro, { useDidShow, useRouter } from "@tarojs/taro";
 import { ICONS } from "../../lib/icons.gen";
 import { getBank } from "../../lib/api";
-import { getProgress, getSettings, setSettings } from "../../lib/store";
+import { getLitTopics, getSettings, litCountForPart, migrateLegacyProgress, setSettings } from "../../lib/store";
 import { capsuleCenteredTop, chromeInsets } from "../../lib/ui";
 import "./index.scss";
 
@@ -12,8 +12,7 @@ export default function Profile() {
   const router = useRouter();
   const returnToPractice = router.params?.returnTo === "practice";
   const [settings, setLocal] = useState(getSettings());
-  const [progress, setProgress] = useState(getProgress());
-  const [partTotals, setPartTotals] = useState<Array<{ idx: number; name: string; total: number }>>([]);
+  const [partTotals, setPartTotals] = useState<Array<{ idx: number; name: string; total: number; done: number }>>([]);
   const [toast, setToast] = useState("");
   const [toastVisible, setToastVisible] = useState(false);
   const toastHideTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -23,12 +22,14 @@ export default function Profile() {
   useDidShow(() => {
     const latest = getSettings();
     setLocal(latest);
-    setProgress(getProgress());
     getBank().then((bank) => {
+      migrateLegacyProgress(bank.parts);
+      const lit = getLitTopics();
       setPartTotals(bank.parts.map((part, idx) => ({
         idx,
         name: part.name,
         total: part.peaks.reduce((sum, peak) => sum + peak.cards.length, 0),
+        done: litCountForPart(lit, part),
       })));
     }).catch(() => setPartTotals([]));
   });
@@ -43,18 +44,12 @@ export default function Profile() {
     toastClearTimer.current = setTimeout(() => setToast(""), 1800);
   }
 
-  function doneCount(partIdx?: number): number {
-    return Object.entries(progress)
-      .filter(([key]) => partIdx === undefined || key.startsWith(`${partIdx}-`))
-      .reduce((sum, [, value]) => sum + Math.max(0, Number(value) || 0), 0);
-  }
-
   function pickBand(band: number) {
     setLocal(setSettings({ targetBand: band }));
     showToast(`目标分已设为 ${band.toFixed(1)}`);
   }
 
-  const totalDone = doneCount();
+  const totalDone = partTotals.reduce((sum, part) => sum + part.done, 0);
   const exp = totalDone * 20;
 
   // The floating back button lives at the top-right, so sharing the capsule's
@@ -112,8 +107,8 @@ export default function Profile() {
               <Text className="score-xp">+{exp} XP</Text>
             </View>
             {partTotals.map((part) => {
-              const done = doneCount(part.idx);
-              const pct = Math.min(100, Math.round((done / part.total) * 100));
+              const done = part.done;
+              const pct = part.total ? Math.min(100, Math.round((done / part.total) * 100)) : 0;
               return (
                 <View className="progress" key={part.name}>
                   <View className="progress-row">

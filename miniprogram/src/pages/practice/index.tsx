@@ -5,7 +5,7 @@ import { getBank, scoreAudio, scoreSpeaking, toPracticeQuestions, type PracticeQ
 import { ICONS } from "../../lib/icons.gen";
 import { LOADING_CLOUD_BIG, LOADING_CLOUD_SMALL, LOADING_SUN_FACE, LOADING_SUN_RAYS } from "../../lib/loading-art";
 import { ensureRecordPermission, startRecording, type RecordingController } from "../../lib/recorder";
-import { getSettings, getTopicPassed, lightMapNode, needForPart, setTopicPassed } from "../../lib/store";
+import { getSettings, getTopicPassed, lightTopic, needForPart, setTopicPassed } from "../../lib/store";
 import { capsuleCenteredTop, chromeInsets } from "../../lib/ui";
 import "./index.scss";
 
@@ -96,7 +96,6 @@ export default function Practice() {
   const router = useRouter();
   const params = router.params || {};
   const partName = decode(params.part || "Part 2&3");
-  const partIdx = Number(params.pi ?? 1);
   const peakIdx = Number(params.peak ?? 0);
   const nodeIdx = Number(params.node ?? 0);
   const topicId = params.topicId || "";
@@ -326,7 +325,7 @@ export default function Practice() {
     const count = nextPassed.filter((id) => requiredQuestionIds.has(id)).length;
     setFbOpen(false);
     if (count >= need) {
-      lightMapNode(partIdx, peakIdx, nodeIdx);
+      lightTopic(partName, String(topic.id));
       Taro.navigateBack();
       return;
     }
