@@ -1,9 +1,27 @@
-﻿import Taro from "@tarojs/taro";
+import Taro from "@tarojs/taro";
 
 // Used by explicit local backend debugging. Production scoring uses the
 // score-service cloud function in the same CloudBase env as the question bank.
 export const BASE_URL = __API_BASE_URL__ || "http://172.20.10.3:3000";
 const SCORE_FUNCTION_NAME = "score-service";
+
+interface MiniCloud {
+  __speakerInited?: boolean;
+  init(options: { env: string; traceUser: boolean }): void;
+  uploadFile(options: { cloudPath: string; filePath: string }): Promise<{ fileID?: string }>;
+  deleteFile(options: { fileList: string[] }): Promise<unknown>;
+  callFunction(options: { name: string; data: TaroGeneral.IAnyObject }): Promise<{ result?: TaroGeneral.IAnyObject }>;
+  database(): {
+    collection(name: string): {
+      doc(id: string): { get(): Promise<{ data?: { activeVersion?: string; parts?: string[] } | Array<{ activeVersion?: string; parts?: string[] }> }> };
+      where(query: { version: string; name: string }): { limit(count: number): { get(): Promise<{ data?: Array<{ part?: Part }> }> } };
+    };
+  };
+}
+
+function cloudApi(): MiniCloud | null {
+  return (Taro as unknown as { cloud?: MiniCloud }).cloud || null;
+}
 
 export interface Question {
   id: string;
@@ -50,12 +68,24 @@ export interface ScoreResult {
   pronunciation: number;
   fluency: number;
   advice: string;
-  source?: "iflytek" | "mock" | "deepseek";
+  source?: "iflytek" | "deepseek" | "unavailable";
   rejected?: boolean;
   transcript?: string;
   lexicalResource?: number;
   grammar?: number;
   evidence?: string[];
+}
+
+function validBand(value: unknown): value is number {
+  return typeof value === "number" && Number.isFinite(value) && value >= 0 && value <= 9;
+}
+
+function assertFollowScore(result: ScoreResult): ScoreResult {
+  if (result.rejected) return result;
+  if (!validBand(result.band) || !validBand(result.pronunciation) || !validBand(result.fluency)) {
+    throw new Error("Invalid follow score response");
+  }
+  return result;
 }
 
 function assertOk<T extends string | ArrayBuffer | TaroGeneral.IAnyObject>(
@@ -79,7 +109,7 @@ function errDetail(err: unknown): string {
 }
 
 function getCloud() {
-  const cloud = (Taro as any).cloud;
+  const cloud = cloudApi();
   if (!__CLOUD_ENV_ID__ || !cloud) return null;
   if (!cloud.__speakerInited) {
     cloud.init({ env: __CLOUD_ENV_ID__, traceUser: true });
@@ -88,23 +118,33 @@ function getCloud() {
   return cloud;
 }
 
-function useCloudScore(): boolean {
+function shouldUseCloudScore(): boolean {
   return Boolean(__CLOUD_ENV_ID__ && !__API_BASE_URL__);
 }
 
-function callScoreFunction<T extends TaroGeneral.IAnyObject>(data: TaroGeneral.IAnyObject): Promise<T> {
+async function callScoreFunction<T extends TaroGeneral.IAnyObject>(data: TaroGeneral.IAnyObject): Promise<T> {
   const cloud = getCloud();
   if (!cloud) throw new Error("CloudBase is not initialized");
-  return cloud
-    .callFunction({ name: SCORE_FUNCTION_NAME, data })
-    .then((res: { result?: T }) => res.result || ({} as T));
+  try {
+    const res = await cloud.callFunction({ name: SCORE_FUNCTION_NAME, data });
+    return (res.result || {}) as T;
+  } catch (error) {
+    const failure = error as { code?: string; errCode?: string; errMsg?: string };
+    const code = String(failure?.code || failure?.errCode || failure?.errMsg || "");
+    if (code.includes("FUNCTION_NOT_FOUND") && typeof data.audioFileID === "string") {
+      try {
+        await cloud.deleteFile({ fileList: [data.audioFileID] });
+      } catch {}
+    }
+    throw error;
+  }
 }
 
 async function uploadTempAudio(audioBase64: string): Promise<string> {
   if (!audioBase64) return "";
   const cloud = getCloud();
   const fs = Taro.getFileSystemManager?.();
-  const userPath = (Taro as any).env?.USER_DATA_PATH;
+  const userPath = (Taro as unknown as { env?: { USER_DATA_PATH?: string } }).env?.USER_DATA_PATH;
   if (!cloud || !fs || !userPath) throw new Error("Cloud upload is unavailable");
   const localPath = `${userPath}/speaker-score-${Date.now()}-${Math.random().toString(36).slice(2)}.pcm`;
   const audio = Taro.base64ToArrayBuffer(audioBase64);
@@ -231,7 +271,7 @@ async function getGeneratedFallbackParts(): Promise<Part[]> {
 
 async function getCloudBank(): Promise<{ parts: Part[]; version?: string } | null> {
   if (!__CLOUD_ENV_ID__) return null;
-  const cloud = (Taro as any).cloud;
+  const cloud = cloudApi();
   if (!cloud) return null;
   if (!cloud.__speakerInited) {
     cloud.init({ env: __CLOUD_ENV_ID__, traceUser: true });
@@ -239,7 +279,9 @@ async function getCloudBank(): Promise<{ parts: Part[]; version?: string } | nul
   }
   const db = cloud.database();
   const manifestResult = await db.collection(BANK_MANIFEST_COLLECTION).doc(ACTIVE_MANIFEST_ID).get();
-  const manifest = manifestResult?.data || {};
+  const manifest = Array.isArray(manifestResult?.data)
+    ? manifestResult.data[0] || {}
+    : manifestResult?.data || {};
   const version = String(manifest.activeVersion || "");
   if (!version) return null;
 
@@ -300,15 +342,15 @@ export async function scoreAudio(params: {
   recited?: boolean;
 }): Promise<ScoreResult> {
   try {
-    if (useCloudScore()) {
+    if (shouldUseCloudScore()) {
       const audioFileID = await uploadTempAudio(params.audioBase64);
-      return await callScoreFunction<ScoreResult>({
+      return assertFollowScore(await callScoreFunction<ScoreResult>({
         action: "score-audio",
         mode: params.mode || "follow",
         recited: params.recited ?? true,
         refText: params.refText,
         audioFileID,
-      });
+      }));
     }
     const res = await Taro.request({
       url: `${BASE_URL}/api/score`,
@@ -322,17 +364,17 @@ export async function scoreAudio(params: {
         audio: params.audioBase64,
       },
     });
-    return assertOk(res, "Scoring failed") as ScoreResult;
+    return assertFollowScore(assertOk(res, "Scoring failed") as ScoreResult);
   } catch (err) {
     console.error("scoreAudio failed", err);
     return {
       band: 0,
       pronunciation: 0,
       fluency: 0,
-      advice: useCloudScore()
+      advice: shouldUseCloudScore()
         ? `评分云函数连接失败，请确认 score-service 已上传并配置密钥。${errDetail(err)}`
         : `评分后端连接失败，请确认本机已启动 npm run dev，并且小程序能访问 ${BASE_URL}。${errDetail(err)}`,
-      source: "mock",
+      source: "unavailable",
       rejected: true,
     };
   }
@@ -345,7 +387,7 @@ export async function scoreSpeaking(params: {
   durationMs?: number;
 }): Promise<ScoreResult> {
   try {
-    if (useCloudScore()) {
+    if (shouldUseCloudScore()) {
       const audioFileID = await uploadTempAudio(params.audioBase64);
       const data = await callScoreFunction<{
         transcript?: string;
@@ -364,6 +406,9 @@ export async function scoreSpeaking(params: {
         audioFileID,
         durationMs: params.durationMs,
       });
+      if (!data.rejected && ![data.overall, data.fluencyCoherence, data.lexicalResource, data.grammar].every(validBand)) {
+        throw new Error("Invalid speaking score response");
+      }
       return {
         band: data.overall ?? 0,
         pronunciation: data.pronunciation ?? 0,
@@ -402,6 +447,9 @@ export async function scoreSpeaking(params: {
       evidence?: string[];
       rejected?: boolean;
     };
+    if (!data.rejected && ![data.overall, data.fluencyCoherence, data.lexicalResource, data.grammar].every(validBand)) {
+      throw new Error("Invalid speaking score response");
+    }
     return {
       band: data.overall ?? 0,
       pronunciation: data.pronunciation ?? 0,
@@ -420,10 +468,10 @@ export async function scoreSpeaking(params: {
       band: 0,
       pronunciation: 0,
       fluency: 0,
-      advice: useCloudScore()
+      advice: shouldUseCloudScore()
         ? `模拟评分云函数暂时不可用，请确认 score-service 已上传并配置密钥。${errDetail(err)}`
         : `模拟评分服务暂时不可用，请重试。${errDetail(err)}`,
-      source: "deepseek",
+      source: "unavailable",
       rejected: true,
     };
   }

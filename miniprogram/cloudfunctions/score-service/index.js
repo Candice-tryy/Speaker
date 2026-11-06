@@ -28,23 +28,13 @@ function rejectedScore(advice, transcript = "") {
     pronunciation: 0,
     advice,
     evidence: [],
-    source: { asr: "iflytek", scorer: "mock" },
+    source: { asr: "iflytek", scorer: "unavailable" },
     rejected: true,
   };
 }
 
 function scoreRetry(advice) {
   return { band: 0, pronunciation: 0, fluency: 0, advice, source: "iflytek", rejected: true };
-}
-
-function mockResult(mode, recited) {
-  const band = recited ? 6.5 : 6.0;
-  const advice = recited
-    ? "稳了！语速和连读都不错，保持这个节奏。"
-    : mode === "mock"
-      ? "意思到位，再多用一个高级搭配会更亮眼。"
-      : '如果只改一件事：把句尾的 /t/ 收清楚，比如 "straight"。';
-  return { band, pronunciation: band, fluency: band, advice, source: "mock" };
 }
 
 function buildAuthUrl(host, path, creds) {
@@ -74,14 +64,15 @@ function parseIseScores(xml) {
 }
 
 function toBand(score) {
-  if (score == null || Number.isNaN(score)) return undefined;
+  if (!Number.isFinite(score)) return undefined;
   return Math.max(0, Math.min(9, Math.round((score / 5) * 9 * 2) / 2));
 }
 
 function mapIseToBand(scores) {
-  const pronunciation = toBand(scores.standard) ?? toBand(scores.accuracy) ?? toBand(scores.total) ?? 6;
-  const fluency = toBand(scores.fluency) ?? toBand(scores.total) ?? 6;
-  const band = toBand(scores.total) ?? Math.round(((pronunciation + fluency) / 2) * 2) / 2;
+  const pronunciation = toBand(scores.standard) ?? toBand(scores.accuracy);
+  const fluency = toBand(scores.fluency);
+  const band = toBand(scores.total);
+  if (pronunciation == null || fluency == null || band == null) return null;
   return { band, pronunciation, fluency };
 }
 
@@ -275,10 +266,11 @@ function httpsJson(url, payload, headers) {
   });
 }
 
-function clampBand(value, fallback = 6) {
+function requiredBand(value) {
+  if (value == null || value === "") throw new Error("Missing rubric score");
   const n = typeof value === "number" ? value : Number(value);
-  if (!Number.isFinite(n)) return fallback;
-  return Math.max(0, Math.min(9, Math.round(n * 2) / 2));
+  if (!Number.isFinite(n) || n < 0 || n > 9) throw new Error("Invalid rubric score");
+  return Math.round(n * 2) / 2;
 }
 
 function extractJson(text) {
@@ -333,8 +325,8 @@ async function scoreSpeakingWithRubric(args) {
   const durationSec = args.durationMs ? Math.max(1, Math.round(args.durationMs / 1000)) : "unknown";
   const prompt =
     `Part: ${args.part}\nQuestion: ${args.question}\nAnswer transcript: ${args.transcript}\nAnswer duration seconds: ${durationSec}\n\n` +
-    "Score this IELTS Speaking answer. Return strict JSON only with keys: overall, fluencyCoherence, lexicalResource, grammar, pronunciation, evidence, advice. " +
-    "Scores must be IELTS bands from 0 to 9 in 0.5 steps. evidence must be 2-4 short Chinese strings. advice must be one warm Chinese sentence starting with 如果只改一件事：";
+    "Give practice feedback based only on this ASR transcript. Return strict JSON only with keys: fluencyCoherence, lexicalResource, grammar, evidence, advice. " +
+    "Do not score pronunciation from a transcript. Scores must be from 0 to 9 in 0.5 steps. evidence must be 2-4 short Chinese strings. advice must be one warm Chinese sentence starting with 如果只改一件事：";
   try {
     const data = await httpsJson(`${LLM_BASE_URL}/chat/completions`, {
       model: LLM_MODEL,
@@ -344,20 +336,23 @@ async function scoreSpeakingWithRubric(args) {
       messages: [
         {
           role: "system",
-          content: "You are a strict IELTS Speaking examiner. Use the public IELTS speaking rubric. You are scoring from ASR transcript, so do not overclaim exact pronunciation. Use Chinese for evidence and advice. Return JSON only.",
+          content: "You are a speaking practice coach. Use the public IELTS speaking rubric as a reference, but score only what can be assessed from an ASR transcript. Never claim an official IELTS score or assess pronunciation. Use Chinese for evidence and advice. Return JSON only.",
         },
         { role: "user", content: prompt },
       ],
     }, { Authorization: `Bearer ${key}` });
     const parsed = extractJson(data?.choices?.[0]?.message?.content || "{}");
     const evidence = Array.isArray(parsed.evidence) ? parsed.evidence.map(String).slice(0, 4) : [];
+    const fluencyCoherence = requiredBand(parsed.fluencyCoherence);
+    const lexicalResource = requiredBand(parsed.lexicalResource);
+    const grammar = requiredBand(parsed.grammar);
     return {
       transcript: args.transcript,
-      overall: clampBand(parsed.overall),
-      fluencyCoherence: clampBand(parsed.fluencyCoherence),
-      lexicalResource: clampBand(parsed.lexicalResource),
-      grammar: clampBand(parsed.grammar),
-      pronunciation: clampBand(parsed.pronunciation),
+      overall: Math.round(((fluencyCoherence + lexicalResource + grammar) / 3) * 2) / 2,
+      fluencyCoherence,
+      lexicalResource,
+      grammar,
+      pronunciation: null,
       advice: typeof parsed.advice === "string" && parsed.advice.trim() ? parsed.advice.trim() : "如果只改一件事：回答再展开一个具体例子，让观点更有支撑。",
       evidence,
       source: { asr: "iflytek", scorer: "deepseek" },
@@ -386,27 +381,83 @@ async function cleanupAudioFile(event) {
   }
 }
 
+// Per-user daily cap on paid scoring calls (XFYUN ISE/ASR + LLM). Set
+// SCORE_DAILY_LIMIT on the cloud function to change it; 0 disables the cap.
+const DAILY_SCORE_LIMIT = Number.parseInt(process.env.SCORE_DAILY_LIMIT || "60", 10);
+const USAGE_COLLECTION = "score_usage";
+
+function chinaDay(now = Date.now()) {
+  return new Date(now + 8 * 3600 * 1000).toISOString().slice(0, 10);
+}
+
+function isMissingCollection(err) {
+  const text = String(err?.errCode ?? "") + " " + String(err?.errMsg || err?.message || err);
+  return /-502005|collection not exist/i.test(text);
+}
+
+function quotaMessage() {
+  return `今天的评分次数已用完（每天 ${DAILY_SCORE_LIMIT} 次），明天再来练吧。`;
+}
+
+// Returns false only when this user has already used today's quota. Storage
+// errors fail open (logged) so a database hiccup never blocks practice.
+async function consumeDailyQuota(retried = false) {
+  if (!(DAILY_SCORE_LIMIT > 0)) return true;
+  const { OPENID } = cloud.getWXContext();
+  // No OPENID means a console/admin test call, not a mini program user.
+  if (!OPENID) return true;
+  const db = cloud.database();
+  const day = chinaDay();
+  const id = `${OPENID}_${day}`;
+  const collection = db.collection(USAGE_COLLECTION);
+  try {
+    const { data } = await collection.where({ _id: id }).limit(1).get();
+    const count = Number(data?.[0]?.count) || 0;
+    if (count >= DAILY_SCORE_LIMIT) return false;
+    if (count === 0) {
+      await collection.doc(id).set({ data: { openid: OPENID, day, count: 1, updatedAt: db.serverDate() } });
+    } else {
+      await collection.doc(id).update({ data: { count: db.command.inc(1), updatedAt: db.serverDate() } });
+    }
+    return true;
+  } catch (err) {
+    if (!retried && isMissingCollection(err)) {
+      try {
+        await db.createCollection(USAGE_COLLECTION);
+      } catch (createErr) {
+        console.warn("create score_usage failed:", createErr);
+      }
+      return consumeDailyQuota(true);
+    }
+    console.error("score quota check failed, allowing request:", err);
+    return true;
+  }
+}
+
 async function handleScoreAudio(event) {
   const mode = event.mode === "mock" ? "mock" : "follow";
-  const recited = Boolean(event.recited);
   const refText = typeof event.refText === "string" ? event.refText : "";
   const appId = env("XFYUN_APP_ID");
   const apiKey = env("XFYUN_API_KEY");
   const apiSecret = env("XFYUN_API_SECRET");
   const haveISE = Boolean(appId && apiKey && apiSecret);
-  const pcm = await getAudioBuffer(event);
   try {
-    if (mode === "follow" && haveISE && refText) {
-      if (!pcm.length) return scoreRetry("没录到声音，请点一下开始录音，读完整段后再提交。");
-      const scores = await assessReading({ creds: { appId, apiKey, apiSecret }, refText, pcm });
-      if (scores.rejected || scores.total == null) {
-        return scoreRetry("没听清你的发音，请靠近麦克风，读完整段后再提交。");
-      }
-      const mapped = mapIseToBand(scores);
-      const advice = await generateAdvice(refText, scores);
-      return { ...mapped, advice, source: "iflytek" };
+    const pcm = await getAudioBuffer(event);
+    if (mode !== "follow") {
+      return scoreRetry("当前请求不是跟读评分，请更新小程序后重试。");
     }
-    return mockResult(mode, recited);
+    if (!haveISE) return scoreRetry("跟读评分服务尚未配置完成，请联系管理员。");
+    if (!refText) return scoreRetry("当前题目缺少跟读文本，请换一道题后重试。");
+    if (!pcm.length) return scoreRetry("没录到声音，请点一下开始录音，读完整段后再提交。");
+    if (!(await consumeDailyQuota())) return scoreRetry(quotaMessage());
+    const scores = await assessReading({ creds: { appId, apiKey, apiSecret }, refText, pcm });
+    if (scores.rejected || scores.total == null) {
+      return scoreRetry("没听清你的发音，请靠近麦克风，读完整段后再提交。");
+    }
+    const mapped = mapIseToBand(scores);
+    if (!mapped) return scoreRetry("评分服务没有返回完整结果，请再试一次。");
+    const advice = await generateAdvice(refText, scores);
+    return { ...mapped, advice, source: "iflytek" };
   } catch (err) {
     console.error("score-audio failed:", err);
     return scoreRetry("评分服务暂时异常，请重试一次。");
@@ -423,10 +474,11 @@ async function handleScoreSpeaking(event) {
   const apiKey = env("XFYUN_ASR_API_KEY", "XFYUN_API_KEY");
   const apiSecret = env("XFYUN_ASR_API_SECRET", "XFYUN_API_SECRET");
   const haveAsr = Boolean(appId && apiKey && apiSecret);
-  const pcm = await getAudioBuffer(event);
   try {
+    const pcm = await getAudioBuffer(event);
     if (!haveAsr) return rejectedScore("还没有配置讯飞 ASR Key，暂时无法进行真实模拟评分。");
     if (!pcm.length) return rejectedScore("没有录到声音，请点一下开始录音，完整回答后再提交。");
+    if (!(await consumeDailyQuota())) return rejectedScore(quotaMessage());
     const transcript = await transcribeSpeech({ creds: { appId, apiKey, apiSecret }, pcm });
     if (!transcript) return rejectedScore("没有听清你的回答，请重新录一遍。");
     if (transcript.split(/\s+/).filter(Boolean).length < 3) {

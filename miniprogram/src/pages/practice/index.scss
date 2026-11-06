@@ -713,6 +713,18 @@
   line-height: 1;
 }
 
+.score-summary {
+  flex: none;
+  text-align: center;
+}
+
+.score-kind {
+  display: block;
+  margin-top: 4px;
+  font-size: 10px;
+  color: #7c9a8d;
+}
+
 .dims {
   display: flex;
   flex-wrap: wrap;
@@ -762,6 +774,15 @@
   font-size: 13px;
   line-height: 1.5;
   color: #c75a2c;
+}
+
+.score-disclaimer {
+  display: block;
+  margin-top: 8px;
+  text-align: center;
+  font-size: 10px;
+  line-height: 1.4;
+  color: #8aa197;
 }
 
 .transcript,
